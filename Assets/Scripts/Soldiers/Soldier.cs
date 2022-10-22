@@ -47,7 +47,14 @@ public class Soldier : MonoBehaviour
     public int ValueNumber
     {
         set {
-            valueText.text = value.ToString();
+            if (value < 1000)
+            {
+                valueText.text = value.ToString();
+            }
+            else
+            {
+                valueText.text = Mathf.FloorToInt(value/1000).ToString() + "K";
+            }
             valueNumber = value;
             SoldierColor = Utils.GetColorByNumber(ValueNumber);
         }

@@ -47,7 +47,7 @@ public class SoldierCellMergeManager : MonoBehaviour
         {
             Vector3 pointerPosition = GetPointerPosition();
             if(pointerPosition!=Vector3.zero)
-                SetLineRendererposition(connectingLine.positionCount - 1, pointerPosition);
+                SetLineRendererPosition(connectingLine.positionCount - 1, pointerPosition);
         }
 
         if (!Input.GetMouseButton(0) && isConnecting)
@@ -86,7 +86,7 @@ public class SoldierCellMergeManager : MonoBehaviour
         connectedCells.Add(cell);
         connectingLine.positionCount = 2;
         Vector3 cellPosition = cell.transform.position;
-        SetLineRendererposition(0, cellPosition);
+        SetLineRendererPosition(0, cellPosition);
     }
 
     public void ConnectCell(SoldierCell cell) {
@@ -104,7 +104,7 @@ public class SoldierCellMergeManager : MonoBehaviour
                     connectingLine.positionCount--;
                     connectedCells.RemoveAt(tempCount - 1);
                     Vector3 newPos = connectedCells[tempCount - 2].transform.position;
-                    SetLineRendererposition(tempCount - 2, newPos);
+                    SetLineRendererPosition(tempCount - 2, newPos);
                 }
             }
             else
@@ -118,7 +118,7 @@ public class SoldierCellMergeManager : MonoBehaviour
                         currentCellValue = newCellValue;
                         currentSumOfValues += newCellValue;
                         UpdateSumOfValuesUI(Mathf.ClosestPowerOfTwo(currentSumOfValues));
-                        SetLineRendererposition(tempCount, newPoint);
+                        SetLineRendererPosition(tempCount, newPoint);
                         connectedCells.Add(cell);
                         connectingLine.positionCount++;
                     }
@@ -206,7 +206,7 @@ public class SoldierCellMergeManager : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity))
         {
-            Vector3 tempPos = GetLineRendererposition(connectingLine.positionCount - 2);
+            Vector3 tempPos = GetLineRendererPosition(connectingLine.positionCount - 2);
             if (Vector3.Distance(tempPos, hit.point) > Mathf.Sqrt(2))
                 return (Vector3.Normalize(hit.point - tempPos) * Mathf.Sqrt(2)) + tempPos;
             else
@@ -215,16 +215,21 @@ public class SoldierCellMergeManager : MonoBehaviour
         return Vector3.zero;
     }
 
-    public void SetLineRendererposition(int index, Vector3 pos)
+    public void SetLineRendererPosition(int index, Vector3 pos)
     {
         connectingLine.SetPosition(index, new Vector3(pos.x, pos.z, -Database.GameConfiguration.LineOffsetFromGround));
     }
     
-    public Vector3 GetLineRendererposition(int index)
+    public Vector3 GetLineRendererPosition(int index)
     {
         Vector3 pos = connectingLine.GetPosition(index);
         pos.z = pos.y;
         pos.y = Database.GameConfiguration.LineOffsetFromGround;
         return pos;
+    }
+    
+    public Vector3 GetLastLineRendererPosition()
+    {
+        return GetLineRendererPosition(connectingLine.positionCount-1);
     }
 }

@@ -60,7 +60,7 @@ public class LevelsEditor : OdinMenuEditorWindow
         GUI.backgroundColor = defaultGUIColor;
         EditorGUILayout.EndHorizontal();
         
-        if (Database.LevelsConfiguration.LevelsData.Count != tree.MenuItems.Count)
+        if (GUI.changed)
         {
             BuildMenuTree();
             ForceMenuTreeRebuild();

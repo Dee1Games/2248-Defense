@@ -1406,6 +1406,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Line
       objectReference: {fileID: 0}
+    - target: {fileID: 6048377743157403355, guid: a5fa2b59f7f605e40a3676c82379778e, type: 3}
+      propertyPath: m_UseWorldSpace
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6048377743157403355, guid: a5fa2b59f7f605e40a3676c82379778e, type: 3}
+      propertyPath: m_Parameters.numCapVertices
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6048377743157403355, guid: a5fa2b59f7f605e40a3676c82379778e, type: 3}
+      propertyPath: m_Parameters.numCornerVertices
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6048377743157403355, guid: a5fa2b59f7f605e40a3676c82379778e, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6048377743157403355, guid: a5fa2b59f7f605e40a3676c82379778e, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
+      value: 0.14989679
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5fa2b59f7f605e40a3676c82379778e, type: 3}
 --- !u!120 &500458689 stripped
