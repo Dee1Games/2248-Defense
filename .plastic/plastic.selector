@@ -1,4 +1,4 @@
 repository "2248-Defense@dee12248defense@cloud"
   path "/"
-    br "/main"
-    co "/main"
+    smartbranch "/main" changeset "21"                         
+     

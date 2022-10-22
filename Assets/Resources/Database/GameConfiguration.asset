@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e5d2c8ba836e8743a738d8ef465f574, type: 3}
+  m_Name: GameConfiguration
+  m_EditorClassIdentifier: 
+  SoldiersFireRate: 0.3
+  BulletDestructionTime: 6
+  BulletOffsetFromGround: 0.7
+  NumberColors:
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0.88467693, g: 1, b: 0, a: 1}
+  - {r: 1, g: 0.007843137, b: 0.5824141, a: 1}
+  - {r: 0.61348677, g: 1, b: 0.007843137, a: 1}
+  - {r: 0.007843137, g: 0.8201961, b: 1, a: 1}
+  - {r: 0.007843137, g: 0.31876597, b: 1, a: 1}
+  - {r: 0.7116425, g: 0.007843137, b: 1, a: 1}
+  - {r: 1, g: 0.28937826, b: 0.007843137, a: 1}
+  - {r: 1, g: 0.6751293, b: 0.007843137, a: 1}
+  - {r: 0.007843137, g: 1, b: 0.33689365, a: 1}
+  - {r: 0.007843137, g: 1, b: 0.73270476, a: 1}

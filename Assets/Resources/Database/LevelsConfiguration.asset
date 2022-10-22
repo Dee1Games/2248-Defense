@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea2bdac934b54dd4eb5b3324237b8db3, type: 3}
+  m_Name: LevelsConfiguration
+  m_EditorClassIdentifier: 
+  LevelsData:
+  - Map: 0
+    WaitTimeBeforeSpawnLevel: 0
+    WavesData:
+    - WaitTimeBeforeSpawnWave: 0
+      EnemySpawnRate: 2
+      EnemiesData:
+      - Type: 0
+        Color: 0
+        Health: 0
+        X: 0
+      - Type: 0
+        Color: 0
+        Health: 0
+        X: 1
+      - Type: 0
+        Color: 0
+        Health: 0
+        X: 2
+      - Type: 0
+        Color: 0
+        Health: 0
+        X: 3
+      - Type: 0
+        Color: 0
+        Health: 0
+        X: 4
+    - WaitTimeBeforeSpawnWave: 0
+      EnemySpawnRate: 2
+      EnemiesData:
+      - Type: 0
+        Color: 3
+        Health: 0
+        X: 0
+      - Type: 0
+        Color: 3
+        Health: 0
+        X: 2
+      - Type: 0
+        Color: 3
+        Health: 100
+        X: 4
+    - WaitTimeBeforeSpawnWave: 0
+      EnemySpawnRate: 2
+      EnemiesData:
+      - Type: 0
+        Color: 4
+        Health: 100
+        X: 1
+      - Type: 0
+        Color: 4
+        Health: 100
+        X: 2
+      - Type: 0
+        Color: 4
+        Health: 100
+        X: 3
+    - WaitTimeBeforeSpawnWave: 0
+      EnemySpawnRate: 2
+      EnemiesData:
+      - Type: 0
+        Color: 2
+        Health: 100
+        X: 0
+      - Type: 0
+        Color: 2
+        Health: 100
+        X: 1
+    - WaitTimeBeforeSpawnWave: 0
+      EnemySpawnRate: 2
+      EnemiesData:
+      - Type: 0
+        Color: 5
+        Health: 100
+        X: 3
+      - Type: 0
+        Color: 5
+        Health: 100
+        X: 4
+    MatrixRow1: 0200000002000000020000000200000002000000
+    MatrixRow2: 0200000002000000020000000200000002000000
+    MatrixRow3: 0200000002000000020000000200000002000000
+    MatrixRow4: 0200000002000000020000000200000002000000
+  - Map: 0
+    WaitTimeBeforeSpawnLevel: 0
+    WavesData:
+    - WaitTimeBeforeSpawnWave: 0
+      EnemySpawnRate: 0
+      EnemiesData:
+      - Type: 0
+        Color: 0
+        Health: 0
+        X: 0
+    MatrixRow1: 
+    MatrixRow2: 
+    MatrixRow3: 
+    MatrixRow4: 
