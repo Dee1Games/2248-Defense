@@ -5,8 +5,12 @@ using UnityEngine;
 [System.Serializable]
 public class LevelData
 {
-    [Range(0, 9)]
+    [Range(0, 100)]
     public int Map;
+
+    public MapTheme Theme;
+
+    public float BomberSoldierSpawnProbability = 0f;
     public float WaitTimeBeforeSpawnLevel;
     [ListDrawerSettings(ShowPaging = true, NumberOfItemsPerPage = 1, Expanded = true)]
     public List<WaveData> WavesData;

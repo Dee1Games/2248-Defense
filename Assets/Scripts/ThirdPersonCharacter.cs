@@ -81,30 +81,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			// send input and other state parameters to the animator
 			UpdateAnimator(move);
 		}
-
-		public void Die()
-		{
-			if (!m_IsAlive)
-				return;
-			
-			m_IsAlive = false;
-			m_Animator.SetBool("DeathTrigger", true);
-			StartCoroutine(Disappear());
-		}
-
-		private IEnumerator Disappear()
-		{
-			yield return new WaitForSeconds(1.5f);
-			m_Animator.enabled = false;
-			float disappearSpeed = 0.25f;
-			float disappearTarget = transform.position.y - 0.5f;
-			while (transform.position.y > disappearTarget)
-			{
-				transform.Translate(Vector3.down * Time.deltaTime * disappearSpeed);
-				yield return new WaitForEndOfFrame();
-			}
-			ObjectPool.DeSpawn(gameObject);
-		}
 		
 		void ScaleCapsuleForCrouching(bool crouch)
 		{

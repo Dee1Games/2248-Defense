@@ -9,6 +9,8 @@ public class EnemyData
     public EnemyColor Color;
     public float Health = 100;
     public float X;
+    public float YOffset;
+    public float SpawnTime;
 
     public void Copy(EnemyData data)
     {
@@ -16,6 +18,7 @@ public class EnemyData
         Color = data.Color;
         Health = data.Health;
         X = data.X;
+        YOffset = data.YOffset;
     }
 
     public UnityEngine.Color GetColor()

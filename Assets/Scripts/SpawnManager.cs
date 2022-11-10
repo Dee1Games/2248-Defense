@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
@@ -17,8 +18,9 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private ObjectPool simpleEnemyPool;
     [SerializeField] private ObjectPool giantEnemyPool;
     [SerializeField] private Transform enemiesContainer;
-    [SerializeField] private float spawnOffset;
-    [SerializeField] private List<GameObject> maps;
+    [SerializeField] private List<Map> maps;
+    [SerializeField] private List<GameObject> themes;
+    [SerializeField] private Transform spawnPos;
 
     private int currentLevelIndex;
     private int currentWaveIndex;
@@ -39,27 +41,52 @@ public class SpawnManager : MonoBehaviour
 
     private IEnumerator SpawnCurrentLevel()
     {
-        foreach (GameObject map in maps)
+        foreach (Map map in maps)
         {
-            map.SetActive(false);
+            map.gameObject.SetActive(false);
         }
+        foreach (GameObject theme in themes)
+        {
+            theme.SetActive(false);
+        }
+        
         currentWaveIndex = 0;
         LevelData levelData = Database.LevelsConfiguration.LevelsData[currentLevelIndex];
-        maps[levelData.Map].SetActive(true);
+        maps[levelData.Map].gameObject.SetActive(true);
+        maps[levelData.Map].ActivateMapTheme(levelData.Theme);
+        themes[(int)levelData.Theme].SetActive(true);
         yield return new WaitForSeconds(levelData.WaitTimeBeforeSpawnLevel);
         StartCoroutine(SpawnCurrentWave());
     }
 
     private IEnumerator SpawnCurrentWave()
     {
+        while (GameManager.Instance.outsideEnemies.Count != 0)
+        {
+            yield return new WaitForEndOfFrame();
+        }
+        
         WaveData waveData = Database.LevelsConfiguration.LevelsData[currentLevelIndex].WavesData[currentWaveIndex];
         yield return new WaitForSeconds(waveData.WaitTimeBeforeSpawnWave);
         int spawnedEnemiesCount = 0;
-        while (spawnedEnemiesCount < waveData.EnemiesData.Count)
+        List<EnemyData> enemiesToSpawn = new List<EnemyData>(waveData.EnemiesData.Count);
+        for(int i=0 ; i<waveData.EnemiesData.Count; i++)
         {
-            yield return new WaitForSeconds(waveData.EnemySpawnRate);
-            SpawnEnemy(waveData.EnemiesData[spawnedEnemiesCount]);
-            spawnedEnemiesCount++;
+            enemiesToSpawn.Add(waveData.EnemiesData[i]);
+        }
+        enemiesToSpawn = enemiesToSpawn.OrderBy(o=>o.SpawnTime).ToList();
+        float spawnStartTime = Time.timeSinceLevelLoad;
+        while (spawnedEnemiesCount < enemiesToSpawn.Count)
+        {
+            if (Time.timeSinceLevelLoad - spawnStartTime < enemiesToSpawn[spawnedEnemiesCount].SpawnTime)
+            {
+                yield return new WaitForEndOfFrame();
+            }
+            else
+            {
+                SpawnEnemy(enemiesToSpawn[spawnedEnemiesCount]);
+                spawnedEnemiesCount++;
+            }
         }
 
         if (currentWaveIndex+1 < Database.LevelsConfiguration.LevelsData[currentLevelIndex].WavesData.Count)
@@ -88,7 +115,8 @@ public class SpawnManager : MonoBehaviour
     {
         Enemy enemy = (enemyData.Type==EnemyType.SimpleEnemy?simpleEnemyPool:giantEnemyPool).Spawn(enemiesContainer).GetComponent<Enemy>();
         enemy.Init(enemyData);
-        enemy.transform.position = new Vector3(enemyData.X, 0f, spawnOffset);
-        GameManager.Instance.CurrentEnemies.Add(enemy);
+        enemy.transform.position = new Vector3(enemyData.X, 0f, spawnPos.position.z+enemyData.YOffset);
+        GameManager.Instance.outsideEnemies.Add(enemy);
+        GameManager.Instance.OnNewEnemySpawned.Invoke();
     }
 }

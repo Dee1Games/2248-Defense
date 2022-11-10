@@ -49,4 +49,21 @@ public class Utils
 
         return minPower;
     }
+
+    public static string GetShortenNumText(int val)
+    {
+        return GetShortenNumText((float) val);
+    }
+    
+    public static string GetShortenNumText(float val)
+    {
+        if (val < 1000)
+        {
+            return val.ToString();
+        }
+        else
+        {
+            return Mathf.FloorToInt(val/1000).ToString() + "K";
+        }
+    }
 }

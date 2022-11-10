@@ -14,98 +14,2302 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelsData:
   - Map: 0
+    Theme: 1
+    BomberSoldierSpawnProbability: 0
     WaitTimeBeforeSpawnLevel: 0
     WavesData:
     - WaitTimeBeforeSpawnWave: 0
-      EnemySpawnRate: 2
-      EnemiesData:
-      - Type: 0
-        Color: 0
-        Health: 0
-        X: 0
-      - Type: 0
-        Color: 0
-        Health: 0
-        X: 1
-      - Type: 0
-        Color: 0
-        Health: 0
-        X: 2
-      - Type: 0
-        Color: 0
-        Health: 0
-        X: 3
-      - Type: 0
-        Color: 0
-        Health: 0
-        X: 4
-    - WaitTimeBeforeSpawnWave: 0
-      EnemySpawnRate: 2
       EnemiesData:
       - Type: 0
         Color: 3
-        Health: 0
+        Health: 100
         X: 0
+        YOffset: 0
+        SpawnTime: 0
       - Type: 0
-        Color: 3
-        Health: 0
+        Color: 0
+        Health: 100
         X: 2
+        YOffset: 0
+        SpawnTime: 0
       - Type: 0
-        Color: 3
+        Color: 0
         Health: 100
         X: 4
+        YOffset: 0
+        SpawnTime: 0
     - WaitTimeBeforeSpawnWave: 0
-      EnemySpawnRate: 2
       EnemiesData:
       - Type: 0
-        Color: 4
-        Health: 100
-        X: 1
+        Color: 0
+        Health: 60
+        X: 0
+        YOffset: 0
+        SpawnTime: 0
       - Type: 0
-        Color: 4
-        Health: 100
-        X: 2
-      - Type: 0
-        Color: 4
-        Health: 100
+        Color: 0
+        Health: 60
         X: 3
-    - WaitTimeBeforeSpawnWave: 0
-      EnemySpawnRate: 2
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 4
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 2
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 80
+        X: 0
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 80
+        X: 0
+        YOffset: 0
+        SpawnTime: 3
+      - Type: 0
+        Color: 0
+        Health: 80
+        X: 4
+        YOffset: 0
+        SpawnTime: 3.5
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 4
+        YOffset: 0
+        SpawnTime: 6
+      - Type: 0
+        Color: 0
+        Health: 80
+        X: 3
+        YOffset: 0
+        SpawnTime: 6
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 0
+        YOffset: 0
+        SpawnTime: 6
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 2
+        YOffset: 0
+        SpawnTime: 6
+    - WaitTimeBeforeSpawnWave: 5
+      EnemiesData:
+      - Type: 1
+        Color: 4
+        Health: 1000
+        X: 2
+        YOffset: 0
+        SpawnTime: 0
+    - WaitTimeBeforeSpawnWave: 5
       EnemiesData:
       - Type: 0
         Color: 2
         Health: 100
         X: 0
+        YOffset: 0
+        SpawnTime: 0
       - Type: 0
         Color: 2
         Health: 100
         X: 1
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 2
+        Health: 100
+        X: 0
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 2
+        Health: 100
+        X: 0
+        YOffset: 0
+        SpawnTime: 4
+      - Type: 0
+        Color: 2
+        Health: 100
+        X: 0
+        YOffset: 0
+        SpawnTime: 4
+      - Type: 0
+        Color: 2
+        Health: 100
+        X: 0
+        YOffset: 0
+        SpawnTime: 4
+      - Type: 0
+        Color: 2
+        Health: 100
+        X: 0
+        YOffset: 0
+        SpawnTime: 8
+      - Type: 0
+        Color: 2
+        Health: 100
+        X: 0
+        YOffset: 0
+        SpawnTime: 8
+      - Type: 0
+        Color: 2
+        Health: 100
+        X: 0
+        YOffset: 0
+        SpawnTime: 8
+    - WaitTimeBeforeSpawnWave: 5
+      EnemiesData:
+      - Type: 1
+        Color: 5
+        Health: 1000
+        X: 3
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 1
+        Color: 5
+        Health: 1000
+        X: 4
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 30
+        X: 0
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 30
+        X: 1
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 30
+        X: 2
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 30
+        X: 3
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 30
+        X: 4
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 30
+        X: 0
+        YOffset: 0
+        SpawnTime: 0
+    MatrixRow1: 0200000002000000040000000800000004000000
+    MatrixRow2: 0200000004000000020000000200000004000000
+    MatrixRow3: 0400000002000000020000000200000008000000
+    MatrixRow4: 0400000008000000020000000200000002000000
+  - Map: 0
+    Theme: 0
+    BomberSoldierSpawnProbability: 0.1
+    WaitTimeBeforeSpawnLevel: 0
+    WavesData:
     - WaitTimeBeforeSpawnWave: 0
-      EnemySpawnRate: 2
       EnemiesData:
       - Type: 0
-        Color: 5
+        Color: 0
+        Health: 100
+        X: 0
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 100
+        X: 1
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 100
+        X: 2
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
         Health: 100
         X: 3
+        YOffset: 0
+        SpawnTime: 0
       - Type: 0
-        Color: 5
+        Color: 0
         Health: 100
         X: 4
+        YOffset: 0
+        SpawnTime: 0
+    - WaitTimeBeforeSpawnWave: 6
+      EnemiesData:
+      - Type: 0
+        Color: 0
+        Health: 200
+        X: 0
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 200
+        X: 2
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 200
+        X: 4
+        YOffset: 0
+        SpawnTime: 0
+    - WaitTimeBeforeSpawnWave: 0
+      EnemiesData:
+      - Type: 0
+        Color: 0
+        Health: 100
+        X: 0
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 100
+        X: 2
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 100
+        X: 4
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 100
+        X: 0
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 100
+        X: 1
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 100
+        X: 2
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 100
+        X: 3
+        YOffset: 0
+        SpawnTime: 1
+    - WaitTimeBeforeSpawnWave: 0
+      EnemiesData:
+      - Type: 0
+        Color: 0
+        Health: 300
+        X: 1
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 350
+        X: 2
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 400
+        X: 3
+        YOffset: 0
+        SpawnTime: 0
+    - WaitTimeBeforeSpawnWave: 0
+      EnemiesData:
+      - Type: 1
+        Color: 0
+        Health: 1000
+        X: 1
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 100
+        X: 0
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 150
+        X: 1
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 150
+        X: 2
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 100
+        X: 4
+        YOffset: 0
+        SpawnTime: 0
+    MatrixRow1: 0400000002000000080000000200000002000000
+    MatrixRow2: 0200000004000000020000000800000002000000
+    MatrixRow3: 0400000002000000040000000200000008000000
+    MatrixRow4: 0800000004000000020000000400000002000000
+  - Map: 0
+    Theme: 0
+    BomberSoldierSpawnProbability: 0
+    WaitTimeBeforeSpawnLevel: 0
+    WavesData:
+    - WaitTimeBeforeSpawnWave: 0
+      EnemiesData:
+      - Type: 1
+        Color: 0
+        Health: 1000
+        X: 2
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 100
+        X: 0
+        YOffset: 0
+        SpawnTime: 0
+    - WaitTimeBeforeSpawnWave: 0
+      EnemiesData:
+      - Type: 1
+        Color: 0
+        Health: 1000
+        X: 2
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 300
+        X: 0
+        YOffset: 0
+        SpawnTime: 0
+    - WaitTimeBeforeSpawnWave: 0
+      EnemiesData:
+      - Type: 1
+        Color: 0
+        Health: 1000
+        X: 2
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 500
+        X: 0
+        YOffset: 0
+        SpawnTime: 0
+    - WaitTimeBeforeSpawnWave: 0
+      EnemiesData:
+      - Type: 1
+        Color: 0
+        Health: 1000
+        X: 2
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 700
+        X: 0
+        YOffset: 0
+        SpawnTime: 0
+    - WaitTimeBeforeSpawnWave: 0
+      EnemiesData:
+      - Type: 1
+        Color: 0
+        Health: 1000
+        X: 2
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 1
+        Color: 0
+        Health: 1000
+        X: 0
+        YOffset: 0
+        SpawnTime: 0
+    MatrixRow1: 0400000008000000040000000800000004000000
+    MatrixRow2: 0800000004000000080000000400000008000000
+    MatrixRow3: 0400000008000000040000000800000004000000
+    MatrixRow4: 0800000004000000080000000400000008000000
+  - Map: 0
+    Theme: 0
+    BomberSoldierSpawnProbability: 0
+    WaitTimeBeforeSpawnLevel: 0
+    WavesData:
+    - WaitTimeBeforeSpawnWave: 0
+      EnemiesData:
+      - Type: 0
+        Color: 0
+        Health: 100
+        X: 0
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 100
+        X: 0
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 100
+        X: 2
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 100
+        X: 2
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 100
+        X: 4
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 100
+        X: 4
+        YOffset: 0
+        SpawnTime: 1
+    - WaitTimeBeforeSpawnWave: 0
+      EnemiesData:
+      - Type: 0
+        Color: 0
+        Health: 125
+        X: 0
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 125
+        X: 0
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 125
+        X: 1
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 125
+        X: 2
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 125
+        X: 2
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 125
+        X: 3
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 125
+        X: 4
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 125
+        X: 4
+        YOffset: 0
+        SpawnTime: 1
+    - WaitTimeBeforeSpawnWave: 0
+      EnemiesData:
+      - Type: 0
+        Color: 0
+        Health: 150
+        X: 0
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 150
+        X: 0
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 150
+        X: 1
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 150
+        X: 1
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 150
+        X: 2
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 150
+        X: 2
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 150
+        X: 3
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 150
+        X: 3
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 150
+        X: 4
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 150
+        X: 4
+        YOffset: 0
+        SpawnTime: 2
+    - WaitTimeBeforeSpawnWave: 0
+      EnemiesData:
+      - Type: 0
+        Color: 0
+        Health: 175
+        X: 0
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 175
+        X: 0
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 175
+        X: 1
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 175
+        X: 1
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 175
+        X: 1
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 175
+        X: 2
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 175
+        X: 2
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 175
+        X: 3
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 175
+        X: 3
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 175
+        X: 3
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 175
+        X: 4
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 175
+        X: 4
+        YOffset: 0
+        SpawnTime: 1
+    - WaitTimeBeforeSpawnWave: 0
+      EnemiesData:
+      - Type: 0
+        Color: 0
+        Health: 200
+        X: 0
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 200
+        X: 0
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 200
+        X: 0
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 200
+        X: 1
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 200
+        X: 1
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 200
+        X: 1
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 200
+        X: 2
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 200
+        X: 2
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 200
+        X: 2
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 200
+        X: 3
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 200
+        X: 3
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 200
+        X: 3
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 200
+        X: 4
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 200
+        X: 4
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 200
+        X: 4
+        YOffset: 0
+        SpawnTime: 2
     MatrixRow1: 0200000002000000020000000200000002000000
-    MatrixRow2: 0200000002000000020000000200000002000000
-    MatrixRow3: 0200000002000000020000000200000002000000
+    MatrixRow2: 0400000004000000040000000400000004000000
+    MatrixRow3: 0800000008000000080000000800000008000000
     MatrixRow4: 0200000002000000020000000200000002000000
   - Map: 0
+    Theme: 0
+    BomberSoldierSpawnProbability: 0
     WaitTimeBeforeSpawnLevel: 0
     WavesData:
     - WaitTimeBeforeSpawnWave: 0
-      EnemySpawnRate: 0
       EnemiesData:
       - Type: 0
         Color: 0
-        Health: 0
+        Health: 10
         X: 0
-    MatrixRow1: 
-    MatrixRow2: 
-    MatrixRow3: 
-    MatrixRow4: 
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 0
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 0
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 0
+        YOffset: 0
+        SpawnTime: 3
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 0
+        YOffset: 0
+        SpawnTime: 4
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 0
+        YOffset: 0
+        SpawnTime: 5
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 0
+        YOffset: 0
+        SpawnTime: 6
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 0
+        YOffset: 0
+        SpawnTime: 7
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 0
+        YOffset: 0
+        SpawnTime: 8
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 0
+        YOffset: 0
+        SpawnTime: 9
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 1
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 1
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 1
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 1
+        YOffset: 0
+        SpawnTime: 3
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 1
+        YOffset: 0
+        SpawnTime: 4
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 1
+        YOffset: 0
+        SpawnTime: 5
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 1
+        YOffset: 0
+        SpawnTime: 6
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 1
+        YOffset: 0
+        SpawnTime: 7
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 1
+        YOffset: 0
+        SpawnTime: 8
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 1
+        YOffset: 0
+        SpawnTime: 9
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 2
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 2
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 2
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 2
+        YOffset: 0
+        SpawnTime: 3
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 2
+        YOffset: 0
+        SpawnTime: 4
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 2
+        YOffset: 0
+        SpawnTime: 5
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 2
+        YOffset: 0
+        SpawnTime: 6
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 2
+        YOffset: 0
+        SpawnTime: 7
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 2
+        YOffset: 0
+        SpawnTime: 8
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 2
+        YOffset: 0
+        SpawnTime: 9
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 3
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 3
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 3
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 3
+        YOffset: 0
+        SpawnTime: 3
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 3
+        YOffset: 0
+        SpawnTime: 4
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 3
+        YOffset: 0
+        SpawnTime: 5
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 3
+        YOffset: 0
+        SpawnTime: 6
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 3
+        YOffset: 0
+        SpawnTime: 7
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 3
+        YOffset: 0
+        SpawnTime: 8
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 3
+        YOffset: 0
+        SpawnTime: 9
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 4
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 4
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 4
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 4
+        YOffset: 0
+        SpawnTime: 3
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 4
+        YOffset: 0
+        SpawnTime: 4
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 4
+        YOffset: 0
+        SpawnTime: 5
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 4
+        YOffset: 0
+        SpawnTime: 6
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 4
+        YOffset: 0
+        SpawnTime: 7
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 4
+        YOffset: 0
+        SpawnTime: 8
+      - Type: 0
+        Color: 0
+        Health: 10
+        X: 4
+        YOffset: 0
+        SpawnTime: 9
+    - WaitTimeBeforeSpawnWave: 0
+      EnemiesData:
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 0
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 0
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 0
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 0
+        YOffset: 0
+        SpawnTime: 3
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 0
+        YOffset: 0
+        SpawnTime: 4
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 0
+        YOffset: 0
+        SpawnTime: 5
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 0
+        YOffset: 0
+        SpawnTime: 6
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 20
+        YOffset: 0
+        SpawnTime: 7
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 0
+        YOffset: 0
+        SpawnTime: 8
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 0
+        YOffset: 0
+        SpawnTime: 9
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 1
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 1
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 1
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 1
+        YOffset: 0
+        SpawnTime: 3
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 1
+        YOffset: 0
+        SpawnTime: 4
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 1
+        YOffset: 0
+        SpawnTime: 5
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 1
+        YOffset: 0
+        SpawnTime: 6
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 1
+        YOffset: 0
+        SpawnTime: 7
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 1
+        YOffset: 0
+        SpawnTime: 8
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 1
+        YOffset: 0
+        SpawnTime: 9
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 2
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 2
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 2
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 2
+        YOffset: 0
+        SpawnTime: 3
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 2
+        YOffset: 0
+        SpawnTime: 4
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 2
+        YOffset: 0
+        SpawnTime: 5
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 2
+        YOffset: 0
+        SpawnTime: 6
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 2
+        YOffset: 0
+        SpawnTime: 7
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 2
+        YOffset: 0
+        SpawnTime: 8
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 2
+        YOffset: 0
+        SpawnTime: 9
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 3
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 3
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 3
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 3
+        YOffset: 0
+        SpawnTime: 3
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 3
+        YOffset: 0
+        SpawnTime: 4
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 3
+        YOffset: 0
+        SpawnTime: 5
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 3
+        YOffset: 0
+        SpawnTime: 6
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 3
+        YOffset: 0
+        SpawnTime: 7
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 3
+        YOffset: 0
+        SpawnTime: 8
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 3
+        YOffset: 0
+        SpawnTime: 9
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 4
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 4
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 4
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 4
+        YOffset: 0
+        SpawnTime: 3
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 4
+        YOffset: 0
+        SpawnTime: 4
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 4
+        YOffset: 0
+        SpawnTime: 5
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 4
+        YOffset: 0
+        SpawnTime: 6
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 4
+        YOffset: 0
+        SpawnTime: 7
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 4
+        YOffset: 0
+        SpawnTime: 8
+      - Type: 0
+        Color: 0
+        Health: 20
+        X: 4
+        YOffset: 0
+        SpawnTime: 9
+    - WaitTimeBeforeSpawnWave: 0
+      EnemiesData:
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 0
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 0
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 0
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 0
+        YOffset: 0
+        SpawnTime: 3
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 0
+        YOffset: 0
+        SpawnTime: 4
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 0
+        YOffset: 0
+        SpawnTime: 5
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 0
+        YOffset: 0
+        SpawnTime: 6
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 0
+        YOffset: 0
+        SpawnTime: 7
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 0
+        YOffset: 0
+        SpawnTime: 8
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 0
+        YOffset: 0
+        SpawnTime: 9
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 1
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 1
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 1
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 1
+        YOffset: 0
+        SpawnTime: 3
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 1
+        YOffset: 0
+        SpawnTime: 4
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 1
+        YOffset: 0
+        SpawnTime: 5
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 1
+        YOffset: 0
+        SpawnTime: 6
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 1
+        YOffset: 0
+        SpawnTime: 7
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 1
+        YOffset: 0
+        SpawnTime: 8
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 1
+        YOffset: 0
+        SpawnTime: 9
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 2
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 2
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 2
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 2
+        YOffset: 0
+        SpawnTime: 3
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 2
+        YOffset: 0
+        SpawnTime: 4
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 2
+        YOffset: 0
+        SpawnTime: 5
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 2
+        YOffset: 0
+        SpawnTime: 6
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 2
+        YOffset: 0
+        SpawnTime: 7
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 2
+        YOffset: 0
+        SpawnTime: 8
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 2
+        YOffset: 0
+        SpawnTime: 9
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 3
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 3
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 3
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 3
+        YOffset: 0
+        SpawnTime: 3
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 3
+        YOffset: 0
+        SpawnTime: 4
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 3
+        YOffset: 0
+        SpawnTime: 5
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 3
+        YOffset: 0
+        SpawnTime: 6
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 3
+        YOffset: 0
+        SpawnTime: 7
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 3
+        YOffset: 0
+        SpawnTime: 8
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 3
+        YOffset: 0
+        SpawnTime: 9
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 4
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 4
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 4
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 4
+        YOffset: 0
+        SpawnTime: 3
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 4
+        YOffset: 0
+        SpawnTime: 4
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 4
+        YOffset: 0
+        SpawnTime: 5
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 4
+        YOffset: 0
+        SpawnTime: 6
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 4
+        YOffset: 0
+        SpawnTime: 7
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 4
+        YOffset: 0
+        SpawnTime: 8
+      - Type: 0
+        Color: 0
+        Health: 40
+        X: 4
+        YOffset: 0
+        SpawnTime: 9
+    - WaitTimeBeforeSpawnWave: 0
+      EnemiesData:
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 0
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 0
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 0
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 0
+        YOffset: 0
+        SpawnTime: 3
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 0
+        YOffset: 0
+        SpawnTime: 4
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 0
+        YOffset: 0
+        SpawnTime: 5
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 0
+        YOffset: 0
+        SpawnTime: 6
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 0
+        YOffset: 0
+        SpawnTime: 7
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 0
+        YOffset: 0
+        SpawnTime: 8
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 0
+        YOffset: 0
+        SpawnTime: 9
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 1
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 1
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 1
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 1
+        YOffset: 0
+        SpawnTime: 3
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 1
+        YOffset: 0
+        SpawnTime: 4
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 1
+        YOffset: 0
+        SpawnTime: 5
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 1
+        YOffset: 0
+        SpawnTime: 6
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 1
+        YOffset: 0
+        SpawnTime: 7
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 1
+        YOffset: 0
+        SpawnTime: 8
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 1
+        YOffset: 0
+        SpawnTime: 9
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 2
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 2
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 2
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 2
+        YOffset: 0
+        SpawnTime: 3
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 2
+        YOffset: 0
+        SpawnTime: 4
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 2
+        YOffset: 0
+        SpawnTime: 5
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 2
+        YOffset: 0
+        SpawnTime: 6
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 2
+        YOffset: 0
+        SpawnTime: 7
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 2
+        YOffset: 0
+        SpawnTime: 8
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 2
+        YOffset: 0
+        SpawnTime: 9
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 3
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 3
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 3
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 3
+        YOffset: 0
+        SpawnTime: 3
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 3
+        YOffset: 0
+        SpawnTime: 4
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 3
+        YOffset: 0
+        SpawnTime: 5
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 3
+        YOffset: 0
+        SpawnTime: 6
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 3
+        YOffset: 0
+        SpawnTime: 7
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 3
+        YOffset: 0
+        SpawnTime: 8
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 3
+        YOffset: 0
+        SpawnTime: 9
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 4
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 4
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 4
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 4
+        YOffset: 0
+        SpawnTime: 3
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 4
+        YOffset: 0
+        SpawnTime: 4
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 4
+        YOffset: 0
+        SpawnTime: 5
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 4
+        YOffset: 0
+        SpawnTime: 6
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 4
+        YOffset: 0
+        SpawnTime: 7
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 4
+        YOffset: 0
+        SpawnTime: 8
+      - Type: 0
+        Color: 0
+        Health: 60
+        X: 4
+        YOffset: 0
+        SpawnTime: 9
+    - WaitTimeBeforeSpawnWave: 0
+      EnemiesData:
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 0
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 0
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 0
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 0
+        YOffset: 0
+        SpawnTime: 3
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 0
+        YOffset: 0
+        SpawnTime: 4
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 0
+        YOffset: 0
+        SpawnTime: 5
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 0
+        YOffset: 0
+        SpawnTime: 6
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 0
+        YOffset: 0
+        SpawnTime: 7
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 0
+        YOffset: 0
+        SpawnTime: 8
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 0
+        YOffset: 0
+        SpawnTime: 9
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 1
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 1
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 1
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 1
+        YOffset: 0
+        SpawnTime: 3
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 1
+        YOffset: 0
+        SpawnTime: 4
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 1
+        YOffset: 0
+        SpawnTime: 5
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 1
+        YOffset: 0
+        SpawnTime: 6
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 1
+        YOffset: 0
+        SpawnTime: 7
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 1
+        YOffset: 0
+        SpawnTime: 8
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 1
+        YOffset: 0
+        SpawnTime: 9
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 2
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 2
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 2
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 2
+        YOffset: 0
+        SpawnTime: 3
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 2
+        YOffset: 0
+        SpawnTime: 4
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 2
+        YOffset: 0
+        SpawnTime: 5
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 2
+        YOffset: 0
+        SpawnTime: 6
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 2
+        YOffset: 0
+        SpawnTime: 7
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 2
+        YOffset: 0
+        SpawnTime: 8
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 2
+        YOffset: 0
+        SpawnTime: 9
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 3
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 3
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 3
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 3
+        YOffset: 0
+        SpawnTime: 3
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 3
+        YOffset: 0
+        SpawnTime: 4
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 3
+        YOffset: 0
+        SpawnTime: 5
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 3
+        YOffset: 0
+        SpawnTime: 6
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 3
+        YOffset: 0
+        SpawnTime: 7
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 3
+        YOffset: 0
+        SpawnTime: 8
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 3
+        YOffset: 0
+        SpawnTime: 9
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 4
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 4
+        YOffset: 0
+        SpawnTime: 1
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 4
+        YOffset: 0
+        SpawnTime: 2
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 4
+        YOffset: 0
+        SpawnTime: 3
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 4
+        YOffset: 0
+        SpawnTime: 4
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 4
+        YOffset: 0
+        SpawnTime: 5
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 4
+        YOffset: 0
+        SpawnTime: 6
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 4
+        YOffset: 0
+        SpawnTime: 7
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 4
+        YOffset: 0
+        SpawnTime: 8
+      - Type: 0
+        Color: 0
+        Health: 70
+        X: 4
+        YOffset: 0
+        SpawnTime: 9
+    MatrixRow1: 0200000004000000080000000400000002000000
+    MatrixRow2: 0200000004000000080000000400000002000000
+    MatrixRow3: 0200000004000000080000000400000002000000
+    MatrixRow4: 0200000004000000080000000400000002000000
+  - Map: 0
+    Theme: 0
+    BomberSoldierSpawnProbability: 0
+    WaitTimeBeforeSpawnLevel: 0
+    WavesData: []
+    MatrixRow1: 0000000000000000000000000000000000000000
+    MatrixRow2: 0000000000000000000000000000000000000000
+    MatrixRow3: 0000000000000000000000000000000000000000
+    MatrixRow4: 0000000000000000000000000000000000000000

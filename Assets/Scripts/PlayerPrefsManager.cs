@@ -14,6 +14,20 @@ public class PlayerPrefsManager
             return result;
         }
     }
+
+    public static int Coin
+    {
+        set
+        {
+            PlayerPrefs.SetInt(CoinSaveAddress, value);
+        }
+        get
+        {
+            int result = PlayerPrefs.GetInt(CoinSaveAddress, 0);
+            return result;
+        }
+    }
     
     private const string LevelSaveAddress = "Level";
+    private const string CoinSaveAddress = "Coin";
 }

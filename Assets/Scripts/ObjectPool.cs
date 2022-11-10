@@ -32,11 +32,7 @@ public class ObjectPool : MonoBehaviour
             obj = Instantiate(prefab).transform;
         }
         
-        if (parent != null) {
-            obj.SetParent(parent);
-        } else {
-            obj.SetParent(transform);
-        }
+        obj.SetParent(parent);
 
         ObjectPoolRefrence poolRefrence = obj.gameObject.GetComponent<ObjectPoolRefrence>();
         if (poolRefrence == null)

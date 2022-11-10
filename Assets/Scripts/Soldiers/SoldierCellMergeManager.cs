@@ -15,17 +15,20 @@ public class SoldierCellMergeManager : MonoBehaviour
     }
     private static SoldierCellMergeManager _instance;
 
+    [SerializeField] private Transform[] soldierBases;
     [SerializeField] private LineRenderer connectingLine;
     [SerializeField] private Transform soldiersCellContainer;
+    [SerializeField] private Transform enteredEnemiesContainer;
     [SerializeField] public ObjectPool NormalSoldierPool;
     [SerializeField] public ObjectPool BomberSoldierPool;
     [SerializeField] private TextMeshProUGUI sumOfValuesText;
+    [SerializeField] private float connectionCooldown = 5;
 
     private List<List<SoldierCell>> cells;
     private List<SoldierCell> connectedCells = new List<SoldierCell>();
     private int currentCellValue, currentSumOfValues;
     private bool isConnecting = false;
-    private GameObject sumOfValuesUI;
+    private bool canConnect = true;
 
     void Awake()
     {
@@ -37,7 +40,6 @@ public class SoldierCellMergeManager : MonoBehaviour
 
     void Start()
     {
-        sumOfValuesUI = sumOfValuesText.transform.parent.gameObject;
         Init();
     }
 
@@ -67,10 +69,10 @@ public class SoldierCellMergeManager : MonoBehaviour
             {
                 SoldierCell cell = soldiersCellContainer.GetChild(childIndex).GetComponent<SoldierCell>();
                 cell.transform.name = "Cell " + row + " " + column;
-                cell.transform.localPosition = new Vector3(column + -2f, 0.1f, row + -1.5f);
-                cell.Init(row == 3, GameManager.Instance.CurrentLevelData.GetCellNumber(column, 3-row), SoldierType.Normal);
+                cell.transform.localPosition = new Vector3(column, 0.065f, row);
+                int cellNumber = GameManager.Instance.CurrentLevelData.GetCellNumber(column, 3 - row);
+                cell.Init(column, row, row == 3, cellNumber, (cellNumber>0?SoldierType.Normal:SoldierType.Bomber));
                 cells[row].Add(cell);
-
                 childIndex++;
             }
         }
@@ -78,19 +80,25 @@ public class SoldierCellMergeManager : MonoBehaviour
 
     public void StartConnecting(SoldierCell cell)
     {
-        isConnecting = true;
-        int newCellValue = cell.currentSoldier.ValueNumber;
-        currentCellValue = newCellValue;
-        currentSumOfValues = newCellValue;
-        UpdateSumOfValuesUI(Mathf.ClosestPowerOfTwo(currentSumOfValues));
-        connectedCells.Add(cell);
-        connectingLine.positionCount = 2;
-        Vector3 cellPosition = cell.transform.position;
-        SetLineRendererPosition(0, cellPosition);
+        if (canConnect && GameManager.Instance.insideEnemies.Count == 0)
+        {
+	        isConnecting = true;
+	        int newCellValue = cell.currentSoldier.ValueNumber;
+	        currentCellValue = newCellValue;
+	        currentSumOfValues = newCellValue;
+	        //UpdateSumOfValuesUI(Mathf.ClosestPowerOfTwo(currentSumOfValues));
+	        connectedCells.Add(cell);
+	        connectingLine.positionCount = 2;
+	        Vector3 cellPosition = cell.transform.position;
+	        SetLineRendererPosition(0, cellPosition);
+    	}
     }
 
     public void ConnectCell(SoldierCell cell) {
-        if (isConnecting)
+        if (GameManager.Instance.insideEnemies.Count > 0) {
+            CancelConnecting();
+        }
+        else if (isConnecting)
         {
             int tempCount = connectedCells.Count;
             Vector3 newPoint = cell.transform.position;
@@ -99,7 +107,7 @@ public class SoldierCellMergeManager : MonoBehaviour
                 if (tempCount > 1 && connectedCells[tempCount - 2] == cell)
                 {
                     currentSumOfValues -= connectedCells[tempCount - 1].currentSoldier.ValueNumber;
-                    UpdateSumOfValuesUI(Mathf.ClosestPowerOfTwo(currentSumOfValues));
+                    //UpdateSumOfValuesUI(Mathf.ClosestPowerOfTwo(currentSumOfValues));
                     currentCellValue = cell.currentSoldier.ValueNumber;
                     connectingLine.positionCount--;
                     connectedCells.RemoveAt(tempCount - 1);
@@ -113,11 +121,11 @@ public class SoldierCellMergeManager : MonoBehaviour
                 if (Mathf.Abs(newPoint.x - lastPoint.x) <= 1 && Mathf.Abs(newPoint.z - lastPoint.z) <= 1)
                 {
                     int newCellValue = cell.currentSoldier.ValueNumber;
-                    if (CorrectConnection(newCellValue))
+                    if (IsCorrectConnection(newCellValue))
                     {
                         currentCellValue = newCellValue;
                         currentSumOfValues += newCellValue;
-                        UpdateSumOfValuesUI(Mathf.ClosestPowerOfTwo(currentSumOfValues));
+                        //UpdateSumOfValuesUI(Mathf.ClosestPowerOfTwo(currentSumOfValues));
                         SetLineRendererPosition(tempCount, newPoint);
                         connectedCells.Add(cell);
                         connectingLine.positionCount++;
@@ -127,7 +135,7 @@ public class SoldierCellMergeManager : MonoBehaviour
         }
     }
 
-    private bool CorrectConnection(int newCellValue)
+    private bool IsCorrectConnection(int newCellValue)
     {
         if (connectedCells.Count < 2 && newCellValue == currentCellValue)
             return true;
@@ -139,62 +147,87 @@ public class SoldierCellMergeManager : MonoBehaviour
 
     public void FinishedConnecting()
     {
-        connectingLine.positionCount = 0;
-        for (int i = 0; i < connectedCells.Count - 1; i++)
-            connectedCells[i].ClearCell();
+        if (GameManager.Instance.insideEnemies.Count > 0)
+        {
+            CancelConnecting();
+        }
+        else
+        {
+            int tempCount = connectedCells.Count;
+            if (tempCount >= 2)
+                StartCoroutine(PutConnectionOnCooldown_CO());
 
-        currentSumOfValues = Mathf.ClosestPowerOfTwo(currentSumOfValues);
-        UpdateSumOfValuesUI(0);
-        connectedCells[connectedCells.Count - 1].currentSoldier.ValueNumber = currentSumOfValues;
-        ShiftSoldiers(cells);
-        connectedCells.Clear();
-        isConnecting = false;
+            for (int i = 0; i < tempCount - 1; i++)
+                connectedCells[i].ClearCell();
+
+            currentSumOfValues = Mathf.ClosestPowerOfTwo(currentSumOfValues);
+            connectedCells[tempCount - 1].currentSoldier.ValueNumber = currentSumOfValues;
+            ShiftSoldiers();
+            CancelConnecting();
+        }
     }
 
-    private void ShiftSoldiers(List<List<SoldierCell>> cellCol)
+    public void ShiftSoldiers()
     {
         int emptyLenght;
         for (int column = 0; column < cells[0].Count; column++)
         {
             emptyLenght = 0;
-            for (int row = cellCol.Count - 1; row >= 0; row--)
+            for (int row = cells.Count - 1; row >= 0; row--)
             {
-                if (cellCol[row][column].IsFull)
+                if (cells[row][column].IsFull)
                 {
                     if (emptyLenght > 0)
-                        cellCol[row][column].currentSoldier.MoveSoldierToAnotherCell(cellCol[row + emptyLenght][column]);
+                    {
+                        cells[row][column].currentSoldier.MoveSoldierToAnotherCell(cells[row + emptyLenght][column]);
+                    }
                 }
                 else
+                {
                     emptyLenght++;
+                }
             }
             GenerateSoldier(cells, column, emptyLenght);
         }
-    }
-
-    private void UpdateSumOfValuesUI(int value) {
-        if(value > 0)
-        {
-            sumOfValuesText.text = value.ToString();
-            sumOfValuesUI.SetActive(true);
-        }else
-            sumOfValuesUI.SetActive(false);
     }
 
     private async Task GenerateSoldier(List<List<SoldierCell>> columnCells,int currentColumn,int emptyCells)
     {
         for (int k = emptyCells - 1; k >= 0; k--)
         {
-            bool spawnBomber = false;
-            
-            
+            bool spawnBomber = Random.Range(0f, 1f)<GameManager.Instance.CurrentLevelData.BomberSoldierSpawnProbability;
             Soldier tempSoldier = (spawnBomber?BomberSoldierPool:NormalSoldierPool).Spawn(transform).GetComponent<Soldier>();
             tempSoldier.Type = spawnBomber ? SoldierType.Bomber : SoldierType.Normal;
             tempSoldier.transform.localPosition = new Vector3(-2 + currentColumn, 0, -2.5f);
             tempSoldier.ValueNumber = (int) Mathf.Pow(2, Utils.GetRandomPower(1, 6));
-            tempSoldier.Type = SoldierType.Normal;
+            tempSoldier.IsShooter = false;
+            tempSoldier.Init();
             tempSoldier.MoveSoldierToAnotherCell(columnCells[k][currentColumn]);
             await Task.Delay(1000);
         }  
+    }
+
+    private void CancelConnecting()
+    {
+        connectingLine.positionCount = 0;
+        //UpdateSumOfValuesUI(0);
+        connectedCells.Clear();
+        isConnecting = false;
+    }
+
+    private IEnumerator PutConnectionOnCooldown_CO() {
+        float counter = 0.0f;
+        canConnect = false;
+        UIManager.Instance.TriggerTimerAnim("StartTimer");
+        while (counter < connectionCooldown)
+        {
+            UIManager.Instance.UpdateTimerNumber(connectionCooldown - counter);
+            counter += Time.deltaTime;
+            yield return null;
+        }
+        UIManager.Instance.UpdateTimerNumber(0);
+        UIManager.Instance.TriggerTimerAnim("EndTimer");
+        canConnect = true;
     }
 
     private Vector3 GetPointerPosition()
@@ -231,5 +264,35 @@ public class SoldierCellMergeManager : MonoBehaviour
     public Vector3 GetLastLineRendererPosition()
     {
         return GetLineRendererPosition(connectingLine.positionCount-1);
+    }
+
+    public SoldierCell GetFirstCellInTheWay(Enemy enemy)
+    {
+        //Transform tempTransformParent = enemy.transform.parent;
+        enemy.transform.parent = enteredEnemiesContainer;
+        int x = Mathf.Clamp(Mathf.RoundToInt(enemy.transform.localPosition.x), 0, 4);
+        int z = Mathf.Clamp(Mathf.FloorToInt(enemy.transform.localPosition.z),0 , 3);
+
+        while (!cells[z][x].IsFull && z>0)
+        {
+            z = z - 1;
+        }
+        
+        if (cells[z][x].IsFull)
+        {
+            return cells[z][x];
+        }
+        else
+        {
+            return null;
+        }
+    }
+    
+    public Vector3 GetEnemyBaseInTheWay(Enemy enemy)
+    {
+        //Transform tempTransformParent = enemy.transform.parent;
+        enemy.transform.parent = enteredEnemiesContainer;
+        int x = Mathf.Clamp(Mathf.RoundToInt(enemy.transform.localPosition.x), 0, 4);
+        return soldierBases[x].position;
     }
 }

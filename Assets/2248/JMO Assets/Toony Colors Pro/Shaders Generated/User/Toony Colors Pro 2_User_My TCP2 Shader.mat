@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Toony Colors Pro 2_User_My TCP2 Shader
+  m_Shader: {fileID: 4800000, guid: 5c0e4862c1b85754ba94403df6ef6287, type: 3}
+  m_ShaderKeywords: TCP2_COLORS_AS_NORMALS
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 75a0e1078985aaa4fa4607f0e5067afa, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Emission1:
+        m_Texture: {fileID: 2800000, guid: 1a57df299ddb2d24680f68aca389602a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 9a50d62a8ae6643499f100ef4a37fbf6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _OutlineWidth: 0.1
+    - _RampSmoothing: 0.799
+    - _RampThreshold: 0.381
+    - _SpecularToonSize: 0.25
+    - _SpecularToonSmoothness: 0.05
+    - __dummy__: 0
+    - __outline_gui_dummy__: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Emission: {r: 16, g: 16, b: 16, a: 1}
+    - _HColor: {r: 0.75, g: 0.75, b: 0.75, a: 1}
+    - _OutlineColorVertex: {r: 0, g: 0, b: 0, a: 1}
+    - _SColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _SpecularColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_BuildTextureStacks: []

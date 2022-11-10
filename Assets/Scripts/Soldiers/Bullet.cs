@@ -4,12 +4,42 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    [SerializeField] private MeshRenderer thisMesh;
+
     private float damage;
     private Rigidbody thisRigid;
+    private Transform target;
+
+    public Color BulletColor
+    {
+        set
+        {
+            thisMesh.material.color = value;
+        }
+        get
+        {
+            return thisMesh.material.color;
+        }
+    }
 
     private void Start()
     {
         thisRigid = GetComponent<Rigidbody>();
+    }
+
+    private void Update()
+    {
+        if (target != null && target.gameObject.activeInHierarchy)
+        {
+            Vector3 targetPos = target.position;
+            targetPos.y = Database.GameConfiguration.BulletOffsetFromGround;
+            thisRigid.velocity = (targetPos - transform.position).normalized * Database.GameConfiguration.BulletSpeed;
+        }
+        else
+        {
+            thisRigid.velocity = Vector3.zero;
+            ObjectPool.DeSpawn(gameObject);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -23,10 +53,17 @@ public class Bullet : MonoBehaviour
         this.damage = damage;
     }
 
+    public void SetTarget(Transform target)
+    {
+        this.target = target;
+    }
+
     private void HitEnemy(Enemy enemy)
     {
         enemy.TakeDamage(damage);
         thisRigid.velocity = Vector3.zero;
+        ParticleManager.Instance.PlayParticle(Particle_Type.BulletHit, transform.position, transform.forward, enemy.transform);
+        DamageUIManager.Instance.ShowDamageUI(enemy.transform, damage, BulletColor);
         ObjectPool.DeSpawn(gameObject);
     }
 

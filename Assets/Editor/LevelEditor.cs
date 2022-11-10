@@ -2,6 +2,7 @@ using log4net.Core;
 using Sirenix.OdinInspector;
 using Sirenix.OdinInspector.Editor;
 using Sirenix.Utilities;
+using UnityEditor;
 using UnityEngine;
 
 public class LevelEditor : OdinEditorWindow
@@ -37,6 +38,7 @@ public class LevelEditor : OdinEditorWindow
         {
             Database.LevelsConfiguration.LevelsData[LevelIndex] = Data;
             Database.LevelsConfiguration.LevelsData[LevelIndex].SetMatrix(Matrix);
+            EditorUtility.SetDirty(Database.LevelsConfiguration);
         }
     }
     
