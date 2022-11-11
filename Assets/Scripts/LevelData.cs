@@ -5,11 +5,12 @@ using UnityEngine;
 [System.Serializable]
 public class LevelData
 {
-    [Range(0, 100)]
+    [Range(1, 8)]
     public int Map;
 
     public MapTheme Theme;
-
+    public int MinSoldierPower = 1;
+    public int MaxSoldierPower = 6;
     public float BomberSoldierSpawnProbability = 0f;
     public float WaitTimeBeforeSpawnLevel;
     [ListDrawerSettings(ShowPaging = true, NumberOfItemsPerPage = 1, Expanded = true)]

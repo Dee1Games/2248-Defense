@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
@@ -40,6 +41,16 @@ public class Enemy : MonoBehaviour
 
     public delegate void DiengInside(Enemy enemy);
     public DiengInside OnDiedInside;
+    
+    void OnEnable()
+    {
+        GameManager.Instance.OnEnemyReachedSildierbase += GoIdle;
+    }
+    
+    void OnDisable()
+    {
+        GameManager.Instance.OnEnemyReachedSildierbase -= GoIdle;
+    }
 
     public void Init(EnemyData data)
     {
@@ -132,12 +143,16 @@ public class Enemy : MonoBehaviour
                 animator.speed = 1f;
                 ParticleManager.Instance.PlayParticle(Particle_Type.SimpleZDeath, transform.position, Vector3.up);
                 ObjectPool.DeSpawn(gameObject);
+                GameManager.Instance.CheckIfAllZombiesDied();
                 break;
         }
     }
 
     private void GoAttack()
     {
+        if (!GameManager.Instance.IsInPlayMode)
+            return;
+        
         SetState(EnemyState.Running);
         attackingCell = SoldierCellMergeManager.Instance.GetFirstCellInTheWay(this);
         if (attackingCell != null)
@@ -154,8 +169,10 @@ public class Enemy : MonoBehaviour
 
     private void ArrivedAtDestination()
     {
-        if (!InMove)
+        if (!InMove || !GameManager.Instance.IsInPlayMode)
             return;
+        
+        InMove = false;
         
         if (!enteredSoldierArea)
         {
@@ -166,29 +183,37 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            if (State != EnemyState.Attacking)
-            {
-                SetState(EnemyState.Attacking);
-            }
+            StartCoroutine(SetStateToAttack());
         }
-        
-        InMove = false;
+    }
+
+    private IEnumerator SetStateToAttack()
+    {
+        while (attackingCell!=null && !attackingCell.IsFull && SoldierCellMergeManager.Instance.IsShifting)
+        {
+            SetState(EnemyState.Idle);
+            yield return new WaitForEndOfFrame();
+        }
+        if (State != EnemyState.Attacking)
+        {
+            SetState(EnemyState.Attacking);
+        }
     }
 
     public void AttackCell()
     {
+        if (!GameManager.Instance.IsInPlayMode)
+            return;
+        
         if (destinationIsBase)
         {
-            if(UIManager.Instance.State != UIState.Defeat)
-                UIManager.Instance.State = UIState.Defeat;
+            GameManager.Instance.OnEnemyReachedSildierbase.Invoke();
         }
-        else
-           if (attackingCell != null && !InMove)
+        else if (attackingCell != null && !InMove)
         {
              if (attackingCell.IsFull)
             {
                 attackingCell.GettingHit();
-                CheckCellAttackResult();
             }
         }
     }
@@ -203,8 +228,12 @@ public class Enemy : MonoBehaviour
             }
         } else if (attackingCell == null)
         {
-            SetDestination(transform.position);
-            SetState(EnemyState.Idle);
+            GoIdle();
         }
+    }
+
+    private void GoIdle()
+    {
+        SetState(EnemyState.Idle);
     }
 }

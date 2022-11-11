@@ -22,9 +22,6 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private List<GameObject> themes;
     [SerializeField] private Transform spawnPos;
 
-    private int currentLevelIndex;
-    private int currentWaveIndex;
-
     void Awake()
     {
         if (_instance == null)
@@ -33,13 +30,17 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
-    public void StartSpawningLevel(int levelIndex)
+    public void StartSpawningCurrentLevel()
     {
-        currentLevelIndex = levelIndex;
         StartCoroutine(SpawnCurrentLevel());
     }
 
-    private IEnumerator SpawnCurrentLevel()
+    public void StartSpawningCurrentWave()
+    {
+        StartCoroutine(SpawnCurrentWave());
+    }
+
+    public void InitCurrentLevel()
     {
         foreach (Map map in maps)
         {
@@ -50,11 +51,15 @@ public class SpawnManager : MonoBehaviour
             theme.SetActive(false);
         }
         
-        currentWaveIndex = 0;
-        LevelData levelData = Database.LevelsConfiguration.LevelsData[currentLevelIndex];
-        maps[levelData.Map].gameObject.SetActive(true);
-        maps[levelData.Map].ActivateMapTheme(levelData.Theme);
+        LevelData levelData = GameManager.Instance.CurrentLevelData;
+        maps[levelData.Map-1].gameObject.SetActive(true);
+        maps[levelData.Map-1].ActivateMapTheme(levelData.Theme);
         themes[(int)levelData.Theme].SetActive(true);
+    }
+
+    private IEnumerator SpawnCurrentLevel()
+    {
+        LevelData levelData = GameManager.Instance.CurrentLevelData;
         yield return new WaitForSeconds(levelData.WaitTimeBeforeSpawnLevel);
         StartCoroutine(SpawnCurrentWave());
     }
@@ -66,7 +71,7 @@ public class SpawnManager : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
         
-        WaveData waveData = Database.LevelsConfiguration.LevelsData[currentLevelIndex].WavesData[currentWaveIndex];
+        WaveData waveData = GameManager.Instance.CurrentWaveData;
         yield return new WaitForSeconds(waveData.WaitTimeBeforeSpawnWave);
         int spawnedEnemiesCount = 0;
         List<EnemyData> enemiesToSpawn = new List<EnemyData>(waveData.EnemiesData.Count);
@@ -87,27 +92,6 @@ public class SpawnManager : MonoBehaviour
                 SpawnEnemy(enemiesToSpawn[spawnedEnemiesCount]);
                 spawnedEnemiesCount++;
             }
-        }
-
-        if (currentWaveIndex+1 < Database.LevelsConfiguration.LevelsData[currentLevelIndex].WavesData.Count)
-        {
-            currentWaveIndex++;
-            StartCoroutine(SpawnCurrentWave());
-        }
-        else
-        {
-            if (currentLevelIndex+1 < Database.LevelsConfiguration.LevelsData.Count)
-            {
-                currentLevelIndex++;
-                currentWaveIndex=0;
-            }
-            else
-            {
-                currentLevelIndex=0;
-                currentWaveIndex=0;
-            }
-            PlayerPrefsManager.Level = currentLevelIndex;
-            StartCoroutine(SpawnCurrentLevel());
         }
     }
 

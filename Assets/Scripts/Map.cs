@@ -12,6 +12,6 @@ public class Map : MonoBehaviour
         {
             mapThemes[i].SetActive(false);
         }
-        mapThemes[(int)theme].SetActive(false);
+        mapThemes[(int)theme].SetActive(true);
     }
 }

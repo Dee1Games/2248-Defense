@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     
     private static GameManager _instance;
 
-    public Action OnNewEnemySpawned , OnEnemyEntered;
+    public Action OnNewEnemySpawned, OnEnemyEntered, OnEnemyReachedSildierbase;
 
     public int CurrentLevelIndex
     {
@@ -23,11 +23,7 @@ public class GameManager : MonoBehaviour
         get;
     }
 
-    public int CurrentWaveIndex
-    {
-        private set;
-        get;
-    }
+    public int CurrentWaveIndex;
 
     private int currentKills = 0;
 
@@ -36,12 +32,18 @@ public class GameManager : MonoBehaviour
         set
         {
             currentKills = value;
-            UIManager.Instance.State = UIState.InGame;
+            UIManager.Instance.Refresh();
         }
         get
         {
             return currentKills;
         }
+    }
+
+    public bool IsInPlayMode
+    {
+        private set;
+        get;
     }
 
     [HideInInspector] public List<Enemy> outsideEnemies = new List<Enemy>();
@@ -59,16 +61,85 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void OnEnable()
+    {
+        OnEnemyReachedSildierbase += EnemyReachedSoldierBase;
+    }
+    
+    void OnDisable()
+    {
+        OnEnemyReachedSildierbase -= EnemyReachedSoldierBase;
+    }
+
     void Start()
     {
         Init();
     }
-
+    
     void Init()
     {
         CurrentLevelIndex = PlayerPrefsManager.Level;
         CurrentWaveIndex = 0;
-        SpawnManager.Instance.StartSpawningLevel(CurrentLevelIndex);
+        InitCurrentLevel();
+        UIManager.Instance.State = UIState.MainMenu;
+    }
+
+    public void InitCurrentLevel()
+    {
+        IsInPlayMode = false;
+        SoldierCellMergeManager.Instance.Init();
+
+        foreach (var enemy in insideEnemies)
+        {
+            Destroy(enemy.gameObject);
+        }
+        foreach (var enemy in outsideEnemies)
+        {
+            Destroy(enemy.gameObject);
+        }
+        
+        insideEnemies.Clear();
+        outsideEnemies.Clear();
+        SpawnManager.Instance.InitCurrentLevel();
+    }
+
+    public void StartCurrentLevel()
+    {
+        InitCurrentLevel();
+        IsInPlayMode = true;
+        CurrentKills = 0;
+        UIManager.Instance.State = UIState.InGame;
+        SoldierCellMergeManager.Instance.Init();
+        SpawnManager.Instance.StartSpawningCurrentLevel();
+    }
+
+    private void EnemyReachedSoldierBase()
+    {
+        UIManager.Instance.State = UIState.Defeat;
+        IsInPlayMode = false;
+    }
+
+    public void CurrentLevelEnded()
+    {
+        SoldierCellMergeManager.Instance.CancelConnecting();
+        UIManager.Instance.State = UIState.Victory;
+        if (CurrentLevelIndex+1 < Database.LevelsConfiguration.LevelsData.Count)
+        {
+            CurrentLevelIndex++;
+            CurrentWaveIndex=0;
+        }
+        else
+        {
+            CurrentLevelIndex=0;
+            CurrentWaveIndex=0;
+        }
+        PlayerPrefsManager.Level = CurrentLevelIndex;
+    }
+    
+    public void CurrentWaveEnded()
+    {
+        GameManager.Instance.CurrentWaveIndex++;
+        SpawnManager.Instance.StartSpawningCurrentWave();
     }
 
     public Enemy GetClosestEnemyTo(Vector3 pos)
@@ -111,5 +182,20 @@ public class GameManager : MonoBehaviour
     {
         if (insideEnemies.Count == 0)
             SoldierCellMergeManager.Instance.ShiftSoldiers();
+    }
+    
+    public void CheckIfAllZombiesDied()
+    {
+        if (insideEnemies.Count == 0 && outsideEnemies.Count == 0)
+        {
+            if (CurrentWaveIndex == CurrentLevelData.WavesData.Count - 1)
+            {
+                CurrentLevelEnded();
+            }
+            else
+            {
+                CurrentWaveEnded();
+            }
+        }
     }
 }

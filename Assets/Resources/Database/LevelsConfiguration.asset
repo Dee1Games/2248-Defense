@@ -13,23 +13,37 @@ MonoBehaviour:
   m_Name: LevelsConfiguration
   m_EditorClassIdentifier: 
   LevelsData:
-  - Map: 0
-    Theme: 1
+  - Map: 7
+    Theme: 0
+    MinSoldierPower: 1
+    MaxSoldierPower: 6
     BomberSoldierSpawnProbability: 0
-    WaitTimeBeforeSpawnLevel: 0
+    WaitTimeBeforeSpawnLevel: 2
     WavesData:
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 0
-        Color: 3
-        Health: 100
+        Color: 0
+        Health: 800
         X: 0
         YOffset: 0
         SpawnTime: 0
       - Type: 0
         Color: 0
         Health: 100
+        X: 1
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 100
         X: 2
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 0
+        Color: 0
+        Health: 100
+        X: 3
         YOffset: 0
         SpawnTime: 0
       - Type: 0
@@ -42,192 +56,20 @@ MonoBehaviour:
       EnemiesData:
       - Type: 0
         Color: 0
-        Health: 60
+        Health: 50
         X: 0
         YOffset: 0
         SpawnTime: 0
-      - Type: 0
-        Color: 0
-        Health: 60
-        X: 3
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Color: 0
-        Health: 60
-        X: 4
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Color: 0
-        Health: 60
-        X: 2
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Color: 0
-        Health: 80
-        X: 0
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Color: 0
-        Health: 80
-        X: 0
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Color: 0
-        Health: 80
-        X: 4
-        YOffset: 0
-        SpawnTime: 3.5
-      - Type: 0
-        Color: 0
-        Health: 70
-        X: 4
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Color: 0
-        Health: 80
-        X: 3
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Color: 0
-        Health: 60
-        X: 0
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Color: 0
-        Health: 70
-        X: 2
-        YOffset: 0
-        SpawnTime: 6
-    - WaitTimeBeforeSpawnWave: 5
-      EnemiesData:
-      - Type: 1
-        Color: 4
-        Health: 1000
-        X: 2
-        YOffset: 0
-        SpawnTime: 0
-    - WaitTimeBeforeSpawnWave: 5
-      EnemiesData:
-      - Type: 0
-        Color: 2
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Color: 2
-        Health: 100
-        X: 1
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Color: 2
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Color: 2
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Color: 2
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Color: 2
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Color: 2
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Color: 2
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Color: 2
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 8
-    - WaitTimeBeforeSpawnWave: 5
-      EnemiesData:
-      - Type: 1
-        Color: 5
-        Health: 1000
-        X: 3
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 1
-        Color: 5
-        Health: 1000
-        X: 4
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Color: 0
-        Health: 30
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Color: 0
-        Health: 30
-        X: 1
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Color: 0
-        Health: 30
-        X: 2
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Color: 0
-        Health: 30
-        X: 3
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Color: 0
-        Health: 30
-        X: 4
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Color: 0
-        Health: 30
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-    MatrixRow1: 0200000002000000040000000800000004000000
+    MatrixRow1: 0200000002000000040000000008000000040000
     MatrixRow2: 0200000004000000020000000200000004000000
-    MatrixRow3: 0400000002000000020000000200000008000000
-    MatrixRow4: 0400000008000000020000000200000002000000
+    MatrixRow3: 0200000002000000020000000200000008000000
+    MatrixRow4: 0200000008000000020000000200000002000000
   - Map: 0
     Theme: 0
+    MinSoldierPower: 1
+    MaxSoldierPower: 6
     BomberSoldierSpawnProbability: 0.1
-    WaitTimeBeforeSpawnLevel: 0
+    WaitTimeBeforeSpawnLevel: 2
     WavesData:
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
@@ -237,144 +79,12 @@ MonoBehaviour:
         X: 0
         YOffset: 0
         SpawnTime: 0
-      - Type: 0
-        Color: 0
-        Health: 100
-        X: 1
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Color: 0
-        Health: 100
-        X: 2
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Color: 0
-        Health: 100
-        X: 3
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Color: 0
-        Health: 100
-        X: 4
-        YOffset: 0
-        SpawnTime: 0
-    - WaitTimeBeforeSpawnWave: 6
-      EnemiesData:
-      - Type: 0
-        Color: 0
-        Health: 200
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Color: 0
-        Health: 200
-        X: 2
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Color: 0
-        Health: 200
-        X: 4
-        YOffset: 0
-        SpawnTime: 0
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 0
         Color: 0
         Health: 100
         X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Color: 0
-        Health: 100
-        X: 2
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Color: 0
-        Health: 100
-        X: 4
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Color: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Color: 0
-        Health: 100
-        X: 1
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Color: 0
-        Health: 100
-        X: 2
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Color: 0
-        Health: 100
-        X: 3
-        YOffset: 0
-        SpawnTime: 1
-    - WaitTimeBeforeSpawnWave: 0
-      EnemiesData:
-      - Type: 0
-        Color: 0
-        Health: 300
-        X: 1
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Color: 0
-        Health: 350
-        X: 2
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Color: 0
-        Health: 400
-        X: 3
-        YOffset: 0
-        SpawnTime: 0
-    - WaitTimeBeforeSpawnWave: 0
-      EnemiesData:
-      - Type: 1
-        Color: 0
-        Health: 1000
-        X: 1
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Color: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Color: 0
-        Health: 150
-        X: 1
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Color: 0
-        Health: 150
-        X: 2
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Color: 0
-        Health: 100
-        X: 4
         YOffset: 0
         SpawnTime: 0
     MatrixRow1: 0400000002000000080000000200000002000000
@@ -383,6 +93,8 @@ MonoBehaviour:
     MatrixRow4: 0800000004000000020000000400000002000000
   - Map: 0
     Theme: 0
+    MinSoldierPower: 1
+    MaxSoldierPower: 6
     BomberSoldierSpawnProbability: 0
     WaitTimeBeforeSpawnLevel: 0
     WavesData:
@@ -462,6 +174,8 @@ MonoBehaviour:
     MatrixRow4: 0800000004000000080000000400000008000000
   - Map: 0
     Theme: 0
+    MinSoldierPower: 1
+    MaxSoldierPower: 6
     BomberSoldierSpawnProbability: 0
     WaitTimeBeforeSpawnLevel: 0
     WavesData:
@@ -787,6 +501,8 @@ MonoBehaviour:
     MatrixRow4: 0200000002000000020000000200000002000000
   - Map: 0
     Theme: 0
+    MinSoldierPower: 1
+    MaxSoldierPower: 6
     BomberSoldierSpawnProbability: 0
     WaitTimeBeforeSpawnLevel: 0
     WavesData:
@@ -2306,6 +2022,30 @@ MonoBehaviour:
     MatrixRow4: 0200000004000000080000000400000002000000
   - Map: 0
     Theme: 0
+    MinSoldierPower: 1
+    MaxSoldierPower: 6
+    BomberSoldierSpawnProbability: 0
+    WaitTimeBeforeSpawnLevel: 0
+    WavesData: []
+    MatrixRow1: 0000000000000000000000000000000000000000
+    MatrixRow2: 0000000000000000000000000000000000000000
+    MatrixRow3: 0000000000000000000000000000000000000000
+    MatrixRow4: 0000000000000000000000000000000000000000
+  - Map: 0
+    Theme: 0
+    MinSoldierPower: 1
+    MaxSoldierPower: 6
+    BomberSoldierSpawnProbability: 0
+    WaitTimeBeforeSpawnLevel: 0
+    WavesData: []
+    MatrixRow1: 0000000000000000000000000000000000000000
+    MatrixRow2: 0000000000000000000000000000000000000000
+    MatrixRow3: 0000000000000000000000000000000000000000
+    MatrixRow4: 0000000000000000000000000000000000000000
+  - Map: 0
+    Theme: 0
+    MinSoldierPower: 1
+    MaxSoldierPower: 6
     BomberSoldierSpawnProbability: 0
     WaitTimeBeforeSpawnLevel: 0
     WavesData: []

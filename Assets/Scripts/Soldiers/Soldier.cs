@@ -65,11 +65,12 @@ public class Soldier : MonoBehaviour
     }
 
     private SoldierCell cell;
-
+    
     private void OnEnable()
     {
         GameManager.Instance.OnNewEnemySpawned += CheckShootingCondition;
         GameManager.Instance.OnEnemyEntered += CheckShootingCondition;
+        GameManager.Instance.OnEnemyReachedSildierbase += GoIdle;
         bulletPool = GameObject.Find("BulletPool").GetComponent<ObjectPool>();
         navmeshAgent = GetComponent<NavMeshAgent>();
         collider = GetComponent<CapsuleCollider>();
@@ -79,6 +80,7 @@ public class Soldier : MonoBehaviour
     {
         GameManager.Instance.OnNewEnemySpawned -= CheckShootingCondition;
         GameManager.Instance.OnEnemyEntered -= CheckShootingCondition;
+        GameManager.Instance.OnEnemyReachedSildierbase -= GoIdle;
     }
 
     public void Init()
@@ -102,8 +104,9 @@ public class Soldier : MonoBehaviour
 
         if (Type == SoldierType.Normal)
         {
-            SetState(SoldierState.Shooting);
+            //SetState(SoldierState.Shooting);
             //SetState(IsShooter?SoldierState.Shooting:SoldierState.Idle);
+            SetState(SoldierState.Idle);
         }
         else
         {
@@ -171,6 +174,7 @@ public class Soldier : MonoBehaviour
                 else
                     thisAnimator.SetBool("attack", false);
                 transform.rotation = Quaternion.LookRotation(Vector3.forward);
+                thisAnimator.speed = 1f;
                 break;
             case SoldierState.Shooting:
                 collider.isTrigger = false;
@@ -180,6 +184,7 @@ public class Soldier : MonoBehaviour
                     thisAnimator.SetBool("shoot", true);
                 else
                     thisAnimator.SetBool("attack", false);
+                thisAnimator.speed = Database.GameConfiguration.SoldiersFireRate;
                 break;
             case SoldierState.Running:
                 collider.isTrigger = false;
@@ -190,6 +195,7 @@ public class Soldier : MonoBehaviour
                 else
                     thisAnimator.SetBool("attack", false);
                 transform.rotation = Quaternion.LookRotation(Vector3.forward);
+                thisAnimator.speed = 1f;
                 break;
             case SoldierState.Bombing:
                 collider.isTrigger = false;
@@ -200,6 +206,7 @@ public class Soldier : MonoBehaviour
                 else
                     thisAnimator.SetBool("attack", true);
                 transform.rotation = Quaternion.LookRotation(Vector3.forward);
+                thisAnimator.speed = 1f;
                 break;
             case SoldierState.Dead:
                 collider.isTrigger = true;
@@ -211,6 +218,7 @@ public class Soldier : MonoBehaviour
                     thisAnimator.SetBool("attack", false);
                 transform.rotation = Quaternion.LookRotation(Vector3.forward);
                 cell.ClearCell();
+                thisAnimator.speed = 1f;
                 break;
         }
     }
@@ -237,6 +245,7 @@ public class Soldier : MonoBehaviour
         transform.position = toPosition;
         SetState(SoldierState.Idle);
         targetCell.TakeNewSolider(this);
+        SoldierCellMergeManager.Instance.EndShifting();
     }
 
     private void CheckShootingCondition()
@@ -253,7 +262,7 @@ public class Soldier : MonoBehaviour
 
     public void GetReadyForShooting()
     {
-        if (Type != SoldierType.Normal)
+        if (Type != SoldierType.Normal || !GameManager.Instance.IsInPlayMode)
             return;
         
         ChooseTargetToShoot();
@@ -272,6 +281,9 @@ public class Soldier : MonoBehaviour
     
     public void Shoot()
     {
+        if (!GameManager.Instance.IsInPlayMode)
+            return;
+            
         if (Type != SoldierType.Normal)
             return;
 
@@ -347,5 +359,10 @@ public class Soldier : MonoBehaviour
     public void SetDestination(Vector3 pos)
     {
         navmeshAgent.SetDestination(pos);
+    }
+    
+    private void GoIdle()
+    {
+        SetState(SoldierState.Idle);
     }
 }

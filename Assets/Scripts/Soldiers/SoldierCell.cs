@@ -37,6 +37,8 @@ public class SoldierCell : MonoBehaviour
         thisColumn = col;
         thisRow = row;
         this.isShootingCell = isShootingCell;
+        if(currentSoldier != null)
+            Destroy(currentSoldier.gameObject);
         currentSoldier = (type==SoldierType.Bomber?SoldierCellMergeManager.Instance.BomberSoldierPool:SoldierCellMergeManager.Instance.NormalSoldierPool).Spawn(transform).GetComponent<Soldier>();
         currentSoldier.transform.localPosition = Vector3.zero;
         currentSoldier.ValueNumber = valueNumber;
@@ -46,6 +48,7 @@ public class SoldierCell : MonoBehaviour
         currentSoldier.curRow = thisRow;
         currentSoldier.Init();
         currentSoldier.SetCell(this);
+        IsFull = true;
     }
 
     // private void DetectClosestEnemy()
@@ -206,7 +209,7 @@ public class SoldierCell : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy") && GameManager.Instance.IsInPlayMode)
             GameManager.Instance.OnEnemyEntered.Invoke();
     }
 

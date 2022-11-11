@@ -116,10 +116,10 @@ public class UIManager : MonoBehaviour
     //        VibrateOff();
     //}
 
-    //public void Refresh()
-    //{
-    //    State = _state;
-    //}
+    public void Refresh()
+    {
+        State = _state;
+    }
 
     //public void Mute()
     //{
@@ -173,6 +173,26 @@ public class UIManager : MonoBehaviour
     {
         cashAnimator.SetTrigger("GetMoney");
         inGameCashText.text = GameManager.Instance.CurrentKills.ToString();
+    }
+
+    public void OnClick_MainMenu_Play()
+    {
+        GameManager.Instance.StartCurrentLevel();
+    }
+    
+    public void OnClick_Win_Next()
+    {
+        GameManager.Instance.StartCurrentLevel();
+    }
+    
+    public void OnClick_Defeat_Retry()
+    {
+        GameManager.Instance.StartCurrentLevel();
+    }
+    
+    public void OnClick_InGame_Retry()
+    {
+        GameManager.Instance.StartCurrentLevel();
     }
 }
 

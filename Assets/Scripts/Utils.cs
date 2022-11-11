@@ -23,7 +23,7 @@ public class Utils
     
     public static Color GetColorByPower(int power)
     {
-        return Database.GameConfiguration.NumberColors[power-1];
+        return Database.GameConfiguration.NumberColors[(power-1)%Database.GameConfiguration.NumberColors.Count];
     }
     
     public static Color GetColorByNumber(int n)

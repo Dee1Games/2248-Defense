@@ -30,17 +30,14 @@ public class SoldierCellMergeManager : MonoBehaviour
     private bool isConnecting = false;
     private bool canConnect = true;
 
+    public bool IsShifting = false;
+
     void Awake()
     {
         if (_instance == null)
         {
             _instance = this;
         }
-    }
-
-    void Start()
-    {
-        Init();
     }
 
     private void Update()
@@ -169,6 +166,7 @@ public class SoldierCellMergeManager : MonoBehaviour
 
     public void ShiftSoldiers()
     {
+        IsShifting = true;
         int emptyLenght;
         for (int column = 0; column < cells[0].Count; column++)
         {
@@ -199,7 +197,7 @@ public class SoldierCellMergeManager : MonoBehaviour
             Soldier tempSoldier = (spawnBomber?BomberSoldierPool:NormalSoldierPool).Spawn(transform).GetComponent<Soldier>();
             tempSoldier.Type = spawnBomber ? SoldierType.Bomber : SoldierType.Normal;
             tempSoldier.transform.localPosition = new Vector3(-2 + currentColumn, 0, -2.5f);
-            tempSoldier.ValueNumber = (int) Mathf.Pow(2, Utils.GetRandomPower(1, 6));
+            tempSoldier.ValueNumber = (int) Mathf.Pow(2, Utils.GetRandomPower(GameManager.Instance.CurrentLevelData.MinSoldierPower, GameManager.Instance.CurrentLevelData.MaxSoldierPower));
             tempSoldier.IsShooter = false;
             tempSoldier.Init();
             tempSoldier.MoveSoldierToAnotherCell(columnCells[k][currentColumn]);
@@ -207,7 +205,7 @@ public class SoldierCellMergeManager : MonoBehaviour
         }  
     }
 
-    private void CancelConnecting()
+    public void CancelConnecting()
     {
         connectingLine.positionCount = 0;
         //UpdateSumOfValuesUI(0);
@@ -273,18 +271,24 @@ public class SoldierCellMergeManager : MonoBehaviour
         int x = Mathf.Clamp(Mathf.RoundToInt(enemy.transform.localPosition.x), 0, 4);
         int z = Mathf.Clamp(Mathf.FloorToInt(enemy.transform.localPosition.z),0 , 3);
 
-        while (!cells[z][x].IsFull && z>0)
+        if (!SoldierCellMergeManager.Instance.IsShifting)
         {
-            z = z - 1;
-        }
-        
-        if (cells[z][x].IsFull)
-        {
-            return cells[z][x];
+            while (!cells[z][x].IsFull && z>0)
+            {
+                z = z - 1;
+            }
+            if (cells[z][x].IsFull)
+            {
+                return cells[z][x];
+            }
+            else
+            {
+                return null;
+            }
         }
         else
         {
-            return null;
+            return cells[z][x];
         }
     }
     
@@ -294,5 +298,10 @@ public class SoldierCellMergeManager : MonoBehaviour
         enemy.transform.parent = enteredEnemiesContainer;
         int x = Mathf.Clamp(Mathf.RoundToInt(enemy.transform.localPosition.x), 0, 4);
         return soldierBases[x].position;
+    }
+
+    public void EndShifting()
+    {
+        IsShifting = false;
     }
 }

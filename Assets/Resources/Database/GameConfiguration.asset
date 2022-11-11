@@ -20,7 +20,7 @@ MonoBehaviour:
   BomberExplosionDamage: 100
   BomberColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   EnemySpeedSimple: 1
-  EnemySpeedGiant: 0.5
+  EnemySpeedGiant: 0.4
   EnemyDefaultAnimationSpeed: 0.3
   SoldiersFireRate: 1
   BulletDestructionTime: 6
