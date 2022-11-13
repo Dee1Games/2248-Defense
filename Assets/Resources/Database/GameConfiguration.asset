@@ -23,6 +23,7 @@ MonoBehaviour:
   EnemySpeedGiant: 0.4
   EnemyDefaultAnimationSpeed: 0.3
   SoldiersFireRate: 1
+  SoldiersMergeTime: 0.05
   BulletDestructionTime: 6
   BulletSpeed: 7
   BulletOffsetFromGround: 0.7

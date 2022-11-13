@@ -163,6 +163,9 @@ public class SoldierCell : MonoBehaviour
         {
             currentSoldier.SetState(SoldierState.Dead);
             IsFull = false;
+            Vector3 particlePos = transform.position;
+            particlePos.y = 1.5f;
+            ParticleManager.Instance.PlayParticle(Particle_Type.SoldierDeath, particlePos, Vector3.up);
         }
         else
         {

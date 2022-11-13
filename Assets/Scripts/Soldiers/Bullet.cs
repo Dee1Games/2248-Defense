@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private MeshRenderer thisMesh;
+    [SerializeField] private TrailRenderer thisTrail;
 
     private float damage;
     private Rigidbody thisRigid;
@@ -15,6 +16,10 @@ public class Bullet : MonoBehaviour
         set
         {
             thisMesh.material.color = value;
+            thisTrail.startColor = value;
+            Color c = value;
+            c.a = 0f;
+            thisTrail.endColor = c;
         }
         get
         {

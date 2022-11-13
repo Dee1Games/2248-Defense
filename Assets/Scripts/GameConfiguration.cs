@@ -15,6 +15,7 @@ public class GameConfiguration : ScriptableObject
     public float EnemySpeedGiant= 0.3f;
     public float EnemyDefaultAnimationSpeed = 0.2f;
     public float SoldiersFireRate = 0.3f;
+    public float SoldiersMergeTime = 0.1f;
     public float BulletDestructionTime = 6f;
     public float BulletSpeed = 3f;
     public float BulletOffsetFromGround = 0.7f;

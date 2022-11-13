@@ -8,7 +8,7 @@ using UnityStandardAssets.Characters.ThirdPerson;
 public class Soldier : MonoBehaviour
 {
     [SerializeField] private SkinnedMeshRenderer thisMeshRenderer;
-    [SerializeField] private Animator thisAnimator;
+    [SerializeField] private Animator thisAnimator, connectAnimator;
     [SerializeField] private TMP_Text valueText;
     [SerializeField] private Transform bulletExitPoint, modelTransform;
     private NavMeshAgent navmeshAgent;
@@ -309,7 +309,6 @@ public class Soldier : MonoBehaviour
         {
             foreach (Enemy insideEnemy in GameManager.Instance.insideEnemies)
             {
-                Debug.Log(Vector3.Distance(transform.position, insideEnemy.transform.position) + " " + cell.name + " " + insideEnemy.name); ;
                 if (Vector3.Distance(transform.position,insideEnemy.transform.position) <= Database.GameConfiguration.InsideShootingRadius)
                 {
                     shooterTarget = insideEnemy;
@@ -365,4 +364,6 @@ public class Soldier : MonoBehaviour
     {
         SetState(SoldierState.Idle);
     }
+
+    public void ShowConnectingAnimation() => connectAnimator.SetTrigger("GetBig");
 }

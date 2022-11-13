@@ -28,7 +28,8 @@ public class SoldierCellMergeManager : MonoBehaviour
     private List<SoldierCell> connectedCells = new List<SoldierCell>();
     private int currentCellValue, currentSumOfValues;
     private bool isConnecting = false;
-    private bool canConnect = true;
+    
+    public bool CanConnect => !IsShifting;
 
     public bool IsShifting = false;
 
@@ -77,7 +78,7 @@ public class SoldierCellMergeManager : MonoBehaviour
 
     public void StartConnecting(SoldierCell cell)
     {
-        if (canConnect && GameManager.Instance.insideEnemies.Count == 0)
+        if (CanConnect && GameManager.Instance.insideEnemies.Count == 0)
         {
 	        isConnecting = true;
 	        int newCellValue = cell.currentSoldier.ValueNumber;
@@ -88,6 +89,8 @@ public class SoldierCellMergeManager : MonoBehaviour
 	        connectingLine.positionCount = 2;
 	        Vector3 cellPosition = cell.transform.position;
 	        SetLineRendererPosition(0, cellPosition);
+            cell.currentSoldier.ShowConnectingAnimation();
+            VibrationManager.Instance.DoLightVibration();
     	}
     }
 
@@ -126,6 +129,8 @@ public class SoldierCellMergeManager : MonoBehaviour
                         SetLineRendererPosition(tempCount, newPoint);
                         connectedCells.Add(cell);
                         connectingLine.positionCount++;
+                        cell.currentSoldier.ShowConnectingAnimation();
+                        VibrationManager.Instance.DoLightVibration();
                     }
                 }
             }
@@ -150,23 +155,16 @@ public class SoldierCellMergeManager : MonoBehaviour
         }
         else
         {
-            int tempCount = connectedCells.Count;
-            if (tempCount >= 2)
-                StartCoroutine(PutConnectionOnCooldown_CO());
-
-            for (int i = 0; i < tempCount - 1; i++)
-                connectedCells[i].ClearCell();
-
-            currentSumOfValues = Mathf.ClosestPowerOfTwo(currentSumOfValues);
-            connectedCells[tempCount - 1].currentSoldier.ValueNumber = currentSumOfValues;
-            ShiftSoldiers();
-            CancelConnecting();
+            connectingLine.positionCount = 0;
+            isConnecting = false;
+            IsShifting = true;
+            StartCoroutine(DoMergeVisuals());
+            VibrationManager.Instance.DoMediumVibration();
         }
     }
 
     public void ShiftSoldiers()
     {
-        IsShifting = true;
         int emptyLenght;
         for (int column = 0; column < cells[0].Count; column++)
         {
@@ -211,21 +209,6 @@ public class SoldierCellMergeManager : MonoBehaviour
         //UpdateSumOfValuesUI(0);
         connectedCells.Clear();
         isConnecting = false;
-    }
-
-    private IEnumerator PutConnectionOnCooldown_CO() {
-        float counter = 0.0f;
-        canConnect = false;
-        UIManager.Instance.TriggerTimerAnim("StartTimer");
-        while (counter < connectionCooldown)
-        {
-            UIManager.Instance.UpdateTimerNumber(connectionCooldown - counter);
-            counter += Time.deltaTime;
-            yield return null;
-        }
-        UIManager.Instance.UpdateTimerNumber(0);
-        UIManager.Instance.TriggerTimerAnim("EndTimer");
-        canConnect = true;
     }
 
     private Vector3 GetPointerPosition()
@@ -302,6 +285,46 @@ public class SoldierCellMergeManager : MonoBehaviour
 
     public void EndShifting()
     {
-        IsShifting = false;
+        bool allCellsFull = true;
+        foreach (var cellRow in cells)
+        {
+            foreach (var cell in cellRow)
+            {
+                if(!cell.IsFull)
+                    allCellsFull = false;
+            }
+        }
+        
+        if(allCellsFull)
+            IsShifting = false;
+    }
+
+    private IEnumerator DoMergeVisuals()
+    {
+        int tempCount = connectedCells.Count;
+        float duration = Database.GameConfiguration.SoldiersMergeTime;
+        if (tempCount >= 2)
+        {
+            Transform mergingSoldier = connectedCells[0].currentSoldier.transform;
+            Vector3 startPos = mergingSoldier.position;
+            Vector3 toPosition = connectedCells[1].currentSoldier.transform.position;
+            float counter = 0.0f;
+            while (counter < duration)
+            {
+                counter += Time.deltaTime;
+                mergingSoldier.position = Vector3.Lerp(startPos, toPosition, counter / duration);
+                yield return null;
+            }
+            connectedCells[0].ClearCell();
+            connectedCells.RemoveAt(0);
+            StartCoroutine(DoMergeVisuals());
+        }
+        else
+        {
+            currentSumOfValues = Mathf.ClosestPowerOfTwo(currentSumOfValues);
+            connectedCells[0].currentSoldier.ValueNumber = currentSumOfValues;
+            ShiftSoldiers();
+            connectedCells.Clear();
+        }
     }
 }

@@ -208,12 +208,14 @@ public class Enemy : MonoBehaviour
         if (destinationIsBase)
         {
             GameManager.Instance.OnEnemyReachedSildierbase.Invoke();
+            VibrationManager.Instance.DoHeavyVibration();
         }
         else if (attackingCell != null && !InMove)
         {
              if (attackingCell.IsFull)
             {
                 attackingCell.GettingHit();
+                VibrationManager.Instance.DoMediumVibration();
             }
         }
     }

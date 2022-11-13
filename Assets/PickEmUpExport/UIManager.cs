@@ -28,8 +28,8 @@ public class UIManager : MonoBehaviour
     [Header("In Game")]
     [SerializeField] GameObject inGamePanel;
     [SerializeField] GameObject checkIcon;
-    [SerializeField] TMP_Text inGameLevelText, inGameCashText , inGameTimerText;
-    [SerializeField] private Animator cashAnimator, timerAnimator;
+    [SerializeField] TMP_Text inGameLevelText, inGameCashText;
+    [SerializeField] private Animator cashAnimator;
     
     [Header("Victory")]
     [SerializeField] GameObject victoryPanel;
@@ -152,22 +152,6 @@ public class UIManager : MonoBehaviour
     //    vibrateOffGO.SetActive(true);
     //    PlayerPrefsManager.Vibrate = false;
     //}
-
-    public void UpdateTimerNumber(float number)
-    {
-        if(number > 0)
-        {
-            checkIcon.SetActive(false);
-            inGameTimerText.text = number.ToString("F2");
-        }
-        else
-        {
-            checkIcon.SetActive(true);
-            inGameTimerText.text = "";
-        }
-    }
-
-    public void TriggerTimerAnim(string trigger) => timerAnimator.SetTrigger(trigger);
 
     public void UpdateKillCount()
     {

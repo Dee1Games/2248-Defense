@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelsData:
   - Map: 7
-    Theme: 0
+    Theme: 1
     MinSoldierPower: 1
     MaxSoldierPower: 6
     BomberSoldierSpawnProbability: 0
@@ -64,7 +64,7 @@ MonoBehaviour:
     MatrixRow2: 0200000004000000020000000200000004000000
     MatrixRow3: 0200000002000000020000000200000008000000
     MatrixRow4: 0200000008000000020000000200000002000000
-  - Map: 0
+  - Map: 1
     Theme: 0
     MinSoldierPower: 1
     MaxSoldierPower: 6
@@ -91,7 +91,7 @@ MonoBehaviour:
     MatrixRow2: 0200000004000000020000000800000002000000
     MatrixRow3: 0400000002000000040000000200000008000000
     MatrixRow4: 0800000004000000020000000400000002000000
-  - Map: 0
+  - Map: 1
     Theme: 0
     MinSoldierPower: 1
     MaxSoldierPower: 6
@@ -172,7 +172,7 @@ MonoBehaviour:
     MatrixRow2: 0800000004000000080000000400000008000000
     MatrixRow3: 0400000008000000040000000800000004000000
     MatrixRow4: 0800000004000000080000000400000008000000
-  - Map: 0
+  - Map: 2
     Theme: 0
     MinSoldierPower: 1
     MaxSoldierPower: 6
@@ -499,7 +499,7 @@ MonoBehaviour:
     MatrixRow2: 0400000004000000040000000400000004000000
     MatrixRow3: 0800000008000000080000000800000008000000
     MatrixRow4: 0200000002000000020000000200000002000000
-  - Map: 0
+  - Map: 2
     Theme: 0
     MinSoldierPower: 1
     MaxSoldierPower: 6
