@@ -254,9 +254,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisMeshRenderer: {fileID: 6728436909985591639}
   thisAnimator: {fileID: 7259781235550928808}
+  connectAnimator: {fileID: 0}
   valueText: {fileID: 5006187669110156161}
   bulletExitPoint: {fileID: 7486761503325376387}
+  modelTransform: {fileID: 0}
   shootTarget: {x: 0, y: 0, z: 0}
+  curCol: 0
+  curRow: 0
   IsShooter: 0
   Type: 0
 --- !u!54 &5509060560956527006
@@ -1539,6 +1543,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7599002089485100868}
     m_Modifications:
+    - target: {fileID: 5161822843867499601, guid: 0457ace34b6694049a831bfb2c2a43c9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8415123130688030723, guid: 0457ace34b6694049a831bfb2c2a43c9, type: 3}
       propertyPath: m_Name
       value: Bomb

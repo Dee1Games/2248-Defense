@@ -68,14 +68,14 @@ public class Bullet : MonoBehaviour
         enemy.TakeDamage(damage);
         thisRigid.velocity = Vector3.zero;
         ParticleManager.Instance.PlayParticle(Particle_Type.BulletHit, transform.position, transform.forward, enemy.transform);
-        DamageUIManager.Instance.ShowDamageUI(enemy.transform, damage, BulletColor);
+        DamageUIManager.Instance.ShowDamageUI(enemy.transform, damage, BulletColor, enemy.Data.Type==EnemyType.SimpleEnemy?0f:0.5f);
         ObjectPool.DeSpawn(gameObject);
     }
 
     public void InvokeSelfDestruction() => Invoke(nameof(SelfDestruct), Database.GameConfiguration.BulletDestructionTime);
 
     private void SelfDestruct() {
-        thisRigid.velocity = Vector3.zero;
-        ObjectPool.DeSpawn(gameObject);
+        //thisRigid.velocity = Vector3.zero;
+        //ObjectPool.DeSpawn(gameObject);
     }
 }

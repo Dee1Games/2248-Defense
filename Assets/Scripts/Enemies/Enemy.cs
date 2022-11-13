@@ -141,7 +141,7 @@ public class Enemy : MonoBehaviour
                 animator.SetBool("walk", false);
                 animator.SetBool("attack", false);
                 animator.speed = 1f;
-                ParticleManager.Instance.PlayParticle(Particle_Type.SimpleZDeath, transform.position, Vector3.up);
+                ParticleManager.Instance.PlayParticle(Data.Type==EnemyType.SimpleEnemy ?Particle_Type.SimpleZDeath:Particle_Type.GiantZDeath, transform.position, Vector3.up);
                 ObjectPool.DeSpawn(gameObject);
                 GameManager.Instance.CheckIfAllZombiesDied();
                 break;
@@ -189,9 +189,11 @@ public class Enemy : MonoBehaviour
 
     private IEnumerator SetStateToAttack()
     {
-        while (attackingCell!=null && !attackingCell.IsFull && SoldierCellMergeManager.Instance.IsShifting)
+        float idleTime = 0f;
+        while (attackingCell!=null && !attackingCell.IsFull && SoldierCellMergeManager.Instance.IsShifting && idleTime<3f)
         {
             SetState(EnemyState.Idle);
+            idleTime += Time.deltaTime;
             yield return new WaitForEndOfFrame();
         }
         if (State != EnemyState.Attacking)

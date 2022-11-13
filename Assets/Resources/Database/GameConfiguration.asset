@@ -12,22 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e5d2c8ba836e8743a738d8ef465f574, type: 3}
   m_Name: GameConfiguration
   m_EditorClassIdentifier: 
-  SoldierSpeedNormal: 1
+  SoldierSpeedNormal: 2
   SoldierSpeedBomber: 1
   MinDistanceToExplode: 1
   InsideShootingRadius: 2
   BomberExplosionRadius: 3
   BomberExplosionDamage: 100
   BomberColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-  EnemySpeedSimple: 1
-  EnemySpeedGiant: 0.4
+  EnemySpeedSimple: 0.85
+  EnemySpeedGiant: 0.7
   EnemyDefaultAnimationSpeed: 0.3
-  SoldiersFireRate: 1
-  SoldiersMergeTime: 0.05
+  SoldiersFireRate: 2
+  SoldiersMergeTime: 0.15
   BulletDestructionTime: 6
   BulletSpeed: 7
   BulletOffsetFromGround: 0.7
-  LineOffsetFromGround: 0.5
+  LineOffsetFromGround: 0.2
   NumberColors:
   - {r: 0.13333334, g: 0.60784316, b: 0.8117648, a: 1}
   - {r: 0.9294118, g: 0.5372549, b: 0.24313727, a: 1}

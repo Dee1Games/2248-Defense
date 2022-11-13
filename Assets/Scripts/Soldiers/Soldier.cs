@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 using UnityStandardAssets.Characters.ThirdPerson;
 
 public class Soldier : MonoBehaviour
@@ -10,6 +11,7 @@ public class Soldier : MonoBehaviour
     [SerializeField] private SkinnedMeshRenderer thisMeshRenderer;
     [SerializeField] private Animator thisAnimator, connectAnimator;
     [SerializeField] private TMP_Text valueText;
+    [SerializeField] private Image soldierCircle;
     [SerializeField] private Transform bulletExitPoint, modelTransform;
     private NavMeshAgent navmeshAgent;
     private CapsuleCollider collider;    
@@ -64,6 +66,15 @@ public class Soldier : MonoBehaviour
         get { return soldierColor; }
     }
 
+    public bool SoldierCircle
+    {
+        set
+        {
+            if(Type == SoldierType.Normal)
+                soldierCircle.enabled = value;
+        }
+    }
+
     private SoldierCell cell;
     
     private void OnEnable()
@@ -85,6 +96,8 @@ public class Soldier : MonoBehaviour
 
     public void Init()
     {
+        transform.localScale = Vector3.one;
+        SoldierCircle = false;
         ObjectPoolRefrence poolRefrence = GetComponent<ObjectPoolRefrence>();
         if (poolRefrence == null)
         {
@@ -185,6 +198,7 @@ public class Soldier : MonoBehaviour
                 else
                     thisAnimator.SetBool("attack", false);
                 thisAnimator.speed = Database.GameConfiguration.SoldiersFireRate;
+                transform.rotation = Quaternion.LookRotation(Vector3.forward);
                 break;
             case SoldierState.Running:
                 collider.isTrigger = false;
@@ -228,14 +242,14 @@ public class Soldier : MonoBehaviour
         StartCoroutine(MoveSoldier_CO(targetCell));
     }
 
-    private IEnumerator MoveSoldier_CO(SoldierCell targetCell, float duration = 1)
+    private IEnumerator MoveSoldier_CO(SoldierCell targetCell)
     {
         SetState(SoldierState.Running);
         float counter = 0.0f;
         int distance = (int)(targetCell.transform.position.z - transform.position.z);
         Vector3 startPos = transform.position;
         Vector3 toPosition = transform.position + new Vector3(0, 0, distance);
-        duration *= distance;
+        float duration = distance/ Database.GameConfiguration.SoldierSpeedNormal;
         while (counter < duration)
         {
             counter += Time.deltaTime;

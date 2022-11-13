@@ -32,7 +32,7 @@ public class DamageUIManager : MonoBehaviour
         lastDamageInfoForParent = new Dictionary<int, LastDamageInfo>();
     }
     
-    public void ShowDamageUI(Transform parent, float damageAmount , Color textColor)
+    public void ShowDamageUI(Transform parent, float damageAmount , Color textColor, float offsetY = 0f)
     {
         //StartCoroutine(ShowDamageUI_CO(parent, yOffset, damageAmount));
         /*int parentID = parent.GetInstanceID();
@@ -52,6 +52,7 @@ public class DamageUIManager : MonoBehaviour
         Vector3 pos = Vector3.zero;
         pos.x = Random.Range(minNumberPos.x, maxNumberPos.x); 
         pos.y = Random.Range(minNumberPos.y, maxNumberPos.y);
+        pos.y += offsetY;
         damageCanvas.localPosition = pos;
         StartCoroutine(ChangeAlphaAndMove(damageCanvas, damageText, () =>
         {

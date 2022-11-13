@@ -171,6 +171,13 @@ public class GameManager : MonoBehaviour
                 enemiesInExplosionRaduis.Add(enemy);
             }
         }
+        foreach (var enemy in insideEnemies)
+        {
+            if (Vector3.Distance(center, enemy.transform.position) < radius)
+            {
+                enemiesInExplosionRaduis.Add(enemy);
+            }
+        }
         
         foreach (var enemy in enemiesInExplosionRaduis)
         {
