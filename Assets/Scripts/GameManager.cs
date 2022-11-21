@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
     {
         Init();
     }
-    
+
     void Init()
     {
         CurrentLevelIndex = PlayerPrefsManager.Level;
@@ -193,7 +193,7 @@ public class GameManager : MonoBehaviour
     
     public void CheckIfAllZombiesDied()
     {
-        if (insideEnemies.Count == 0 && outsideEnemies.Count == 0)
+        if (insideEnemies.Count == 0 && outsideEnemies.Count == 0 && SpawnManager.Instance.SpawningEnded)
         {
             if (CurrentWaveIndex == CurrentLevelData.WavesData.Count - 1)
             {

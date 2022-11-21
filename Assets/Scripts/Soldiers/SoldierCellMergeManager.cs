@@ -111,10 +111,10 @@ public class SoldierCellMergeManager : MonoBehaviour
                     //UpdateSumOfValuesUI(Mathf.ClosestPowerOfTwo(currentSumOfValues));
                     currentCellValue = cell.currentSoldier.ValueNumber;
                     connectingLine.positionCount--;
+                    connectedCells[tempCount - 1].currentSoldier.SoldierCircle = false;
                     connectedCells.RemoveAt(tempCount - 1);
                     Vector3 newPos = connectedCells[tempCount - 2].transform.position;
                     SetLineRendererPosition(tempCount - 2, newPos);
-                    cell.currentSoldier.SoldierCircle = false;
                 }
             }
             else
@@ -324,6 +324,7 @@ public class SoldierCellMergeManager : MonoBehaviour
             }
             connectedCells[0].ClearCell();
             connectedCells.RemoveAt(0);
+            SoundManager.Instance.Play(Sound.SoldierCombine);
             StartCoroutine(DoMergeVisuals());
         }
         else

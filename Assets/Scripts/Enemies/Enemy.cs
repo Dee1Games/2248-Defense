@@ -41,15 +41,22 @@ public class Enemy : MonoBehaviour
 
     public delegate void DiengInside(Enemy enemy);
     public DiengInside OnDiedInside;
+
+    private bool inited = false;
     
     void OnEnable()
     {
+        inited = false;
         GameManager.Instance.OnEnemyReachedSildierbase += GoIdle;
+        float randomTime = Random.Range(2, 5);
+        InvokeRepeating(nameof(Shout), 0, randomTime);
     }
     
     void OnDisable()
     {
+        inited = false;
         GameManager.Instance.OnEnemyReachedSildierbase -= GoIdle;
+        CancelInvoke(nameof(Shout));
     }
 
     public void Init(EnemyData data)
@@ -65,14 +72,15 @@ public class Enemy : MonoBehaviour
         //renderer.materials[0].color = Data.GetColor();
         navmeshAgent.speed = Speed;
         SetDestination(new Vector3(Data.X, 0f, 0f));
+        inited = true;
     }
     
     void Update()
     {     
-        if (!IsAlive)
+        if (!IsAlive || !inited)
             return;
 
-        if (navmeshAgent.remainingDistance > navmeshAgent.stoppingDistance)
+        if (Vector3.Distance(navmeshAgent.destination, transform.position) > navmeshAgent.stoppingDistance)
         {
             InMove = true;
         }
@@ -144,6 +152,10 @@ public class Enemy : MonoBehaviour
                 ParticleManager.Instance.PlayParticle(Data.Type==EnemyType.SimpleEnemy ?Particle_Type.SimpleZDeath:Particle_Type.GiantZDeath, transform.position, Vector3.up);
                 ObjectPool.DeSpawn(gameObject);
                 GameManager.Instance.CheckIfAllZombiesDied();
+                if (Data.Type == EnemyType.SimpleEnemy)
+                    SoundManager.Instance.Play(Sound.SimpleZDeath);
+                else
+                    SoundManager.Instance.Play(Sound.GiantZDeath);
                 break;
         }
     }
@@ -239,5 +251,13 @@ public class Enemy : MonoBehaviour
     private void GoIdle()
     {
         SetState(EnemyState.Idle);
+    }
+
+    private void Shout()
+    {
+        if (Data.Type == EnemyType.SimpleEnemy)
+            SoundManager.Instance.Play(Sound.SimpleZVoice, 0.8f);
+        else
+            SoundManager.Instance.Play(Sound.GiantZVoice, 0.8f);
     }
 }

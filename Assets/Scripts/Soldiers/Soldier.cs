@@ -310,6 +310,7 @@ public class Soldier : MonoBehaviour
             newBullet.SetBulletDamage(valueNumber);
             newBullet.SetTarget(shooterTarget.transform);
             newBullet.InvokeSelfDestruction();
+            SoundManager.Instance.Play(Sound.Shoot,0.5f);
         }
         else
         {

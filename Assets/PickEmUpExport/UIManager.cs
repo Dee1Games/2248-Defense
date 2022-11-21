@@ -73,7 +73,7 @@ public class UIManager : MonoBehaviour
                     break;
                 case UIState.Victory:
                     victoryLevelText.text = "Level " + (GameManager.Instance.CurrentLevelIndex + 1);
-                    victoryPeopleNumberText.text = "x  " + GameManager.Instance.CurrentKills.ToString();
+                    victoryPeopleNumberText.text = "x" + GameManager.Instance.CurrentKills.ToString();
                     victoryPanel.SetActive(true);
                     PlayerPrefsManager.Coin += GameManager.Instance.CurrentKills;
                     //SoundManager.Instance.PlayCheerSound();
@@ -82,7 +82,7 @@ public class UIManager : MonoBehaviour
                 case UIState.Defeat:
 					//GameManager.Instance.CanDraw = false;
                     defeatLevelText.text = "Level " + (GameManager.Instance.CurrentLevelIndex + 1);
-                    zombiesKilledText.text = "x " + GameManager.Instance.CurrentKills;
+                    zombiesKilledText.text = "x" + GameManager.Instance.CurrentKills;
                     defeatPanel.SetActive(true);
                     break;
             }

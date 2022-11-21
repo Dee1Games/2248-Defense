@@ -15,6 +15,8 @@ public class SpawnManager : MonoBehaviour
 
     private static SpawnManager _instance;
 
+    public bool SpawningEnded;
+
     [SerializeField] private ObjectPool simpleEnemyPool;
     [SerializeField] private ObjectPool giantEnemyPool;
     [SerializeField] private Transform enemiesContainer;
@@ -32,11 +34,13 @@ public class SpawnManager : MonoBehaviour
 
     public void StartSpawningCurrentLevel()
     {
+        SpawningEnded = false;
         StartCoroutine(SpawnCurrentLevel());
     }
 
     public void StartSpawningCurrentWave()
     {
+        SpawningEnded = false;
         StartCoroutine(SpawnCurrentWave());
     }
 
@@ -59,6 +63,7 @@ public class SpawnManager : MonoBehaviour
 
     private IEnumerator SpawnCurrentLevel()
     {
+        SpawningEnded = false;
         LevelData levelData = GameManager.Instance.CurrentLevelData;
         yield return new WaitForSeconds(levelData.WaitTimeBeforeSpawnLevel);
         StartCoroutine(SpawnCurrentWave());
@@ -66,6 +71,7 @@ public class SpawnManager : MonoBehaviour
 
     private IEnumerator SpawnCurrentWave()
     {
+        SpawningEnded = false;
         while (GameManager.Instance.outsideEnemies.Count != 0)
         {
             yield return new WaitForEndOfFrame();
@@ -93,6 +99,7 @@ public class SpawnManager : MonoBehaviour
                 spawnedEnemiesCount++;
             }
         }
+        SpawningEnded = true;
     }
 
     private void SpawnEnemy(EnemyData enemyData)
