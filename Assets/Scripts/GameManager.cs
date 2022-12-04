@@ -53,6 +53,14 @@ public class GameManager : MonoBehaviour
     public LevelData CurrentLevelData => Database.LevelsConfiguration.LevelsData[CurrentLevelIndex];
     public WaveData CurrentWaveData => Database.LevelsConfiguration.LevelsData[CurrentLevelIndex].WavesData[CurrentWaveIndex];
 
+    public int CurrentTutorialIndex;
+
+    public float IdleTime
+    {
+        get;
+        private set;
+    }
+
     void Awake()
     {
         if (_instance == null)
@@ -71,23 +79,55 @@ public class GameManager : MonoBehaviour
         OnEnemyReachedSildierbase -= EnemyReachedSoldierBase;
     }
 
+    public void ResetIdleTime()
+    {
+        IdleTime = 0f;
+    }
+
     void Start()
     {
         Init();
     }
 
+    void Update()
+    {
+        if (IsInPlayMode && UIManager.Instance.State==UIState.InGame)
+        {
+            IdleTime += Time.deltaTime;
+            if (Input.GetMouseButton(0))
+            {
+                ResetIdleTime();
+            }
+        }
+        else
+        {
+            ResetIdleTime();
+        }
+    }
+
     void Init()
     {
-        CurrentLevelIndex = PlayerPrefsManager.Level;
-        CurrentWaveIndex = 0;
-        InitCurrentLevel();
-        UIManager.Instance.State = UIState.MainMenu;
+        if (PlayerPrefsManager.SeenTutorial)
+        {
+            ResetIdleTime();
+            CurrentLevelIndex = PlayerPrefsManager.Level;
+            CurrentWaveIndex = 0;
+            InitCurrentLevel();
+            UIManager.Instance.State = UIState.MainMenu;
+        }
+        else
+        {
+            CurrentTutorialIndex = 0;
+            InitCurrentTutorial();
+        }
     }
 
     public void InitCurrentLevel()
     {
+        CurrentTutorialIndex = 0;
         IsInPlayMode = false;
         SoldierCellMergeManager.Instance.Init();
+        SoldierCellMergeManager.Instance.ShowAllCells();
 
         foreach (var enemy in insideEnemies)
         {
@@ -100,7 +140,8 @@ public class GameManager : MonoBehaviour
         
         insideEnemies.Clear();
         outsideEnemies.Clear();
-        SpawnManager.Instance.InitCurrentLevel();
+        SpawnManager.Instance.InitMapAndTheme(CurrentLevelData.Map-1, CurrentLevelData.Theme);
+        InitCurrentTutorial();
     }
 
     public void StartCurrentLevel()
@@ -113,16 +154,71 @@ public class GameManager : MonoBehaviour
         SpawnManager.Instance.StartSpawningCurrentLevel();
     }
 
+    public void InitCurrentTutorial()
+    {
+        if (PlayerPrefsManager.SeenTutorial && !CurrentLevelData.HasTutorial)
+            return;
+
+        if (!PlayerPrefsManager.SeenTutorial)
+        {
+            if (CurrentTutorialIndex < Database.TutorialConfiguration.Data.Count)
+            {
+                ResetIdleTime();
+                IsInPlayMode = true;
+                SoldierCellMergeManager.Instance.Init();
+                SoldierCellMergeManager.Instance.ShowAllCells();
+                SoldierCellMergeManager.Instance.InitTutorial(Database.TutorialConfiguration.Data[CurrentTutorialIndex]);
+                UIManager.Instance.State = UIState.InGame;
+                foreach (var enemy in insideEnemies)
+                {
+                    Destroy(enemy.gameObject);
+                }
+                foreach (var enemy in outsideEnemies)
+                {
+                    Destroy(enemy.gameObject);
+                }
+                insideEnemies.Clear();
+                outsideEnemies.Clear();
+                SpawnManager.Instance.InitMapAndTheme(Database.TutorialConfiguration.Map, Database.TutorialConfiguration.Theme);
+                TutorialManager.Instance.Help();
+            }
+            else
+            {
+                TutorialManager.Instance.End();
+                if (!PlayerPrefsManager.SeenTutorial)
+                {
+                    PlayerPrefsManager.SeenTutorial = true;
+                    Invoke("Init", 1f);
+                }
+            }
+        }
+        else
+        {
+            if (CurrentTutorialIndex < CurrentLevelData.Tutorials.Count)
+            {
+                TutorialManager.Instance.Help();
+            }
+            else
+            {
+                TutorialManager.Instance.End();
+            }
+        }
+    }
+
     private void EnemyReachedSoldierBase()
     {
-        UIManager.Instance.State = UIState.Defeat;
+        //UIManager.Instance.State = UIState.Defeat;
+        Invoke(nameof(InvokeLoseUI), Database.GameConfiguration.WinLoseDialogeDelay);
         IsInPlayMode = false;
     }
+
+    private void InvokeLoseUI()=> UIManager.Instance.State = UIState.Defeat;
 
     public void CurrentLevelEnded()
     {
         SoldierCellMergeManager.Instance.CancelConnecting();
-        UIManager.Instance.State = UIState.Victory;
+        //UIManager.Instance.State = UIState.Victory;
+        Invoke(nameof(InvokeWinUI), Database.GameConfiguration.WinLoseDialogeDelay);
         if (CurrentLevelIndex+1 < Database.LevelsConfiguration.LevelsData.Count)
         {
             CurrentLevelIndex++;
@@ -136,6 +232,8 @@ public class GameManager : MonoBehaviour
         PlayerPrefsManager.Level = CurrentLevelIndex;
     }
     
+    private void InvokeWinUI() => UIManager.Instance.State = UIState.Victory;
+
     public void CurrentWaveEnded()
     {
         GameManager.Instance.CurrentWaveIndex++;

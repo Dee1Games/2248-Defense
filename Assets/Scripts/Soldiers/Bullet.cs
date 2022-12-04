@@ -51,6 +51,12 @@ public class Bullet : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
             HitEnemy(other.GetComponent<Enemy>());
+        else if (other.CompareTag("Wall") && Database.GameConfiguration.WallsStopBullet)
+        {
+            SoundManager.Instance.Play(Sound.BulletDestroy, 0.5f);
+            ParticleManager.Instance.PlayParticle(Particle_Type.BulletDestroy, transform.position, transform.forward);
+            ObjectPool.DeSpawn(gameObject);
+        }
     }
 
     public void SetBulletDamage(float damage)

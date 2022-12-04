@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class SoldierCellMergeManager : MonoBehaviour
 {
@@ -28,10 +30,12 @@ public class SoldierCellMergeManager : MonoBehaviour
     private List<SoldierCell> connectedCells = new List<SoldierCell>();
     private int currentCellValue, currentSumOfValues;
     private bool isConnecting = false;
+    private float currentPitch, pitchDifference;
     
     public bool CanConnect => !IsShifting;
 
     public bool IsShifting = false;
+    public bool IsMerging = false;
 
     void Awake()
     {
@@ -39,6 +43,7 @@ public class SoldierCellMergeManager : MonoBehaviour
         {
             _instance = this;
         }
+        pitchDifference = Database.GameConfiguration.ConnectPitchDifference;
     }
 
     private void Update()
@@ -75,16 +80,45 @@ public class SoldierCellMergeManager : MonoBehaviour
             }
         }
     }
+    
+    public void InitTutorial(TutorialData tutorialData)
+    {
+        for (int row = 0; row < 4; row++)
+        {
+            for (int column = 0; column < 5; column++)
+            {
+                cells[row][column].gameObject.SetActive(false);
+            }
+        }
+        foreach (var cellData in tutorialData.CellsData)
+        {
+            cells[cellData.X][cellData.Y].gameObject.SetActive(true);
+            cells[cellData.X][cellData.Y].Init(cellData.Y, cellData.X, cellData.X == 3, cellData.N, (cellData.N>0?SoldierType.Normal:SoldierType.Bomber));
+        }
+    }
+    
+    public void ShowAllCells()
+    {
+        for (int row = 0; row < 4; row++)
+        {
+            for (int column = 0; column < 5; column++)
+            {
+                cells[row][column].gameObject.SetActive(true);
+            }
+        }
+    }
+    
+    
 
     public void StartConnecting(SoldierCell cell)
     {
         if (CanConnect && GameManager.Instance.insideEnemies.Count == 0)
         {
 	        isConnecting = true;
+            currentPitch = 1;
 	        int newCellValue = cell.currentSoldier.ValueNumber;
 	        currentCellValue = newCellValue;
 	        currentSumOfValues = newCellValue;
-	        //UpdateSumOfValuesUI(Mathf.ClosestPowerOfTwo(currentSumOfValues));
 	        connectedCells.Add(cell);
 	        connectingLine.positionCount = 2;
 	        Vector3 cellPosition = cell.transform.position;
@@ -92,6 +126,7 @@ public class SoldierCellMergeManager : MonoBehaviour
             cell.currentSoldier.ShowConnectingAnimation();
             cell.currentSoldier.SoldierCircle = true;
             VibrationManager.Instance.DoLightVibration();
+            SoundManager.Instance.PlayByASComponent(Sound.SoldierConnet, cell.currentSoldier.gameObject, pitch: currentPitch);
     	}
     }
 
@@ -99,7 +134,7 @@ public class SoldierCellMergeManager : MonoBehaviour
         if (GameManager.Instance.insideEnemies.Count > 0) {
             CancelConnecting();
         }
-        else if (isConnecting)
+        else if(isConnecting)
         {
             int tempCount = connectedCells.Count;
             Vector3 newPoint = cell.transform.position;
@@ -108,13 +143,13 @@ public class SoldierCellMergeManager : MonoBehaviour
                 if (tempCount > 1 && connectedCells[tempCount - 2] == cell)
                 {
                     currentSumOfValues -= connectedCells[tempCount - 1].currentSoldier.ValueNumber;
-                    //UpdateSumOfValuesUI(Mathf.ClosestPowerOfTwo(currentSumOfValues));
                     currentCellValue = cell.currentSoldier.ValueNumber;
                     connectingLine.positionCount--;
                     connectedCells[tempCount - 1].currentSoldier.SoldierCircle = false;
                     connectedCells.RemoveAt(tempCount - 1);
                     Vector3 newPos = connectedCells[tempCount - 2].transform.position;
                     SetLineRendererPosition(tempCount - 2, newPos);
+                    currentPitch -= pitchDifference;
                 }
             }
             else
@@ -127,13 +162,14 @@ public class SoldierCellMergeManager : MonoBehaviour
                     {
                         currentCellValue = newCellValue;
                         currentSumOfValues += newCellValue;
-                        //UpdateSumOfValuesUI(Mathf.ClosestPowerOfTwo(currentSumOfValues));
                         SetLineRendererPosition(tempCount, newPoint);
                         connectedCells.Add(cell);
                         connectingLine.positionCount++;
                         cell.currentSoldier.ShowConnectingAnimation();
                         cell.currentSoldier.SoldierCircle = true;
                         VibrationManager.Instance.DoLightVibration();
+                        currentPitch += pitchDifference;
+                        SoundManager.Instance.PlayByASComponent(Sound.SoldierConnet, cell.currentSoldier.gameObject, pitch: currentPitch);
                     }
                 }
             }
@@ -152,13 +188,51 @@ public class SoldierCellMergeManager : MonoBehaviour
 
     public void FinishedConnecting()
     {
-        if (GameManager.Instance.insideEnemies.Count > 0 || connectedCells.Count <= 1)
+        if (!PlayerPrefsManager.SeenTutorial)
+        {
+            TutorialPath path = TutorialManager.Instance.Path;
+            if (path != null)
+            {
+                bool isCorrectPath = true;
+
+                if (path.Order.Count != connectedCells.Count)
+                {
+                    isCorrectPath = false;
+                }
+                else
+                {
+                    // for (int i = 0; i < path.Order.Count; i++)
+                    // {
+                    //     if (path.Order[i].x != connectedCells[i].Coordination.row ||
+                    //         path.Order[i].y != connectedCells[i].Coordination.column)
+                    //     {
+                    //         isCorrectPath = false;
+                    //     }
+                    // }
+                }
+
+                if (!isCorrectPath)
+                {
+                    CancelConnecting();
+                    VibrationManager.Instance.DoMediumVibration();
+                    return;
+                }
+                else
+                {
+                    TutorialManager.Instance.End();
+                }
+            }
+        }
+        
+        currentPitch = 1;
+        if (connectedCells.Count <= 1 || GameManager.Instance.insideEnemies.Count > 0)
         {
             connectedCells[0].currentSoldier.SoldierCircle = false;
             CancelConnecting();
         }
         else
         {
+            GameManager.Instance.CurrentTutorialIndex++;
             connectingLine.positionCount = 0;
             isConnecting = false;
             IsShifting = true;
@@ -207,10 +281,36 @@ public class SoldierCellMergeManager : MonoBehaviour
         }  
     }
 
+    private IEnumerator BlinkLine(Action onEnd = null)
+    {
+        float dur = 1f;
+        int n = 3;
+        float dur2 = dur / n;
+
+        Color color1 = connectingLine.startColor;
+        Color color2 = connectingLine.endColor;
+
+        connectingLine.startColor = Color.red;
+        connectingLine.endColor = Color.red;
+        yield return new WaitForSeconds(dur2);
+        connectingLine.startColor = color1;
+        connectingLine.endColor = color2;
+        yield return new WaitForSeconds(dur2);
+        connectingLine.startColor = Color.red;
+        connectingLine.endColor = Color.red;
+        yield return new WaitForSeconds(dur2);
+        connectingLine.startColor = color1;
+        connectingLine.endColor = color2;
+
+        if (onEnd != null)
+        {
+            onEnd.Invoke();
+        }
+    }
+
     public void CancelConnecting()
     {
         connectingLine.positionCount = 0;
-        //UpdateSumOfValuesUI(0);
         foreach (SoldierCell cell in connectedCells)
             cell.currentSoldier.SoldierCircle = false;
         connectedCells.Clear();
@@ -300,13 +400,20 @@ public class SoldierCellMergeManager : MonoBehaviour
                     allCellsFull = false;
             }
         }
-        
-        if(allCellsFull)
+
+        if (allCellsFull)
+        {
+            if (PlayerPrefsManager.SeenTutorial)
+            {
+                GameManager.Instance.InitCurrentTutorial();
+            }
             IsShifting = false;
+        }
     }
 
     private IEnumerator DoMergeVisuals()
     {
+        IsMerging = true;
         int tempCount = connectedCells.Count;
         float duration = Database.GameConfiguration.SoldiersMergeTime;
         if (tempCount >= 2)
@@ -332,8 +439,19 @@ public class SoldierCellMergeManager : MonoBehaviour
             currentSumOfValues = Mathf.ClosestPowerOfTwo(currentSumOfValues);
             connectedCells[0].currentSoldier.ValueNumber = currentSumOfValues;
             connectedCells[0].currentSoldier.SoldierCircle = false;
-            ShiftSoldiers();
+            SoundManager.Instance.Play(Sound.SoldierMerge);
+            ParticleManager.Instance.PlayParticle(Particle_Type.SoldierMerge, connectedCells[0].transform.position+(Vector3.up*0.5f), Vector3.up);
+            if (PlayerPrefsManager.SeenTutorial)
+            {
+                ShiftSoldiers();
+            }
+            else
+            {
+                GameManager.Instance.InitCurrentTutorial();
+            }
             connectedCells.Clear();
+            IsMerging = false;
+            IsShifting = false;
         }
     }
 }

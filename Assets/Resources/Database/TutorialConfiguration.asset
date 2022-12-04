@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 467808e6e49233c4fab4d4a4a382c877, type: 3}
+  m_Name: TutorialConfiguration
+  m_EditorClassIdentifier: 
+  Map: 0
+  Theme: 1
+  Data:
+  - Path:
+      Order:
+      - {x: 0, y: 2}
+      - {x: 1, y: 2}
+      - {x: 2, y: 2}
+      - {x: 3, y: 2}
+    CellsData:
+    - X: 3
+      Y: 2
+      N: 2
+    - X: 2
+      Y: 2
+      N: 2
+    - X: 1
+      Y: 2
+      N: 2
+    - X: 0
+      Y: 2
+      N: 2
+  - Path:
+      Order:
+      - {x: 0, y: 0}
+      - {x: 0, y: 1}
+      - {x: 0, y: 2}
+      - {x: 1, y: 2}
+      - {x: 2, y: 2}
+      - {x: 3, y: 2}
+    CellsData:
+    - X: 3
+      Y: 2
+      N: 2
+    - X: 2
+      Y: 2
+      N: 2
+    - X: 1
+      Y: 2
+      N: 2
+    - X: 0
+      Y: 2
+      N: 2
+    - X: 0
+      Y: 1
+      N: 2
+    - X: 0
+      Y: 0
+      N: 2
+  - Path:
+      Order:
+      - {x: 0, y: 0}
+      - {x: 0, y: 1}
+      - {x: 0, y: 2}
+      - {x: 1, y: 2}
+      - {x: 2, y: 2}
+      - {x: 3, y: 2}
+    CellsData:
+    - X: 3
+      Y: 2
+      N: 16
+    - X: 2
+      Y: 2
+      N: 8
+    - X: 1
+      Y: 2
+      N: 4
+    - X: 0
+      Y: 2
+      N: 4
+    - X: 0
+      Y: 1
+      N: 2
+    - X: 0
+      Y: 0
+      N: 2
+  - Path:
+      Order:
+      - {x: 0, y: 4}
+      - {x: 0, y: 3}
+      - {x: 1, y: 2}
+      - {x: 2, y: 1}
+      - {x: 2, y: 0}
+      - {x: 3, y: 0}
+      - {x: 3, y: 1}
+      - {x: 3, y: 2}
+      - {x: 3, y: 3}
+      - {x: 3, y: 4}
+    CellsData:
+    - X: 0
+      Y: 4
+      N: 2
+    - X: 0
+      Y: 3
+      N: 2
+    - X: 1
+      Y: 2
+      N: 4
+    - X: 2
+      Y: 1
+      N: 4
+    - X: 2
+      Y: 0
+      N: 4
+    - X: 3
+      Y: 0
+      N: 8
+    - X: 3
+      Y: 1
+      N: 16
+    - X: 3
+      Y: 2
+      N: 32
+    - X: 3
+      Y: 3
+      N: 64
+    - X: 3
+      Y: 4
+      N: 128

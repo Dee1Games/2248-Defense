@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LevelsConfiguration
   m_EditorClassIdentifier: 
   LevelsData:
-  - Map: 1
+  - Map: 8
     Theme: 1
     MinSoldierPower: 1
     MaxSoldierPower: 6
@@ -23,177 +23,88 @@ MonoBehaviour:
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
+        Health: 10
+        X: 0.34387684
+        YOffset: 2.024487
         SpawnTime: 0
       - Type: 0
-        Health: 100
-        X: 2
-        YOffset: 0
+        Health: 10
+        X: 0.81480646
+        YOffset: 2.4654856
         SpawnTime: 0
       - Type: 0
-        Health: 100
-        X: 4
-        YOffset: 0
+        Health: 10
+        X: 2.0901554
+        YOffset: 2.028632
+        SpawnTime: 0
+      - Type: 0
+        Health: 10
+        X: 3.2076664
+        YOffset: 0.012779117
+        SpawnTime: 0
+      - Type: 0
+        Health: 10
+        X: 1.0738018
+        YOffset: 0.56040037
+        SpawnTime: 0
+      - Type: 0
+        Health: 10
+        X: 3.72228
+        YOffset: 1.2979736
+        SpawnTime: 0
+      - Type: 0
+        Health: 10
+        X: 0.49251032
+        YOffset: 0.38401902
+        SpawnTime: 0
+      - Type: 0
+        Health: 10
+        X: 3.270554
+        YOffset: 0.81515354
+        SpawnTime: 0
+      - Type: 0
+        Health: 10
+        X: 3.646772
+        YOffset: 0.041064978
+        SpawnTime: 0
+      - Type: 0
+        Health: 10
+        X: 3.6818037
+        YOffset: 0.4131707
         SpawnTime: 0
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 0
-        Health: 60
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 60
-        X: 3
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 60
-        X: 4
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 60
-        X: 2
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 80
-        X: 0
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 80
-        X: 0
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 80
-        X: 4
-        YOffset: 0
-        SpawnTime: 3.5
-      - Type: 0
-        Health: 70
-        X: 4
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 80
-        X: 3
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 60
-        X: 0
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 70
-        X: 2
-        YOffset: 0
-        SpawnTime: 6
-    - WaitTimeBeforeSpawnWave: 5
-      EnemiesData:
-      - Type: 1
-        Health: 1000
-        X: 2
-        YOffset: 0
+        Health: 0
+        X: 3.597939
+        YOffset: 0.94201595
         SpawnTime: 0
     - WaitTimeBeforeSpawnWave: 5
-      EnemiesData:
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 1
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 8
+      EnemiesData: []
     - WaitTimeBeforeSpawnWave: 5
-      EnemiesData:
-      - Type: 1
-        Health: 1000
-        X: 3
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 1
-        Health: 1000
-        X: 4
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 30
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 30
-        X: 1
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 30
-        X: 2
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 30
-        X: 3
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 30
-        X: 4
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 30
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
+      EnemiesData: []
+    - WaitTimeBeforeSpawnWave: 5
+      EnemiesData: []
     MatrixRow1: 0200000002000000040000000800000004000000
     MatrixRow2: 0200000004000000020000000200000004000000
     MatrixRow3: 0400000002000000020000000200000008000000
     MatrixRow4: 0400000008000000020000000200000002000000
+    HasTutorial: 1
+    Tutorials:
+    - Order:
+      - {x: 2, y: 0}
+      - {x: 3, y: 0}
+      - {x: 3, y: 1}
+      - {x: 3, y: 2}
+      - {x: 3, y: 3}
+    - Order:
+      - {x: 0, y: 4}
+      - {x: 0, y: 3}
+      - {x: 1, y: 3}
+      - {x: 2, y: 3}
+      - {x: 1, y: 2}
+      - {x: 2, y: 2}
+      - {x: 3, y: 2}
   - Map: 2
     Theme: 3
     MinSoldierPower: 1
@@ -204,84 +115,59 @@ MonoBehaviour:
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
+        Health: 10
+        X: 3.871354
+        YOffset: 2.7418876
+        SpawnTime: 1
       - Type: 0
-        Health: 100
-        X: 1
-        YOffset: 0
-        SpawnTime: 0
+        Health: 10
+        X: 2.3810956
+        YOffset: 0.79044825
+        SpawnTime: 1
       - Type: 0
-        Health: 100
-        X: 2
-        YOffset: 0
-        SpawnTime: 0
+        Health: 10
+        X: 1.0533779
+        YOffset: 1.5492392
+        SpawnTime: 1
       - Type: 0
-        Health: 100
-        X: 3
-        YOffset: 0
-        SpawnTime: 0
+        Health: 10
+        X: 1.4077356
+        YOffset: 2.5599024
+        SpawnTime: 1
       - Type: 0
-        Health: 100
-        X: 4
-        YOffset: 0
-        SpawnTime: 0
+        Health: 10
+        X: 1.11536
+        YOffset: 0.12193072
+        SpawnTime: 1
+      - Type: 0
+        Health: 10
+        X: 1.7238042
+        YOffset: 1.8059704
+        SpawnTime: 1
+      - Type: 0
+        Health: 10
+        X: 0.24164724
+        YOffset: 2.340838
+        SpawnTime: 1
+      - Type: 0
+        Health: 10
+        X: 0.45625162
+        YOffset: 0.82511276
+        SpawnTime: 1
+      - Type: 0
+        Health: 10
+        X: 2.899436
+        YOffset: 1.6723027
+        SpawnTime: 1
+      - Type: 0
+        Health: 10
+        X: 0.21760654
+        YOffset: 2.8298664
+        SpawnTime: 1
     - WaitTimeBeforeSpawnWave: 6
-      EnemiesData:
-      - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 200
-        X: 2
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 200
-        X: 4
-        YOffset: 0
-        SpawnTime: 0
+      EnemiesData: []
     - WaitTimeBeforeSpawnWave: 0
-      EnemiesData:
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 2
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 4
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 100
-        X: 1
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 100
-        X: 2
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 100
-        X: 3
-        YOffset: 0
-        SpawnTime: 1
+      EnemiesData: []
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 0
@@ -330,6 +216,8 @@ MonoBehaviour:
     MatrixRow2: 0200000004000000020000000800000002000000
     MatrixRow3: 0400000002000000040000000200000008000000
     MatrixRow4: 0800000004000000020000000400000002000000
+    HasTutorial: 0
+    Tutorials: []
   - Map: 2
     Theme: 2
     MinSoldierPower: 1
@@ -401,6 +289,8 @@ MonoBehaviour:
     MatrixRow2: 0800000004000000080000000400000008000000
     MatrixRow3: 0400000008000000040000000800000004000000
     MatrixRow4: 0800000004000000080000000400000008000000
+    HasTutorial: 0
+    Tutorials: []
   - Map: 3
     Theme: 4
     MinSoldierPower: 1
@@ -677,6 +567,8 @@ MonoBehaviour:
     MatrixRow2: 0400000004000000040000000400000004000000
     MatrixRow3: 0800000008000000080000000800000008000000
     MatrixRow4: 0200000002000000020000000200000002000000
+    HasTutorial: 0
+    Tutorials: []
   - Map: 3
     Theme: 5
     MinSoldierPower: 1
@@ -1948,6 +1840,8 @@ MonoBehaviour:
     MatrixRow2: 0200000004000000080000000400000002000000
     MatrixRow3: 0200000004000000080000000400000002000000
     MatrixRow4: 0200000004000000080000000400000002000000
+    HasTutorial: 0
+    Tutorials: []
   - Map: 4
     Theme: 1
     MinSoldierPower: 1
@@ -2069,6 +1963,8 @@ MonoBehaviour:
     MatrixRow2: 0400000008000000080000000800000004000000
     MatrixRow3: 1000000004000000080000000400000010000000
     MatrixRow4: 1000000008000000040000000800000010000000
+    HasTutorial: 0
+    Tutorials: []
   - Map: 5
     Theme: 2
     MinSoldierPower: 1
@@ -2400,6 +2296,8 @@ MonoBehaviour:
     MatrixRow2: 0800000004000000080000000400000008000000
     MatrixRow3: 0800000010000000040000001000000008000000
     MatrixRow4: 0800000004000000080000000400000008000000
+    HasTutorial: 0
+    Tutorials: []
   - Map: 6
     Theme: 3
     MinSoldierPower: 1
@@ -2636,6 +2534,8 @@ MonoBehaviour:
     MatrixRow2: 0800000004000000080000000400000008000000
     MatrixRow3: 1000000004000000100000000400000010000000
     MatrixRow4: 0400000010000000040000001000000004000000
+    HasTutorial: 0
+    Tutorials: []
   - Map: 7
     Theme: 4
     MinSoldierPower: 1
@@ -2857,6 +2757,8 @@ MonoBehaviour:
     MatrixRow2: 1000000004000000080000000400000010000000
     MatrixRow3: 1000000004000000080000000400000010000000
     MatrixRow4: 0400000010000000080000001000000004000000
+    HasTutorial: 0
+    Tutorials: []
   - Map: 8
     Theme: 5
     MinSoldierPower: 1
@@ -4128,21 +4030,5 @@ MonoBehaviour:
     MatrixRow2: 0400000004000000040000000400000004000000
     MatrixRow3: 0400000004000000040000000400000004000000
     MatrixRow4: 0400000004000000040000000400000004000000
-  - Map: 1
-    Theme: 3
-    MinSoldierPower: 1
-    MaxSoldierPower: 6
-    BomberSoldierSpawnProbability: 0
-    WaitTimeBeforeSpawnLevel: 0
-    WavesData:
-    - WaitTimeBeforeSpawnWave: 0
-      EnemiesData:
-      - Type: 0
-        Health: 9999999
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-    MatrixRow1: 8000000002000000020000000200000002000000
-    MatrixRow2: 0200000002000000020000000200000002000000
-    MatrixRow3: 0200000002000000020000000200000002000000
-    MatrixRow4: 0200000002000000020000000200000002000000
+    HasTutorial: 0
+    Tutorials: []

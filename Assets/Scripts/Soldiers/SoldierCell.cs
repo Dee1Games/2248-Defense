@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoldierCell : MonoBehaviour
 {
-    public bool IsFull = true;
+    public bool IsFull = true, IsKilled = false;
     public Soldier currentSoldier;
 
     private bool isShootingCell = false;
@@ -37,8 +37,10 @@ public class SoldierCell : MonoBehaviour
         thisColumn = col;
         thisRow = row;
         this.isShootingCell = isShootingCell;
-        if(currentSoldier != null)
-            Destroy(currentSoldier.gameObject);
+        if (currentSoldier != null)
+        {
+            ObjectPool.DeSpawn(currentSoldier.gameObject);
+        }
         currentSoldier = (type==SoldierType.Bomber?SoldierCellMergeManager.Instance.BomberSoldierPool:SoldierCellMergeManager.Instance.NormalSoldierPool).Spawn(transform).GetComponent<Soldier>();
         currentSoldier.transform.localPosition = Vector3.zero;
         currentSoldier.ValueNumber = valueNumber;
@@ -143,6 +145,7 @@ public class SoldierCell : MonoBehaviour
         currentSoldier.curCol = thisColumn;
         currentSoldier.curRow = thisRow;
         IsFull = true;
+        IsKilled = false;
         currentSoldier.SetCell(this);
         if (isShootingCell)
         {
@@ -159,18 +162,19 @@ public class SoldierCell : MonoBehaviour
             ClearCell();
         }
         else
-        if (currentSoldier.ValueNumber / 2 == 1)
+        /*if (currentSoldier.ValueNumber / 2 == 1)*/
         {
             currentSoldier.SetState(SoldierState.Dead);
             IsFull = false;
+            IsKilled = true;
             Vector3 particlePos = transform.position;
             particlePos.y = 1.5f;
             ParticleManager.Instance.PlayParticle(Particle_Type.SoldierDeath, particlePos, Vector3.up);
         }
-        else
+        /*else
         {
             currentSoldier.ValueNumber /= 2;
-        }
+        }*/
     }
 
 /*    private void EnemyEntered(Enemy enemy)
@@ -213,7 +217,7 @@ public class SoldierCell : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy") && GameManager.Instance.IsInPlayMode)
-            GameManager.Instance.OnEnemyEntered.Invoke();
+            GameManager.Instance.OnEnemyEntered?.Invoke();
     }
 
     /*private void OnTriggerExit(Collider other)

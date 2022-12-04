@@ -65,6 +65,13 @@ public class ObjectPool : MonoBehaviour
     public static void DeSpawn(GameObject obj)
     {
         ObjectPoolRefrence poolRefrence = obj.GetComponent<ObjectPoolRefrence>();
-        poolRefrence.pool.DeSpawnObject(obj);
+        if (poolRefrence != null)
+        {
+            poolRefrence.pool.DeSpawnObject(obj);
+        }
+        else
+        {
+            Destroy(obj);
+        }
     }
 }

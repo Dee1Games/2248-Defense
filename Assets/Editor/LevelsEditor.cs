@@ -40,7 +40,7 @@ public class LevelsEditor : OdinMenuEditorWindow
         }
         
         GUI.backgroundColor = Color.red;
-        if (GUILayout.Button("- Remove Level",  GUILayout.Width(100)) && Database.LevelsConfiguration.LevelsData.Count == tree.MenuItems.Count)
+        if (GUILayout.Button("- Remove Level",  GUILayout.Width(100)) && Database.LevelsConfiguration.LevelsData.Count == tree.MenuItems.Count-2)
         {
             List<int> levelIndexes = new List<int>(tree.Selection.Count);
             foreach (var selectedLevel in tree.Selection)
@@ -48,7 +48,7 @@ public class LevelsEditor : OdinMenuEditorWindow
                 if (!selectedLevel.Name.ToLower().Contains("level"))
                     continue;
                 
-                int levelIndex = int.Parse(selectedLevel.Name.ToLower().Replace("level ", "")) - 1;
+                int levelIndex = int.Parse(selectedLevel.Name.ToLower().Replace("level ", ""))-1;
                 levelIndexes.Add(levelIndex);
             }
             foreach (int levelIndex in levelIndexes)
@@ -73,6 +73,7 @@ public class LevelsEditor : OdinMenuEditorWindow
         tree = new OdinMenuTree(supportsMultiSelect: true);
         LevelEditors = new List<LevelEditor>();
         tree.Add("Game Configs", Database.GameConfiguration, EditorIcons.SettingsCog);
+        tree.Add("Tutorial Configs", Database.TutorialConfiguration, EditorIcons.Info);
         for (int i = 0; i < Database.LevelsConfiguration.LevelsData.Count; i++)
         {
             LevelEditor levelEditor = new LevelEditor(i);

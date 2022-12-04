@@ -6,5 +6,8 @@ public enum Sound
     SoldierCombine,
     SimpleZVoice,
     GiantZVoice,
-    Shoot
+    Shoot,
+    BulletDestroy,
+    SoldierMerge,
+    SoldierConnet
 }

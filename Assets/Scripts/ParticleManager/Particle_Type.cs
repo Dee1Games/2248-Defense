@@ -6,5 +6,7 @@ public enum Particle_Type
    GiantZDeath,
    Explosion,
    Boom,
-   BulletHit
+   BulletHit,
+   BulletDestroy,
+   SoldierMerge
 }

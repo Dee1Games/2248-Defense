@@ -38,7 +38,7 @@ public class Enemy : MonoBehaviour
     private bool enteredSoldierArea;
     private bool InMove;
     private bool destinationIsBase = false;
-
+    private float lastTimeAttacked;
     public delegate void DiengInside(Enemy enemy);
     public DiengInside OnDiedInside;
 
@@ -88,6 +88,13 @@ public class Enemy : MonoBehaviour
         {
             ArrivedAtDestination();
         }
+
+        if (State == EnemyState.Attacking && (Time.timeSinceLevelLoad-lastTimeAttacked>Database.GameConfiguration.EnemyAttackRate))
+        {
+            AttackCell();
+            CheckCellAttackResult();
+            lastTimeAttacked = Time.timeSinceLevelLoad;
+        }
     }
 
     public void SetDestination(Vector3 pos)
@@ -131,7 +138,8 @@ public class Enemy : MonoBehaviour
                 navmeshAgent.enabled = true;
                 animator.SetBool("walk", false);
                 animator.SetBool("attack", true);
-                animator.speed = 1f;
+                animator.speed = Speed / Database.GameConfiguration.EnemyDefaultAnimationSpeed;
+                lastTimeAttacked = Time.timeSinceLevelLoad;
                 break;
             case EnemyState.Dead:
                 GameManager.Instance.CurrentKills++;

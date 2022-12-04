@@ -31,6 +31,24 @@ public class SoundManager : MonoBehaviour
         AudioSource.PlayClipAtPoint(SoundUtils.GetClip(sound), Vector3.zero, volume);
     }
 
+    public void PlayByASComponent(Sound sound,GameObject obj, float volume = 1, float pitch = 1, bool loop = false)
+    {
+        AudioSource source;
+        obj.TryGetComponent(out source);
+
+        if(source == null) 
+        { 
+            source = obj.AddComponent<AudioSource>();
+        }
+
+        source.playOnAwake = false;
+        source.volume = volume;
+        source.pitch = pitch;
+        source.loop = loop;
+        source.clip = SoundUtils.GetClip(sound);
+        source.Play();
+    }
+
     private bool IsExcluded(Sound sound)
     {
         return ExcludedSounds.Contains(sound);

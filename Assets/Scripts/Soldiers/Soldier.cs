@@ -14,7 +14,7 @@ public class Soldier : MonoBehaviour
     [SerializeField] private Image soldierCircle;
     [SerializeField] private Transform bulletExitPoint, modelTransform;
     private NavMeshAgent navmeshAgent;
-    private CapsuleCollider collider;    
+    private CapsuleCollider thisCollider;    
     private ObjectPool bulletPool;
     private Enemy bomberTarget;
     private Enemy shooterTarget;
@@ -84,7 +84,7 @@ public class Soldier : MonoBehaviour
         GameManager.Instance.OnEnemyReachedSildierbase += GoIdle;
         bulletPool = GameObject.Find("BulletPool").GetComponent<ObjectPool>();
         navmeshAgent = GetComponent<NavMeshAgent>();
-        collider = GetComponent<CapsuleCollider>();
+        thisCollider = GetComponent<CapsuleCollider>();
     }
     
     private void OnDisable()
@@ -179,7 +179,7 @@ public class Soldier : MonoBehaviour
         switch (State)
         {
             case SoldierState.Idle:
-                collider.isTrigger = false;
+                thisCollider.isTrigger = false;
                 navmeshAgent.enabled = false;
                 thisAnimator.SetBool("walk", false);
                 if(Type==SoldierType.Normal)
@@ -190,7 +190,7 @@ public class Soldier : MonoBehaviour
                 thisAnimator.speed = 1f;
                 break;
             case SoldierState.Shooting:
-                collider.isTrigger = false;
+                thisCollider.isTrigger = false;
                 navmeshAgent.enabled = false;
                 thisAnimator.SetBool("walk", false);
                 if(Type==SoldierType.Normal)
@@ -201,7 +201,7 @@ public class Soldier : MonoBehaviour
                 transform.rotation = Quaternion.LookRotation(Vector3.forward);
                 break;
             case SoldierState.Running:
-                collider.isTrigger = false;
+                thisCollider.isTrigger = false;
                 navmeshAgent.enabled = false;
                 thisAnimator.SetBool("walk", true);
                 if(Type==SoldierType.Normal)
@@ -212,7 +212,7 @@ public class Soldier : MonoBehaviour
                 thisAnimator.speed = 1f;
                 break;
             case SoldierState.Bombing:
-                collider.isTrigger = false;
+                thisCollider.isTrigger = false;
                 navmeshAgent.enabled = true;
                 thisAnimator.SetBool("walk", false);
                 if(Type==SoldierType.Normal)
@@ -223,7 +223,7 @@ public class Soldier : MonoBehaviour
                 thisAnimator.speed = 1f;
                 break;
             case SoldierState.Dead:
-                collider.isTrigger = true;
+                thisCollider.isTrigger = true;
                 navmeshAgent.enabled = false;
                 thisAnimator.SetBool("walk", false);
                 if(Type==SoldierType.Normal)
@@ -310,7 +310,7 @@ public class Soldier : MonoBehaviour
             newBullet.SetBulletDamage(valueNumber);
             newBullet.SetTarget(shooterTarget.transform);
             newBullet.InvokeSelfDestruction();
-            SoundManager.Instance.Play(Sound.Shoot,0.5f);
+            SoundManager.Instance.Play(Sound.Shoot,0.3f);
         }
         else
         {

@@ -27,7 +27,21 @@ public class PlayerPrefsManager
             return result;
         }
     }
+
+    public static bool SeenTutorial
+    {
+        set
+        {
+            PlayerPrefs.SetInt(TutorialSaveAddress, value?1:0);
+        }
+        get
+        {
+            int result = PlayerPrefs.GetInt(TutorialSaveAddress, 0);
+            return result==1;
+        }
+    }
     
     private const string LevelSaveAddress = "Level";
     private const string CoinSaveAddress = "Coin";
+    private const string TutorialSaveAddress = "Tutorial";
 }

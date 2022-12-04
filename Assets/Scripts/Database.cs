@@ -29,10 +29,40 @@ public class Database : MonoBehaviour
         }
     }
     private static LevelsConfiguration levelsConfiguration;
+    
+    
+    public static LevelsConfiguration2 LevelsConfiguration2
+    {
+        get
+        {
+            if (levelsConfiguration2 == null)
+            {
+                levelsConfiguration2 = Resources.Load<LevelsConfiguration2>("Database/" + nameof(LevelsConfiguration2));
+            }
+            return levelsConfiguration2;
+        }
+    }
+    private static LevelsConfiguration2 levelsConfiguration2;
+    
+    
+    public static TutorialConfiguration TutorialConfiguration
+    {
+        get
+        {
+            if (tutorialConfiguration == null)
+            {
+                tutorialConfiguration = Resources.Load<TutorialConfiguration>("Database/" + nameof(TutorialConfiguration));
+            }
+            return tutorialConfiguration;
+        }
+    }
+    private static TutorialConfiguration tutorialConfiguration;
 
     public static void Reset()
     {
         gameConfiguration = null;
         levelsConfiguration = null;
+        levelsConfiguration2 = null;
+        tutorialConfiguration = null;
     }
 }

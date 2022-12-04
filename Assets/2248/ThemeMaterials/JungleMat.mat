@@ -86,14 +86,21 @@ Material:
     - _NormalIntensity: 0.6
     - _OcclusionStrength: 1
     - _OcclussionIntensity: 0
+    - _Offset1: 0
+    - _Offset2: 0
+    - _Outline: 0.1
     - _OutlineWidth: 0
     - _Parallax: 0.02
     - _RampSmooth: 0.1
     - _RampThreshold: 0.5
+    - _Shininess: 0.1
     - _SmoothnessTextureChannel: 0
+    - _SpecSmooth: 0.05
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _TexLod: 5
     - _UVSec: 0
+    - _ZSmooth: -0.5
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.06666667, g: 0.48235297, b: 0, a: 1}
@@ -101,5 +108,6 @@ Material:
     - _HColor: {r: 0.785, g: 0.785, b: 0.785, a: 1}
     - _HDREmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SColor: {r: 0.19499996, g: 0.19499996, b: 0.19499996, a: 1}
+    - _SColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_BuildTextureStacks: []

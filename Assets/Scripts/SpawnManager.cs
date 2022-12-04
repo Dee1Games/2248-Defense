@@ -44,21 +44,20 @@ public class SpawnManager : MonoBehaviour
         StartCoroutine(SpawnCurrentWave());
     }
 
-    public void InitCurrentLevel()
+    public void InitMapAndTheme(int map, MapTheme theme)
     {
-        foreach (Map map in maps)
+        foreach (Map _map in maps)
         {
-            map.gameObject.SetActive(false);
+            _map.gameObject.SetActive(false);
         }
-        foreach (GameObject theme in themes)
+        foreach (GameObject _theme in themes)
         {
-            theme.SetActive(false);
+            _theme.SetActive(false);
         }
         
-        LevelData levelData = GameManager.Instance.CurrentLevelData;
-        maps[levelData.Map-1].gameObject.SetActive(true);
-        maps[levelData.Map-1].ActivateMapTheme(levelData.Theme);
-        themes[(int)levelData.Theme].SetActive(true);
+        maps[map].gameObject.SetActive(true);
+        maps[map].ActivateMapTheme(theme);
+        themes[(int)theme].SetActive(true);
     }
 
     private IEnumerator SpawnCurrentLevel()

@@ -21,6 +21,9 @@ public class LevelData
     public int[] MatrixRow3 = new int[5];
     public int[] MatrixRow4 = new int[5];
 
+    public bool HasTutorial= false;
+    public List<TutorialPath> Tutorials;
+
     public void SetMatrix(int[,] matrix)
     {
         MatrixRow1 = new int[5];
