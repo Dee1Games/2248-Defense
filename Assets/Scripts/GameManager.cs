@@ -49,9 +49,16 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public List<Enemy> outsideEnemies = new List<Enemy>();
     [HideInInspector] public List<Enemy> insideEnemies = new List<Enemy>();
     //[HideInInspector] public Dictionary<(int row, int column),List<Enemy>> insideEnemies = new Dictionary<(int, int), List<Enemy>>();
-    
-    public LevelData CurrentLevelData => Database.LevelsConfiguration.LevelsData[CurrentLevelIndex];
-    public WaveData CurrentWaveData => Database.LevelsConfiguration.LevelsData[CurrentLevelIndex].WavesData[CurrentWaveIndex];
+
+    private int levelsCount => Database.LevelsConfiguration.LevelsData.Count - 5;
+
+    public LevelData CurrentLevelData => CurrentLevelIndex <5 ? Database.LevelsConfiguration.LevelsData[CurrentLevelIndex] :
+        Database.LevelsConfiguration.LevelsData[(CurrentLevelIndex % levelsCount) + 5];
+
+    public float currentCoefficient => 1 + ((CurrentLevelIndex / levelsCount) * Database.GameConfiguration.levelsCoefficient);
+
+    public WaveData CurrentWaveData => CurrentLevelIndex < 5 ? Database.LevelsConfiguration.LevelsData[CurrentLevelIndex].WavesData[CurrentWaveIndex] :
+        Database.LevelsConfiguration.LevelsData[(CurrentLevelIndex % levelsCount) + 5].WavesData[CurrentWaveIndex];
 
     public int CurrentTutorialIndex;
 
@@ -140,7 +147,8 @@ public class GameManager : MonoBehaviour
         
         insideEnemies.Clear();
         outsideEnemies.Clear();
-        SpawnManager.Instance.InitMapAndTheme(CurrentLevelData.Map-1, CurrentLevelData.Theme);
+        int themeIndex = (CurrentLevelIndex%5)+1; 
+        SpawnManager.Instance.InitMapAndTheme(CurrentLevelData.Map-1, (MapTheme)themeIndex);
         InitCurrentTutorial();
     }
 

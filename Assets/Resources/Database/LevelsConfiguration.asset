@@ -13,83 +13,133 @@ MonoBehaviour:
   m_Name: LevelsConfiguration
   m_EditorClassIdentifier: 
   LevelsData:
-  - Map: 8
+  - Map: 1
     Theme: 1
     MinSoldierPower: 1
     MaxSoldierPower: 6
     BomberSoldierSpawnProbability: 0
-    WaitTimeBeforeSpawnLevel: 0
+    WaitTimeBeforeSpawnLevel: 1
     WavesData:
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 0
         Health: 10
-        X: 0.34387684
-        YOffset: 2.024487
+        X: 3.9729
+        YOffset: 2.7862592
         SpawnTime: 0
       - Type: 0
         Health: 10
-        X: 0.81480646
-        YOffset: 2.4654856
+        X: 1.1954691
+        YOffset: 0.075140834
         SpawnTime: 0
       - Type: 0
         Health: 10
-        X: 2.0901554
-        YOffset: 2.028632
+        X: 2.955943
+        YOffset: 2.6159053
         SpawnTime: 0
       - Type: 0
         Health: 10
-        X: 3.2076664
-        YOffset: 0.012779117
+        X: 3.1796093
+        YOffset: 0.34709966
         SpawnTime: 0
       - Type: 0
         Health: 10
-        X: 1.0738018
-        YOffset: 0.56040037
-        SpawnTime: 0
-      - Type: 0
-        Health: 10
-        X: 3.72228
-        YOffset: 1.2979736
-        SpawnTime: 0
-      - Type: 0
-        Health: 10
-        X: 0.49251032
-        YOffset: 0.38401902
-        SpawnTime: 0
-      - Type: 0
-        Health: 10
-        X: 3.270554
-        YOffset: 0.81515354
-        SpawnTime: 0
-      - Type: 0
-        Health: 10
-        X: 3.646772
-        YOffset: 0.041064978
-        SpawnTime: 0
-      - Type: 0
-        Health: 10
-        X: 3.6818037
-        YOffset: 0.4131707
+        X: 3.172576
+        YOffset: 0.8980989
         SpawnTime: 0
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 0
-        Health: 0
-        X: 3.597939
-        YOffset: 0.94201595
+        Health: 20
+        X: 0.22495127
+        YOffset: 2.134076
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 3.3790898
+        YOffset: 2.6100805
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 3.1101022
+        YOffset: 0.05544591
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 3.5027356
+        YOffset: 2.0284817
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 2.0285118
+        YOffset: 1.0837889
         SpawnTime: 0
     - WaitTimeBeforeSpawnWave: 5
-      EnemiesData: []
+      EnemiesData:
+      - Type: 1
+        Health: 100
+        X: 3.4120493
+        YOffset: 1.8275194
+        SpawnTime: 0
     - WaitTimeBeforeSpawnWave: 5
-      EnemiesData: []
+      EnemiesData:
+      - Type: 0
+        Health: 40
+        X: 1.9083693
+        YOffset: 2.7903461
+        SpawnTime: 0
+      - Type: 0
+        Health: 40
+        X: 3.629362
+        YOffset: 2.7016733
+        SpawnTime: 0
+      - Type: 0
+        Health: 40
+        X: 1.9563892
+        YOffset: 0.5893904
+        SpawnTime: 0
+      - Type: 0
+        Health: 40
+        X: 2.8659458
+        YOffset: 0.4313432
+        SpawnTime: 0
+      - Type: 0
+        Health: 40
+        X: 3.9037867
+        YOffset: 1.8815131
+        SpawnTime: 0
     - WaitTimeBeforeSpawnWave: 5
-      EnemiesData: []
-    MatrixRow1: 0200000002000000040000000800000004000000
-    MatrixRow2: 0200000004000000020000000200000004000000
-    MatrixRow3: 0400000002000000020000000200000008000000
-    MatrixRow4: 0400000008000000020000000200000002000000
-    HasTutorial: 1
+      EnemiesData:
+      - Type: 0
+        Health: 50
+        X: 0.08117676
+        YOffset: 1.9465442
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.7756257
+        YOffset: 2.3784976
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.319654
+        YOffset: 2.3347173
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.571175
+        YOffset: 1.236824
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.3318079
+        YOffset: 2.9924407
+        SpawnTime: 0
+    MatrixRow1: 0200000002000000020000000200000002000000
+    MatrixRow2: 0400000004000000020000000400000002000000
+    MatrixRow3: 0400000004000000020000000400000004000000
+    MatrixRow4: 0200000002000000020000000200000002000000
+    HasTutorial: 0
     Tutorials:
     - Order:
       - {x: 2, y: 0}
@@ -109,181 +159,791 @@ MonoBehaviour:
     Theme: 3
     MinSoldierPower: 1
     MaxSoldierPower: 6
-    BomberSoldierSpawnProbability: 0.1
-    WaitTimeBeforeSpawnLevel: 0
+    BomberSoldierSpawnProbability: 0
+    WaitTimeBeforeSpawnLevel: 1
     WavesData:
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 0
         Health: 10
-        X: 3.871354
-        YOffset: 2.7418876
-        SpawnTime: 1
+        X: 0.9854584
+        YOffset: 2.5567985
+        SpawnTime: 0
       - Type: 0
         Health: 10
-        X: 2.3810956
-        YOffset: 0.79044825
-        SpawnTime: 1
+        X: 0.5348582
+        YOffset: 1.0990853
+        SpawnTime: 0
       - Type: 0
         Health: 10
-        X: 1.0533779
-        YOffset: 1.5492392
-        SpawnTime: 1
+        X: 1.2887933
+        YOffset: 2.463593
+        SpawnTime: 0
       - Type: 0
         Health: 10
-        X: 1.4077356
-        YOffset: 2.5599024
-        SpawnTime: 1
+        X: 3.0651708
+        YOffset: 0.53747964
+        SpawnTime: 0
       - Type: 0
         Health: 10
-        X: 1.11536
-        YOffset: 0.12193072
-        SpawnTime: 1
+        X: 2.4157093
+        YOffset: 1.6131244
+        SpawnTime: 0
       - Type: 0
         Health: 10
-        X: 1.7238042
-        YOffset: 1.8059704
-        SpawnTime: 1
+        X: 1.4697897
+        YOffset: 1.1296115
+        SpawnTime: 0
       - Type: 0
         Health: 10
-        X: 0.24164724
-        YOffset: 2.340838
-        SpawnTime: 1
+        X: 1.3507345
+        YOffset: 0.2546625
+        SpawnTime: 0
       - Type: 0
         Health: 10
-        X: 0.45625162
-        YOffset: 0.82511276
-        SpawnTime: 1
+        X: 3.0036635
+        YOffset: 1.6624622
+        SpawnTime: 0
       - Type: 0
         Health: 10
-        X: 2.899436
-        YOffset: 1.6723027
-        SpawnTime: 1
+        X: 2.1598723
+        YOffset: 1.2299733
+        SpawnTime: 0
       - Type: 0
         Health: 10
-        X: 0.21760654
-        YOffset: 2.8298664
-        SpawnTime: 1
+        X: 3.1380444
+        YOffset: 0.8694604
+        SpawnTime: 0
     - WaitTimeBeforeSpawnWave: 6
-      EnemiesData: []
-    - WaitTimeBeforeSpawnWave: 0
-      EnemiesData: []
+      EnemiesData:
+      - Type: 0
+        Health: 20
+        X: 0.008446217
+        YOffset: 2.6578655
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 0.5914583
+        YOffset: 2.0654287
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 3.9843354
+        YOffset: 1.1157105
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 0.47792673
+        YOffset: 0.3076086
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 0.98561716
+        YOffset: 2.3833966
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 3.4958873
+        YOffset: 2.7877936
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 2.742465
+        YOffset: 0.13549018
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 1.2640064
+        YOffset: 2.1899266
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 3.3987532
+        YOffset: 0.32551646
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 1.7133348
+        YOffset: 0.9661086
+        SpawnTime: 0
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 0
-        Health: 300
-        X: 1
-        YOffset: 0
+        Health: 30
+        X: 0.6321821
+        YOffset: 0.44094157
         SpawnTime: 0
       - Type: 0
-        Health: 350
-        X: 2
-        YOffset: 0
+        Health: 30
+        X: 3.538353
+        YOffset: 0.38998497
         SpawnTime: 0
       - Type: 0
-        Health: 400
-        X: 3
-        YOffset: 0
+        Health: 30
+        X: 3.655459
+        YOffset: 2.3144245
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 0.6186185
+        YOffset: 1.6993656
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 1.0925643
+        YOffset: 2.1360064
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 1.2948401
+        YOffset: 2.1911423
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 3.8850589
+        YOffset: 0.96635
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 2.4281042
+        YOffset: 2.2399242
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 1.4719818
+        YOffset: 2.7002387
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 0.78071356
+        YOffset: 1.504895
         SpawnTime: 0
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
-      - Type: 1
-        Health: 1000
-        X: 1
-        YOffset: 0
-        SpawnTime: 2
       - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
+        Health: 40
+        X: 1.4723833
+        YOffset: 1.0547943
         SpawnTime: 0
       - Type: 0
-        Health: 150
-        X: 1
-        YOffset: 0
+        Health: 40
+        X: 2.717896
+        YOffset: 1.781945
         SpawnTime: 0
       - Type: 0
-        Health: 150
-        X: 2
-        YOffset: 0
+        Health: 40
+        X: 0.711555
+        YOffset: 2.394036
         SpawnTime: 0
       - Type: 0
-        Health: 100
-        X: 4
-        YOffset: 0
+        Health: 40
+        X: 2.3863618
+        YOffset: 1.0806046
+        SpawnTime: 0
+      - Type: 0
+        Health: 40
+        X: 2.4692104
+        YOffset: 0.36054862
+        SpawnTime: 0
+      - Type: 0
+        Health: 40
+        X: 2.0003622
+        YOffset: 2.1880412
+        SpawnTime: 0
+      - Type: 0
+        Health: 40
+        X: 1.5059569
+        YOffset: 0.6901417
+        SpawnTime: 0
+      - Type: 0
+        Health: 40
+        X: 3.2987719
+        YOffset: 1.8563714
+        SpawnTime: 0
+      - Type: 0
+        Health: 40
+        X: 0.40073586
+        YOffset: 1.0343974
+        SpawnTime: 0
+      - Type: 0
+        Health: 40
+        X: 0.5444088
+        YOffset: 1.6313536
+        SpawnTime: 0
+    - WaitTimeBeforeSpawnWave: 0
+      EnemiesData:
+      - Type: 0
+        Health: 50
+        X: 0.3431406
+        YOffset: 1.7803254
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.7555311
+        YOffset: 0.29190087
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.635106
+        YOffset: 1.7913005
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.015062
+        YOffset: 1.2784019
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.226828
+        YOffset: 2.5245345
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.0244675
+        YOffset: 2.7624958
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.033565
+        YOffset: 0.47659135
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.7446885
+        YOffset: 2.8847258
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.9482775
+        YOffset: 1.254096
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.4954278
+        YOffset: 1.7962005
         SpawnTime: 0
     MatrixRow1: 0400000002000000080000000200000002000000
-    MatrixRow2: 0200000004000000020000000800000002000000
-    MatrixRow3: 0400000002000000040000000200000008000000
-    MatrixRow4: 0800000004000000020000000400000002000000
+    MatrixRow2: 0200000004000000020000000200000002000000
+    MatrixRow3: 0400000002000000040000000200000002000000
+    MatrixRow4: 0200000004000000020000000400000002000000
     HasTutorial: 0
     Tutorials: []
   - Map: 2
     Theme: 2
     MinSoldierPower: 1
     MaxSoldierPower: 6
-    BomberSoldierSpawnProbability: 0
-    WaitTimeBeforeSpawnLevel: 0
+    BomberSoldierSpawnProbability: 0.01
+    WaitTimeBeforeSpawnLevel: 1
     WavesData:
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
-      - Type: 1
-        Health: 1000
-        X: 2
-        YOffset: 0
+      - Type: 0
+        Health: 10
+        X: 3.704832
+        YOffset: 2.8411398
         SpawnTime: 0
       - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
+        Health: 10
+        X: 0.64730215
+        YOffset: 2.6303651
+        SpawnTime: 0
+      - Type: 0
+        Health: 10
+        X: 0.38986874
+        YOffset: 0.033497572
+        SpawnTime: 0
+      - Type: 0
+        Health: 10
+        X: 0.28020096
+        YOffset: 0.42490375
+        SpawnTime: 0
+      - Type: 0
+        Health: 10
+        X: 3.2945595
+        YOffset: 2.3655806
+        SpawnTime: 0
+      - Type: 0
+        Health: 10
+        X: 2.5144305
+        YOffset: 0.8768719
+        SpawnTime: 0
+      - Type: 0
+        Health: 10
+        X: 1.2573273
+        YOffset: 1.4257596
+        SpawnTime: 0
+      - Type: 0
+        Health: 10
+        X: 3.9358563
+        YOffset: 2.6554322
+        SpawnTime: 0
+      - Type: 0
+        Health: 10
+        X: 1.7520702
+        YOffset: 0.22497654
+        SpawnTime: 0
+      - Type: 0
+        Health: 10
+        X: 3.3845773
+        YOffset: 2.6409264
+        SpawnTime: 0
+      - Type: 0
+        Health: 10
+        X: 0.3348236
+        YOffset: 0.8840359
+        SpawnTime: 0
+      - Type: 0
+        Health: 10
+        X: 3.6485515
+        YOffset: 1.787355
+        SpawnTime: 0
+      - Type: 0
+        Health: 10
+        X: 2.1032288
+        YOffset: 0.015580416
+        SpawnTime: 0
+      - Type: 0
+        Health: 10
+        X: 0.53120756
+        YOffset: 1.7137351
+        SpawnTime: 0
+      - Type: 0
+        Health: 10
+        X: 1.4169824
+        YOffset: 0.3603505
+        SpawnTime: 0
+      - Type: 0
+        Health: 10
+        X: 3.5302792
+        YOffset: 0.39003253
+        SpawnTime: 0
+      - Type: 0
+        Health: 10
+        X: 1.7262743
+        YOffset: 0.41969776
+        SpawnTime: 0
+      - Type: 0
+        Health: 10
+        X: 0.7637434
+        YOffset: 1.8745153
+        SpawnTime: 0
+      - Type: 0
+        Health: 10
+        X: 3.8289552
+        YOffset: 0.8877713
+        SpawnTime: 0
+      - Type: 0
+        Health: 10
+        X: 2.113694
+        YOffset: 2.8582025
         SpawnTime: 0
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
-      - Type: 1
-        Health: 1000
-        X: 2
-        YOffset: 0
+      - Type: 0
+        Health: 20
+        X: 2.542688
+        YOffset: 2.300364
         SpawnTime: 0
       - Type: 0
-        Health: 300
-        X: 0
-        YOffset: 0
+        Health: 20
+        X: 3.0722556
+        YOffset: 0.956315
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 0.973701
+        YOffset: 1.8048186
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 0.34454584
+        YOffset: 2.4859934
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 1.0020416
+        YOffset: 2.4066718
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 1.5671413
+        YOffset: 0.46191537
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 1.5573108
+        YOffset: 0.73270726
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 3.0084162
+        YOffset: 2.5902667
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 2.7247872
+        YOffset: 1.2556474
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 0.5627785
+        YOffset: 2.841319
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 3.3424582
+        YOffset: 2.822791
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 0.851336
+        YOffset: 1.1150911
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 1.1392028
+        YOffset: 1.4719296
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 2.3817704
+        YOffset: 2.1489487
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 3.4408221
+        YOffset: 1.422013
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 2.1049411
+        YOffset: 0.2782935
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 1.5086739
+        YOffset: 2.7014809
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 0.15535355
+        YOffset: 1.8136816
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 1.3381016
+        YOffset: 0.9860274
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 2.7157588
+        YOffset: 1.6107805
         SpawnTime: 0
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
-      - Type: 1
-        Health: 1000
-        X: 2
-        YOffset: 0
+      - Type: 0
+        Health: 30
+        X: 3.9861684
+        YOffset: 1.2736154
         SpawnTime: 0
       - Type: 0
-        Health: 500
-        X: 0
-        YOffset: 0
+        Health: 30
+        X: 3.566749
+        YOffset: 0.44884622
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 1.285928
+        YOffset: 0.9579225
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 2.374313
+        YOffset: 0.5302813
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 0.7208972
+        YOffset: 2.2274742
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 2.0017726
+        YOffset: 1.5018699
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 2.8174353
+        YOffset: 0.45842028
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 0.01863575
+        YOffset: 1.9349177
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 1.3203914
+        YOffset: 1.261112
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 1.8367498
+        YOffset: 2.633585
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 0.61270905
+        YOffset: 0.51977885
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 3.446825
+        YOffset: 1.3155501
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 3.3579845
+        YOffset: 2.3856626
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 1.4563558
+        YOffset: 0.7759854
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 2.6226888
+        YOffset: 1.5532005
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 0.7850709
+        YOffset: 0.04347825
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 3.7189622
+        YOffset: 2.4260445
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 0.0660696
+        YOffset: 2.699177
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 2.6775522
+        YOffset: 0.14367807
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 3.1630545
+        YOffset: 2.2871883
         SpawnTime: 0
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
-      - Type: 1
-        Health: 1000
-        X: 2
-        YOffset: 0
+      - Type: 0
+        Health: 40
+        X: 0.45373392
+        YOffset: 2.6950822
         SpawnTime: 0
       - Type: 0
-        Health: 700
-        X: 0
-        YOffset: 0
+        Health: 40
+        X: 2.3252184
+        YOffset: 2.8513305
+        SpawnTime: 0
+      - Type: 0
+        Health: 40
+        X: 0.16991806
+        YOffset: 2.1294544
+        SpawnTime: 0
+      - Type: 0
+        Health: 40
+        X: 1.6143444
+        YOffset: 0.47426784
+        SpawnTime: 0
+      - Type: 0
+        Health: 40
+        X: 2.0750158
+        YOffset: 1.9965459
+        SpawnTime: 0
+      - Type: 0
+        Health: 40
+        X: 0.9318552
+        YOffset: 2.782897
+        SpawnTime: 0
+      - Type: 0
+        Health: 40
+        X: 0.09678984
+        YOffset: 0.11154735
+        SpawnTime: 0
+      - Type: 0
+        Health: 40
+        X: 2.003083
+        YOffset: 1.5598459
+        SpawnTime: 0
+      - Type: 0
+        Health: 40
+        X: 1.794009
+        YOffset: 0.035434484
+        SpawnTime: 0
+      - Type: 0
+        Health: 40
+        X: 2.6596289
+        YOffset: 0.791917
+        SpawnTime: 0
+      - Type: 0
+        Health: 40
+        X: 3.2489467
+        YOffset: 1.0702274
+        SpawnTime: 0
+      - Type: 0
+        Health: 40
+        X: 0.40187836
+        YOffset: 1.3038509
+        SpawnTime: 0
+      - Type: 0
+        Health: 40
+        X: 1.6555402
+        YOffset: 0.26604474
+        SpawnTime: 0
+      - Type: 0
+        Health: 40
+        X: 0.87418413
+        YOffset: 1.9399266
+        SpawnTime: 0
+      - Type: 0
+        Health: 40
+        X: 0.037442684
+        YOffset: 1.9073778
+        SpawnTime: 0
+      - Type: 0
+        Health: 40
+        X: 3.4011211
+        YOffset: 1.5170944
+        SpawnTime: 0
+      - Type: 0
+        Health: 40
+        X: 1.3232391
+        YOffset: 0.7213311
+        SpawnTime: 0
+      - Type: 0
+        Health: 40
+        X: 1.641845
+        YOffset: 2.918213
+        SpawnTime: 0
+      - Type: 0
+        Health: 40
+        X: 0.9100971
+        YOffset: 0.3172052
+        SpawnTime: 0
+      - Type: 0
+        Health: 40
+        X: 3.674429
+        YOffset: 0.049916983
         SpawnTime: 0
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
-      - Type: 1
-        Health: 1000
-        X: 2
-        YOffset: 0
+      - Type: 0
+        Health: 50
+        X: 0.1839552
+        YOffset: 0.54964936
         SpawnTime: 0
-      - Type: 1
-        Health: 1000
-        X: 0
-        YOffset: 0
+      - Type: 0
+        Health: 50
+        X: 2.88762
+        YOffset: 2.556561
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.9329033
+        YOffset: 1.3865964
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.5534718
+        YOffset: 0.8384605
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.6272092
+        YOffset: 0.15203762
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.9093337
+        YOffset: 2.1112237
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.4073517
+        YOffset: 1.822911
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.7535021
+        YOffset: 0.302732
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.4148929
+        YOffset: 0.58599615
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.3063259
+        YOffset: 2.7608032
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.09172
+        YOffset: 0.41635358
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.7365675
+        YOffset: 0.60469115
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.6814818
+        YOffset: 2.8951628
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.7496114
+        YOffset: 1.874459
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.8922682
+        YOffset: 2.7162633
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.7015352
+        YOffset: 2.8768368
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.7035608
+        YOffset: 0.011903644
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.8194861
+        YOffset: 0.641598
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.1812305
+        YOffset: 2.6823378
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.2710257
+        YOffset: 1.5035415
         SpawnTime: 0
     MatrixRow1: 0400000008000000040000000800000004000000
     MatrixRow2: 0800000004000000080000000400000008000000
@@ -295,276 +955,896 @@ MonoBehaviour:
     Theme: 4
     MinSoldierPower: 1
     MaxSoldierPower: 6
-    BomberSoldierSpawnProbability: 0
-    WaitTimeBeforeSpawnLevel: 0
+    BomberSoldierSpawnProbability: 0.01
+    WaitTimeBeforeSpawnLevel: 1
     WavesData:
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
+        Health: 10
+        X: 0.40561962
+        YOffset: 0.61535347
         SpawnTime: 0
       - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 100
-        X: 2
-        YOffset: 0
+        Health: 10
+        X: 0.81487274
+        YOffset: 2.5838919
         SpawnTime: 0
       - Type: 0
-        Health: 100
-        X: 2
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 100
-        X: 4
-        YOffset: 0
+        Health: 10
+        X: 0.9746294
+        YOffset: 2.4157486
         SpawnTime: 0
       - Type: 0
-        Health: 100
-        X: 4
-        YOffset: 0
+        Health: 10
+        X: 0.1726923
+        YOffset: 2.2452192
+        SpawnTime: 0
+      - Type: 0
+        Health: 10
+        X: 1.0380409
+        YOffset: 0.65914893
+        SpawnTime: 0
+      - Type: 0
+        Health: 10
+        X: 0.58570576
+        YOffset: 1.4147627
         SpawnTime: 1
+      - Type: 0
+        Health: 10
+        X: 0.778605
+        YOffset: 2.2930832
+        SpawnTime: 1
+      - Type: 0
+        Health: 10
+        X: 2.5248775
+        YOffset: 0.002921462
+        SpawnTime: 1
+      - Type: 0
+        Health: 10
+        X: 2.8766909
+        YOffset: 1.843394
+        SpawnTime: 1
+      - Type: 0
+        Health: 10
+        X: 2.8978968
+        YOffset: 1.173404
+        SpawnTime: 1
+      - Type: 0
+        Health: 10
+        X: 3.2312083
+        YOffset: 0.9972884
+        SpawnTime: 2
+      - Type: 0
+        Health: 10
+        X: 0.61392784
+        YOffset: 2.8482695
+        SpawnTime: 2
+      - Type: 0
+        Health: 10
+        X: 1.978616
+        YOffset: 1.2885487
+        SpawnTime: 2
+      - Type: 0
+        Health: 10
+        X: 1.6263254
+        YOffset: 1.8701701
+        SpawnTime: 2
+      - Type: 0
+        Health: 10
+        X: 3.195253
+        YOffset: 0.50900173
+        SpawnTime: 2
+      - Type: 0
+        Health: 10
+        X: 2.4075644
+        YOffset: 0.19317591
+        SpawnTime: 3
+      - Type: 0
+        Health: 10
+        X: 0.9541111
+        YOffset: 1.1431787
+        SpawnTime: 3
+      - Type: 0
+        Health: 10
+        X: 2.575005
+        YOffset: 1.2739017
+        SpawnTime: 3
+      - Type: 0
+        Health: 10
+        X: 2.5666633
+        YOffset: 0.56261086
+        SpawnTime: 3
+      - Type: 0
+        Health: 10
+        X: 2.8601632
+        YOffset: 1.4551382
+        SpawnTime: 3
+      - Type: 0
+        Health: 10
+        X: 3.1622953
+        YOffset: 2.6739557
+        SpawnTime: 4
+      - Type: 0
+        Health: 10
+        X: 1.0741589
+        YOffset: 0.92907196
+        SpawnTime: 4
+      - Type: 0
+        Health: 10
+        X: 0.8380804
+        YOffset: 1.2847242
+        SpawnTime: 4
+      - Type: 0
+        Health: 10
+        X: 1.8071678
+        YOffset: 2.5276494
+        SpawnTime: 4
+      - Type: 0
+        Health: 10
+        X: 1.263427
+        YOffset: 1.6171508
+        SpawnTime: 4
+      - Type: 0
+        Health: 10
+        X: 1.2572763
+        YOffset: 0.270293
+        SpawnTime: 5
+      - Type: 0
+        Health: 10
+        X: 0.29277372
+        YOffset: 1.8476484
+        SpawnTime: 5
+      - Type: 0
+        Health: 10
+        X: 2.6515322
+        YOffset: 2.3231387
+        SpawnTime: 5
+      - Type: 0
+        Health: 10
+        X: 1.6264441
+        YOffset: 1.4382446
+        SpawnTime: 5
+      - Type: 0
+        Health: 10
+        X: 3.6175919
+        YOffset: 2.7820153
+        SpawnTime: 5
+      - Type: 0
+        Health: 10
+        X: 0.8099365
+        YOffset: 2.585566
+        SpawnTime: 6
+      - Type: 0
+        Health: 10
+        X: 0.06620407
+        YOffset: 1.9437143
+        SpawnTime: 6
+      - Type: 0
+        Health: 10
+        X: 2.5877595
+        YOffset: 2.5145383
+        SpawnTime: 6
+      - Type: 0
+        Health: 10
+        X: 1.0604222
+        YOffset: 0.10478675
+        SpawnTime: 6
+      - Type: 0
+        Health: 10
+        X: 3.07787
+        YOffset: 0.389853
+        SpawnTime: 6
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 0
-        Health: 125
-        X: 0
-        YOffset: 0
+        Health: 20
+        X: 3.8699942
+        YOffset: 0.9622051
         SpawnTime: 0
       - Type: 0
-        Health: 125
-        X: 0
-        YOffset: 0
+        Health: 20
+        X: 2.1607664
+        YOffset: 2.2824378
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 3.4377398
+        YOffset: 2.5798624
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 2.3668444
+        YOffset: 2.820323
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 3.0317678
+        YOffset: 0.9178181
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 2.507803
+        YOffset: 0.21624792
         SpawnTime: 1
       - Type: 0
-        Health: 125
-        X: 1
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 125
-        X: 2
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 125
-        X: 2
-        YOffset: 0
+        Health: 20
+        X: 3.5318408
+        YOffset: 0.94774085
         SpawnTime: 1
       - Type: 0
-        Health: 125
-        X: 3
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 125
-        X: 4
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 125
-        X: 4
-        YOffset: 0
+        Health: 20
+        X: 2.8814116
+        YOffset: 0.67594314
         SpawnTime: 1
+      - Type: 0
+        Health: 20
+        X: 1.3515532
+        YOffset: 2.2581549
+        SpawnTime: 1
+      - Type: 0
+        Health: 20
+        X: 3.8976598
+        YOffset: 0.81024367
+        SpawnTime: 1
+      - Type: 0
+        Health: 20
+        X: 2.6130705
+        YOffset: 0.5841819
+        SpawnTime: 2
+      - Type: 0
+        Health: 20
+        X: 2.2944252
+        YOffset: 0.39555323
+        SpawnTime: 2
+      - Type: 0
+        Health: 20
+        X: 3.7472963
+        YOffset: 2.810111
+        SpawnTime: 2
+      - Type: 0
+        Health: 20
+        X: 3.621252
+        YOffset: 2.0025465
+        SpawnTime: 2
+      - Type: 0
+        Health: 20
+        X: 1.2466357
+        YOffset: 1.7553954
+        SpawnTime: 2
+      - Type: 0
+        Health: 20
+        X: 1.6297634
+        YOffset: 2.5943217
+        SpawnTime: 3
+      - Type: 0
+        Health: 20
+        X: 1.6018937
+        YOffset: 1.8984733
+        SpawnTime: 3
+      - Type: 0
+        Health: 20
+        X: 1.2688696
+        YOffset: 2.4027896
+        SpawnTime: 3
+      - Type: 0
+        Health: 20
+        X: 2.5414057
+        YOffset: 0.10773718
+        SpawnTime: 3
+      - Type: 0
+        Health: 20
+        X: 2.2127755
+        YOffset: 2.6247354
+        SpawnTime: 3
+      - Type: 0
+        Health: 20
+        X: 3.0612164
+        YOffset: 1.7933605
+        SpawnTime: 4
+      - Type: 0
+        Health: 20
+        X: 1.5502131
+        YOffset: 1.9980154
+        SpawnTime: 4
+      - Type: 0
+        Health: 20
+        X: 2.3225462
+        YOffset: 2.753967
+        SpawnTime: 4
+      - Type: 0
+        Health: 20
+        X: 3.1321507
+        YOffset: 2.6264968
+        SpawnTime: 4
+      - Type: 0
+        Health: 20
+        X: 1.8272474
+        YOffset: 2.7963977
+        SpawnTime: 4
+      - Type: 0
+        Health: 20
+        X: 0.4166441
+        YOffset: 0.948661
+        SpawnTime: 5
+      - Type: 0
+        Health: 20
+        X: 2.0626934
+        YOffset: 2.7949467
+        SpawnTime: 5
+      - Type: 0
+        Health: 20
+        X: 0.361228
+        YOffset: 1.7523971
+        SpawnTime: 5
+      - Type: 0
+        Health: 20
+        X: 3.2229137
+        YOffset: 0.5913062
+        SpawnTime: 5
+      - Type: 0
+        Health: 20
+        X: 2.9603891
+        YOffset: 1.0152314
+        SpawnTime: 5
+      - Type: 0
+        Health: 20
+        X: 2.289747
+        YOffset: 2.5101
+        SpawnTime: 6
+      - Type: 0
+        Health: 20
+        X: 0.45896292
+        YOffset: 2.9200964
+        SpawnTime: 6
+      - Type: 0
+        Health: 20
+        X: 2.4355328
+        YOffset: 1.7132747
+        SpawnTime: 6
+      - Type: 0
+        Health: 20
+        X: 2.8692846
+        YOffset: 1.4282608
+        SpawnTime: 6
+      - Type: 0
+        Health: 20
+        X: 3.6145287
+        YOffset: 0.09580135
+        SpawnTime: 6
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 0
-        Health: 150
-        X: 0
-        YOffset: 0
+        Health: 30
+        X: 2.515051
+        YOffset: 2.6824026
         SpawnTime: 0
       - Type: 0
-        Health: 150
-        X: 0
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 150
-        X: 1
-        YOffset: 0
+        Health: 30
+        X: 2.3367922
+        YOffset: 0.9536707
         SpawnTime: 0
       - Type: 0
-        Health: 150
-        X: 1
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 150
-        X: 2
-        YOffset: 0
+        Health: 30
+        X: 2.5808005
+        YOffset: 1.7446952
         SpawnTime: 0
       - Type: 0
-        Health: 150
-        X: 2
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 150
-        X: 3
-        YOffset: 0
+        Health: 30
+        X: 0.823349
+        YOffset: 1.9537543
         SpawnTime: 0
       - Type: 0
-        Health: 150
-        X: 3
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 150
-        X: 4
-        YOffset: 0
+        Health: 30
+        X: 3.3712573
+        YOffset: 2.1338818
         SpawnTime: 0
       - Type: 0
-        Health: 150
-        X: 4
-        YOffset: 0
+        Health: 30
+        X: 2.8315477
+        YOffset: 0.5825833
+        SpawnTime: 1
+      - Type: 0
+        Health: 30
+        X: 0.29453945
+        YOffset: 0.17582917
+        SpawnTime: 1
+      - Type: 0
+        Health: 30
+        X: 3.170752
+        YOffset: 0.6932577
+        SpawnTime: 1
+      - Type: 0
+        Health: 30
+        X: 1.6860044
+        YOffset: 0.34686184
+        SpawnTime: 1
+      - Type: 0
+        Health: 30
+        X: 1.3284018
+        YOffset: 0.66576684
+        SpawnTime: 1
+      - Type: 0
+        Health: 30
+        X: 1.8379915
+        YOffset: 1.4680221
         SpawnTime: 2
+      - Type: 0
+        Health: 30
+        X: 1.8965995
+        YOffset: 0.5847577
+        SpawnTime: 2
+      - Type: 0
+        Health: 30
+        X: 0.75103855
+        YOffset: 1.573395
+        SpawnTime: 2
+      - Type: 0
+        Health: 30
+        X: 1.0845859
+        YOffset: 2.182815
+        SpawnTime: 2
+      - Type: 0
+        Health: 30
+        X: 2.168525
+        YOffset: 2.3973956
+        SpawnTime: 2
+      - Type: 0
+        Health: 30
+        X: 2.7509508
+        YOffset: 1.046808
+        SpawnTime: 3
+      - Type: 0
+        Health: 30
+        X: 3.6204872
+        YOffset: 0.37826014
+        SpawnTime: 3
+      - Type: 0
+        Health: 30
+        X: 3.6567307
+        YOffset: 0.1926527
+        SpawnTime: 3
+      - Type: 0
+        Health: 30
+        X: 3.7786841
+        YOffset: 2.875911
+        SpawnTime: 3
+      - Type: 0
+        Health: 30
+        X: 1.6315773
+        YOffset: 1.0564845
+        SpawnTime: 3
+      - Type: 0
+        Health: 30
+        X: 0.39360905
+        YOffset: 1.5019588
+        SpawnTime: 4
+      - Type: 0
+        Health: 30
+        X: 0.78688335
+        YOffset: 2.6491992
+        SpawnTime: 4
+      - Type: 0
+        Health: 30
+        X: 3.1330428
+        YOffset: 0.8205076
+        SpawnTime: 4
+      - Type: 0
+        Health: 30
+        X: 3.3872123
+        YOffset: 2.2913024
+        SpawnTime: 4
+      - Type: 0
+        Health: 30
+        X: 2.1380203
+        YOffset: 1.0964746
+        SpawnTime: 4
+      - Type: 0
+        Health: 30
+        X: 3.1916056
+        YOffset: 1.7112238
+        SpawnTime: 5
+      - Type: 0
+        Health: 30
+        X: 3.3802748
+        YOffset: 1.323842
+        SpawnTime: 5
+      - Type: 0
+        Health: 30
+        X: 1.285558
+        YOffset: 1.0756571
+        SpawnTime: 5
+      - Type: 0
+        Health: 30
+        X: 2.5561905
+        YOffset: 2.3516278
+        SpawnTime: 5
+      - Type: 0
+        Health: 30
+        X: 3.6595125
+        YOffset: 0.7539162
+        SpawnTime: 5
+      - Type: 0
+        Health: 30
+        X: 3.3652263
+        YOffset: 1.3454709
+        SpawnTime: 6
+      - Type: 0
+        Health: 30
+        X: 1.7215931
+        YOffset: 0.5378977
+        SpawnTime: 6
+      - Type: 0
+        Health: 30
+        X: 3.5364094
+        YOffset: 2.4886193
+        SpawnTime: 6
+      - Type: 0
+        Health: 30
+        X: 2.7954621
+        YOffset: 1.2103374
+        SpawnTime: 6
+      - Type: 0
+        Health: 30
+        X: 1.8513548
+        YOffset: 1.2025113
+        SpawnTime: 6
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 0
-        Health: 175
-        X: 0
-        YOffset: 0
+        Health: 40
+        X: 3.9136395
+        YOffset: 2.4932647
         SpawnTime: 0
       - Type: 0
-        Health: 175
-        X: 0
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 175
-        X: 1
-        YOffset: 0
+        Health: 40
+        X: 2.2807925
+        YOffset: 1.2754703
         SpawnTime: 0
       - Type: 0
-        Health: 175
-        X: 1
-        YOffset: 0
+        Health: 40
+        X: 2.5173783
+        YOffset: 2.7013755
+        SpawnTime: 0
+      - Type: 0
+        Health: 40
+        X: 3.2191687
+        YOffset: 2.9848928
+        SpawnTime: 0
+      - Type: 0
+        Health: 40
+        X: 3.2354388
+        YOffset: 2.2603598
+        SpawnTime: 0
+      - Type: 0
+        Health: 40
+        X: 3.1840491
+        YOffset: 0.1050421
         SpawnTime: 1
       - Type: 0
-        Health: 175
-        X: 1
-        YOffset: 0
+        Health: 40
+        X: 0.6077032
+        YOffset: 0.49869525
+        SpawnTime: 1
+      - Type: 0
+        Health: 40
+        X: 2.7192812
+        YOffset: 2.7779222
+        SpawnTime: 1
+      - Type: 0
+        Health: 40
+        X: 0.17448664
+        YOffset: 0.101964
+        SpawnTime: 1
+      - Type: 0
+        Health: 40
+        X: 3.6693778
+        YOffset: 1.6570091
+        SpawnTime: 1
+      - Type: 0
+        Health: 40
+        X: 3.6763778
+        YOffset: 0.091064215
         SpawnTime: 2
       - Type: 0
-        Health: 175
-        X: 2
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 175
-        X: 2
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 175
-        X: 3
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 175
-        X: 3
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 175
-        X: 3
-        YOffset: 0
+        Health: 40
+        X: 0.77949333
+        YOffset: 0.4260546
         SpawnTime: 2
       - Type: 0
-        Health: 175
-        X: 4
-        YOffset: 0
-        SpawnTime: 0
+        Health: 40
+        X: 0.9618244
+        YOffset: 2.1434531
+        SpawnTime: 2
       - Type: 0
-        Health: 175
-        X: 4
-        YOffset: 0
-        SpawnTime: 1
+        Health: 40
+        X: 3.7027178
+        YOffset: 1.442523
+        SpawnTime: 2
+      - Type: 0
+        Health: 40
+        X: 0.6351476
+        YOffset: 0.6929312
+        SpawnTime: 2
+      - Type: 0
+        Health: 40
+        X: 1.3813865
+        YOffset: 1.3567533
+        SpawnTime: 3
+      - Type: 0
+        Health: 40
+        X: 1.944721
+        YOffset: 0.4097954
+        SpawnTime: 3
+      - Type: 0
+        Health: 40
+        X: 0.22745085
+        YOffset: 2.142119
+        SpawnTime: 3
+      - Type: 0
+        Health: 40
+        X: 3.7193446
+        YOffset: 0.023247242
+        SpawnTime: 3
+      - Type: 0
+        Health: 40
+        X: 0.5687499
+        YOffset: 2.004801
+        SpawnTime: 3
+      - Type: 0
+        Health: 40
+        X: 0.9282007
+        YOffset: 1.9421682
+        SpawnTime: 4
+      - Type: 0
+        Health: 40
+        X: 2.0299313
+        YOffset: 1.8475776
+        SpawnTime: 4
+      - Type: 0
+        Health: 40
+        X: 0.01526165
+        YOffset: 0.9660085
+        SpawnTime: 4
+      - Type: 0
+        Health: 40
+        X: 2.9582248
+        YOffset: 1.7176721
+        SpawnTime: 4
+      - Type: 0
+        Health: 40
+        X: 3.1214194
+        YOffset: 2.6215088
+        SpawnTime: 4
+      - Type: 0
+        Health: 40
+        X: 2.1041834
+        YOffset: 1.4871516
+        SpawnTime: 5
+      - Type: 0
+        Health: 40
+        X: 1.2259376
+        YOffset: 0.54442906
+        SpawnTime: 5
+      - Type: 0
+        Health: 40
+        X: 1.6960251
+        YOffset: 1.6252289
+        SpawnTime: 5
+      - Type: 0
+        Health: 40
+        X: 2.2525299
+        YOffset: 2.4158893
+        SpawnTime: 5
+      - Type: 0
+        Health: 40
+        X: 2.5465527
+        YOffset: 1.8280494
+        SpawnTime: 5
+      - Type: 0
+        Health: 40
+        X: 2.5103645
+        YOffset: 1.7844667
+        SpawnTime: 6
+      - Type: 0
+        Health: 40
+        X: 0.45774937
+        YOffset: 1.5140331
+        SpawnTime: 6
+      - Type: 0
+        Health: 40
+        X: 2.5188618
+        YOffset: 2.3767319
+        SpawnTime: 6
+      - Type: 0
+        Health: 40
+        X: 2.293558
+        YOffset: 1.6250823
+        SpawnTime: 6
+      - Type: 0
+        Health: 40
+        X: 1.0090206
+        YOffset: 0.99542767
+        SpawnTime: 6
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 0.21627235
+        YOffset: 2.017939
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 200
-        X: 1
-        YOffset: 0
+        Health: 50
+        X: 2.6439285
+        YOffset: 0.9804767
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 1
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 200
-        X: 1
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 200
-        X: 2
-        YOffset: 0
+        Health: 50
+        X: 2.243007
+        YOffset: 1.8140512
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 2
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 200
-        X: 2
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 200
-        X: 3
-        YOffset: 0
+        Health: 50
+        X: 1.4412711
+        YOffset: 1.3853419
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 3
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 200
-        X: 3
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 200
-        X: 4
-        YOffset: 0
+        Health: 50
+        X: 0.86024475
+        YOffset: 2.7594128
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 4
-        YOffset: 0
+        Health: 50
+        X: 2.2905004
+        YOffset: 2.7592974
         SpawnTime: 1
       - Type: 0
-        Health: 200
-        X: 4
-        YOffset: 0
+        Health: 50
+        X: 2.8604264
+        YOffset: 0.8209049
+        SpawnTime: 1
+      - Type: 0
+        Health: 50
+        X: 2.8429031
+        YOffset: 1.0187342
+        SpawnTime: 1
+      - Type: 0
+        Health: 50
+        X: 0.8316407
+        YOffset: 0.28892577
+        SpawnTime: 1
+      - Type: 0
+        Health: 50
+        X: 1.7921445
+        YOffset: 1.8862424
+        SpawnTime: 1
+      - Type: 0
+        Health: 50
+        X: 3.6680222
+        YOffset: 0.32967353
         SpawnTime: 2
+      - Type: 0
+        Health: 50
+        X: 0.77416325
+        YOffset: 1.7337625
+        SpawnTime: 2
+      - Type: 0
+        Health: 50
+        X: 0.783885
+        YOffset: 0.113734245
+        SpawnTime: 2
+      - Type: 0
+        Health: 50
+        X: 3.724133
+        YOffset: 2.5813007
+        SpawnTime: 2
+      - Type: 0
+        Health: 50
+        X: 3.0211978
+        YOffset: 2.8001575
+        SpawnTime: 2
+      - Type: 0
+        Health: 50
+        X: 3.814775
+        YOffset: 1.7256315
+        SpawnTime: 3
+      - Type: 0
+        Health: 50
+        X: 2.1145604
+        YOffset: 0.13033497
+        SpawnTime: 3
+      - Type: 0
+        Health: 50
+        X: 3.1064363
+        YOffset: 2.7628045
+        SpawnTime: 3
+      - Type: 0
+        Health: 50
+        X: 3.4556093
+        YOffset: 1.9955406
+        SpawnTime: 3
+      - Type: 0
+        Health: 50
+        X: 3.6866732
+        YOffset: 0.7014488
+        SpawnTime: 3
+      - Type: 0
+        Health: 50
+        X: 0.6688156
+        YOffset: 1.4963746
+        SpawnTime: 4
+      - Type: 0
+        Health: 50
+        X: 1.0876305
+        YOffset: 0.93206173
+        SpawnTime: 4
+      - Type: 0
+        Health: 50
+        X: 3.5159516
+        YOffset: 2.7900395
+        SpawnTime: 4
+      - Type: 0
+        Health: 50
+        X: 0.31160784
+        YOffset: 2.38939
+        SpawnTime: 4
+      - Type: 0
+        Health: 50
+        X: 1.0133779
+        YOffset: 2.380479
+        SpawnTime: 4
+      - Type: 0
+        Health: 50
+        X: 0.34928465
+        YOffset: 2.0546958
+        SpawnTime: 5
+      - Type: 0
+        Health: 50
+        X: 1.8167565
+        YOffset: 1.492897
+        SpawnTime: 5
+      - Type: 0
+        Health: 50
+        X: 3.0272183
+        YOffset: 0.53632164
+        SpawnTime: 5
+      - Type: 0
+        Health: 50
+        X: 0.0035977364
+        YOffset: 1.9648901
+        SpawnTime: 5
+      - Type: 0
+        Health: 50
+        X: 3.9460363
+        YOffset: 0.09952605
+        SpawnTime: 5
+      - Type: 0
+        Health: 50
+        X: 0.9395428
+        YOffset: 2.695969
+        SpawnTime: 6
+      - Type: 0
+        Health: 50
+        X: 3.1375518
+        YOffset: 2.6506956
+        SpawnTime: 6
+      - Type: 0
+        Health: 50
+        X: 1.1087935
+        YOffset: 2.0844426
+        SpawnTime: 6
+      - Type: 0
+        Health: 50
+        X: 2.1987627
+        YOffset: 2.911276
+        SpawnTime: 6
+      - Type: 0
+        Health: 50
+        X: 2.5733466
+        YOffset: 1.8486197
+        SpawnTime: 6
     MatrixRow1: 0200000002000000020000000200000002000000
-    MatrixRow2: 0400000004000000040000000400000004000000
+    MatrixRow2: 04000000ffffffff040000000400000004000000
     MatrixRow3: 0800000008000000080000000800000008000000
     MatrixRow4: 0200000002000000020000000200000002000000
     HasTutorial: 0
@@ -573,1269 +1853,304 @@ MonoBehaviour:
     Theme: 5
     MinSoldierPower: 1
     MaxSoldierPower: 6
-    BomberSoldierSpawnProbability: 0
-    WaitTimeBeforeSpawnLevel: 0
+    BomberSoldierSpawnProbability: 0.01
+    WaitTimeBeforeSpawnLevel: 1
     WavesData:
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 0
         Health: 10
-        X: 0
-        YOffset: 0
+        X: 3.3356872
+        YOffset: 2.9291568
         SpawnTime: 0
       - Type: 0
         Health: 10
-        X: 0
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 10
-        X: 0
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 10
-        X: 0
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 10
-        X: 0
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 10
-        X: 0
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 10
-        X: 0
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 10
-        X: 0
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 10
-        X: 0
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 10
-        X: 0
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 10
-        X: 1
-        YOffset: 0
+        X: 0.57812166
+        YOffset: 0.13612747
         SpawnTime: 0
       - Type: 0
         Health: 10
-        X: 1
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 10
-        X: 1
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 10
-        X: 1
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 10
-        X: 1
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 10
-        X: 1
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 10
-        X: 1
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 10
-        X: 1
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 10
-        X: 1
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 10
-        X: 1
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 10
-        X: 2
-        YOffset: 0
+        X: 0.1547966
+        YOffset: 1.5624328
         SpawnTime: 0
       - Type: 0
         Health: 10
-        X: 2
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 10
-        X: 2
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 10
-        X: 2
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 10
-        X: 2
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 10
-        X: 2
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 10
-        X: 2
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 10
-        X: 2
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 10
-        X: 2
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 10
-        X: 2
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 10
-        X: 3
-        YOffset: 0
+        X: 2.3433225
+        YOffset: 1.6702192
         SpawnTime: 0
       - Type: 0
         Health: 10
-        X: 3
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 10
-        X: 3
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 10
-        X: 3
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 10
-        X: 3
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 10
-        X: 3
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 10
-        X: 3
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 10
-        X: 3
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 10
-        X: 3
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 10
-        X: 3
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 10
-        X: 4
-        YOffset: 0
+        X: 0.55854607
+        YOffset: 1.3016505
         SpawnTime: 0
-      - Type: 0
-        Health: 10
-        X: 4
-        YOffset: 0
+      - Type: 1
+        Health: 200
+        X: 2
+        YOffset: 0.42660856
         SpawnTime: 1
-      - Type: 0
-        Health: 10
-        X: 4
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 10
-        X: 4
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 10
-        X: 4
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 10
-        X: 4
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 10
-        X: 4
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 10
-        X: 4
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 10
-        X: 4
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 10
-        X: 4
-        YOffset: 0
-        SpawnTime: 9
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 0
         Health: 20
-        X: 0
-        YOffset: 0
+        X: 2.5878935
+        YOffset: 2.4279141
         SpawnTime: 0
       - Type: 0
         Health: 20
-        X: 0
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 20
-        X: 0
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 20
-        X: 0
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 20
-        X: 0
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 20
-        X: 0
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 20
-        X: 0
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 20
-        X: 20
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 20
-        X: 0
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 20
-        X: 0
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 20
-        X: 1
-        YOffset: 0
+        X: 2.814045
+        YOffset: 1.2559478
         SpawnTime: 0
       - Type: 0
         Health: 20
-        X: 1
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 20
-        X: 1
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 20
-        X: 1
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 20
-        X: 1
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 20
-        X: 1
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 20
-        X: 1
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 20
-        X: 1
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 20
-        X: 1
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 20
-        X: 1
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 20
-        X: 2
-        YOffset: 0
+        X: 0.9597702
+        YOffset: 1.7037108
         SpawnTime: 0
       - Type: 0
         Health: 20
-        X: 2
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 20
-        X: 2
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 20
-        X: 2
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 20
-        X: 2
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 20
-        X: 2
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 20
-        X: 2
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 20
-        X: 2
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 20
-        X: 2
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 20
-        X: 2
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 20
-        X: 3
-        YOffset: 0
+        X: 2.5525045
+        YOffset: 2.550291
         SpawnTime: 0
       - Type: 0
         Health: 20
-        X: 3
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 20
-        X: 3
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 20
-        X: 3
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 20
-        X: 3
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 20
-        X: 3
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 20
-        X: 3
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 20
-        X: 3
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 20
-        X: 3
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 20
-        X: 3
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 20
-        X: 4
-        YOffset: 0
+        X: 2.852016
+        YOffset: 1.3643973
         SpawnTime: 0
       - Type: 0
         Health: 20
-        X: 4
-        YOffset: 0
+        X: 2.65062
+        YOffset: 2.103931
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 1.2318733
+        YOffset: 1.337857
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 2.2502244
+        YOffset: 2.483141
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 0.124471664
+        YOffset: 2.5629334
+        SpawnTime: 0
+      - Type: 0
+        Health: 20
+        X: 3.785224
+        YOffset: 0.11942017
+        SpawnTime: 0
+      - Type: 1
+        Health: 300
+        X: 2
+        YOffset: 0.63966286
         SpawnTime: 1
+    - WaitTimeBeforeSpawnWave: 0
+      EnemiesData:
       - Type: 0
-        Health: 20
-        X: 4
-        YOffset: 0
-        SpawnTime: 2
+        Health: 30
+        X: 3.1155462
+        YOffset: 0.9844106
+        SpawnTime: 0
       - Type: 0
-        Health: 20
-        X: 4
-        YOffset: 0
-        SpawnTime: 3
+        Health: 30
+        X: 1.7763226
+        YOffset: 0.4646827
+        SpawnTime: 0
       - Type: 0
-        Health: 20
-        X: 4
-        YOffset: 0
-        SpawnTime: 4
+        Health: 30
+        X: 0.030418873
+        YOffset: 1.2380896
+        SpawnTime: 0
       - Type: 0
-        Health: 20
-        X: 4
-        YOffset: 0
-        SpawnTime: 5
+        Health: 30
+        X: 3.4386644
+        YOffset: 0.0071851015
+        SpawnTime: 0
       - Type: 0
-        Health: 20
-        X: 4
-        YOffset: 0
-        SpawnTime: 6
+        Health: 30
+        X: 2.6710496
+        YOffset: 2.0716295
+        SpawnTime: 0
       - Type: 0
-        Health: 20
-        X: 4
-        YOffset: 0
-        SpawnTime: 7
+        Health: 30
+        X: 2.5967884
+        YOffset: 0.63140595
+        SpawnTime: 0
       - Type: 0
-        Health: 20
-        X: 4
-        YOffset: 0
-        SpawnTime: 8
+        Health: 30
+        X: 0.3105402
+        YOffset: 0.2792902
+        SpawnTime: 0
       - Type: 0
-        Health: 20
-        X: 4
-        YOffset: 0
-        SpawnTime: 9
+        Health: 30
+        X: 1.3278339
+        YOffset: 2.7553272
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 2.643952
+        YOffset: 0.2806431
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 3.630601
+        YOffset: 2.8970275
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 1.3924258
+        YOffset: 1.8711479
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 1.5590851
+        YOffset: 0.3359381
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 1.3458631
+        YOffset: 0.28964567
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 2.4405673
+        YOffset: 2.1282082
+        SpawnTime: 0
+      - Type: 0
+        Health: 30
+        X: 0.9412527
+        YOffset: 2.0423033
+        SpawnTime: 0
+      - Type: 1
+        Health: 400
+        X: 2
+        YOffset: 0.22794378
+        SpawnTime: 1
+    - WaitTimeBeforeSpawnWave: 0
+      EnemiesData:
+      - Type: 1
+        Health: 500
+        X: 3.5601497
+        YOffset: 0.52731764
+        SpawnTime: 0
+      - Type: 1
+        Health: 500
+        X: 0.24207878
+        YOffset: 1.1430457
+        SpawnTime: 0
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 0
         Health: 40
-        X: 0
-        YOffset: 0
+        X: 2.7929425
+        YOffset: 2.9881344
         SpawnTime: 0
       - Type: 0
         Health: 40
-        X: 0
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 40
-        X: 0
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 40
-        X: 0
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 40
-        X: 0
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 40
-        X: 0
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 40
-        X: 0
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 40
-        X: 0
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 40
-        X: 0
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 40
-        X: 0
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 40
-        X: 1
-        YOffset: 0
+        X: 0.948524
+        YOffset: 1.9637139
         SpawnTime: 0
       - Type: 0
         Health: 40
-        X: 1
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 40
-        X: 1
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 40
-        X: 1
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 40
-        X: 1
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 40
-        X: 1
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 40
-        X: 1
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 40
-        X: 1
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 40
-        X: 1
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 40
-        X: 1
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 40
-        X: 2
-        YOffset: 0
+        X: 0.53091
+        YOffset: 0.098015785
         SpawnTime: 0
       - Type: 0
         Health: 40
-        X: 2
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 40
-        X: 2
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 40
-        X: 2
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 40
-        X: 2
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 40
-        X: 2
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 40
-        X: 2
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 40
-        X: 2
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 40
-        X: 2
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 40
-        X: 2
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 40
-        X: 3
-        YOffset: 0
+        X: 2.2268612
+        YOffset: 2.388228
         SpawnTime: 0
       - Type: 0
         Health: 40
-        X: 3
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 40
-        X: 3
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 40
-        X: 3
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 40
-        X: 3
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 40
-        X: 3
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 40
-        X: 3
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 40
-        X: 3
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 40
-        X: 3
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 40
-        X: 3
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 40
-        X: 4
-        YOffset: 0
+        X: 2.743657
+        YOffset: 1.9290801
         SpawnTime: 0
       - Type: 0
         Health: 40
-        X: 4
-        YOffset: 0
-        SpawnTime: 1
+        X: 3.2278366
+        YOffset: 2.5878818
+        SpawnTime: 0
       - Type: 0
         Health: 40
-        X: 4
-        YOffset: 0
-        SpawnTime: 2
+        X: 2.0584824
+        YOffset: 0.93048674
+        SpawnTime: 0
       - Type: 0
         Health: 40
-        X: 4
-        YOffset: 0
-        SpawnTime: 3
+        X: 0.8642707
+        YOffset: 0.8082606
+        SpawnTime: 0
       - Type: 0
         Health: 40
-        X: 4
-        YOffset: 0
-        SpawnTime: 4
+        X: 3.912891
+        YOffset: 1.9922851
+        SpawnTime: 0
       - Type: 0
         Health: 40
-        X: 4
-        YOffset: 0
-        SpawnTime: 5
+        X: 3.58501
+        YOffset: 0.09312594
+        SpawnTime: 0
       - Type: 0
         Health: 40
-        X: 4
-        YOffset: 0
-        SpawnTime: 6
+        X: 3.0052457
+        YOffset: 1.6282148
+        SpawnTime: 0
       - Type: 0
         Health: 40
-        X: 4
-        YOffset: 0
-        SpawnTime: 7
+        X: 2.4160783
+        YOffset: 0.13156807
+        SpawnTime: 0
       - Type: 0
         Health: 40
-        X: 4
-        YOffset: 0
-        SpawnTime: 8
+        X: 0.11797619
+        YOffset: 2.3958192
+        SpawnTime: 0
       - Type: 0
         Health: 40
-        X: 4
-        YOffset: 0
-        SpawnTime: 9
-    - WaitTimeBeforeSpawnWave: 0
-      EnemiesData:
-      - Type: 0
-        Health: 60
-        X: 0
-        YOffset: 0
+        X: 1.6295526
+        YOffset: 0.1466775
         SpawnTime: 0
       - Type: 0
-        Health: 60
-        X: 0
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 60
-        X: 0
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 60
-        X: 0
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 60
-        X: 0
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 60
-        X: 0
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 60
-        X: 0
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 60
-        X: 0
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 60
-        X: 0
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 60
-        X: 0
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 60
-        X: 1
-        YOffset: 0
+        Health: 40
+        X: 3.3301601
+        YOffset: 2.0929737
         SpawnTime: 0
       - Type: 0
-        Health: 60
-        X: 1
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 60
-        X: 1
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 60
-        X: 1
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 60
-        X: 1
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 60
-        X: 1
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 60
-        X: 1
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 60
-        X: 1
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 60
-        X: 1
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 60
-        X: 1
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 60
-        X: 2
-        YOffset: 0
+        Health: 40
+        X: 2.8811955
+        YOffset: 0.68190265
         SpawnTime: 0
       - Type: 0
-        Health: 60
-        X: 2
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 60
-        X: 2
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 60
-        X: 2
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 60
-        X: 2
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 60
-        X: 2
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 60
-        X: 2
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 60
-        X: 2
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 60
-        X: 2
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 60
-        X: 2
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 60
-        X: 3
-        YOffset: 0
+        Health: 40
+        X: 0.9741082
+        YOffset: 1.5836475
         SpawnTime: 0
       - Type: 0
-        Health: 60
-        X: 3
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 60
-        X: 3
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 60
-        X: 3
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 60
-        X: 3
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 60
-        X: 3
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 60
-        X: 3
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 60
-        X: 3
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 60
-        X: 3
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 60
-        X: 3
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 60
-        X: 4
-        YOffset: 0
+        Health: 40
+        X: 2.825704
+        YOffset: 0.27315187
         SpawnTime: 0
       - Type: 0
-        Health: 60
-        X: 4
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 60
-        X: 4
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 60
-        X: 4
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 60
-        X: 4
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 60
-        X: 4
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 60
-        X: 4
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 60
-        X: 4
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 60
-        X: 4
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 60
-        X: 4
-        YOffset: 0
-        SpawnTime: 9
-    - WaitTimeBeforeSpawnWave: 0
-      EnemiesData:
-      - Type: 0
-        Health: 70
-        X: 0
-        YOffset: 0
+        Health: 40
+        X: 1.841162
+        YOffset: 0.072996855
         SpawnTime: 0
       - Type: 0
-        Health: 70
-        X: 0
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 70
-        X: 0
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 70
-        X: 0
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 70
-        X: 0
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 70
-        X: 0
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 70
-        X: 0
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 70
-        X: 0
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 70
-        X: 0
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 70
-        X: 0
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 70
-        X: 1
-        YOffset: 0
+        Health: 40
+        X: 2.6118336
+        YOffset: 0.2921809
         SpawnTime: 0
-      - Type: 0
-        Health: 70
-        X: 1
-        YOffset: 0
+      - Type: 1
+        Health: 500
+        X: 3.59756
+        YOffset: 1.1579201
         SpawnTime: 1
-      - Type: 0
-        Health: 70
-        X: 1
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 70
-        X: 1
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 70
-        X: 1
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 70
-        X: 1
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 70
-        X: 1
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 70
-        X: 1
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 70
-        X: 1
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 70
-        X: 1
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 70
-        X: 2
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 70
-        X: 2
-        YOffset: 0
+      - Type: 1
+        Health: 500
+        X: 0.22072458
+        YOffset: 2.3299718
         SpawnTime: 1
-      - Type: 0
-        Health: 70
-        X: 2
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 70
-        X: 2
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 70
-        X: 2
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 70
-        X: 2
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 70
-        X: 2
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 70
-        X: 2
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 70
-        X: 2
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 70
-        X: 2
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 70
-        X: 3
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 70
-        X: 3
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 70
-        X: 3
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 70
-        X: 3
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 70
-        X: 3
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 70
-        X: 3
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 70
-        X: 3
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 70
-        X: 3
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 70
-        X: 3
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 70
-        X: 3
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 70
-        X: 4
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 70
-        X: 4
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 70
-        X: 4
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 70
-        X: 4
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 70
-        X: 4
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 70
-        X: 4
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 70
-        X: 4
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 70
-        X: 4
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 70
-        X: 4
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 70
-        X: 4
-        YOffset: 0
-        SpawnTime: 9
     MatrixRow1: 0200000004000000080000000400000002000000
     MatrixRow2: 0200000004000000080000000400000002000000
     MatrixRow3: 0200000004000000080000000400000002000000
@@ -1846,119 +2161,529 @@ MonoBehaviour:
     Theme: 1
     MinSoldierPower: 1
     MaxSoldierPower: 6
-    BomberSoldierSpawnProbability: 0
-    WaitTimeBeforeSpawnLevel: 0
+    BomberSoldierSpawnProbability: 0.01
+    WaitTimeBeforeSpawnLevel: 1
     WavesData:
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 1
-        Health: 666
+        Health: 200
         X: 0
         YOffset: 0
         SpawnTime: 0
       - Type: 1
-        Health: 666
-        X: 0
+        Health: 200
+        X: 1
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 1
+        Health: 200
+        X: 2
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 1
+        Health: 200
+        X: 3
+        YOffset: 0
+        SpawnTime: 0
+      - Type: 1
+        Health: 200
+        X: 4
         YOffset: 0
         SpawnTime: 0
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
-      - Type: 1
-        Health: 666
+      - Type: 0
+        Health: 50
         X: 0
-        YOffset: 0
+        YOffset: 1.942375
         SpawnTime: 0
-      - Type: 1
-        Health: 666
+      - Type: 0
+        Health: 50
         X: 0
-        YOffset: 0
+        YOffset: 2.172464
         SpawnTime: 0
-      - Type: 1
-        Health: 666
+      - Type: 0
+        Health: 50
         X: 0
-        YOffset: 0
+        YOffset: 1.0975003
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0
+        YOffset: 0.12956214
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0
+        YOffset: 0.6152011
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1
+        YOffset: 0.29428983
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1
+        YOffset: 0.6308849
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1
+        YOffset: 2.1922631
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1
+        YOffset: 0.33681214
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1
+        YOffset: 1.1922703
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2
+        YOffset: 0.99467915
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2
+        YOffset: 0.95269364
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2
+        YOffset: 2.5923629
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2
+        YOffset: 1.1894169
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2
+        YOffset: 0.4808489
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3
+        YOffset: 0.56277
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3
+        YOffset: 1.1051071
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3
+        YOffset: 0.69311714
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3
+        YOffset: 2.5548077
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3
+        YOffset: 1.6998527
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 4
+        YOffset: 1.6059592
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 4
+        YOffset: 1.1977582
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 4
+        YOffset: 2.4871337
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 4
+        YOffset: 1.0570912
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 4
+        YOffset: 0.30790508
         SpawnTime: 0
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
-      - Type: 1
-        Health: 666
-        X: 0
-        YOffset: 0
+      - Type: 0
+        Health: 50
+        X: 3.2027054
+        YOffset: 0.16293061
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.06489134
+        YOffset: 0.81140846
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.1109192
+        YOffset: 1.6160893
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.8391504
+        YOffset: 1.4517484
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.014600754
+        YOffset: 2.0714173
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.9192972
+        YOffset: 2.3210855
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.3793645
+        YOffset: 2.6417706
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.5186296
+        YOffset: 1.070993
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.264912
+        YOffset: 1.4406698
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.940392
+        YOffset: 0.75792915
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.1249595
+        YOffset: 1.1173048
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.4677086
+        YOffset: 2.481958
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.1032751
+        YOffset: 1.0083437
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.43761015
+        YOffset: 0.39563227
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.80643845
+        YOffset: 2.9113646
         SpawnTime: 0
       - Type: 1
-        Health: 666
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
+        Health: 200
+        X: 2.4095743
+        YOffset: 1.5829728
+        SpawnTime: 1
       - Type: 1
-        Health: 666
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
+        Health: 200
+        X: 1.4970253
+        YOffset: 0.87697524
+        SpawnTime: 1
       - Type: 1
-        Health: 666
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
+        Health: 200
+        X: 2.2573564
+        YOffset: 1.5111463
+        SpawnTime: 1
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
-      - Type: 1
-        Health: 666
-        X: 0
-        YOffset: 0
+      - Type: 0
+        Health: 50
+        X: 1.4855568
+        YOffset: 1.4139056
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.1331987
+        YOffset: 1.5204666
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.30486488
+        YOffset: 2.9372463
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.2088575
+        YOffset: 1.1641207
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.8695953
+        YOffset: 0.9970996
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.829215
+        YOffset: 0.07449925
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.3925319
+        YOffset: 0.99889845
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.429984
+        YOffset: 0.8986564
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.2249048
+        YOffset: 2.3081608
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.1919901
+        YOffset: 2.969319
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.6067624
+        YOffset: 1.5595832
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.6127996
+        YOffset: 1.41221
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.8382168
+        YOffset: 0.21480095
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.13910484
+        YOffset: 2.4088998
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.33030748
+        YOffset: 0.972321
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.96870184
+        YOffset: 0.9411319
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.020988941
+        YOffset: 0.050718784
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.8262823
+        YOffset: 1.1042874
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.8094344
+        YOffset: 2.2609873
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.533443
+        YOffset: 1.296104
         SpawnTime: 0
       - Type: 1
-        Health: 666
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
+        Health: 200
+        X: 2.0026653
+        YOffset: 1.5307333
+        SpawnTime: 1
       - Type: 1
-        Health: 666
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
+        Health: 200
+        X: 1.797703
+        YOffset: 2.1288607
+        SpawnTime: 1
       - Type: 1
-        Health: 666
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
+        Health: 200
+        X: 3.1414957
+        YOffset: 0.8319245
+        SpawnTime: 1
       - Type: 1
-        Health: 666
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
+        Health: 200
+        X: 0.7248802
+        YOffset: 2.840334
+        SpawnTime: 1
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
-      - Type: 1
-        Health: 666
-        X: 0
-        YOffset: 0
+      - Type: 0
+        Health: 50
+        X: 0.65264225
+        YOffset: 1.2648656
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.9388733
+        YOffset: 0.9470013
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.94028
+        YOffset: 2.1525073
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.100631
+        YOffset: 2.7752988
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.9711056
+        YOffset: 2.2210102
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.172684
+        YOffset: 2.5564356
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.5527787
+        YOffset: 0.022837043
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.17524
+        YOffset: 1.9397535
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.971489
+        YOffset: 2.0073423
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.594094
+        YOffset: 2.172305
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.219674
+        YOffset: 2.1891809
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.539631
+        YOffset: 0.09858835
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.20211792
+        YOffset: 1.124697
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.8419695
+        YOffset: 0.79050654
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.35690498
+        YOffset: 2.0347877
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.7860353
+        YOffset: 2.7866857
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.8425674
+        YOffset: 0.13131952
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.2388036
+        YOffset: 0.006333947
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.5207567
+        YOffset: 1.678513
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.54332066
+        YOffset: 1.2515621
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.22335005
+        YOffset: 2.3835025
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.3843577
+        YOffset: 1.6896405
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.015532017
+        YOffset: 1.7273037
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.9359329
+        YOffset: 1.1979415
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.7029171
+        YOffset: 2.3918042
         SpawnTime: 0
       - Type: 1
-        Health: 666
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
+        Health: 200
+        X: 3.562665
+        YOffset: 0.7243148
+        SpawnTime: 1
       - Type: 1
-        Health: 666
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
+        Health: 200
+        X: 1.7204998
+        YOffset: 2.0413947
+        SpawnTime: 1
       - Type: 1
-        Health: 666
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
+        Health: 200
+        X: 2.9450712
+        YOffset: 2.0607398
+        SpawnTime: 1
       - Type: 1
-        Health: 666
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
+        Health: 200
+        X: 1.8772562
+        YOffset: 2.6102867
+        SpawnTime: 1
       - Type: 1
-        Health: 666
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
+        Health: 200
+        X: 1.7175462
+        YOffset: 0.42449677
+        SpawnTime: 1
     MatrixRow1: 0400000004000000040000000400000004000000
     MatrixRow2: 0400000008000000080000000800000004000000
     MatrixRow3: 1000000004000000080000000400000010000000
@@ -1969,329 +2694,469 @@ MonoBehaviour:
     Theme: 2
     MinSoldierPower: 1
     MaxSoldierPower: 6
-    BomberSoldierSpawnProbability: 0
-    WaitTimeBeforeSpawnLevel: 0
+    BomberSoldierSpawnProbability: 0.02
+    WaitTimeBeforeSpawnLevel: 1
     WavesData:
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 2.8110542
+        YOffset: 2.9516482
         SpawnTime: 0
       - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 3.5470638
+        YOffset: 1.4975128
         SpawnTime: 0
       - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 2.1642983
+        YOffset: 2.0109277
         SpawnTime: 0
       - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 2.6243973
+        YOffset: 2.8859353
         SpawnTime: 0
       - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 2.7426057
+        YOffset: 0.53118217
         SpawnTime: 0
       - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 1.2081473
+        YOffset: 0.028560877
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.009596825
+        YOffset: 2.598057
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.4285822
+        YOffset: 1.865469
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.040311337
+        YOffset: 2.1467605
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.4720459
+        YOffset: 2.9243822
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.096511
+        YOffset: 0.62954736
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.2352953
+        YOffset: 0.679656
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.4319685
+        YOffset: 0.6872159
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.4618957
+        YOffset: 1.7714927
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.778728
+        YOffset: 1.2158785
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.5301237
+        YOffset: 2.564995
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.075918
+        YOffset: 2.394507
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.7873492
+        YOffset: 2.0764232
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.2501762
+        YOffset: 2.6297722
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.320893
+        YOffset: 2.1389456
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.2645304
+        YOffset: 0.10535753
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.35214376
+        YOffset: 0.8844436
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.955318
+        YOffset: 2.1411314
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.8479538
+        YOffset: 0.86837643
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.9433222
+        YOffset: 0.7509211
+        SpawnTime: 0
+    - WaitTimeBeforeSpawnWave: 0
+      EnemiesData:
+      - Type: 0
+        Health: 70
+        X: 0.65632296
+        YOffset: 2.3255816
+        SpawnTime: 0
+      - Type: 0
+        Health: 70
+        X: 2.2202156
+        YOffset: 1.1728833
+        SpawnTime: 0
+      - Type: 0
+        Health: 70
+        X: 3.620058
+        YOffset: 0.22838938
+        SpawnTime: 0
+      - Type: 0
+        Health: 70
+        X: 3.9073472
+        YOffset: 2.484274
+        SpawnTime: 0
+      - Type: 0
+        Health: 70
+        X: 0.21856022
+        YOffset: 2.187148
+        SpawnTime: 0
+      - Type: 0
+        Health: 70
+        X: 1.7367423
+        YOffset: 0.7567175
+        SpawnTime: 0
+      - Type: 0
+        Health: 70
+        X: 0.13591766
+        YOffset: 2.8183289
+        SpawnTime: 0
+      - Type: 0
+        Health: 70
+        X: 3.7563658
+        YOffset: 0.2210151
+        SpawnTime: 0
+      - Type: 0
+        Health: 70
+        X: 1.4035704
+        YOffset: 0.24748242
+        SpawnTime: 0
+      - Type: 0
+        Health: 70
+        X: 2.900576
+        YOffset: 1.4007673
+        SpawnTime: 0
+      - Type: 0
+        Health: 70
+        X: 0.97402716
+        YOffset: 0.8449815
+        SpawnTime: 0
+      - Type: 0
+        Health: 70
+        X: 0.05171442
+        YOffset: 1.723161
+        SpawnTime: 0
+      - Type: 0
+        Health: 70
+        X: 1.1170833
+        YOffset: 1.9086174
+        SpawnTime: 0
+      - Type: 0
+        Health: 70
+        X: 0.25797606
+        YOffset: 0.62482417
+        SpawnTime: 0
+      - Type: 0
+        Health: 70
+        X: 2.325444
+        YOffset: 1.5867493
+        SpawnTime: 0
+      - Type: 0
+        Health: 70
+        X: 2.3987167
+        YOffset: 2.9712958
+        SpawnTime: 0
+      - Type: 0
+        Health: 70
+        X: 0.17091894
+        YOffset: 1.9773645
+        SpawnTime: 0
+      - Type: 0
+        Health: 70
+        X: 3.564618
+        YOffset: 1.3797622
+        SpawnTime: 0
+      - Type: 0
+        Health: 70
+        X: 2.2263896
+        YOffset: 2.1898942
+        SpawnTime: 0
+      - Type: 0
+        Health: 70
+        X: 2.5403023
+        YOffset: 0.9757156
+        SpawnTime: 0
+      - Type: 0
+        Health: 70
+        X: 3.8448238
+        YOffset: 1.8773403
+        SpawnTime: 0
+      - Type: 0
+        Health: 70
+        X: 2.2630498
+        YOffset: 0.064018965
+        SpawnTime: 0
+      - Type: 0
+        Health: 70
+        X: 1.1184075
+        YOffset: 2.7810702
+        SpawnTime: 0
+      - Type: 0
+        Health: 70
+        X: 3.8574905
+        YOffset: 0.35199094
+        SpawnTime: 0
+      - Type: 0
+        Health: 70
+        X: 2.7601624
+        YOffset: 1.179703
+        SpawnTime: 0
+    - WaitTimeBeforeSpawnWave: 0
+      EnemiesData:
+      - Type: 1
+        Health: 300
+        X: 3.2729526
+        YOffset: 2.448523
+        SpawnTime: 0
+      - Type: 1
+        Health: 300
+        X: 0.081668854
+        YOffset: 1.4615746
+        SpawnTime: 0
+      - Type: 1
+        Health: 300
+        X: 3.211678
+        YOffset: 1.1647243
+        SpawnTime: 0
+      - Type: 1
+        Health: 300
+        X: 2.8453913
+        YOffset: 1.5767596
+        SpawnTime: 0
+      - Type: 1
+        Health: 300
+        X: 2.1823666
+        YOffset: 2.554259
+        SpawnTime: 0
+    - WaitTimeBeforeSpawnWave: 0
+      EnemiesData:
+      - Type: 1
+        Health: 500
+        X: 0.96161604
+        YOffset: 1.0012774
+        SpawnTime: 0
+      - Type: 1
+        Health: 500
+        X: 3.0191479
+        YOffset: 0.9439153
+        SpawnTime: 0
+      - Type: 1
+        Health: 500
+        X: 1.7432873
+        YOffset: 0.46822536
+        SpawnTime: 0
+      - Type: 1
+        Health: 500
+        X: 1.4438627
+        YOffset: 1.2642894
+        SpawnTime: 0
+      - Type: 1
+        Health: 500
+        X: 0.7749572
+        YOffset: 2.2703595
         SpawnTime: 0
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 0
         Health: 100
-        X: 0
-        YOffset: 0
+        X: 0.06567764
+        YOffset: 0.305328
         SpawnTime: 0
       - Type: 0
         Health: 100
-        X: 0
-        YOffset: 0
+        X: 3.8795009
+        YOffset: 0.6772299
         SpawnTime: 0
       - Type: 0
         Health: 100
-        X: 0
-        YOffset: 0
+        X: 2.2342904
+        YOffset: 1.4450915
         SpawnTime: 0
       - Type: 0
         Health: 100
-        X: 0
-        YOffset: 0
+        X: 1.1305363
+        YOffset: 0.9197976
         SpawnTime: 0
       - Type: 0
         Health: 100
-        X: 0
-        YOffset: 0
+        X: 3.7999682
+        YOffset: 2.7150388
         SpawnTime: 0
       - Type: 0
         Health: 100
-        X: 0
-        YOffset: 0
+        X: 2.2484934
+        YOffset: 1.5402079
         SpawnTime: 0
       - Type: 0
         Health: 100
-        X: 0
-        YOffset: 0
+        X: 1.5058506
+        YOffset: 0.6820725
         SpawnTime: 0
       - Type: 0
         Health: 100
-        X: 0
-        YOffset: 0
+        X: 3.8111968
+        YOffset: 2.092092
         SpawnTime: 0
       - Type: 0
         Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-    - WaitTimeBeforeSpawnWave: 0
-      EnemiesData:
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
+        X: 0.023573875
+        YOffset: 2.0484147
         SpawnTime: 0
       - Type: 0
         Health: 100
-        X: 0
-        YOffset: 0
+        X: 0.227911
+        YOffset: 0.5980053
         SpawnTime: 0
       - Type: 0
         Health: 100
-        X: 0
-        YOffset: 0
+        X: 0.6789985
+        YOffset: 1.8759209
         SpawnTime: 0
       - Type: 0
         Health: 100
-        X: 0
-        YOffset: 0
+        X: 1.4504874
+        YOffset: 0.76014143
         SpawnTime: 0
       - Type: 0
         Health: 100
-        X: 0
-        YOffset: 0
+        X: 0.36849165
+        YOffset: 2.4781601
         SpawnTime: 0
       - Type: 0
         Health: 100
-        X: 0
-        YOffset: 0
+        X: 1.1283767
+        YOffset: 1.3957877
         SpawnTime: 0
       - Type: 0
         Health: 100
-        X: 0
-        YOffset: 0
+        X: 0.9216404
+        YOffset: 0.6829809
         SpawnTime: 0
       - Type: 0
         Health: 100
-        X: 0
-        YOffset: 0
+        X: 1.5010412
+        YOffset: 0.17581916
         SpawnTime: 0
       - Type: 0
         Health: 100
-        X: 0
-        YOffset: 0
+        X: 2.147045
+        YOffset: 2.3290482
         SpawnTime: 0
       - Type: 0
         Health: 100
-        X: 0
-        YOffset: 0
+        X: 0.48798656
+        YOffset: 1.8483047
         SpawnTime: 0
       - Type: 0
         Health: 100
-        X: 0
-        YOffset: 0
+        X: 2.8824615
+        YOffset: 1.048264
         SpawnTime: 0
       - Type: 0
         Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-    - WaitTimeBeforeSpawnWave: 0
-      EnemiesData:
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
+        X: 2.7961197
+        YOffset: 1.0624084
         SpawnTime: 0
       - Type: 0
         Health: 100
-        X: 0
-        YOffset: 0
+        X: 1.1624591
+        YOffset: 0.5590042
         SpawnTime: 0
       - Type: 0
         Health: 100
-        X: 0
-        YOffset: 0
+        X: 3.2760978
+        YOffset: 2.793615
         SpawnTime: 0
       - Type: 0
         Health: 100
-        X: 0
-        YOffset: 0
+        X: 1.3688238
+        YOffset: 2.1282141
         SpawnTime: 0
       - Type: 0
         Health: 100
-        X: 0
-        YOffset: 0
+        X: 1.1274064
+        YOffset: 0.22364223
         SpawnTime: 0
       - Type: 0
         Health: 100
-        X: 0
-        YOffset: 0
+        X: 0.6952596
+        YOffset: 2.1904469
         SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-    - WaitTimeBeforeSpawnWave: 0
-      EnemiesData:
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
+      - Type: 1
+        Health: 500
+        X: 2.6849737
+        YOffset: 0.0019079447
+        SpawnTime: 1
+      - Type: 1
+        Health: 500
+        X: 2.0891526
+        YOffset: 1.4758503
+        SpawnTime: 1
+      - Type: 1
+        Health: 500
+        X: 2.311023
+        YOffset: 1.1939919
+        SpawnTime: 1
+      - Type: 1
+        Health: 500
+        X: 2.047866
+        YOffset: 1.1675553
+        SpawnTime: 1
+      - Type: 1
+        Health: 500
+        X: 1.2768352
+        YOffset: 2.169061
+        SpawnTime: 1
     MatrixRow1: 0400000008000000100000000800000004000000
     MatrixRow2: 0800000004000000080000000400000008000000
     MatrixRow3: 0800000010000000040000001000000008000000
@@ -2302,233 +3167,843 @@ MonoBehaviour:
     Theme: 3
     MinSoldierPower: 1
     MaxSoldierPower: 6
-    BomberSoldierSpawnProbability: 0
-    WaitTimeBeforeSpawnLevel: 0
+    BomberSoldierSpawnProbability: 0.02
+    WaitTimeBeforeSpawnLevel: 1
     WavesData:
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 3.4995155
+        YOffset: 2.4165592
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 1.2970932
+        YOffset: 2.8690703
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 0.37891293
+        YOffset: 1.142163
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 2.821323
+        YOffset: 2.559854
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.2618382
+        YOffset: 2.6020594
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.046528
+        YOffset: 2.2622402
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.09639
+        YOffset: 0.67148566
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.33383703
+        YOffset: 2.8465583
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.8088439
+        YOffset: 2.2206979
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.145585
+        YOffset: 2.1467657
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.9426985
+        YOffset: 0.7888779
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.271311
+        YOffset: 0.16630447
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.8443289
+        YOffset: 1.7686727
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.104077816
+        YOffset: 0.60773313
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.49920845
+        YOffset: 2.6015868
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.0664592
+        YOffset: 0.9888963
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.5216584
+        YOffset: 0.6622306
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.9972124
+        YOffset: 1.4520688
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.2699826
+        YOffset: 1.276299
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.7273788
+        YOffset: 2.5550327
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.763008
+        YOffset: 1.235878
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.6967192
+        YOffset: 1.945992
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.0702112
+        YOffset: 1.0255117
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.6105299
+        YOffset: 0.49638426
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.6386561
+        YOffset: 1.6196382
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.935122
+        YOffset: 1.4309502
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.8756084
+        YOffset: 1.493413
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.5413008
+        YOffset: 1.7293622
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.82062054
+        YOffset: 0.7720526
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.19680929
+        YOffset: 2.5521965
+        SpawnTime: 0
+      - Type: 1
+        Health: 100
+        X: 0.8941593
+        YOffset: 1.9842424
         SpawnTime: 0
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 0.4570222
+        YOffset: 1.62603
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 2.0691388
+        YOffset: 0.28609478
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 2.0378683
+        YOffset: 2.300917
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 1.7466404
+        YOffset: 0.63651323
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 1.7594764
+        YOffset: 0.44197083
         SpawnTime: 0
       - Type: 0
+        Health: 50
+        X: 1.1699197
+        YOffset: 1.4984996
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.030209
+        YOffset: 2.0972419
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.3302732
+        YOffset: 2.0353553
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.023271084
+        YOffset: 1.2308033
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.56915236
+        YOffset: 0.8694951
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.6049283
+        YOffset: 2.5843792
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.4580863
+        YOffset: 1.6858776
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.901093
+        YOffset: 2.8180814
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.9281707
+        YOffset: 2.480856
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.7420852
+        YOffset: 1.7746935
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.351882
+        YOffset: 0.32398546
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.98133135
+        YOffset: 1.6948526
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.44056225
+        YOffset: 2.1330943
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.8527155
+        YOffset: 1.891977
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.883864
+        YOffset: 1.1955974
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.32424784
+        YOffset: 0.895127
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.1470087
+        YOffset: 1.5936325
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.2156436
+        YOffset: 1.1853101
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.061673
+        YOffset: 2.72079
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.1237476
+        YOffset: 2.0906224
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.0794525
+        YOffset: 1.4037085
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.5120761
+        YOffset: 2.9601278
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.3143051
+        YOffset: 0.10555816
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.4418461
+        YOffset: 1.5250356
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.4075415
+        YOffset: 2.2106614
+        SpawnTime: 0
+      - Type: 1
         Health: 200
-        X: 0
-        YOffset: 0
+        X: 1.1379726
+        YOffset: 1.0574296
+        SpawnTime: 0
+      - Type: 1
+        Health: 200
+        X: 2.2415617
+        YOffset: 2.6761045
         SpawnTime: 0
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 0.14250755
+        YOffset: 1.8352022
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 3.550117
+        YOffset: 0.22765553
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 1.7706215
+        YOffset: 0.28699136
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 3.3111444
+        YOffset: 1.095175
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 3.4257202
+        YOffset: 0.6677617
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 1.6371353
+        YOffset: 2.5654914
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 3.7534122
+        YOffset: 0.3137809
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 0.030642986
+        YOffset: 0.4043194
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.5768561
+        YOffset: 0.32999575
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.5951605
+        YOffset: 0.16768706
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.027435
+        YOffset: 2.9116073
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.49602747
+        YOffset: 1.0779402
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.6921306
+        YOffset: 1.29283
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.3009517
+        YOffset: 0.23114383
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.5891533
+        YOffset: 1.8690901
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.5140233
+        YOffset: 2.2595205
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.1928663
+        YOffset: 2.1604743
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.6900547
+        YOffset: 0.5806643
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.1397426
+        YOffset: 1.9430823
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.1412659
+        YOffset: 2.6216404
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.4343426
+        YOffset: 0.3136196
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.8520303
+        YOffset: 0.36916995
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.1044621
+        YOffset: 2.101408
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.4285741
+        YOffset: 1.9912684
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.2944334
+        YOffset: 2.885559
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.89266586
+        YOffset: 0.8602883
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.915411
+        YOffset: 0.6006993
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.5617607
+        YOffset: 0.0933609
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.6870956
+        YOffset: 2.2890768
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.2571764
+        YOffset: 2.2878604
+        SpawnTime: 0
+      - Type: 1
+        Health: 300
+        X: 3.2034116
+        YOffset: 2.2506166
+        SpawnTime: 0
+      - Type: 1
+        Health: 300
+        X: 2.6334515
+        YOffset: 1.747102
+        SpawnTime: 0
+      - Type: 1
+        Health: 300
+        X: 0.08410978
+        YOffset: 2.5929472
         SpawnTime: 0
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 0.07201052
+        YOffset: 2.3513427
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 3.2286968
+        YOffset: 2.0324926
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 0.9155183
+        YOffset: 0.28177822
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 0.6058965
+        YOffset: 0.9420034
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 1.9795821
+        YOffset: 0.7680947
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 0.81690836
+        YOffset: 2.8161082
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 1.4979193
+        YOffset: 1.8420951
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 3.8415418
+        YOffset: 2.3521328
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 3.5728679
+        YOffset: 1.9202503
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 2.0101588
+        YOffset: 1.9772859
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.6011796
+        YOffset: 0.52689135
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.0067146
+        YOffset: 2.953576
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.061869
+        YOffset: 1.7140186
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.3154562
+        YOffset: 0.62479055
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.5616589
+        YOffset: 1.7277706
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.8750865
+        YOffset: 0.550262
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.8280087
+        YOffset: 2.4221625
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.24266
+        YOffset: 1.1910822
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.9037428
+        YOffset: 0.54615855
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.8916678
+        YOffset: 2.4873395
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.8345604
+        YOffset: 0.8558766
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.6702375
+        YOffset: 2.5008864
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.5257156
+        YOffset: 2.4008822
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.5117857
+        YOffset: 1.6836152
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.3560092
+        YOffset: 2.2666368
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.9398732
+        YOffset: 1.4464076
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.55283403
+        YOffset: 0.267236
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.2085552
+        YOffset: 1.9477869
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.9289715
+        YOffset: 2.83605
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.0760257
+        YOffset: 2.4323559
+        SpawnTime: 0
+      - Type: 1
+        Health: 400
+        X: 1.2985518
+        YOffset: 0.90718657
+        SpawnTime: 0
+      - Type: 1
+        Health: 400
+        X: 0.26580667
+        YOffset: 1.7097514
+        SpawnTime: 0
+      - Type: 1
+        Health: 400
+        X: 2.1677191
+        YOffset: 0.27672458
+        SpawnTime: 0
+      - Type: 1
+        Health: 400
+        X: 1.3968966
+        YOffset: 1.5669832
         SpawnTime: 0
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 3.563479
+        YOffset: 1.0369439
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 1.161278
+        YOffset: 1.720583
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 0.65540695
+        YOffset: 2.7660923
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 2.6192527
+        YOffset: 0.19805288
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 0.48684072
+        YOffset: 0.79749674
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 3.0729847
+        YOffset: 2.273552
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 1.8170145
+        YOffset: 1.6039321
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 3.6869617
+        YOffset: 2.5065114
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 1.3932745
+        YOffset: 1.9322516
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 2.2526734
+        YOffset: 0.39482403
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 2.1693785
+        YOffset: 2.9398575
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 0.8199229
+        YOffset: 1.2277033
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 1.4508121
+        YOffset: 0.19280577
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 3.4076204
+        YOffset: 1.6422448
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 50
+        X: 2.0734818
+        YOffset: 2.0160446
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.044190884
+        YOffset: 2.2541418
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.2277186
+        YOffset: 2.590426
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.88028
+        YOffset: 0.5256661
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.252217
+        YOffset: 1.9464122
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.145228
+        YOffset: 1.4847991
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.24370003
+        YOffset: 1.7455149
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.5351653
+        YOffset: 0.28659332
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 2.0048997
+        YOffset: 2.9210305
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.9678087
+        YOffset: 1.2757077
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.29041433
+        YOffset: 0.73962164
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.1237195
+        YOffset: 1.2838464
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 3.5718193
+        YOffset: 2.1214046
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.653625
+        YOffset: 0.7639888
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 1.8731058
+        YOffset: 2.7568235
+        SpawnTime: 0
+      - Type: 0
+        Health: 50
+        X: 0.492939
+        YOffset: 1.8144913
+        SpawnTime: 0
+      - Type: 1
+        Health: 500
+        X: 0.059192657
+        YOffset: 0.05872965
+        SpawnTime: 0
+      - Type: 1
+        Health: 500
+        X: 2.8644896
+        YOffset: 0.57311404
+        SpawnTime: 0
+      - Type: 1
+        Health: 500
+        X: 3.764614
+        YOffset: 0.8570604
+        SpawnTime: 0
+      - Type: 1
+        Health: 500
+        X: 2.359431
+        YOffset: 2.9889793
+        SpawnTime: 0
+      - Type: 1
+        Health: 500
+        X: 2.4844434
+        YOffset: 0.9182462
         SpawnTime: 0
     MatrixRow1: 0400000008000000040000000800000004000000
     MatrixRow2: 0800000004000000080000000400000008000000
@@ -2540,1492 +4015,867 @@ MonoBehaviour:
     Theme: 4
     MinSoldierPower: 1
     MaxSoldierPower: 6
-    BomberSoldierSpawnProbability: 0
-    WaitTimeBeforeSpawnLevel: 0
+    BomberSoldierSpawnProbability: 0.02
+    WaitTimeBeforeSpawnLevel: 1
     WavesData:
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 1
-        Health: 2000
-        X: 0
-        YOffset: 0
+        Health: 60
+        X: 1.3543456
+        YOffset: 1.4862323
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 60
+        X: 2.6977205
+        YOffset: 1.4232485
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 60
+        X: 1.204499
+        YOffset: 0.8650494
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 3.663981
+        YOffset: 2.4781122
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 1.4469526
+        YOffset: 0.52608776
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.6376834
+        YOffset: 0.87430555
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 1.007045
+        YOffset: 2.9183006
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.5850096
+        YOffset: 0.4411558
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.881876
+        YOffset: 0.8021148
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.81171703
+        YOffset: 1.4737248
         SpawnTime: 0
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
-      - Type: 1
-        Health: 2000
-        X: 0
-        YOffset: 0
+      - Type: 0
+        Health: 60
+        X: 2.6835647
+        YOffset: 0.88582045
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 60
+        X: 2.993497
+        YOffset: 2.239505
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 60
+        X: 3.4520936
+        YOffset: 0.53616714
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 60
+        X: 3.0905147
+        YOffset: 0.6832799
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 60
+        X: 0.528512
+        YOffset: 0.7277323
         SpawnTime: 0
-      - Type: 1
-        Health: 2000
-        X: 0
-        YOffset: 0
+      - Type: 0
+        Health: 60
+        X: 0.5863304
+        YOffset: 1.6570871
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.8441448
+        YOffset: 0.15856504
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.119441986
+        YOffset: 0.147318
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 1.6664107
+        YOffset: 0.55410933
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.8179574
+        YOffset: 1.3339331
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.5450611
+        YOffset: 0.30945933
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 1.3376582
+        YOffset: 2.251289
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.6046281
+        YOffset: 0.71885884
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.12411928
+        YOffset: 0.77212554
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 1.7835181
+        YOffset: 2.7232351
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.5417385
+        YOffset: 1.3086131
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.9023113
+        YOffset: 0.32750845
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.8255672
+        YOffset: 0.56045187
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 3.960125
+        YOffset: 2.113101
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 3.4407458
+        YOffset: 1.317271
         SpawnTime: 0
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
-      - Type: 1
-        Health: 2000
-        X: 0
-        YOffset: 0
+      - Type: 0
+        Health: 60
+        X: 2.065076
+        YOffset: 1.9731045
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 60
+        X: 3.5042872
+        YOffset: 1.7798479
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 1
-        Health: 2000
-        X: 0
-        YOffset: 0
+        Health: 60
+        X: 0.916564
+        YOffset: 1.1520205
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 1
-        Health: 2000
-        X: 0
-        YOffset: 0
+        Health: 60
+        X: 3.0938716
+        YOffset: 2.4914713
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 60
+        X: 0.82090855
+        YOffset: 1.4034646
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 60
+        X: 2.9368734
+        YOffset: 1.9744316
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 1.2589443
+        YOffset: 2.859506
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 1.2054188
+        YOffset: 0.48999345
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.0909998
+        YOffset: 2.64603
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 1.5169766
+        YOffset: 0.42013907
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 3.306808
+        YOffset: 0.536474
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 1.4715302
+        YOffset: 2.8548102
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.1569767
+        YOffset: 1.7511444
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.2980976
+        YOffset: 1.5554321
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.5727282
+        YOffset: 0.8043514
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 1.8638632
+        YOffset: 1.8741326
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 3.129415
+        YOffset: 1.1142888
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.7997227
+        YOffset: 1.2702425
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.9543233
+        YOffset: 1.4518485
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.5473032
+        YOffset: 0.43144298
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.4045022
+        YOffset: 0.75796956
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.026374
+        YOffset: 1.5566065
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 3.4136105
+        YOffset: 1.4788151
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.8968029
+        YOffset: 2.59187
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.7333393
+        YOffset: 1.5308144
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.8314986
+        YOffset: 2.3856418
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.7259259
+        YOffset: 0.55400527
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.77186346
+        YOffset: 0.839979
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 1.9524114
+        YOffset: 1.0645621
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.0185287
+        YOffset: 2.6534243
         SpawnTime: 0
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
-      - Type: 1
-        Health: 2000
-        X: 0
-        YOffset: 0
+      - Type: 0
+        Health: 60
+        X: 0.3443961
+        YOffset: 2.4574435
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 60
+        X: 0.13747835
+        YOffset: 2.946393
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 1
-        Health: 2000
-        X: 0
-        YOffset: 0
+        Health: 60
+        X: 1.1017654
+        YOffset: 2.7204204
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 60
+        X: 2.2192004
+        YOffset: 2.8777795
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 1
-        Health: 2000
-        X: 0
-        YOffset: 0
+        Health: 60
+        X: 1.481704
+        YOffset: 2.8819032
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 60
+        X: 0.4437232
+        YOffset: 0.36190867
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 60
+        X: 0.65953827
+        YOffset: 0.89395076
         SpawnTime: 0
-      - Type: 1
-        Health: 2000
-        X: 0
-        YOffset: 0
+      - Type: 0
+        Health: 60
+        X: 2.4466178
+        YOffset: 0.02774477
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 1.9196327
+        YOffset: 0.9199557
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.50194454
+        YOffset: 2.7710185
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 1.1737697
+        YOffset: 1.7822258
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 3.7816734
+        YOffset: 1.0498285
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.97367716
+        YOffset: 2.5409932
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.7088914
+        YOffset: 1.1244476
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.184048
+        YOffset: 1.4413943
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.8533196
+        YOffset: 1.3702922
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.14116907
+        YOffset: 0.81556445
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.7366385
+        YOffset: 0.025376558
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 3.0653996
+        YOffset: 1.1851604
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.6566262
+        YOffset: 1.3199713
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 1.9244673
+        YOffset: 1.7191834
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.589982
+        YOffset: 0.7342007
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.1780181
+        YOffset: 2.8821
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.39935637
+        YOffset: 1.1696823
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.1985571
+        YOffset: 0.028019428
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.5587254
+        YOffset: 0.37728095
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 3.4832697
+        YOffset: 1.9861815
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.033273
+        YOffset: 2.3679428
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.7548046
+        YOffset: 2.5901546
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.8693376
+        YOffset: 2.1574173
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.5484042
+        YOffset: 2.6090834
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 3.3043838
+        YOffset: 0.6785842
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 3.1924386
+        YOffset: 2.5011697
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 3.8469572
+        YOffset: 0.24365222
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.13299513
+        YOffset: 2.441494
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 3.17724
+        YOffset: 0.5809883
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.51306295
+        YOffset: 2.9304695
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.703947
+        YOffset: 0.8918919
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.35151148
+        YOffset: 2.3873127
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.8878627
+        YOffset: 2.5546937
         SpawnTime: 0
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
-      - Type: 1
-        Health: 2000
-        X: 0
-        YOffset: 0
+      - Type: 0
+        Health: 60
+        X: 1.4974482
+        YOffset: 0.026198387
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 60
+        X: 0.68248796
+        YOffset: 0.1915412
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 1
-        Health: 2000
-        X: 0
-        YOffset: 0
+        Health: 60
+        X: 1.4366767
+        YOffset: 2.574116
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 60
+        X: 0.8512573
+        YOffset: 1.355643
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 1
-        Health: 2000
-        X: 0
-        YOffset: 0
+        Health: 60
+        X: 3.3075547
+        YOffset: 0.84147817
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 60
+        X: 1.5523994
+        YOffset: 0.20125401
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 1
-        Health: 2000
-        X: 0
-        YOffset: 0
+        Health: 60
+        X: 2.6533465
+        YOffset: 0.56022084
         SpawnTime: 0
       - Type: 0
-        Health: 200
-        X: 0
-        YOffset: 0
+        Health: 60
+        X: 3.0791373
+        YOffset: 0.12701368
         SpawnTime: 0
-      - Type: 1
-        Health: 2000
-        X: 0
-        YOffset: 0
+      - Type: 0
+        Health: 60
+        X: 1.1164005
+        YOffset: 2.9575577
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 1.3065722
+        YOffset: 2.2692769
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.9032488
+        YOffset: 2.5418377
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 3.856309
+        YOffset: 0.48560643
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.8178058
+        YOffset: 1.7584639
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.8192272
+        YOffset: 1.2695155
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.570146
+        YOffset: 1.0694151
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.7292576
+        YOffset: 2.6815531
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.527359
+        YOffset: 0.34085655
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.617785
+        YOffset: 1.4922972
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 1.3829563
+        YOffset: 1.4655092
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.9380665
+        YOffset: 0.6488621
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.2254326
+        YOffset: 2.4506445
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 1.2538645
+        YOffset: 2.8859239
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 1.1878717
+        YOffset: 1.7720909
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.7535839
+        YOffset: 1.5363274
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.63680506
+        YOffset: 2.9592729
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 3.2762527
+        YOffset: 1.738313
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.8249283
+        YOffset: 0.45538938
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 3.9243112
+        YOffset: 1.585635
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.77813244
+        YOffset: 1.1819878
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.5072498
+        YOffset: 2.7320902
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 1.7329009
+        YOffset: 0.07967305
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 3.4944658
+        YOffset: 0.22431529
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.2883484
+        YOffset: 1.642113
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.12415123
+        YOffset: 0.18942189
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 3.4875512
+        YOffset: 0.39380765
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 3.5170588
+        YOffset: 1.3434095
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 1.118387
+        YOffset: 1.4068234
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.8990893
+        YOffset: 0.28757215
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 3.6691031
+        YOffset: 2.7651954
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.200678
+        YOffset: 1.649586
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.030302048
+        YOffset: 2.1632476
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 3.4864187
+        YOffset: 0.95394176
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 1.3399432
+        YOffset: 1.5206454
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.3588765
+        YOffset: 0.98079926
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.08130026
+        YOffset: 1.78508
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 3.2374244
+        YOffset: 2.7465138
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 0.21598434
+        YOffset: 1.9329286
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 2.1904776
+        YOffset: 0.48403502
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 1.8211443
+        YOffset: 1.4407465
+        SpawnTime: 0
+      - Type: 0
+        Health: 60
+        X: 1.9783361
+        YOffset: 1.9658682
         SpawnTime: 0
     MatrixRow1: 0400000010000000080000001000000004000000
     MatrixRow2: 1000000004000000080000000400000010000000
     MatrixRow3: 1000000004000000080000000400000010000000
-    MatrixRow4: 0400000010000000080000001000000004000000
+    MatrixRow4: 0400000010000000ffffffff1000000004000000
     HasTutorial: 0
     Tutorials: []
   - Map: 8
     Theme: 5
     MinSoldierPower: 1
     MaxSoldierPower: 6
-    BomberSoldierSpawnProbability: 0
-    WaitTimeBeforeSpawnLevel: 0
+    BomberSoldierSpawnProbability: 0.02
+    WaitTimeBeforeSpawnLevel: 1
     WavesData:
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
-      - Type: 0
-        Health: 20
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 20
-        X: 0
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 20
-        X: 0
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 20
-        X: 0
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 20
-        X: 0
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 20
-        X: 0
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 20
-        X: 0
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 20
-        X: 0
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 20
-        X: 0
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 20
-        X: 0
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 20
-        X: 1
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 20
-        X: 1
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 20
-        X: 1
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 20
-        X: 1
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 20
-        X: 1
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 20
-        X: 1
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 20
-        X: 1
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 20
-        X: 1
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 20
-        X: 1
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 20
-        X: 1
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 20
+      - Type: 1
+        Health: 1000
         X: 2
         YOffset: 0
         SpawnTime: 0
-      - Type: 0
-        Health: 20
-        X: 2
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 20
-        X: 2
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 20
-        X: 2
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 20
-        X: 2
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 20
-        X: 2
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 20
-        X: 2
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 20
-        X: 2
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 20
-        X: 2
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 20
-        X: 2
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 20
-        X: 3
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 20
-        X: 3
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 20
-        X: 3
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 20
-        X: 3
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 20
-        X: 3
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 20
-        X: 3
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 20
-        X: 3
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 20
-        X: 3
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 20
-        X: 3
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 20
-        X: 3
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 10
-        X: 4
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 10
-        X: 4
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 10
-        X: 4
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 10
-        X: 4
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 10
-        X: 4
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 10
-        X: 4
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 10
-        X: 4
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 10
-        X: 4
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 10
-        X: 4
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 10
-        X: 4
-        YOffset: 0
-        SpawnTime: 9
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
-      - Type: 0
-        Health: 40
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 40
-        X: 0
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 40
-        X: 0
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 40
-        X: 0
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 40
-        X: 0
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 40
-        X: 0
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 40
-        X: 0
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 40
-        X: 0
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 40
-        X: 0
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 40
-        X: 0
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 40
+      - Type: 1
+        Health: 1000
         X: 1
         YOffset: 0
         SpawnTime: 0
-      - Type: 0
-        Health: 40
-        X: 1
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 40
-        X: 1
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 40
-        X: 1
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 40
-        X: 1
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 40
-        X: 1
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 40
-        X: 1
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 40
-        X: 1
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 40
-        X: 1
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 40
-        X: 1
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 40
-        X: 2
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 40
-        X: 2
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 40
-        X: 2
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 40
-        X: 2
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 40
-        X: 2
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 40
-        X: 2
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 40
-        X: 2
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 40
-        X: 2
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 40
-        X: 2
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 40
-        X: 2
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 40
+      - Type: 1
+        Health: 1000
         X: 3
         YOffset: 0
         SpawnTime: 0
-      - Type: 0
-        Health: 40
-        X: 3
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 40
-        X: 3
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 40
-        X: 3
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 40
-        X: 3
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 40
-        X: 3
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 40
-        X: 3
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 40
-        X: 3
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 40
-        X: 3
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 40
-        X: 3
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 40
-        X: 4
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 40
-        X: 4
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 40
-        X: 4
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 40
-        X: 4
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 40
-        X: 4
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 40
-        X: 4
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 40
-        X: 4
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 40
-        X: 4
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 40
-        X: 4
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 40
-        X: 4
-        YOffset: 0
-        SpawnTime: 9
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
-      - Type: 0
-        Health: 60
-        X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 60
-        X: 0
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 60
-        X: 0
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 60
-        X: 0
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 60
-        X: 0
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 60
-        X: 0
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 60
-        X: 0
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 60
-        X: 0
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 60
-        X: 0
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 60
-        X: 0
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 60
+      - Type: 1
+        Health: 1000
         X: 1
         YOffset: 0
         SpawnTime: 0
-      - Type: 0
-        Health: 60
-        X: 1
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 60
-        X: 1
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 60
-        X: 1
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 60
-        X: 1
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 60
-        X: 1
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 60
-        X: 1
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 60
-        X: 1
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 60
-        X: 1
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 60
-        X: 1
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 60
+      - Type: 1
+        Health: 1000
         X: 2
         YOffset: 0
         SpawnTime: 0
-      - Type: 0
-        Health: 60
-        X: 2
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 60
-        X: 2
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 60
-        X: 2
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 60
-        X: 2
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 60
-        X: 2
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 60
-        X: 2
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 60
-        X: 2
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 60
-        X: 2
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 60
-        X: 2
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 60
+      - Type: 1
+        Health: 1000
         X: 3
         YOffset: 0
         SpawnTime: 0
-      - Type: 0
-        Health: 60
-        X: 3
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 60
-        X: 3
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 60
-        X: 3
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 60
-        X: 3
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 60
-        X: 3
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 60
-        X: 3
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 60
-        X: 3
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 60
-        X: 3
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 60
-        X: 3
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 60
-        X: 4
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 60
-        X: 4
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 60
-        X: 4
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 60
-        X: 4
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 60
-        X: 4
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 60
-        X: 4
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 60
-        X: 4
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 60
-        X: 4
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 60
-        X: 4
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 60
-        X: 4
-        YOffset: 0
-        SpawnTime: 9
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
-      - Type: 0
-        Health: 80
+      - Type: 1
+        Health: 1000
         X: 0
         YOffset: 0
         SpawnTime: 0
-      - Type: 0
-        Health: 80
-        X: 0
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 80
-        X: 0
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 80
-        X: 0
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 80
-        X: 0
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 80
-        X: 0
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 80
-        X: 0
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 80
-        X: 0
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 80
-        X: 0
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 80
-        X: 0
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 80
+      - Type: 1
+        Health: 1000
         X: 1
         YOffset: 0
         SpawnTime: 0
-      - Type: 0
-        Health: 80
-        X: 1
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 80
-        X: 1
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 80
-        X: 1
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 80
-        X: 1
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 80
-        X: 1
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 80
-        X: 1
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 80
-        X: 1
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 80
-        X: 1
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 80
-        X: 1
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 80
-        X: 2
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 0
-        Health: 80
-        X: 2
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 80
-        X: 2
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 80
-        X: 2
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 80
-        X: 2
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 80
-        X: 2
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 80
-        X: 2
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 80
-        X: 2
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 80
-        X: 2
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 80
-        X: 2
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 80
+      - Type: 1
+        Health: 1000
         X: 3
         YOffset: 0
         SpawnTime: 0
-      - Type: 0
-        Health: 80
-        X: 3
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 80
-        X: 3
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 80
-        X: 3
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 80
-        X: 3
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 80
-        X: 3
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 80
-        X: 3
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 80
-        X: 3
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 80
-        X: 3
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 80
-        X: 3
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 80
+      - Type: 1
+        Health: 1000
         X: 4
         YOffset: 0
         SpawnTime: 0
-      - Type: 0
-        Health: 80
-        X: 4
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 80
-        X: 4
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 80
-        X: 4
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 80
-        X: 4
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 80
-        X: 4
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 80
-        X: 4
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 80
-        X: 4
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 80
-        X: 4
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 80
-        X: 4
-        YOffset: 0
-        SpawnTime: 9
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
-      - Type: 0
-        Health: 100
+      - Type: 1
+        Health: 1000
         X: 0
         YOffset: 0
         SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 100
-        X: 0
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 100
+      - Type: 1
+        Health: 1000
         X: 1
         YOffset: 0
         SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 1
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 100
-        X: 1
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 100
-        X: 1
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 100
-        X: 1
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 100
-        X: 1
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 100
-        X: 1
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 100
-        X: 1
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 100
-        X: 1
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 100
-        X: 1
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 100
+      - Type: 1
+        Health: 1000
         X: 2
         YOffset: 0
         SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 2
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 100
-        X: 2
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 100
-        X: 2
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 100
-        X: 2
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 100
-        X: 2
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 100
-        X: 2
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 100
-        X: 2
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 100
-        X: 2
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 100
-        X: 2
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 100
+      - Type: 1
+        Health: 1000
         X: 3
         YOffset: 0
         SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 3
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 100
-        X: 3
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 100
-        X: 3
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 100
-        X: 3
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 100
-        X: 3
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 100
-        X: 3
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 100
-        X: 3
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 100
-        X: 3
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 100
-        X: 3
-        YOffset: 0
-        SpawnTime: 9
-      - Type: 0
-        Health: 100
+      - Type: 1
+        Health: 1000
         X: 4
         YOffset: 0
         SpawnTime: 0
-      - Type: 0
-        Health: 100
-        X: 4
-        YOffset: 0
-        SpawnTime: 1
-      - Type: 0
-        Health: 100
-        X: 4
-        YOffset: 0
-        SpawnTime: 2
-      - Type: 0
-        Health: 100
-        X: 4
-        YOffset: 0
-        SpawnTime: 3
-      - Type: 0
-        Health: 100
-        X: 4
-        YOffset: 0
-        SpawnTime: 4
-      - Type: 0
-        Health: 100
-        X: 4
-        YOffset: 0
-        SpawnTime: 5
-      - Type: 0
-        Health: 100
-        X: 4
-        YOffset: 0
-        SpawnTime: 6
-      - Type: 0
-        Health: 100
-        X: 4
-        YOffset: 0
-        SpawnTime: 7
-      - Type: 0
-        Health: 100
-        X: 4
-        YOffset: 0
-        SpawnTime: 8
-      - Type: 0
-        Health: 100
-        X: 4
-        YOffset: 0
-        SpawnTime: 9
     MatrixRow1: 0400000004000000040000000400000004000000
     MatrixRow2: 0400000004000000040000000400000004000000
     MatrixRow3: 0400000004000000040000000400000004000000

@@ -17,6 +17,7 @@ MonoBehaviour:
   InsideShootingRadius: 2
   SoldiersFireRate: 2
   SoldiersMergeTime: 0.15
+  ConnectPitchDifference: 0.2
   BomberExplosionRadius: 3
   BomberExplosionDamage: 100
   MinDistanceToExplode: 1
@@ -24,6 +25,7 @@ MonoBehaviour:
   EnemySpeedSimple: 0.85
   EnemySpeedGiant: 0.7
   EnemyDefaultAnimationSpeed: 0.3
+  EnemyAttackRate: 1
   BulletDestructionTime: 6
   BulletSpeed: 7
   BulletOffsetFromGround: 0.7
@@ -46,3 +48,4 @@ MonoBehaviour:
   - {r: 0.8117648, g: 0.5176471, b: 0.9215687, a: 1}
   - {r: 0.8588236, g: 0.06666667, b: 0.3647059, a: 1}
   WinLoseDialogeDelay: 1
+  levelsCoefficient: 0.2

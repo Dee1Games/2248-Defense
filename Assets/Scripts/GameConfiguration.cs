@@ -34,4 +34,7 @@ public class GameConfiguration : ScriptableObject
     public float LineOffsetFromGround = 0.1f;
     public List<Color> NumberColors;
     public float WinLoseDialogeDelay = 1;
+
+    [Header("Level")]
+    public float levelsCoefficient = 0.1f;
 }

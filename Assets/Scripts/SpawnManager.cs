@@ -105,7 +105,7 @@ public class SpawnManager : MonoBehaviour
     {
         Enemy enemy = (enemyData.Type==EnemyType.SimpleEnemy?simpleEnemyPool:giantEnemyPool).Spawn(enemiesContainer).GetComponent<Enemy>();
         enemy.Init(enemyData);
-        enemy.transform.position = new Vector3(enemyData.X, 0f, spawnPos.position.z+enemyData.YOffset);
+        enemy.transform.position = new Vector3(enemyData.X, 0f, spawnPos.position.z+enemy.Data.YOffset);
         GameManager.Instance.outsideEnemies.Add(enemy);
         GameManager.Instance.OnNewEnemySpawned.Invoke();
     }

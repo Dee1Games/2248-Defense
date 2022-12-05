@@ -75,6 +75,14 @@ public class Soldier : MonoBehaviour
         }
     }
 
+    public Color SoldierCircleColor
+    {
+        set
+        {
+            soldierCircle.color = value;
+        }
+    }
+
     private SoldierCell cell;
     
     private void OnEnable()

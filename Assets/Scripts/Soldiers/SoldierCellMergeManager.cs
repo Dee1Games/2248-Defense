@@ -28,7 +28,7 @@ public class SoldierCellMergeManager : MonoBehaviour
 
     private List<List<SoldierCell>> cells;
     private List<SoldierCell> connectedCells = new List<SoldierCell>();
-    private int currentCellValue, currentSumOfValues;
+    private int currentCellValue, currentSumOfValues, currentPowerAddition;
     private bool isConnecting = false;
     private float currentPitch, pitchDifference;
     
@@ -74,6 +74,8 @@ public class SoldierCellMergeManager : MonoBehaviour
                 cell.transform.name = "Cell " + row + " " + column;
                 cell.transform.localPosition = new Vector3(column, 0.065f, row);
                 int cellNumber = GameManager.Instance.CurrentLevelData.GetCellNumber(column, 3 - row);
+                currentPowerAddition = (int) GameManager.Instance.currentCoefficient / 2;
+                cellNumber *= (int)Mathf.Pow(2, currentPowerAddition);
                 cell.Init(column, row, row == 3, cellNumber, (cellNumber>0?SoldierType.Normal:SoldierType.Bomber));
                 cells[row].Add(cell);
                 childIndex++;
@@ -273,7 +275,11 @@ public class SoldierCellMergeManager : MonoBehaviour
             Soldier tempSoldier = (spawnBomber?BomberSoldierPool:NormalSoldierPool).Spawn(transform).GetComponent<Soldier>();
             tempSoldier.Type = spawnBomber ? SoldierType.Bomber : SoldierType.Normal;
             tempSoldier.transform.localPosition = new Vector3(-2 + currentColumn, 0, -2.5f);
-            tempSoldier.ValueNumber = (int) Mathf.Pow(2, Utils.GetRandomPower(GameManager.Instance.CurrentLevelData.MinSoldierPower, GameManager.Instance.CurrentLevelData.MaxSoldierPower));
+            tempSoldier.ValueNumber = (int) Mathf.Pow(2, Utils.GetRandomPower
+                (
+                GameManager.Instance.CurrentLevelData.MinSoldierPower + currentPowerAddition,
+                GameManager.Instance.CurrentLevelData.MaxSoldierPower + currentPowerAddition
+                ));
             tempSoldier.IsShooter = false;
             tempSoldier.Init();
             tempSoldier.MoveSoldierToAnotherCell(columnCells[k][currentColumn]);
@@ -414,11 +420,14 @@ public class SoldierCellMergeManager : MonoBehaviour
     private IEnumerator DoMergeVisuals()
     {
         IsMerging = true;
+        foreach (SoldierCell cell in connectedCells)
+            cell.currentSoldier.SoldierCircleColor = Color.black;
         int tempCount = connectedCells.Count;
         float duration = Database.GameConfiguration.SoldiersMergeTime;
         if (tempCount >= 2)
         {
             Transform mergingSoldier = connectedCells[0].currentSoldier.transform;
+            connectedCells[0].currentSoldier.SoldierCircleColor = Color.white;
             connectedCells[0].currentSoldier.SoldierCircle = false;
             Vector3 startPos = mergingSoldier.position;
             Vector3 toPosition = connectedCells[1].currentSoldier.transform.position;
@@ -429,6 +438,7 @@ public class SoldierCellMergeManager : MonoBehaviour
                 mergingSoldier.position = Vector3.Lerp(startPos, toPosition, counter / duration);
                 yield return null;
             }
+            
             connectedCells[0].ClearCell();
             connectedCells.RemoveAt(0);
             SoundManager.Instance.Play(Sound.SoldierCombine);
@@ -438,6 +448,7 @@ public class SoldierCellMergeManager : MonoBehaviour
         {
             currentSumOfValues = Mathf.ClosestPowerOfTwo(currentSumOfValues);
             connectedCells[0].currentSoldier.ValueNumber = currentSumOfValues;
+            connectedCells[0].currentSoldier.SoldierCircleColor = Color.white;
             connectedCells[0].currentSoldier.SoldierCircle = false;
             SoundManager.Instance.Play(Sound.SoldierMerge);
             ParticleManager.Instance.PlayParticle(Particle_Type.SoldierMerge, connectedCells[0].transform.position+(Vector3.up*0.5f), Vector3.up);

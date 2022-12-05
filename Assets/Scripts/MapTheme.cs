@@ -4,6 +4,6 @@ public enum MapTheme
     Street,
     Jungle,
     Sea,
-    Desert,
+    Desertv,
     Desert2,
 }

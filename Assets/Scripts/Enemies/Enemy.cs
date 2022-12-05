@@ -65,6 +65,7 @@ public class Enemy : MonoBehaviour
         navmeshAgent = GetComponent<NavMeshAgent>();
         collider = GetComponent<CapsuleCollider>();
         this.Data.Copy(data);
+        Data.Health *= GameManager.Instance.currentCoefficient;
         healthText.text = Data.Health.ToString();
         healthText.color = Color.red;
         SetState(EnemyState.Running);

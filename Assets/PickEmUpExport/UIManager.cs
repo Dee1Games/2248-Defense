@@ -72,7 +72,7 @@ public class UIManager : MonoBehaviour
                     inGamePanel.SetActive(true);
                     break;
                 case UIState.Victory:
-                    victoryLevelText.text = "Level " + (GameManager.Instance.CurrentLevelIndex + 1);
+                    victoryLevelText.text = "Level " + (GameManager.Instance.CurrentLevelIndex);
                     victoryPeopleNumberText.text = "x" + GameManager.Instance.CurrentKills.ToString();
                     victoryPanel.SetActive(true);
                     PlayerPrefsManager.Coin += GameManager.Instance.CurrentKills;
