@@ -158,8 +158,15 @@ public class SoldierCell : MonoBehaviour
     {
         if(currentSoldier.Type == SoldierType.Bomber)
         {
-            currentSoldier.Explode();
-            ClearCell();
+            // currentSoldier.Explode();
+            // ClearCell();
+            currentSoldier.SetState(SoldierState.Dead);
+            IsFull = false;
+            IsKilled = true;
+            Vector3 particlePos = transform.position;
+            particlePos.y = 1.5f;
+            ParticleManager.Instance.PlayParticle(Particle_Type.SoldierDeath, particlePos, Vector3.up);
+            GameManager.Instance.Explosion(transform.position, Database.GameConfiguration.BomberExplosionRadius, Database.GameConfiguration.BomberExplosionDamage);
         }
         else
         /*if (currentSoldier.ValueNumber / 2 == 1)*/

@@ -424,8 +424,10 @@ public class SoldierCellMergeManager : MonoBehaviour
             cell.currentSoldier.SoldierCircleColor = Color.black;
         int tempCount = connectedCells.Count;
         float duration = Database.GameConfiguration.SoldiersMergeTime;
-        if (tempCount >= 2)
+        if (tempCount >= 2 )
         {
+            if (!GameManager.Instance.IsInPlayMode)
+                yield break;
             Transform mergingSoldier = connectedCells[0].currentSoldier.transform;
             connectedCells[0].currentSoldier.SoldierCircleColor = Color.white;
             connectedCells[0].currentSoldier.SoldierCircle = false;
@@ -438,7 +440,8 @@ public class SoldierCellMergeManager : MonoBehaviour
                 mergingSoldier.position = Vector3.Lerp(startPos, toPosition, counter / duration);
                 yield return null;
             }
-            
+            if (!GameManager.Instance.IsInPlayMode)
+                yield break;
             connectedCells[0].ClearCell();
             connectedCells.RemoveAt(0);
             SoundManager.Instance.Play(Sound.SoldierCombine);

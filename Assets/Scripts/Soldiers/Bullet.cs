@@ -42,8 +42,13 @@ public class Bullet : MonoBehaviour
         }
         else
         {
-            thisRigid.velocity = Vector3.zero;
-            ObjectPool.DeSpawn(gameObject);
+            if (thisRigid.velocity.magnitude < 0.1f)
+            {
+                thisRigid.velocity = Vector3.zero;
+                ObjectPool.DeSpawn(gameObject);
+            }
+            //thisRigid.velocity = Vector3.zero;
+            //ObjectPool.DeSpawn(gameObject);
         }
     }
 
@@ -81,7 +86,7 @@ public class Bullet : MonoBehaviour
     public void InvokeSelfDestruction() => Invoke(nameof(SelfDestruct), Database.GameConfiguration.BulletDestructionTime);
 
     private void SelfDestruct() {
-        //thisRigid.velocity = Vector3.zero;
-        //ObjectPool.DeSpawn(gameObject);
+        thisRigid.velocity = Vector3.zero;
+        ObjectPool.DeSpawn(gameObject);
     }
 }

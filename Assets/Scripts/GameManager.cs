@@ -131,6 +131,7 @@ public class GameManager : MonoBehaviour
 
     public void InitCurrentLevel()
     {
+        CurrentWaveIndex=0;
         CurrentTutorialIndex = 0;
         IsInPlayMode = false;
         SoldierCellMergeManager.Instance.Init();
@@ -154,6 +155,7 @@ public class GameManager : MonoBehaviour
 
     public void StartCurrentLevel()
     {
+        CurrentWaveIndex=0;
         InitCurrentLevel();
         IsInPlayMode = true;
         CurrentKills = 0;

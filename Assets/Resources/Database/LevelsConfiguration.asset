@@ -18,7 +18,7 @@ MonoBehaviour:
     MinSoldierPower: 1
     MaxSoldierPower: 6
     BomberSoldierSpawnProbability: 0
-    WaitTimeBeforeSpawnLevel: 1
+    WaitTimeBeforeSpawnLevel: 0
     WavesData:
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
@@ -74,14 +74,14 @@ MonoBehaviour:
         X: 2.0285118
         YOffset: 1.0837889
         SpawnTime: 0
-    - WaitTimeBeforeSpawnWave: 5
+    - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 1
         Health: 100
         X: 3.4120493
         YOffset: 1.8275194
         SpawnTime: 0
-    - WaitTimeBeforeSpawnWave: 5
+    - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 0
         Health: 40
@@ -108,7 +108,7 @@ MonoBehaviour:
         X: 3.9037867
         YOffset: 1.8815131
         SpawnTime: 0
-    - WaitTimeBeforeSpawnWave: 5
+    - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 0
         Health: 50
@@ -155,12 +155,12 @@ MonoBehaviour:
       - {x: 1, y: 2}
       - {x: 2, y: 2}
       - {x: 3, y: 2}
-  - Map: 2
+  - Map: 8
     Theme: 3
     MinSoldierPower: 1
     MaxSoldierPower: 6
     BomberSoldierSpawnProbability: 0
-    WaitTimeBeforeSpawnLevel: 1
+    WaitTimeBeforeSpawnLevel: 0
     WavesData:
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
@@ -214,7 +214,7 @@ MonoBehaviour:
         X: 3.1380444
         YOffset: 0.8694604
         SpawnTime: 0
-    - WaitTimeBeforeSpawnWave: 6
+    - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 0
         Health: 20
@@ -428,12 +428,12 @@ MonoBehaviour:
     MatrixRow4: 0200000004000000020000000400000002000000
     HasTutorial: 0
     Tutorials: []
-  - Map: 2
+  - Map: 4
     Theme: 2
     MinSoldierPower: 1
     MaxSoldierPower: 6
     BomberSoldierSpawnProbability: 0.01
-    WaitTimeBeforeSpawnLevel: 1
+    WaitTimeBeforeSpawnLevel: 0
     WavesData:
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
@@ -951,12 +951,12 @@ MonoBehaviour:
     MatrixRow4: 0800000004000000080000000400000008000000
     HasTutorial: 0
     Tutorials: []
-  - Map: 3
+  - Map: 2
     Theme: 4
     MinSoldierPower: 1
     MaxSoldierPower: 6
     BomberSoldierSpawnProbability: 0.01
-    WaitTimeBeforeSpawnLevel: 1
+    WaitTimeBeforeSpawnLevel: 0
     WavesData:
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
@@ -1849,12 +1849,12 @@ MonoBehaviour:
     MatrixRow4: 0200000002000000020000000200000002000000
     HasTutorial: 0
     Tutorials: []
-  - Map: 3
+  - Map: 6
     Theme: 5
     MinSoldierPower: 1
     MaxSoldierPower: 6
     BomberSoldierSpawnProbability: 0.01
-    WaitTimeBeforeSpawnLevel: 1
+    WaitTimeBeforeSpawnLevel: 0
     WavesData:
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
@@ -2157,38 +2157,18 @@ MonoBehaviour:
     MatrixRow4: 0200000004000000080000000400000002000000
     HasTutorial: 0
     Tutorials: []
-  - Map: 4
+  - Map: 5
     Theme: 1
     MinSoldierPower: 1
     MaxSoldierPower: 6
     BomberSoldierSpawnProbability: 0.01
-    WaitTimeBeforeSpawnLevel: 1
+    WaitTimeBeforeSpawnLevel: 0
     WavesData:
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
       - Type: 1
-        Health: 200
+        Health: 1400
         X: 0
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 1
-        Health: 200
-        X: 1
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 1
-        Health: 200
-        X: 2
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 1
-        Health: 200
-        X: 3
-        YOffset: 0
-        SpawnTime: 0
-      - Type: 1
-        Health: 200
-        X: 4
         YOffset: 0
         SpawnTime: 0
     - WaitTimeBeforeSpawnWave: 0
@@ -2686,16 +2666,16 @@ MonoBehaviour:
         SpawnTime: 1
     MatrixRow1: 0400000004000000040000000400000004000000
     MatrixRow2: 0400000008000000080000000800000004000000
-    MatrixRow3: 1000000004000000080000000400000010000000
+    MatrixRow3: 0800000004000000080000000400000010000000
     MatrixRow4: 1000000008000000040000000800000010000000
     HasTutorial: 0
     Tutorials: []
-  - Map: 5
+  - Map: 7
     Theme: 2
     MinSoldierPower: 1
     MaxSoldierPower: 6
     BomberSoldierSpawnProbability: 0.02
-    WaitTimeBeforeSpawnLevel: 1
+    WaitTimeBeforeSpawnLevel: 0
     WavesData:
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
@@ -3163,12 +3143,12 @@ MonoBehaviour:
     MatrixRow4: 0800000004000000080000000400000008000000
     HasTutorial: 0
     Tutorials: []
-  - Map: 6
+  - Map: 1
     Theme: 3
     MinSoldierPower: 1
     MaxSoldierPower: 6
     BomberSoldierSpawnProbability: 0.02
-    WaitTimeBeforeSpawnLevel: 1
+    WaitTimeBeforeSpawnLevel: 0
     WavesData:
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
@@ -4011,12 +3991,12 @@ MonoBehaviour:
     MatrixRow4: 0400000010000000040000001000000004000000
     HasTutorial: 0
     Tutorials: []
-  - Map: 7
+  - Map: 3
     Theme: 4
     MinSoldierPower: 1
     MaxSoldierPower: 6
     BomberSoldierSpawnProbability: 0.02
-    WaitTimeBeforeSpawnLevel: 1
+    WaitTimeBeforeSpawnLevel: 0
     WavesData:
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:
@@ -4789,7 +4769,7 @@ MonoBehaviour:
     MinSoldierPower: 1
     MaxSoldierPower: 6
     BomberSoldierSpawnProbability: 0.02
-    WaitTimeBeforeSpawnLevel: 1
+    WaitTimeBeforeSpawnLevel: 0
     WavesData:
     - WaitTimeBeforeSpawnWave: 0
       EnemiesData:

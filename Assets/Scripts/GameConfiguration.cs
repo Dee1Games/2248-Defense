@@ -21,11 +21,12 @@ public class GameConfiguration : ScriptableObject
     [Header("Enemy")]
     public float EnemySpeedSimple = 0.5f;
     public float EnemySpeedGiant= 0.3f;
-    public float EnemyDefaultAnimationSpeed = 0.2f;
+    public float EnemySimpleDefaultAnimationSpeed = 0.2f;
+    public float EnemyGiantDefaultAnimationSpeed = 0.2f;
     public float EnemyAttackRate = 1f;
 
     [Header("Bullet")]
-    public float BulletDestructionTime = 6f;
+    public float BulletDestructionTime = 10f;
     public float BulletSpeed = 3f;
     public float BulletOffsetFromGround = 0.7f;
     public bool WallsStopBullet = true; 
@@ -37,4 +38,5 @@ public class GameConfiguration : ScriptableObject
 
     [Header("Level")]
     public float levelsCoefficient = 0.1f;
+    public float levelsMultiplier = 3;
 }

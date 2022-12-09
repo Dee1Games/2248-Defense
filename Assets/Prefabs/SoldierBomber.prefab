@@ -256,8 +256,9 @@ MonoBehaviour:
   thisAnimator: {fileID: 7259781235550928808}
   connectAnimator: {fileID: 0}
   valueText: {fileID: 5006187669110156161}
+  soldierCircle: {fileID: 0}
   bulletExitPoint: {fileID: 7486761503325376387}
-  modelTransform: {fileID: 0}
+  modelTransform: {fileID: 3469369791554269287}
   shootTarget: {x: 0, y: 0, z: 0}
   curCol: 0
   curRow: 0

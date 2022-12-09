@@ -68,7 +68,7 @@ public class UIManager : MonoBehaviour
                     break;
                 case UIState.InGame:
                     inGameLevelText.text = "Level " + (GameManager.Instance.CurrentLevelIndex + 1);// + PlayerPrefsManager.FinishedLevelsCounter * 21);
-                    inGameCashText.text = GameManager.Instance.CurrentKills.ToString();
+                    inGameCashText.text = (GameManager.Instance.CurrentKills + PlayerPrefsManager.Coin).ToString();
                     inGamePanel.SetActive(true);
                     break;
                 case UIState.Victory:
@@ -156,7 +156,7 @@ public class UIManager : MonoBehaviour
     public void UpdateKillCount()
     {
         cashAnimator.SetTrigger("GetMoney");
-        inGameCashText.text = GameManager.Instance.CurrentKills.ToString();
+        inGameCashText.text = (GameManager.Instance.CurrentKills + PlayerPrefsManager.Coin).ToString();
     }
 
     public void OnClick_MainMenu_Play()

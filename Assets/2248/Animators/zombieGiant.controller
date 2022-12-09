@@ -21,7 +21,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: a3016957de19236408796b07a5c2bcdb, type: 2}
+  m_Motion: {fileID: -203655887218126122, guid: 36df389155edc02438ac272d9ea9fe2d, type: 3}
   m_Tag: 
   m_SpeedParameter: speed
   m_MirrorParameter: 
@@ -48,7 +48,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: a3016957de19236408796b07a5c2bcdb, type: 2}
+  m_Motion: {fileID: -203655887218126122, guid: 36df389155edc02438ac272d9ea9fe2d, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -141,7 +141,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 6861151682806325531}
-    m_Position: {x: 360, y: 100, z: 0}
+    m_Position: {x: 366.7086, y: 107.0919, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8228665746722199581}
     m_Position: {x: 370, y: 10, z: 0}
@@ -192,7 +192,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: zombie
+  m_Name: zombieGiant
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: walk
@@ -273,7 +273,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 577a9deea57048b49afe2a9f1b8c9447, type: 3}
+  m_Motion: {fileID: -203655887218126122, guid: 36df389155edc02438ac272d9ea9fe2d, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

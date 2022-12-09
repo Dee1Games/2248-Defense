@@ -33,6 +33,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Animator animator;
     
     private NavMeshAgent navmeshAgent;
+    private Transform healthCanvas;
     private CapsuleCollider collider;
     private SoldierCell attackingCell;
     private bool enteredSoldierArea;
@@ -63,9 +64,11 @@ public class Enemy : MonoBehaviour
     {
         enteredSoldierArea = false;
         navmeshAgent = GetComponent<NavMeshAgent>();
+        healthCanvas = healthText.transform.parent;
         collider = GetComponent<CapsuleCollider>();
         this.Data.Copy(data);
-        Data.Health *= GameManager.Instance.currentCoefficient;
+        Data.Health *= Database.GameConfiguration.levelsMultiplier * GameManager.Instance.currentCoefficient;
+        Data.Health = Mathf.RoundToInt(Data.Health);
         healthText.text = Data.Health.ToString();
         healthText.color = Color.red;
         SetState(EnemyState.Running);
@@ -80,6 +83,8 @@ public class Enemy : MonoBehaviour
     {     
         if (!IsAlive || !inited)
             return;
+
+        healthCanvas.localEulerAngles = new Vector3(24.26f,180 - (transform.localEulerAngles.y - 180),0);
 
         if (Vector3.Distance(navmeshAgent.destination, transform.position) > navmeshAgent.stoppingDistance)
         {
@@ -107,6 +112,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float damage)
     {
         Data.Health -= damage;
+        Data.Health = Mathf.RoundToInt(Data.Health);
         healthText.text = Data.Health.ToString();
         if (Data.Health <= 0)
         {
@@ -132,14 +138,25 @@ public class Enemy : MonoBehaviour
                 navmeshAgent.enabled = true;
                 animator.SetBool("walk", true);
                 animator.SetBool("attack", false);
-                animator.speed = Speed / Database.GameConfiguration.EnemyDefaultAnimationSpeed;
+                animator.speed = 1f;
+                float animationSpeed = 0f;
+                if (Data.Type == EnemyType.SimpleEnemy)
+                    animationSpeed = Database.GameConfiguration.EnemySimpleDefaultAnimationSpeed;
+                else
+                    animationSpeed = Database.GameConfiguration.EnemyGiantDefaultAnimationSpeed;
+                animator.SetFloat("speed", Speed / animationSpeed);
                 break;
             case EnemyState.Attacking:
                 collider.isTrigger = false;
                 navmeshAgent.enabled = true;
                 animator.SetBool("walk", false);
                 animator.SetBool("attack", true);
-                animator.speed = Speed / Database.GameConfiguration.EnemyDefaultAnimationSpeed;
+                float animationSpeed2 = 0f;
+                if (Data.Type == EnemyType.SimpleEnemy)
+                    animationSpeed2 = Database.GameConfiguration.EnemySimpleDefaultAnimationSpeed;
+                else
+                    animationSpeed2 = Database.GameConfiguration.EnemyGiantDefaultAnimationSpeed;
+                animator.speed = Speed / animationSpeed2;
                 lastTimeAttacked = Time.timeSinceLevelLoad;
                 break;
             case EnemyState.Dead:
@@ -230,6 +247,7 @@ public class Enemy : MonoBehaviour
         
         if (destinationIsBase)
         {
+            animator.SetBool("attack", true);
             GameManager.Instance.OnEnemyReachedSildierbase.Invoke();
             VibrationManager.Instance.DoHeavyVibration();
         }

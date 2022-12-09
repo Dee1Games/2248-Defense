@@ -159,7 +159,10 @@ public class Soldier : MonoBehaviour
             {
                 if (bomberTarget == null || !bomberTarget.IsAlive) {
                     bomberTarget = GameManager.Instance.GetClosestEnemyTo(transform.position);
-                    SetDestination(bomberTarget.transform.position);
+                    if (bomberTarget != null)
+                    {
+                        SetDestination(bomberTarget.transform.position);
+                    }
                 }
                 
                 if (bomberTarget == null || !bomberTarget.IsAlive) {
@@ -177,7 +180,8 @@ public class Soldier : MonoBehaviour
         }
         else
         {
-            GoBomb();
+            //GoBomb();
+            StartCoroutine(GoBombAfterShifting());
         }
     }
 
@@ -195,6 +199,7 @@ public class Soldier : MonoBehaviour
                 else
                     thisAnimator.SetBool("attack", false);
                 transform.rotation = Quaternion.LookRotation(Vector3.forward);
+                modelTransform.rotation = Quaternion.LookRotation(Vector3.forward);
                 thisAnimator.speed = 1f;
                 break;
             case SoldierState.Shooting:
@@ -206,7 +211,8 @@ public class Soldier : MonoBehaviour
                 else
                     thisAnimator.SetBool("attack", false);
                 thisAnimator.speed = Database.GameConfiguration.SoldiersFireRate;
-                transform.rotation = Quaternion.LookRotation(Vector3.forward);
+                //modelTransform.rotation = Quaternion.LookRotation(Vector3.forward);
+                //transform.rotation = Quaternion.LookRotation(Vector3.forward);
                 break;
             case SoldierState.Running:
                 thisCollider.isTrigger = false;
@@ -217,6 +223,7 @@ public class Soldier : MonoBehaviour
                 else
                     thisAnimator.SetBool("attack", false);
                 transform.rotation = Quaternion.LookRotation(Vector3.forward);
+                modelTransform.rotation = Quaternion.LookRotation(Vector3.forward);
                 thisAnimator.speed = 1f;
                 break;
             case SoldierState.Bombing:
@@ -228,6 +235,7 @@ public class Soldier : MonoBehaviour
                 else
                     thisAnimator.SetBool("attack", true);
                 transform.rotation = Quaternion.LookRotation(Vector3.forward);
+                modelTransform.rotation = Quaternion.LookRotation(Vector3.forward);
                 thisAnimator.speed = 1f;
                 break;
             case SoldierState.Dead:
@@ -239,6 +247,7 @@ public class Soldier : MonoBehaviour
                 else
                     thisAnimator.SetBool("attack", false);
                 transform.rotation = Quaternion.LookRotation(Vector3.forward);
+                modelTransform.rotation = Quaternion.LookRotation(Vector3.forward);
                 cell.ClearCell();
                 thisAnimator.speed = 1f;
                 break;
@@ -293,6 +302,7 @@ public class Soldier : MonoBehaviour
             SetState(SoldierState.Shooting);
             Vector3 currentPos = modelTransform.position;
             Vector3 currentTarget = shooterTarget.transform.position;
+            currentTarget.y = currentPos.y;
             modelTransform.rotation = Quaternion.LookRotation(currentTarget-currentPos);
         }
         else
@@ -314,7 +324,8 @@ public class Soldier : MonoBehaviour
             SetState(SoldierState.Shooting);
             Bullet newBullet = bulletPool.Spawn().GetComponent <Bullet>();
             newBullet.transform.position = bulletExitPoint.position;
-            newBullet.BulletColor = soldierColor;
+            //newBullet.BulletColor = soldierColor;
+            newBullet.BulletColor = Color.yellow;
             newBullet.SetBulletDamage(valueNumber);
             newBullet.SetTarget(shooterTarget.transform);
             newBullet.InvokeSelfDestruction();
@@ -368,14 +379,36 @@ public class Soldier : MonoBehaviour
         Invoke(nameof(ShiftAfterBomberGone), 0.1f);
     }
 
+    IEnumerator GoBombAfterShifting()
+    {
+        float t = 0f;
+        float timeOut = 10f;
+        while (SoldierCellMergeManager.Instance.IsShifting)
+        {
+            t += Time.deltaTime;
+            if (t >= timeOut)
+            {
+                break;
+            }
+            else
+            {
+                yield return new WaitForEndOfFrame();
+            }
+        }
+
+        yield return new WaitForSeconds(0.5f);
+        GoBomb();
+    }
+
     private void ShiftAfterBomberGone() => SoldierCellMergeManager.Instance.ShiftSoldiers();
 
     public void Explode()
     {
-        GameManager.Instance.Explosion(transform.position, Database.GameConfiguration.BomberExplosionRadius, Database.GameConfiguration.BomberExplosionDamage);
         SetState(SoldierState.Idle);
         bomberTarget = null;
         ObjectPool.DeSpawn(gameObject);
+        GameManager.Instance.Explosion(transform.position, Database.GameConfiguration.BomberExplosionRadius, Database.GameConfiguration.BomberExplosionDamage);
+
     }
     
     public void SetDestination(Vector3 pos)
