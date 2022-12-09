@@ -103,7 +103,7 @@ Material:
     - _ZSmooth: -0.5
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.95294124, g: 0.67058825, b: 0.4156863, a: 1}
+    - _Color: {r: 0.709, g: 0.49892592, b: 0.3092757, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _HColor: {r: 0.785, g: 0.785, b: 0.785, a: 1}
     - _HDREmissionColor: {r: 0, g: 0, b: 0, a: 1}

@@ -10,7 +10,7 @@ public class Bullet : MonoBehaviour
     private float damage;
     private Rigidbody thisRigid;
     private Transform target;
-
+    private Vector3 currentTargetPos;
     public Color BulletColor
     {
         set
@@ -36,19 +36,22 @@ public class Bullet : MonoBehaviour
     {
         if (target != null && target.gameObject.activeInHierarchy)
         {
-            Vector3 targetPos = target.position;
-            targetPos.y = Database.GameConfiguration.BulletOffsetFromGround;
-            thisRigid.velocity = (targetPos - transform.position).normalized * Database.GameConfiguration.BulletSpeed;
+            currentTargetPos = target.position;
+            currentTargetPos.y = Database.GameConfiguration.BulletOffsetFromGround;
+            thisRigid.velocity = (currentTargetPos - transform.position).normalized * Database.GameConfiguration.BulletSpeed;
         }
         else
         {
-            if (thisRigid.velocity.magnitude < 0.1f)
+            if (Vector3.Magnitude(currentTargetPos - transform.position) < 1)
             {
                 thisRigid.velocity = Vector3.zero;
                 ObjectPool.DeSpawn(gameObject);
             }
-            //thisRigid.velocity = Vector3.zero;
-            //ObjectPool.DeSpawn(gameObject);
+            else if (thisRigid.velocity.magnitude < 0.1f)
+            {
+                thisRigid.velocity = Vector3.zero;
+                ObjectPool.DeSpawn(gameObject);
+            }
         }
     }
 
@@ -86,7 +89,7 @@ public class Bullet : MonoBehaviour
     public void InvokeSelfDestruction() => Invoke(nameof(SelfDestruct), Database.GameConfiguration.BulletDestructionTime);
 
     private void SelfDestruct() {
-        thisRigid.velocity = Vector3.zero;
-        ObjectPool.DeSpawn(gameObject);
+        //thisRigid.velocity = Vector3.zero;
+        //ObjectPool.DeSpawn(gameObject);
     }
 }
