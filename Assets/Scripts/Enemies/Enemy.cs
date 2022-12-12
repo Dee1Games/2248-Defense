@@ -62,6 +62,7 @@ public class Enemy : MonoBehaviour
 
     public void Init(EnemyData data)
     {
+        destinationIsBase = false;
         enteredSoldierArea = false;
         navmeshAgent = GetComponent<NavMeshAgent>();
         healthCanvas = healthText.transform.parent;
@@ -100,6 +101,11 @@ public class Enemy : MonoBehaviour
             AttackCell();
             CheckCellAttackResult();
             lastTimeAttacked = Time.timeSinceLevelLoad;
+        }
+        
+        if (State == EnemyState.Attacking && attackingCell!=null && !attackingCell.IsFull)
+        {
+            StartCoroutine(GoAttack());
         }
     }
 
@@ -186,22 +192,32 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void GoAttack()
+    private IEnumerator GoAttack()
     {
-        if (!GameManager.Instance.IsInPlayMode)
-            return;
-        
-        SetState(EnemyState.Running);
-        attackingCell = SoldierCellMergeManager.Instance.GetFirstCellInTheWay(this);
-        if (attackingCell != null)
+        if (GameManager.Instance.IsInPlayMode)
         {
-            SetDestination(attackingCell.transform.position);
-        }
-        else
-        {
-            destinationIsBase = true;
-            Vector3 basePosition = SoldierCellMergeManager.Instance.GetEnemyBaseInTheWay(this);
-            SetDestination(basePosition);
+            float idleTime = 0f;
+            while ((SoldierCellMergeManager.Instance.IsShifting || SoldierCellMergeManager.Instance.IsMerging) && idleTime<5f)
+            {
+                SetState(EnemyState.Idle);
+                idleTime += Time.deltaTime;
+                yield return new WaitForEndOfFrame();
+            }
+            //if (State != EnemyState.Attacking)
+            //{
+                SetState(EnemyState.Running);
+                attackingCell = SoldierCellMergeManager.Instance.GetFirstCellInTheWay(this);
+                if (attackingCell != null)
+                {
+                    SetDestination(attackingCell.transform.position);
+                }
+                else
+                {
+                    destinationIsBase = true;
+                    Vector3 basePosition = SoldierCellMergeManager.Instance.GetEnemyBaseInTheWay(this);
+                    SetDestination(basePosition);
+                }
+            //}
         }
     }
 
@@ -217,7 +233,7 @@ public class Enemy : MonoBehaviour
             enteredSoldierArea = true;
             GameManager.Instance.insideEnemies.Add(this);
             GameManager.Instance.outsideEnemies.Remove(this);
-            GoAttack();
+            StartCoroutine(GoAttack());
         }
         else
         {
@@ -228,7 +244,7 @@ public class Enemy : MonoBehaviour
     private IEnumerator SetStateToAttack()
     {
         float idleTime = 0f;
-        while (attackingCell!=null && !attackingCell.IsFull && SoldierCellMergeManager.Instance.IsShifting && idleTime<3f)
+        while ((SoldierCellMergeManager.Instance.IsShifting || SoldierCellMergeManager.Instance.IsMerging) && idleTime<5f)
         {
             SetState(EnemyState.Idle);
             idleTime += Time.deltaTime;
@@ -267,7 +283,7 @@ public class Enemy : MonoBehaviour
         {
             if (!attackingCell.IsFull)
             {
-                GoAttack();
+                StartCoroutine(GoAttack());
             }
         } else if (attackingCell == null)
         {

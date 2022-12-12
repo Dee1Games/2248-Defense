@@ -324,8 +324,8 @@ public class Soldier : MonoBehaviour
             SetState(SoldierState.Shooting);
             Bullet newBullet = bulletPool.Spawn().GetComponent <Bullet>();
             newBullet.transform.position = bulletExitPoint.position;
-            //newBullet.BulletColor = soldierColor;
-            newBullet.BulletColor = Color.yellow;
+            newBullet.BulletColor = soldierColor;
+            //newBullet.BulletColor = Color.yellow;
             newBullet.SetBulletDamage(valueNumber);
             newBullet.SetTarget(shooterTarget.transform);
             newBullet.InvokeSelfDestruction();
@@ -400,7 +400,7 @@ public class Soldier : MonoBehaviour
         GoBomb();
     }
 
-    private void ShiftAfterBomberGone() => SoldierCellMergeManager.Instance.ShiftSoldiers();
+    private void ShiftAfterBomberGone() => SoldierCellMergeManager.Instance.RequestShifting();
 
     public void Explode()
     {

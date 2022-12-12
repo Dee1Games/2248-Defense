@@ -31,7 +31,8 @@ public class SoldierCellMergeManager : MonoBehaviour
     private int currentCellValue, currentSumOfValues, currentPowerAddition;
     private bool isConnecting = false;
     private float currentPitch, pitchDifference;
-    
+    private int shiftRequests = 0;
+
     public bool CanConnect => !IsShifting;
 
     public bool IsShifting = false;
@@ -114,7 +115,7 @@ public class SoldierCellMergeManager : MonoBehaviour
 
     public void StartConnecting(SoldierCell cell)
     {
-        if (CanConnect && GameManager.Instance.insideEnemies.Count == 0)
+        if (CanConnect && !IsMerging && GameManager.Instance.insideEnemies.Count == 0)
         {
 	        isConnecting = true;
             currentPitch = 1;
@@ -237,14 +238,25 @@ public class SoldierCellMergeManager : MonoBehaviour
             GameManager.Instance.CurrentTutorialIndex++;
             connectingLine.positionCount = 0;
             isConnecting = false;
-            IsShifting = true;
             StartCoroutine(DoMergeVisuals());
             VibrationManager.Instance.DoMediumVibration();
         }
     }
 
+    public void RequestShifting()
+    {
+        shiftRequests++;
+        if(!IsShifting)
+        {
+            shiftRequests--;
+            ShiftSoldiers();
+        }
+    }
+
     public void ShiftSoldiers()
     {
+        IsShifting = true;
+        IsMerging = false;
         int emptyLenght;
         for (int column = 0; column < cells[0].Count; column++)
         {
@@ -414,6 +426,11 @@ public class SoldierCellMergeManager : MonoBehaviour
                 GameManager.Instance.InitCurrentTutorial();
             }
             IsShifting = false;
+            if(shiftRequests > 0)
+            {
+                shiftRequests--;
+                ShiftSoldiers();
+            }
         }
     }
 
@@ -457,15 +474,15 @@ public class SoldierCellMergeManager : MonoBehaviour
             ParticleManager.Instance.PlayParticle(Particle_Type.SoldierMerge, connectedCells[0].transform.position+(Vector3.up*0.5f), Vector3.up);
             if (PlayerPrefsManager.SeenTutorial)
             {
-                ShiftSoldiers();
+                RequestShifting();
             }
             else
             {
                 GameManager.Instance.InitCurrentTutorial();
             }
             connectedCells.Clear();
+            yield return new WaitForSeconds(1f);
             IsMerging = false;
-            IsShifting = false;
         }
     }
 }

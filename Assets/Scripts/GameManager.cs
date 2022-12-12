@@ -153,6 +153,23 @@ public class GameManager : MonoBehaviour
         InitCurrentTutorial();
     }
 
+    public void Restart()
+    {
+        StartCoroutine(RestartFlow());
+    }
+
+    private IEnumerator RestartFlow()
+    {
+        float idleTime = 0f;
+        while ((SoldierCellMergeManager.Instance.IsShifting || SoldierCellMergeManager.Instance.IsMerging) && idleTime<10f)
+        {
+            idleTime += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+
+        StartCurrentLevel();
+    }
+
     public void StartCurrentLevel()
     {
         CurrentWaveIndex=0;
@@ -226,6 +243,18 @@ public class GameManager : MonoBehaviour
 
     public void CurrentLevelEnded()
     {
+        StartCoroutine(StartLevelEndFlow());
+    }
+
+    private IEnumerator StartLevelEndFlow()
+    {
+        float idleTime = 0f;
+        while ((SoldierCellMergeManager.Instance.IsShifting || SoldierCellMergeManager.Instance.IsMerging) && idleTime<10f)
+        {
+            idleTime += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+        
         SoldierCellMergeManager.Instance.CancelConnecting();
         //UIManager.Instance.State = UIState.Victory;
         Invoke(nameof(InvokeWinUI), Database.GameConfiguration.WinLoseDialogeDelay);
@@ -296,9 +325,14 @@ public class GameManager : MonoBehaviour
     public void CheckIfInsideZombiesDied()
     {
         if (insideEnemies.Count == 0)
-            SoldierCellMergeManager.Instance.ShiftSoldiers();
+            Invoke(nameof(InvokeRequestShift), 0.2f);
     }
-    
+
+    private void InvokeRequestShift()
+    {
+        SoldierCellMergeManager.Instance.RequestShifting();
+    }
+
     public void CheckIfAllZombiesDied()
     {
         if (insideEnemies.Count == 0 && outsideEnemies.Count == 0 && SpawnManager.Instance.SpawningEnded)

@@ -76,16 +76,27 @@ public class SoldierCell : MonoBehaviour
 
     public void OnPointerDown()
     {
-        if (currentSoldier.Type == SoldierType.Bomber)
+        if (currentSoldier.Type == SoldierType.Bomber ||
+            !GameManager.Instance.IsInPlayMode ||
+            SoldierCellMergeManager.Instance.IsShifting ||
+            SoldierCellMergeManager.Instance.IsMerging)
+        {
             return;
+        }
         
         SoldierCellMergeManager.Instance.StartConnecting(this);
     }
     
     public void OnPointerEnter()
     {
-        if (currentSoldier.Type == SoldierType.Bomber)
+        if (currentSoldier.Type == SoldierType.Bomber ||
+            !GameManager.Instance.IsInPlayMode ||
+            SoldierCellMergeManager.Instance.IsShifting ||
+            SoldierCellMergeManager.Instance.IsMerging)
+        {
             return;
+        }
+            
         
         SoldierCellMergeManager.Instance.ConnectCell(this);
     }

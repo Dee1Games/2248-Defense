@@ -176,7 +176,7 @@ public class UIManager : MonoBehaviour
     
     public void OnClick_InGame_Retry()
     {
-        GameManager.Instance.StartCurrentLevel();
+        GameManager.Instance.Restart();
     }
 }
 

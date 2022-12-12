@@ -22,11 +22,11 @@ MonoBehaviour:
   BomberExplosionDamage: 2000
   MinDistanceToExplode: 1
   BomberColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-  EnemySpeedSimple: 1.8
+  EnemySpeedSimple: 1.7
   EnemySpeedGiant: 1.2
   EnemySimpleDefaultAnimationSpeed: 2
   EnemyGiantDefaultAnimationSpeed: 0.5
-  EnemyAttackRate: 1
+  EnemyAttackRate: 0.5
   BulletDestructionTime: 10
   BulletSpeed: 7
   BulletOffsetFromGround: 0.7
@@ -50,4 +50,4 @@ MonoBehaviour:
   - {r: 0.8588236, g: 0.06666667, b: 0.3647059, a: 1}
   WinLoseDialogeDelay: 1
   levelsCoefficient: 0.2
-  levelsMultiplier: 3
+  levelsMultiplier: 2.5
