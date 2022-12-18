@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e5d2c8ba836e8743a738d8ef465f574, type: 3}
   m_Name: GameConfiguration
   m_EditorClassIdentifier: 
-  SoldierSpeedNormal: 2
+  SoldierSpeedNormal: 3
   SoldierSpeedBomber: 2
   InsideShootingRadius: 2
   SoldiersFireRate: 2
@@ -26,7 +26,7 @@ MonoBehaviour:
   EnemySpeedGiant: 1.2
   EnemySimpleDefaultAnimationSpeed: 2
   EnemyGiantDefaultAnimationSpeed: 0.5
-  EnemyAttackRate: 0.5
+  EnemyAttackRate: 0.01
   BulletDestructionTime: 10
   BulletSpeed: 7
   BulletOffsetFromGround: 0.7
@@ -49,5 +49,5 @@ MonoBehaviour:
   - {r: 0.8117648, g: 0.5176471, b: 0.9215687, a: 1}
   - {r: 0.8588236, g: 0.06666667, b: 0.3647059, a: 1}
   WinLoseDialogeDelay: 1
-  levelsCoefficient: 0.2
-  levelsMultiplier: 2.5
+  levelsCoefficient: 0.1
+  levelsMultiplier: 2

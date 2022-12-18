@@ -798,7 +798,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8176433d461484ab9cf9acdce024f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  src: {fileID: 1920784292379027478}
 --- !u!82 &1920784292379027478
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4027,7 +4026,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a8176433d461484ab9cf9acdce024f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  src: {fileID: 2970222468010302682}
 --- !u!82 &2970222468010302682
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4689,6 +4687,7 @@ MonoBehaviour:
   mainMenuCashText: {fileID: 6730228938280344110}
   inGamePanel: {fileID: 7154332698983207967}
   checkIcon: {fileID: 0}
+  retryButton: {fileID: 7154332698271762909}
   inGameLevelText: {fileID: 8245290777820377269}
   inGameCashText: {fileID: 8245290776337260212}
   cashAnimator: {fileID: 7154332699207214676}

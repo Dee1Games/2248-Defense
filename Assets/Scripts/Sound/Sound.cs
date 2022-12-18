@@ -9,5 +9,7 @@ public enum Sound
     Shoot,
     BulletDestroy,
     SoldierMerge,
-    SoldierConnet
+    SoldierConnet,
+    Victory,
+    Star
 }

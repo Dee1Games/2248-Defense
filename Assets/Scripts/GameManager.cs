@@ -246,6 +246,11 @@ public class GameManager : MonoBehaviour
         StartCoroutine(StartLevelEndFlow());
     }
 
+    public void EnemyEnteredSoldierArea()
+    {
+        SoldierCellMergeManager.Instance.CancelConnecting();
+    }
+
     private IEnumerator StartLevelEndFlow()
     {
         float idleTime = 0f;
@@ -258,7 +263,8 @@ public class GameManager : MonoBehaviour
         SoldierCellMergeManager.Instance.CancelConnecting();
         //UIManager.Instance.State = UIState.Victory;
         Invoke(nameof(InvokeWinUI), Database.GameConfiguration.WinLoseDialogeDelay);
-        if (CurrentLevelIndex+1 < Database.LevelsConfiguration.LevelsData.Count)
+
+        /*if (CurrentLevelIndex+1 < Database.LevelsConfiguration.LevelsData.Count)
         {
             CurrentLevelIndex++;
             CurrentWaveIndex=0;
@@ -267,7 +273,9 @@ public class GameManager : MonoBehaviour
         {
             CurrentLevelIndex=0;
             CurrentWaveIndex=0;
-        }
+        }*/
+        CurrentLevelIndex++;
+        CurrentWaveIndex = 0;
         PlayerPrefsManager.Level = CurrentLevelIndex;
     }
     
@@ -298,6 +306,7 @@ public class GameManager : MonoBehaviour
 
     public void Explosion(Vector3 center, float radius,  float damage)
     {
+        center.y = 1.25f;
         ParticleManager.Instance.PlayParticle(Particle_Type.Boom, center, Vector3.up);
         ParticleManager.Instance.PlayParticle(Particle_Type.Explosion, center, Vector3.up);
         List<Enemy> enemiesInExplosionRaduis = new List<Enemy>();

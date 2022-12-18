@@ -33,7 +33,7 @@ public class SoldierCellMergeManager : MonoBehaviour
     private float currentPitch, pitchDifference;
     private int shiftRequests = 0;
 
-    public bool CanConnect => !IsShifting;
+    public bool CanConnect => !IsShifting && !IsMerging && (GameManager.Instance.insideEnemies.Count==0);
 
     public bool IsShifting = false;
     public bool IsMerging = false;
@@ -75,7 +75,7 @@ public class SoldierCellMergeManager : MonoBehaviour
                 cell.transform.name = "Cell " + row + " " + column;
                 cell.transform.localPosition = new Vector3(column, 0.065f, row);
                 int cellNumber = GameManager.Instance.CurrentLevelData.GetCellNumber(column, 3 - row);
-                currentPowerAddition = (int) GameManager.Instance.currentCoefficient / 2;
+                currentPowerAddition = Mathf.FloorToInt((GameManager.Instance.currentCoefficient - 1) / 1.5f);
                 cellNumber *= (int)Mathf.Pow(2, currentPowerAddition);
                 cell.Init(column, row, row == 3, cellNumber, (cellNumber>0?SoldierType.Normal:SoldierType.Bomber));
                 cells[row].Add(cell);
@@ -130,7 +130,7 @@ public class SoldierCellMergeManager : MonoBehaviour
             cell.currentSoldier.SoldierCircle = true;
             VibrationManager.Instance.DoLightVibration();
             SoundManager.Instance.PlayByASComponent(Sound.SoldierConnet, cell.currentSoldier.gameObject, pitch: currentPitch);
-    	}
+        }
     }
 
     public void ConnectCell(SoldierCell cell) {
@@ -228,7 +228,7 @@ public class SoldierCellMergeManager : MonoBehaviour
         }
         
         currentPitch = 1;
-        if (connectedCells.Count <= 1 || GameManager.Instance.insideEnemies.Count > 0)
+        if (connectedCells.Count <= 1 || GameManager.Instance.insideEnemies.Count > 0 || IsShifting)
         {
             connectedCells[0].currentSoldier.SoldierCircle = false;
             CancelConnecting();
@@ -246,7 +246,7 @@ public class SoldierCellMergeManager : MonoBehaviour
     public void RequestShifting()
     {
         shiftRequests++;
-        if(!IsShifting)
+        if(!IsShifting && !IsMerging)
         {
             shiftRequests--;
             ShiftSoldiers();
@@ -277,6 +277,7 @@ public class SoldierCellMergeManager : MonoBehaviour
             }
             GenerateSoldier(cells, column, emptyLenght);
         }
+        StartCoroutine(CheckShiftEnding());
     }
 
     private async Task GenerateSoldier(List<List<SoldierCell>> columnCells,int currentColumn,int emptyCells)
@@ -328,6 +329,8 @@ public class SoldierCellMergeManager : MonoBehaviour
 
     public void CancelConnecting()
     {
+        if (!isConnecting)
+            return;
         connectingLine.positionCount = 0;
         foreach (SoldierCell cell in connectedCells)
             cell.currentSoldier.SoldierCircle = false;
@@ -407,31 +410,34 @@ public class SoldierCellMergeManager : MonoBehaviour
         return soldierBases[x].position;
     }
 
-    public void EndShifting()
+    private IEnumerator CheckShiftEnding()
     {
-        bool allCellsFull = true;
+        while (IsThereEmptyCell())
+        {
+            yield return null;
+        }
+
+        IsShifting = false;
+        if (shiftRequests > 0)
+        {
+            shiftRequests--;
+            ShiftSoldiers();
+        }
+    }
+
+    private bool IsThereEmptyCell()
+    {
         foreach (var cellRow in cells)
         {
             foreach (var cell in cellRow)
             {
-                if(!cell.IsFull)
-                    allCellsFull = false;
+                if (!cell.IsFull)
+                {
+                    return true;
+                }
             }
         }
-
-        if (allCellsFull)
-        {
-            if (PlayerPrefsManager.SeenTutorial)
-            {
-                GameManager.Instance.InitCurrentTutorial();
-            }
-            IsShifting = false;
-            if(shiftRequests > 0)
-            {
-                shiftRequests--;
-                ShiftSoldiers();
-            }
-        }
+        return false;
     }
 
     private IEnumerator DoMergeVisuals()
@@ -472,6 +478,7 @@ public class SoldierCellMergeManager : MonoBehaviour
             connectedCells[0].currentSoldier.SoldierCircle = false;
             SoundManager.Instance.Play(Sound.SoldierMerge);
             ParticleManager.Instance.PlayParticle(Particle_Type.SoldierMerge, connectedCells[0].transform.position+(Vector3.up*0.5f), Vector3.up);
+            IsMerging = false;
             if (PlayerPrefsManager.SeenTutorial)
             {
                 RequestShifting();
@@ -482,7 +489,6 @@ public class SoldierCellMergeManager : MonoBehaviour
             }
             connectedCells.Clear();
             yield return new WaitForSeconds(1f);
-            IsMerging = false;
         }
     }
 }

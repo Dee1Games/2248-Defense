@@ -28,6 +28,7 @@ public class UIManager : MonoBehaviour
     [Header("In Game")]
     [SerializeField] GameObject inGamePanel;
     [SerializeField] GameObject checkIcon;
+    [SerializeField] GameObject retryButton;
     [SerializeField] TMP_Text inGameLevelText, inGameCashText;
     [SerializeField] private Animator cashAnimator;
     
@@ -67,6 +68,7 @@ public class UIManager : MonoBehaviour
                     mainMenuPanel.SetActive(true);
                     break;
                 case UIState.InGame:
+                    retryButton.SetActive(PlayerPrefsManager.SeenTutorial);
                     inGameLevelText.text = "Level " + (GameManager.Instance.CurrentLevelIndex + 1);// + PlayerPrefsManager.FinishedLevelsCounter * 21);
                     inGameCashText.text = (GameManager.Instance.CurrentKills + PlayerPrefsManager.Coin).ToString();
                     inGamePanel.SetActive(true);
@@ -75,9 +77,12 @@ public class UIManager : MonoBehaviour
                     victoryLevelText.text = "Level " + (GameManager.Instance.CurrentLevelIndex);
                     victoryPeopleNumberText.text = "x" + GameManager.Instance.CurrentKills.ToString();
                     victoryPanel.SetActive(true);
-                    PlayerPrefsManager.Coin += GameManager.Instance.CurrentKills;
-                    //SoundManager.Instance.PlayCheerSound();
-                    //SoundManager.Instance.PlaySuccessSound();
+                    
+                    if (!refresh)
+                    {
+                        PlayerPrefsManager.Coin += GameManager.Instance.CurrentKills;
+                        SoundManager.Instance.Play(Sound.Victory);
+                    }
                     break;
                 case UIState.Defeat:
 					//GameManager.Instance.CanDraw = false;

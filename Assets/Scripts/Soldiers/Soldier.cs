@@ -269,6 +269,8 @@ public class Soldier : MonoBehaviour
         float duration = distance/ Database.GameConfiguration.SoldierSpeedNormal;
         while (counter < duration)
         {
+            if(soldierState != SoldierState.Running)
+                SetState(SoldierState.Running);
             counter += Time.deltaTime;
             transform.position = Vector3.Lerp(startPos, toPosition, counter / duration);
             yield return null;
@@ -276,7 +278,7 @@ public class Soldier : MonoBehaviour
         transform.position = toPosition;
         SetState(SoldierState.Idle);
         targetCell.TakeNewSolider(this);
-        SoldierCellMergeManager.Instance.EndShifting();
+        //SoldierCellMergeManager.Instance.EndShifting();
     }
 
     private void CheckShootingCondition()

@@ -230,6 +230,7 @@ public class Enemy : MonoBehaviour
         
         if (!enteredSoldierArea)
         {
+            GameManager.Instance.EnemyEnteredSoldierArea();
             enteredSoldierArea = true;
             GameManager.Instance.insideEnemies.Add(this);
             GameManager.Instance.outsideEnemies.Remove(this);

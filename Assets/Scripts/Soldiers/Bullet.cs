@@ -11,6 +11,7 @@ public class Bullet : MonoBehaviour
     private Rigidbody thisRigid;
     private Transform target;
     private Vector3 currentTargetPos;
+    private float existanceCounter;
     public Color BulletColor
     {
         set
@@ -32,6 +33,11 @@ public class Bullet : MonoBehaviour
         thisRigid = GetComponent<Rigidbody>();
     }
 
+    private void OnEnable()
+    {
+        existanceCounter = 0;
+    }
+
     private void Update()
     {
         if (target != null && target.gameObject.activeInHierarchy)
@@ -42,7 +48,9 @@ public class Bullet : MonoBehaviour
         }
         else
         {
-            if (Vector3.Magnitude(currentTargetPos - transform.position) < 1)
+            target = null;
+            existanceCounter += Time.deltaTime;
+            if (existanceCounter > 4 || Vector3.Magnitude(currentTargetPos - transform.position) < 1)
             {
                 thisRigid.velocity = Vector3.zero;
                 ObjectPool.DeSpawn(gameObject);
