@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
 
     private int currentKills = 0;
 
+    private bool restartIsPending = false;
+
     public int CurrentKills
     {
         set
@@ -155,11 +157,16 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
+        if (restartIsPending)
+            return;
+
         StartCoroutine(RestartFlow());
     }
 
     private IEnumerator RestartFlow()
     {
+        restartIsPending = true;
+
         float idleTime = 0f;
         while ((SoldierCellMergeManager.Instance.IsShifting || SoldierCellMergeManager.Instance.IsMerging) && idleTime<10f)
         {
@@ -168,6 +175,8 @@ public class GameManager : MonoBehaviour
         }
 
         StartCurrentLevel();
+
+        restartIsPending = false;
     }
 
     public void StartCurrentLevel()
