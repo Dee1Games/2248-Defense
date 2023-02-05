@@ -33,10 +33,15 @@ public class SoldierCellMergeManager : MonoBehaviour
     private float currentPitch, pitchDifference;
     private int shiftRequests = 0;
 
-    public bool CanConnect => !IsShifting && !IsMerging && (GameManager.Instance.insideEnemies.Count==0);
+    public bool CanConnect => !IsShifting && !IsMerging && (GameManager.Instance.insideEnemies.Count==0) && !isInMergingMode;
 
     public bool IsShifting = false;
     public bool IsMerging = false;
+
+    //merge counter
+    public bool isInMergingMode => mergeCounter != mergeCounts;
+    public int mergeCounts;
+    private int mergeCounter = 0;
 
     void Awake()
     {
@@ -62,7 +67,7 @@ public class SoldierCellMergeManager : MonoBehaviour
         }
     }
 
-    public void Init()
+    public void Init(int mergeCounts)
     {
         cells = new List<List<SoldierCell>>();
         int childIndex = 0;
@@ -82,6 +87,8 @@ public class SoldierCellMergeManager : MonoBehaviour
                 childIndex++;
             }
         }
+        mergeCounter = 0;
+        this.mergeCounts = mergeCounts;
     }
     
     public void InitTutorial(TutorialData tutorialData)
@@ -240,6 +247,7 @@ public class SoldierCellMergeManager : MonoBehaviour
             isConnecting = false;
             StartCoroutine(DoMergeVisuals());
             VibrationManager.Instance.DoMediumVibration();
+            mergeCounter++;
         }
     }
 
