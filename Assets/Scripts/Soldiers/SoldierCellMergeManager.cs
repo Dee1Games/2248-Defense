@@ -67,7 +67,7 @@ public class SoldierCellMergeManager : MonoBehaviour
         }
     }
 
-    public void Init(int mergeCounts)
+    public void Init()
     {
         cells = new List<List<SoldierCell>>();
         int childIndex = 0;
@@ -88,7 +88,7 @@ public class SoldierCellMergeManager : MonoBehaviour
             }
         }
         mergeCounter = 0;
-        this.mergeCounts = mergeCounts;
+        this.mergeCounts = GameManager.Instance.CurrentLevelData.MergeCount;
     }
     
     public void InitTutorial(TutorialData tutorialData)
