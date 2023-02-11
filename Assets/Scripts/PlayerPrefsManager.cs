@@ -10,7 +10,7 @@ public class PlayerPrefsManager
         }
         get
         {
-            return 7;
+            return 2;
             int result = PlayerPrefs.GetInt(LevelSaveAddress, 0);
             return result;
         }

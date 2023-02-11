@@ -72,18 +72,40 @@ public class Enemy : MonoBehaviour
         Data.Health = Mathf.RoundToInt(Data.Health);
         healthText.text = Data.Health.ToString();
         healthText.color = Color.red;
-        SetState(EnemyState.Running);
+        //SetState(EnemyState.Running);
         transform.eulerAngles = new Vector3(0f, 180f, 0f);
         //renderer.materials[0].color = Data.GetColor();
         navmeshAgent.speed = Speed;
         SetDestination(new Vector3(Data.X, 0f, 0f));
         inited = true;
+        
+        if (EnemyStopLineManager.Instance.IsActive)
+        {
+            navmeshAgent.speed = 0;
+            SetState(EnemyState.Stop);
+        }
+        else
+        {
+            navmeshAgent.speed = Speed;
+            SetState(EnemyState.Running);
+        }
     }
     
     void Update()
     {     
         if (!IsAlive || !inited)
             return;
+
+        if (EnemyStopLineManager.Instance.IsActive)
+        {
+            navmeshAgent.speed = 0;
+            SetState(EnemyState.Stop);
+        }
+        else
+        {
+            navmeshAgent.speed = Speed;
+            SetState(EnemyState.Running);
+        }
 
         healthCanvas.localEulerAngles = new Vector3(24.26f,180 - (transform.localEulerAngles.y - 180),0);
 
@@ -137,6 +159,15 @@ public class Enemy : MonoBehaviour
                 navmeshAgent.enabled = true;
                 animator.SetBool("walk", false);
                 animator.SetBool("attack", false);
+                animator.SetBool("stop", false);
+                animator.speed = 1f;
+                break;
+            case EnemyState.Stop:
+                collider.isTrigger = false;
+                navmeshAgent.enabled = true;
+                animator.SetBool("walk", false);
+                animator.SetBool("attack", false);
+                animator.SetBool("stop", true);
                 animator.speed = 1f;
                 break;
             case EnemyState.Running:
@@ -144,6 +175,7 @@ public class Enemy : MonoBehaviour
                 navmeshAgent.enabled = true;
                 animator.SetBool("walk", true);
                 animator.SetBool("attack", false);
+                animator.SetBool("stop", false);
                 animator.speed = 1f;
                 float animationSpeed = 0f;
                 if (Data.Type == EnemyType.SimpleEnemy)
@@ -157,6 +189,7 @@ public class Enemy : MonoBehaviour
                 navmeshAgent.enabled = true;
                 animator.SetBool("walk", false);
                 animator.SetBool("attack", true);
+                animator.SetBool("stop", false);
                 float animationSpeed2 = 0f;
                 if (Data.Type == EnemyType.SimpleEnemy)
                     animationSpeed2 = Database.GameConfiguration.EnemySimpleDefaultAnimationSpeed;
@@ -180,6 +213,7 @@ public class Enemy : MonoBehaviour
                 navmeshAgent.enabled = false;
                 animator.SetBool("walk", false);
                 animator.SetBool("attack", false);
+                animator.SetBool("stop", false);
                 animator.speed = 1f;
                 ParticleManager.Instance.PlayParticle(Data.Type==EnemyType.SimpleEnemy ?Particle_Type.SimpleZDeath:Particle_Type.GiantZDeath, transform.position, Vector3.up);
                 ObjectPool.DeSpawn(gameObject);

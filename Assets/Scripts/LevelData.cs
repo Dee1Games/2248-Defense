@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class LevelData
 {
-    [Range(1, 10)]
+    [Range(0, 10)]
     public int MergeCount = 4;
     
     [Range(1, 8)]

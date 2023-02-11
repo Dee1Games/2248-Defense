@@ -174,6 +174,9 @@ public class Soldier : MonoBehaviour
 
     public void GoToAttackState()
     {
+        if (EnemyStopLineManager.Instance.IsActive)
+            return;
+        
         if (Type == SoldierType.Normal)
         {
             SetState(SoldierState.Shooting);
@@ -283,6 +286,9 @@ public class Soldier : MonoBehaviour
 
     private void CheckShootingCondition()
     {
+        if (EnemyStopLineManager.Instance.IsActive)
+            return;
+        
         if (Type == SoldierType.Normal)
         {
             ChooseTargetToShoot();
@@ -296,6 +302,9 @@ public class Soldier : MonoBehaviour
     public void GetReadyForShooting()
     {
         if (Type != SoldierType.Normal || !GameManager.Instance.IsInPlayMode)
+            return;
+        
+        if (EnemyStopLineManager.Instance.IsActive)
             return;
         
         ChooseTargetToShoot();
@@ -319,6 +328,9 @@ public class Soldier : MonoBehaviour
             return;
             
         if (Type != SoldierType.Normal)
+            return;
+
+        if (EnemyStopLineManager.Instance.IsActive)
             return;
 
         if (shooterTarget != null)
