@@ -25,6 +25,7 @@ public class SoldierCellMergeManager : MonoBehaviour
     [SerializeField] public ObjectPool BomberSoldierPool;
     [SerializeField] private TextMeshProUGUI sumOfValuesText;
     [SerializeField] private float connectionCooldown = 5;
+    [SerializeField] private BoxCollider[] allCellsCol;
 
     private List<List<SoldierCell>> cells;
     private List<SoldierCell> connectedCells = new List<SoldierCell>();
@@ -124,7 +125,8 @@ public class SoldierCellMergeManager : MonoBehaviour
     {
         if (CanConnect && !IsMerging && GameManager.Instance.insideEnemies.Count == 0)
         {
-	        isConnecting = true;
+            ChangeColsScale(0.5f);
+            isConnecting = true;
             currentPitch = 1;
 	        int newCellValue = cell.currentSoldier.ValueNumber;
 	        currentCellValue = newCellValue;
@@ -242,6 +244,7 @@ public class SoldierCellMergeManager : MonoBehaviour
         }
         else
         {
+            ChangeColsScale(0.8f);
             GameManager.Instance.CurrentTutorialIndex++;
             connectingLine.positionCount = 0;
             isConnecting = false;
@@ -339,6 +342,8 @@ public class SoldierCellMergeManager : MonoBehaviour
     {
         if (!isConnecting)
             return;
+
+        ChangeColsScale(0.8f);
         connectingLine.positionCount = 0;
         foreach (SoldierCell cell in connectedCells)
             cell.currentSoldier.SoldierCircle = false;
@@ -498,5 +503,11 @@ public class SoldierCellMergeManager : MonoBehaviour
             connectedCells.Clear();
             yield return new WaitForSeconds(1f);
         }
+    }
+
+    private void ChangeColsScale(float scale)
+    {
+        foreach (BoxCollider col in allCellsCol)
+            col.size = new Vector3(scale,col.size.y,scale);
     }
 }
