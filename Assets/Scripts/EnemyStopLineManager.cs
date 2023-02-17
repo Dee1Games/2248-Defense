@@ -47,5 +47,12 @@ public class EnemyStopLineManager : MonoBehaviour
     public void Disable()
     {
         IsActive = false;
+        if (GameManager.Instance.insideEnemies.Count == 0)
+        {
+            foreach (SoldierCell cell in SoldierCellMergeManager.Instance.ShootingCells)
+            {
+                cell.currentSoldier.GoToAttackState();
+            }
+        }
     }
 }

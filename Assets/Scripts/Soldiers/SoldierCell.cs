@@ -32,7 +32,7 @@ public class SoldierCell : MonoBehaviour
         thisCol = GetComponent<BoxCollider>();
     }
 
-    public void Init(int col, int row, bool isShootingCell, int valueNumber, SoldierType type)
+    public SoldierCell Init(int col, int row, bool isShootingCell, int valueNumber, SoldierType type)
     {
         thisColumn = col;
         thisRow = row;
@@ -51,6 +51,7 @@ public class SoldierCell : MonoBehaviour
         currentSoldier.Init();
         currentSoldier.SetCell(this);
         IsFull = true;
+        return this;
     }
 
     // private void DetectClosestEnemy()

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: LevelsConfiguration
   m_EditorClassIdentifier: 
   LevelsData:
-  - Map: 1
+  - MergeCount: 4
+    Map: 1
     Theme: 1
     MinSoldierPower: 1
     MaxSoldierPower: 6
@@ -155,7 +156,8 @@ MonoBehaviour:
       - {x: 1, y: 2}
       - {x: 2, y: 2}
       - {x: 3, y: 2}
-  - Map: 8
+  - MergeCount: 4
+    Map: 8
     Theme: 3
     MinSoldierPower: 1
     MaxSoldierPower: 6
@@ -428,7 +430,8 @@ MonoBehaviour:
     MatrixRow4: 0200000004000000020000000400000002000000
     HasTutorial: 0
     Tutorials: []
-  - Map: 4
+  - MergeCount: 4
+    Map: 4
     Theme: 2
     MinSoldierPower: 1
     MaxSoldierPower: 6
@@ -951,7 +954,8 @@ MonoBehaviour:
     MatrixRow4: 0800000004000000080000000400000008000000
     HasTutorial: 0
     Tutorials: []
-  - Map: 6
+  - MergeCount: 4
+    Map: 6
     Theme: 4
     MinSoldierPower: 1
     MaxSoldierPower: 6
@@ -1849,7 +1853,8 @@ MonoBehaviour:
     MatrixRow4: 0200000002000000020000000200000002000000
     HasTutorial: 0
     Tutorials: []
-  - Map: 1
+  - MergeCount: 4
+    Map: 1
     Theme: 5
     MinSoldierPower: 1
     MaxSoldierPower: 6
@@ -2157,7 +2162,8 @@ MonoBehaviour:
     MatrixRow4: 0200000004000000080000000400000002000000
     HasTutorial: 0
     Tutorials: []
-  - Map: 5
+  - MergeCount: 4
+    Map: 5
     Theme: 1
     MinSoldierPower: 1
     MaxSoldierPower: 6
@@ -2680,7 +2686,8 @@ MonoBehaviour:
     MatrixRow4: 1000000008000000040000000800000010000000
     HasTutorial: 0
     Tutorials: []
-  - Map: 7
+  - MergeCount: 4
+    Map: 7
     Theme: 2
     MinSoldierPower: 1
     MaxSoldierPower: 6
@@ -3153,7 +3160,8 @@ MonoBehaviour:
     MatrixRow4: 0800000004000000080000000400000008000000
     HasTutorial: 0
     Tutorials: []
-  - Map: 4
+  - MergeCount: 4
+    Map: 4
     Theme: 3
     MinSoldierPower: 1
     MaxSoldierPower: 6
@@ -4001,7 +4009,8 @@ MonoBehaviour:
     MatrixRow4: 0400000010000000040000001000000004000000
     HasTutorial: 0
     Tutorials: []
-  - Map: 3
+  - MergeCount: 4
+    Map: 3
     Theme: 4
     MinSoldierPower: 1
     MaxSoldierPower: 6
@@ -4774,7 +4783,8 @@ MonoBehaviour:
     MatrixRow4: 0400000010000000ffffffff1000000004000000
     HasTutorial: 0
     Tutorials: []
-  - Map: 8
+  - MergeCount: 4
+    Map: 8
     Theme: 5
     MinSoldierPower: 1
     MaxSoldierPower: 6

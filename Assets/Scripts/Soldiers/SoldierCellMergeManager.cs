@@ -39,6 +39,8 @@ public class SoldierCellMergeManager : MonoBehaviour
     public bool IsShifting = false;
     public bool IsMerging = false;
 
+    public List<SoldierCell> ShootingCells;
+
     //merge counter
     public bool IsInMergingMode => mergeCounter != mergeCounts;
     public int mergeCounts;
@@ -71,6 +73,7 @@ public class SoldierCellMergeManager : MonoBehaviour
     public void Init()
     {
         cells = new List<List<SoldierCell>>();
+        ShootingCells = new List<SoldierCell>();
         int childIndex = 0;
         for (int row = 0; row < 4; row++)
         {
@@ -83,7 +86,11 @@ public class SoldierCellMergeManager : MonoBehaviour
                 int cellNumber = GameManager.Instance.CurrentLevelData.GetCellNumber(column, 3 - row);
                 currentPowerAddition = Mathf.FloorToInt((GameManager.Instance.currentCoefficient - 1) / 1.5f);
                 cellNumber *= (int)Mathf.Pow(2, currentPowerAddition);
-                cell.Init(column, row, row == 3, cellNumber, (cellNumber>0?SoldierType.Normal:SoldierType.Bomber));
+                SoldierCell theCell = cell.Init(column, row, row == 3, cellNumber, (cellNumber>0?SoldierType.Normal:SoldierType.Bomber));
+                if(row == 3)
+                {
+                    ShootingCells.Add(theCell);
+                }
                 cells[row].Add(cell);
                 childIndex++;
             }
@@ -107,7 +114,11 @@ public class SoldierCellMergeManager : MonoBehaviour
         foreach (var cellData in tutorialData.CellsData)
         {
             cells[cellData.X][cellData.Y].gameObject.SetActive(true);
-            cells[cellData.X][cellData.Y].Init(cellData.Y, cellData.X, cellData.X == 3, cellData.N, (cellData.N>0?SoldierType.Normal:SoldierType.Bomber));
+            SoldierCell theCell = cells[cellData.X][cellData.Y].Init(cellData.Y, cellData.X, cellData.X == 3, cellData.N, (cellData.N>0?SoldierType.Normal:SoldierType.Bomber));
+            if(cellData.X == 3)
+            {
+                ShootingCells.Add(theCell);
+            }
         }
     }
     

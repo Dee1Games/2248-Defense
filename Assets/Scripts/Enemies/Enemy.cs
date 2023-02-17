@@ -76,9 +76,7 @@ public class Enemy : MonoBehaviour
         transform.eulerAngles = new Vector3(0f, 180f, 0f);
         //renderer.materials[0].color = Data.GetColor();
         navmeshAgent.speed = Speed;
-        SetDestination(new Vector3(Data.X, 0f, 0f));
-        inited = true;
-        
+
         if (EnemyStopLineManager.Instance.IsActive)
         {
             navmeshAgent.speed = 0;
@@ -89,6 +87,9 @@ public class Enemy : MonoBehaviour
             navmeshAgent.speed = Speed;
             SetState(EnemyState.Running);
         }
+        
+        SetDestination(new Vector3(Data.X, 0f, 0f));
+        inited = true;
     }
     
     void Update()
