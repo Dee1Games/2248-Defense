@@ -29,7 +29,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject inGamePanel;
     [SerializeField] GameObject checkIcon;
     [SerializeField] GameObject retryButton;
-    [SerializeField] TMP_Text inGameLevelText, inGameCashText;
+    [SerializeField] TMP_Text inGameLevelText, inGameCashText, movesCountText;
     [SerializeField] private Animator cashAnimator;
     
     [Header("Victory")]
@@ -162,6 +162,12 @@ public class UIManager : MonoBehaviour
     {
         cashAnimator.SetTrigger("GetMoney");
         inGameCashText.text = (GameManager.Instance.CurrentKills + PlayerPrefsManager.Coin).ToString();
+    }
+
+    public void UpdateMoveCount(int moveCounts)
+    {
+        movesCountText.gameObject.SetActive(moveCounts > 0);
+        movesCountText.text = "Moves: " + moveCounts;
     }
 
     public void OnClick_MainMenu_Play()

@@ -77,7 +77,6 @@ public class SoldierCell : MonoBehaviour
 
     public void OnPointerDown()
     {
-        print("pointer down");
         if (currentSoldier.Type == SoldierType.Bomber ||
             !GameManager.Instance.IsInPlayMode ||
             SoldierCellMergeManager.Instance.IsShifting ||
@@ -91,7 +90,6 @@ public class SoldierCell : MonoBehaviour
     
     public void OnPointerEnter()
     {
-        print("pointer enter");
         if (currentSoldier.Type == SoldierType.Bomber ||
             !GameManager.Instance.IsInPlayMode ||
             SoldierCellMergeManager.Instance.IsShifting ||

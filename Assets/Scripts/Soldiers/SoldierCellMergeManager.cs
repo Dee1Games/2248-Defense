@@ -100,6 +100,7 @@ public class SoldierCellMergeManager : MonoBehaviour
             mergeCounts = GameManager.Instance.CurrentLevelData.MergeCount;
 
         EnemyStopLineManager.Instance.IsActive = mergeCounts > 0;
+        UIManager.Instance.UpdateMoveCount(mergeCounts);
     }
     
     public void InitTutorial(TutorialData tutorialData)
@@ -265,6 +266,7 @@ public class SoldierCellMergeManager : MonoBehaviour
             StartCoroutine(DoMergeVisuals());
             VibrationManager.Instance.DoMediumVibration();
             mergeCounter++;
+            UIManager.Instance.UpdateMoveCount(mergeCounts - mergeCounter);
             if (mergeCounter >= GameManager.Instance.CurrentLevelData.MergeCount)
             {
                 EnemyStopLineManager.Instance.Disable();
