@@ -123,4 +123,46 @@ public class TutorialManager : MonoBehaviour
         hand.transform.position = target;
         currentCellIndex = 1;
     }
+
+    public List<Vector2> GetRandomPath(List<List<SoldierCell>> cells)
+    {
+
+        for (int i = 1; i < cells.Count - 1; i++)
+        {
+            for(int j = 1; j < cells[0].Count -1; j++)
+            {
+                List<Vector2> path = GetAroundCellsIndexWithSameValue(cells, i, j);
+                if(path.Count > 1)
+                {
+                    while(path.Count > 2)
+                    {
+                        path.RemoveAt(0);
+                    }
+                    path.Add(new Vector2(i, j));
+                    return path;
+                }
+            }
+        }
+
+        return null;
+    }
+
+    private List<Vector2> GetAroundCellsIndexWithSameValue(List<List<SoldierCell>> cells,int a, int b)
+    {
+        int targetValue = cells[a][b].currentSoldier.ValueNumber;
+        List<Vector2> sameValuesIndexes = new List<Vector2>();
+        for (int i = a - 1; i <= a + 1; i++)
+        {
+            for(int j = b - 1; j <= b + 1; j++)
+            {
+                if (i == a &&  j == b)
+                    continue;
+
+                if (cells[i][j].currentSoldier.ValueNumber == targetValue)
+                    sameValuesIndexes.Add(new Vector2(i, j));
+            }
+        }
+
+        return sameValuesIndexes;
+    }
 }

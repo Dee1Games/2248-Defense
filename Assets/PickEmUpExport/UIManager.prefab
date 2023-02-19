@@ -2889,7 +2889,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.08976659, y: 0.16041669}
   m_AnchorMax: {x: 0.5, y: 0.85}
-  m_AnchoredPosition: {x: -1.0000305, y: -1}
+  m_AnchoredPosition: {x: -1, y: -1}
   m_SizeDelta: {x: -6, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1920784293981843380
@@ -4901,6 +4901,7 @@ MonoBehaviour:
   inGameCashText: {fileID: 8245290776337260212}
   movesCountText: {fileID: 4679874666755283502}
   cashAnimator: {fileID: 7154332699207214676}
+  moveAnimator: {fileID: 1346408077570210569}
   victoryPanel: {fileID: 2970222468010302687}
   victoryLevelText: {fileID: 2970222468977631485}
   victoryPeopleNumberText: {fileID: 2970222468576210519}
@@ -5058,6 +5059,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7520871106608456461}
+  - component: {fileID: 1346408077570210569}
   m_Layer: 5
   m_Name: MoveInfo
   m_TagString: Untagged
@@ -5086,6 +5088,25 @@ RectTransform:
   m_AnchoredPosition: {x: -146, y: -384}
   m_SizeDelta: {x: 331, y: 160}
   m_Pivot: {x: 0, y: 1}
+--- !u!95 &1346408077570210569
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3297568923437357055}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e5932c41237fd0f40bdf1fece9dbcfca, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3553274426006558934
 GameObject:
   m_ObjectHideFlags: 0

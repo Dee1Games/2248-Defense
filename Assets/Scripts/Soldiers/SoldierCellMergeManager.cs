@@ -68,6 +68,15 @@ public class SoldierCellMergeManager : MonoBehaviour
         {
             FinishedConnecting();
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            List<Vector2> path = TutorialManager.Instance.GetRandomPath(cells);
+            foreach(Vector2 index in path)
+            {
+                cells[(int)index.x][(int)index.y].gameObject.SetActive(false);
+            }
+        }
     }
 
     public void Init()

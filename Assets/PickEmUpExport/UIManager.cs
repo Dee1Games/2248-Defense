@@ -30,7 +30,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject checkIcon;
     [SerializeField] GameObject retryButton;
     [SerializeField] TMP_Text inGameLevelText, inGameCashText, movesCountText;
-    [SerializeField] private Animator cashAnimator;
+    [SerializeField] Animator cashAnimator, moveAnimator;
     
     [Header("Victory")]
     [SerializeField] GameObject victoryPanel;
@@ -166,6 +166,7 @@ public class UIManager : MonoBehaviour
 
     public void UpdateMoveCount(int moveCounts)
     {
+        moveAnimator.SetTrigger("LoseOneMove");
         movesCountText.gameObject.SetActive(moveCounts > 0);
         movesCountText.text = "Moves: " + moveCounts;
     }
