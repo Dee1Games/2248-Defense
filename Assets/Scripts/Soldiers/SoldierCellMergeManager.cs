@@ -152,18 +152,20 @@ public class SoldierCellMergeManager : MonoBehaviour
             ChangeColsScale(0.5f);
             isConnecting = true;
             currentPitch = 1;
-	        int newCellValue = cell.currentSoldier.ValueNumber;
-	        currentCellValue = newCellValue;
-	        currentSumOfValues = newCellValue;
-	        connectedCells.Add(cell);
-	        connectingLine.positionCount = 2;
-	        Vector3 cellPosition = cell.transform.position;
-	        SetLineRendererPosition(0, cellPosition);
+            int newCellValue = cell.currentSoldier.ValueNumber;
+            currentCellValue = newCellValue;
+            currentSumOfValues = newCellValue;
+            connectedCells.Add(cell);
+            connectingLine.positionCount = 2;
+            Vector3 cellPosition = cell.transform.position;
+            SetLineRendererPosition(0, cellPosition);
             cell.currentSoldier.ShowConnectingAnimation();
             cell.currentSoldier.SoldierCircle = true;
             VibrationManager.Instance.DoLightVibration();
             SoundManager.Instance.PlayByASComponent(Sound.SoldierConnet, cell.currentSoldier.gameObject, pitch: currentPitch);
         }
+        else if (!IsInMergingMode)
+            UIManager.Instance.UpdateMoveCount(-1);
     }
 
     public void ConnectCell(SoldierCell cell) {

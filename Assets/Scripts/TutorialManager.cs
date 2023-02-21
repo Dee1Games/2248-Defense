@@ -131,13 +131,9 @@ public class TutorialManager : MonoBehaviour
         {
             for(int j = 1; j < cells[0].Count -1; j++)
             {
-                List<Vector2> path = GetAroundCellsIndexWithSameValue(cells, i, j);
+                List<Vector2> path = GetAroundCellsIndex(cells, i, j);
                 if(path.Count > 1)
                 {
-                    while(path.Count > 2)
-                    {
-                        path.RemoveAt(0);
-                    }
                     path.Add(new Vector2(i, j));
                     return path;
                 }
@@ -147,10 +143,12 @@ public class TutorialManager : MonoBehaviour
         return null;
     }
 
-    private List<Vector2> GetAroundCellsIndexWithSameValue(List<List<SoldierCell>> cells,int a, int b)
+    private List<Vector2> GetAroundCellsIndex(List<List<SoldierCell>> cells,int a, int b)
     {
         int targetValue = cells[a][b].currentSoldier.ValueNumber;
-        List<Vector2> sameValuesIndexes = new List<Vector2>();
+        List<Vector2> pathIndexes = new List<Vector2>();
+        Stack<Vector2> sameValue = new Stack<Vector2>();
+        Stack<Vector2> multipliedValue = new Stack<Vector2>();
         for (int i = a - 1; i <= a + 1; i++)
         {
             for(int j = b - 1; j <= b + 1; j++)
@@ -158,11 +156,25 @@ public class TutorialManager : MonoBehaviour
                 if (i == a &&  j == b)
                     continue;
 
-                if (cells[i][j].currentSoldier.ValueNumber == targetValue)
-                    sameValuesIndexes.Add(new Vector2(i, j));
+                int closeCellValue = cells[i][j].currentSoldier.ValueNumber;
+                if (closeCellValue == targetValue)
+                    sameValue.Push(new Vector2(i, j));
+
+                if(closeCellValue == targetValue * 2)
+                    multipliedValue.Push(new Vector2(i, j));
             }
         }
-
-        return sameValuesIndexes;
+        if (sameValue.Count > 0)
+        {
+            while (pathIndexes.Count < 2 && sameValue.Count > 0)
+            {
+                pathIndexes.Add(sameValue.Pop());
+            }
+            while (pathIndexes.Count < 2 && multipliedValue.Count > 0)
+            {
+                pathIndexes.Add(multipliedValue.Pop());
+            }
+        }
+        return pathIndexes;
     }
 }

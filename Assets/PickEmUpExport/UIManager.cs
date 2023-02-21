@@ -167,9 +167,22 @@ public class UIManager : MonoBehaviour
     public void UpdateMoveCount(int moveCounts)
     {
         moveAnimator.SetTrigger("LoseOneMove");
-        movesCountText.gameObject.SetActive(moveCounts > 0);
-        movesCountText.text = "Moves: " + moveCounts;
+        movesCountText.gameObject.SetActive(true);
+
+        if (moveCounts == -1)
+        {
+            CancelInvoke(nameof(DeactiveMoveCountText));
+            movesCountText.text = "Moves: " + 0;
+            Invoke(nameof(DeactiveMoveCountText), 2);
+        }
+        else
+        {
+            movesCountText.gameObject.SetActive(moveCounts > 0);
+            movesCountText.text = "Moves: " + moveCounts;
+        }
     }
+
+    private void DeactiveMoveCountText() => movesCountText.gameObject.SetActive(false);
 
     public void OnClick_MainMenu_Play()
     {
