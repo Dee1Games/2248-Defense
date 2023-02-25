@@ -74,7 +74,7 @@ public class SoldierCellMergeManager : MonoBehaviour
             List<Vector2> path = TutorialManager.Instance.GetRandomPath(cells);
             foreach(Vector2 index in path)
             {
-                cells[(int)index.x][(int)index.y].gameObject.SetActive(false);
+                print(cells[(int)index.x][(int)index.y].name);
             }
         }*/
     }
