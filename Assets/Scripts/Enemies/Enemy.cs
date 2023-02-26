@@ -102,7 +102,7 @@ public class Enemy : MonoBehaviour
             navmeshAgent.speed = 0;
             SetState(EnemyState.Stop);
         }
-        else
+        else if (State==EnemyState.Stop)
         {
             navmeshAgent.speed = Speed;
             SetState(EnemyState.Running);
@@ -151,9 +151,7 @@ public class Enemy : MonoBehaviour
 
     public void SetState(EnemyState state)
     {
-        State = state;
-
-        switch (State) 
+        switch (state) 
         {
             case EnemyState.Idle:
                 collider.isTrigger = false;
@@ -197,7 +195,10 @@ public class Enemy : MonoBehaviour
                 else
                     animationSpeed2 = Database.GameConfiguration.EnemyGiantDefaultAnimationSpeed;
                 animator.speed = Speed / animationSpeed2;
-                lastTimeAttacked = Time.timeSinceLevelLoad;
+                if (State != state)
+                {
+                    lastTimeAttacked = Time.timeSinceLevelLoad;
+                }
                 break;
             case EnemyState.Dead:
                 GameManager.Instance.CurrentKills++;
@@ -225,6 +226,8 @@ public class Enemy : MonoBehaviour
                     SoundManager.Instance.Play(Sound.GiantZDeath);
                 break;
         }
+        
+        State = state;
     }
 
     private IEnumerator GoAttack()

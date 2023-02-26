@@ -42,9 +42,11 @@ public class SoldierCellMergeManager : MonoBehaviour
     public List<SoldierCell> ShootingCells;
 
     //merge counter
-    public bool IsInMergingMode => mergeCounter != mergeCounts;
+    public bool IsInMergingMode => GameManager.Instance.CurrentLevelData.MergeCount==0 || mergeCounter != mergeCounts || !PlayerPrefsManager.SeenTutorial;
     public int mergeCounts;
     private int mergeCounter = 0;
+
+    private float idleTime;
 
     void Awake()
     {
@@ -53,6 +55,7 @@ public class SoldierCellMergeManager : MonoBehaviour
             _instance = this;
         }
         pitchDifference = Database.GameConfiguration.ConnectPitchDifference;
+        idleTime = 0f;
     }
 
     private void Update()
@@ -69,14 +72,33 @@ public class SoldierCellMergeManager : MonoBehaviour
             FinishedConnecting();
         }
 
-        /*if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetMouseButton(0))
         {
-            List<Vector2> path = TutorialManager.Instance.GetRandomPath(cells);
-            foreach(Vector2 index in path)
+            idleTime = 0f;
+        }
+        else
+        {
+            idleTime += Time.deltaTime;
+        }
+
+        if (PlayerPrefsManager.SeenTutorial)
+        {
+            
+            if (CanConnect && GameManager.Instance.CurrentLevelData.HasTutorial &&
+                ((GameManager.Instance.CurrentLevelData.MergeCount!=0 && mergeCounter != mergeCounts) || GameManager.Instance.CurrentLevelData.MergeCount==0) && 
+                GameManager.Instance.IsInPlayMode && UIManager.Instance.State==UIState.InGame)
             {
-                print(cells[(int)index.x][(int)index.y].name);
+                TutorialPath path = TutorialManager.Instance.GetRandomPath(cells);
+                if (path != null)
+                {
+                    TutorialManager.Instance.SetPath(path);
+                }
             }
-        }*/
+            else
+            {
+                TutorialManager.Instance.ClearPath();
+            } 
+        }
     }
 
     public void Init()
@@ -526,6 +548,10 @@ public class SoldierCellMergeManager : MonoBehaviour
             if (PlayerPrefsManager.SeenTutorial)
             {
                 RequestShifting();
+                if (GameManager.Instance.CurrentLevelData.HasTutorial)
+                {
+                    GameManager.Instance.InitCurrentTutorial();
+                }
             }
             else
             {

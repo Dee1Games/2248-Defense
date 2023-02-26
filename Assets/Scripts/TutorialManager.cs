@@ -71,6 +71,22 @@ public class TutorialManager : MonoBehaviour
         }
     }
 
+    public void SetPath(TutorialPath path)
+    {
+        Path = new TutorialPath();
+        Path.Order = new List<Vector2>(path.Order.Count);
+        for (int i = 0; i < path.Order.Count; i++)
+        {
+            Path.Order.Add(path.Order[i]);
+        }
+    }
+
+    public void ClearPath()
+    {
+        Path.Order.Clear();
+        Deactivate();
+    }
+
     public void Help()
     {
         if (PlayerPrefsManager.SeenTutorial)
@@ -124,33 +140,29 @@ public class TutorialManager : MonoBehaviour
         currentCellIndex = 1;
     }
 
-
-    public List<Vector2> GetRandomPath(List<List<SoldierCell>> cells)
+    public TutorialPath GetRandomPath(List<List<SoldierCell>> cells)
     {
-        List<Vector2> pathIndexes = new List<Vector2>();
+        TutorialPath tutorialPath = new TutorialPath();
+        tutorialPath.Order = new List<Vector2>();
         Stack<Vector2> readyToCheck = new Stack<Vector2>();
-
         for (int i = cells.Count - 1; i >= 0; i--)
         {
             for (int j = cells[0].Count - 1; j >= 0; j--)
             {
-                pathIndexes.Clear();
-                pathIndexes.Add(new Vector2(i, j));
+                tutorialPath.Order.Clear();
+                tutorialPath.Order.Add(new Vector2(i, j));
                 int firstNodeValue = cells[i][j].currentSoldier.ValueNumber;
-                List<Vector2> nextStepCandidates = GetAroundCellsIndex(cells, i, j, pathIndexes);
-
+                List<Vector2> nextStepCandidates = GetAroundCellsIndex(cells, i, j, tutorialPath.Order);
                 if (nextStepCandidates.Count > 0)
                 {
                     foreach (Vector2 candidate in nextStepCandidates)
                         if (firstNodeValue == cells[(int)candidate.x][(int)candidate.y].currentSoldier.ValueNumber)
                             readyToCheck.Push(candidate);
-
                     while (readyToCheck.Count > 0)
                     {
                         Vector2 nextNode = readyToCheck.Pop();
-                        pathIndexes.Add(nextNode);
-                        nextStepCandidates = GetAroundCellsIndex(cells, (int)nextNode.x, (int)nextNode.y, pathIndexes);
-
+                        tutorialPath.Order.Add(nextNode);
+                        nextStepCandidates = GetAroundCellsIndex(cells, (int)nextNode.x, (int)nextNode.y, tutorialPath.Order);
                         if (nextStepCandidates.Count > 0)
                         {
                             foreach (Vector2 candidate in nextStepCandidates)
@@ -158,25 +170,21 @@ public class TutorialManager : MonoBehaviour
                         }
                         else
                         {
-                            if (pathIndexes.Count > 2)
-                                return pathIndexes;
+                            if (tutorialPath.Order.Count > 2)
+                                return tutorialPath;
                             else
-                                pathIndexes.Remove(nextNode);
+                                tutorialPath.Order.Remove(nextNode);
                         }
                     }
-
-                    if (pathIndexes.Count > 2)
-                        return pathIndexes;
+                    if (tutorialPath.Order.Count > 2)
+                        return tutorialPath;
                 }
                 else
-                    pathIndexes.Remove(new Vector2(i, j));
-
+                    tutorialPath.Order.Remove(new Vector2(i, j));
             }
         }
-
         return null;
     }
-
     private List<Vector2> GetAroundCellsIndex(List<List<SoldierCell>> cells, int a, int b, List<Vector2> forbiddens)
     {
         int targetValue = cells[a][b].currentSoldier.ValueNumber;
@@ -189,10 +197,8 @@ public class TutorialManager : MonoBehaviour
             {
                 if (j < 0 || j > cells[0].Count - 1)
                     continue;
-
                 if (i == a && j == b)
                     continue;
-
                 int closeCellValue = cells[i][j].currentSoldier.ValueNumber;
                 if (closeCellValue == targetValue || closeCellValue == targetValue * 2)
                 {
@@ -203,10 +209,8 @@ public class TutorialManager : MonoBehaviour
         }
         return aroundCandidates;
     }
-
     /*public List<Vector2> GetRandomPath(List<List<SoldierCell>> cells)
     {
-
         for (int i = cells.Count - 1; i >= 0; i--)
         {
             for (int j = cells[0].Count - 1; j >= 0 ; j--)
@@ -219,10 +223,8 @@ public class TutorialManager : MonoBehaviour
                 }
             }
         }
-
         return null;
     }
-
     private List<Vector2> GetAroundCellsIndex(List<List<SoldierCell>> cells, int a, int b)
     {
         int targetValue = cells[a][b].currentSoldier.ValueNumber;
@@ -237,14 +239,11 @@ public class TutorialManager : MonoBehaviour
             {
             if (j < 0 || j > cells[0].Count - 1)
                 continue;
-
                 if (i == a && j == b)
                 continue;
-
             int closeCellValue = cells[i][j].currentSoldier.ValueNumber;
             if (closeCellValue == targetValue)
                 sameValue.Push(new Vector2(i, j));
-
             if (closeCellValue == targetValue * 2)
                 multipliedValue.Push(new Vector2(i, j));
             }

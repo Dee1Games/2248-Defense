@@ -87,35 +87,35 @@ MonoBehaviour:
         T: 0
   - WavesData:
     - EnemiesData:
-      - N: 20
+      - N: 25
         Type: 0
         Health: 10
         X: {x: 0, y: 4}
         Y: {x: 0, y: 3}
         T: 0
     - EnemiesData:
-      - N: 20
+      - N: 25
         Type: 0
         Health: 20
         X: {x: 0, y: 4}
         Y: {x: 0, y: 3}
         T: 0
     - EnemiesData:
-      - N: 20
+      - N: 25
         Type: 0
         Health: 30
         X: {x: 0, y: 4}
         Y: {x: 0, y: 3}
         T: 0
     - EnemiesData:
-      - N: 20
+      - N: 25
         Type: 0
         Health: 40
         X: {x: 0, y: 4}
         Y: {x: 0, y: 3}
         T: 0
     - EnemiesData:
-      - N: 20
+      - N: 25
         Type: 0
         Health: 50
         X: {x: 0, y: 4}
@@ -491,7 +491,7 @@ MonoBehaviour:
     - EnemiesData:
       - N: 25
         Type: 0
-        Health: 20
+        Health: 25
         X: {x: 0, y: 4}
         Y: {x: 0, y: 3}
         T: 0
@@ -505,14 +505,14 @@ MonoBehaviour:
     - EnemiesData:
       - N: 5
         Type: 1
-        Health: 250
+        Health: 300
         X: {x: 0, y: 4}
         Y: {x: 0, y: 3}
         T: 0
     - EnemiesData:
-      - N: 5
+      - N: 10
         Type: 1
-        Health: 300
+        Health: 150
         X: {x: 0, y: 4}
         Y: {x: 0, y: 3}
         T: 0
@@ -525,7 +525,7 @@ MonoBehaviour:
         T: 0
       - N: 4
         Type: 1
-        Health: 300
+        Health: 250
         X: {x: 0, y: 4}
         Y: {x: 0, y: 3}
         T: 1
@@ -597,9 +597,9 @@ MonoBehaviour:
         T: 0
   - WavesData:
     - EnemiesData:
-      - N: 10
+      - N: 12
         Type: 0
-        Health: 30
+        Health: 35
         X: {x: 0, y: 4}
         Y: {x: 0, y: 3}
         T: 0
@@ -620,14 +620,146 @@ MonoBehaviour:
     - EnemiesData:
       - N: 40
         Type: 0
-        Health: 30
+        Health: 25
         X: {x: 0, y: 4}
         Y: {x: 0, y: 3}
         T: 0
     - EnemiesData:
       - N: 50
         Type: 0
+        Health: 20
+        X: {x: 0, y: 4}
+        Y: {x: 0, y: 3}
+        T: 0
+  - WavesData:
+    - EnemiesData:
+      - N: 1
+        Type: 1
+        Health: 2000
+        X: {x: 2, y: 2}
+        Y: {x: 0, y: 0}
+        T: 0
+    - EnemiesData:
+      - N: 1
+        Type: 1
+        Health: 1500
+        X: {x: 1, y: 1}
+        Y: {x: 0, y: 0}
+        T: 0
+      - N: 1
+        Type: 1
+        Health: 1500
+        X: {x: 3, y: 3}
+        Y: {x: 0, y: 0}
+        T: 0
+    - EnemiesData:
+      - N: 1
+        Type: 1
+        Health: 1250
+        X: {x: 1, y: 1}
+        Y: {x: 0, y: 0}
+        T: 0
+      - N: 1
+        Type: 1
+        Health: 1250
+        X: {x: 2, y: 2}
+        Y: {x: 0, y: 0}
+        T: 0
+      - N: 1
+        Type: 1
+        Health: 1250
+        X: {x: 3, y: 3}
+        Y: {x: 0, y: 0}
+        T: 0
+    - EnemiesData:
+      - N: 1
+        Type: 1
+        Health: 1250
+        X: {x: 0, y: 0}
+        Y: {x: 0, y: 0}
+        T: 0
+      - N: 1
+        Type: 1
+        Health: 750
+        X: {x: 1, y: 1}
+        Y: {x: 0, y: 0}
+        T: 0
+      - N: 1
+        Type: 1
+        Health: 750
+        X: {x: 3, y: 3}
+        Y: {x: 0, y: 0}
+        T: 0
+      - N: 1
+        Type: 1
+        Health: 1250
+        X: {x: 4, y: 4}
+        Y: {x: 0, y: 0}
+        T: 0
+    - EnemiesData:
+      - N: 1
+        Type: 1
+        Health: 1000
+        X: {x: 0, y: 0}
+        Y: {x: 0, y: 0}
+        T: 0
+      - N: 1
+        Type: 1
+        Health: 500
+        X: {x: 1, y: 1}
+        Y: {x: 0, y: 0}
+        T: 0
+      - N: 1
+        Type: 1
+        Health: 1000
+        X: {x: 2, y: 2}
+        Y: {x: 0, y: 0}
+        T: 0
+      - N: 1
+        Type: 1
+        Health: 500
+        X: {x: 3, y: 3}
+        Y: {x: 0, y: 0}
+        T: 0
+      - N: 1
+        Type: 1
+        Health: 1000
+        X: {x: 4, y: 4}
+        Y: {x: 0, y: 0}
+        T: 0
+  - WavesData:
+    - EnemiesData:
+      - N: 25
+        Type: 0
         Health: 30
+        X: {x: 0, y: 4}
+        Y: {x: 0, y: 3}
+        T: 0
+    - EnemiesData:
+      - N: 35
+        Type: 0
+        Health: 30
+        X: {x: 0, y: 4}
+        Y: {x: 0, y: 3}
+        T: 0
+    - EnemiesData:
+      - N: 45
+        Type: 0
+        Health: 25
+        X: {x: 0, y: 4}
+        Y: {x: 0, y: 3}
+        T: 0
+    - EnemiesData:
+      - N: 55
+        Type: 0
+        Health: 20
+        X: {x: 0, y: 4}
+        Y: {x: 0, y: 3}
+        T: 0
+    - EnemiesData:
+      - N: 65
+        Type: 0
+        Health: 15
         X: {x: 0, y: 4}
         Y: {x: 0, y: 3}
         T: 0
@@ -637,93 +769,87 @@ MonoBehaviour:
         Type: 1
         Health: 1000
         X: {x: 2, y: 2}
-        Y: {x: 0, y: 0}
+        Y: {x: 2, y: 3}
+        T: 0
+      - N: 15
+        Type: 0
+        Health: 50
+        X: {x: 0, y: 4}
+        Y: {x: 0, y: 1}
         T: 0
     - EnemiesData:
       - N: 1
         Type: 1
         Health: 1000
         X: {x: 1, y: 1}
-        Y: {x: 0, y: 0}
+        Y: {x: 2, y: 3}
         T: 0
       - N: 1
         Type: 1
         Health: 1000
         X: {x: 3, y: 3}
-        Y: {x: 0, y: 0}
+        Y: {x: 2, y: 3}
+        T: 0
+      - N: 20
+        Type: 0
+        Health: 50
+        X: {x: 0, y: 4}
+        Y: {x: 0, y: 1}
         T: 0
     - EnemiesData:
       - N: 1
         Type: 1
-        Health: 1000
-        X: {x: 1, y: 1}
-        Y: {x: 0, y: 0}
+        Health: 750
+        X: {x: 0, y: 0}
+        Y: {x: 2, y: 3}
         T: 0
       - N: 1
         Type: 1
         Health: 1000
         X: {x: 2, y: 2}
-        Y: {x: 0, y: 0}
+        Y: {x: 2, y: 3}
         T: 0
       - N: 1
         Type: 1
-        Health: 1000
-        X: {x: 3, y: 3}
-        Y: {x: 0, y: 0}
-        T: 0
-    - EnemiesData:
-      - N: 1
-        Type: 1
-        Health: 1000
-        X: {x: 0, y: 0}
-        Y: {x: 0, y: 0}
-        T: 0
-      - N: 1
-        Type: 1
-        Health: 1000
-        X: {x: 1, y: 1}
-        Y: {x: 0, y: 0}
-        T: 0
-      - N: 1
-        Type: 1
-        Health: 1000
-        X: {x: 3, y: 3}
-        Y: {x: 0, y: 0}
-        T: 0
-      - N: 1
-        Type: 1
-        Health: 1000
+        Health: 750
         X: {x: 4, y: 4}
-        Y: {x: 0, y: 0}
+        Y: {x: 2, y: 3}
+        T: 0
+      - N: 25
+        Type: 0
+        Health: 55
+        X: {x: 0, y: 4}
+        Y: {x: 0, y: 1}
         T: 0
     - EnemiesData:
       - N: 1
         Type: 1
-        Health: 1000
+        Health: 750
         X: {x: 0, y: 0}
-        Y: {x: 0, y: 0}
+        Y: {x: 2, y: 3}
         T: 0
       - N: 1
         Type: 1
-        Health: 1000
-        X: {x: 1, y: 1}
-        Y: {x: 0, y: 0}
-        T: 0
-      - N: 1
-        Type: 1
-        Health: 1000
+        Health: 1750
         X: {x: 2, y: 2}
-        Y: {x: 0, y: 0}
+        Y: {x: 2, y: 3}
         T: 0
       - N: 1
         Type: 1
-        Health: 1000
-        X: {x: 3, y: 3}
-        Y: {x: 0, y: 0}
-        T: 0
-      - N: 1
-        Type: 1
-        Health: 1000
+        Health: 750
         X: {x: 4, y: 4}
-        Y: {x: 0, y: 0}
+        Y: {x: 2, y: 3}
+        T: 0
+      - N: 30
+        Type: 0
+        Health: 50
+        X: {x: 0, y: 4}
+        Y: {x: 0, y: 1}
+        T: 0
+    - EnemiesData:
+      - N: 10
+        Type: 1
+        Health: 750
+        X: {x: 0, y: 4}
+        Y: {x: 0, y: 3}
         T: 0

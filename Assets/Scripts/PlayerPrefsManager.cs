@@ -10,7 +10,6 @@ public class PlayerPrefsManager
         }
         get
         {
-            return 2;
             int result = PlayerPrefs.GetInt(LevelSaveAddress, 0);
             return result;
         }
@@ -37,7 +36,6 @@ public class PlayerPrefsManager
         }
         get
         {
-            return true;
             int result = PlayerPrefs.GetInt(TutorialSaveAddress, 0);
             return result==1;
         }

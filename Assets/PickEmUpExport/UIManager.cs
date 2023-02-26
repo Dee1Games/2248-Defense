@@ -166,6 +166,12 @@ public class UIManager : MonoBehaviour
 
     public void UpdateMoveCount(int moveCounts)
     {
+        if (!PlayerPrefsManager.SeenTutorial || GameManager.Instance.CurrentLevelData.MergeCount == 0)
+        {
+            movesCountText.gameObject.SetActive(false);
+            return;
+        }
+        
         moveAnimator.SetTrigger("LoseOneMove");
         movesCountText.gameObject.SetActive(true);
 

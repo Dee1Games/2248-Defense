@@ -52,15 +52,32 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public List<Enemy> insideEnemies = new List<Enemy>();
     //[HideInInspector] public Dictionary<(int row, int column),List<Enemy>> insideEnemies = new Dictionary<(int, int), List<Enemy>>();
 
-    private int levelsCount => Database.LevelsConfiguration.LevelsData.Count - 5;
+    private int levelsCount => Database.LevelsConfiguration.LevelsData.Count - 4;
 
-    public LevelData CurrentLevelData => CurrentLevelIndex <5 ? Database.LevelsConfiguration.LevelsData[CurrentLevelIndex] :
-        Database.LevelsConfiguration.LevelsData[(CurrentLevelIndex % levelsCount) + 5];
+    public LevelData CurrentLevelData => CurrentLevelIndex <Database.LevelsConfiguration.LevelsData.Count ? Database.LevelsConfiguration.LevelsData[CurrentLevelIndex] :
+        Database.LevelsConfiguration.LevelsData[((CurrentLevelIndex-4) % levelsCount)+4];
 
-    public float currentCoefficient => 1 + ((CurrentLevelIndex / levelsCount) * Database.GameConfiguration.levelsCoefficient);
+    public float currentCoefficient
+    {
+        get
+        {
+            if (CurrentLevelIndex < 4)
+            {
+                return 1;
+            }
+            else
+            {
+                return 1 + (((CurrentLevelIndex-4) / levelsCount) * Database.GameConfiguration.levelsCoefficient); 
+            }
+        }
+    }
 
-    public WaveData CurrentWaveData => CurrentLevelIndex < 5 ? Database.LevelsConfiguration.LevelsData[CurrentLevelIndex].WavesData[CurrentWaveIndex] :
-        Database.LevelsConfiguration.LevelsData[(CurrentLevelIndex % levelsCount) + 5].WavesData[CurrentWaveIndex];
+    public int currentLoop => (CurrentLevelIndex < Database.LevelsConfiguration.LevelsData.Count
+        ? 0
+        : Mathf.FloorToInt((CurrentLevelIndex - 4) / 8));
+
+    public WaveData CurrentWaveData => CurrentLevelIndex < Database.LevelsConfiguration.LevelsData.Count ? Database.LevelsConfiguration.LevelsData[CurrentLevelIndex].WavesData[CurrentWaveIndex] :
+        Database.LevelsConfiguration.LevelsData[((CurrentLevelIndex-4) % levelsCount)+4].WavesData[CurrentWaveIndex];
 
     public int CurrentTutorialIndex;
 
