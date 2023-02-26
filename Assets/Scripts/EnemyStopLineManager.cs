@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Sirenix.OdinInspector.Editor.Examples;
 using UnityEngine;
 
 public class EnemyStopLineManager : MonoBehaviour
