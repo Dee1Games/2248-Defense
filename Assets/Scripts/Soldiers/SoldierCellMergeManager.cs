@@ -510,7 +510,7 @@ public class SoldierCellMergeManager : MonoBehaviour
     {
         IsMerging = true;
         foreach (SoldierCell cell in connectedCells)
-            cell.currentSoldier.SoldierCircleColor = Color.black;
+            cell.currentSoldier.SoldierCircleColor = Color.white;
         int tempCount = connectedCells.Count;
         float duration = Database.GameConfiguration.SoldiersMergeTime;
         if (tempCount >= 2 )

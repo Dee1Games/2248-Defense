@@ -2,14 +2,19 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: m_toon_simple 7
-  m_Shader: {fileID: 4800000, guid: ccfc7d68845db8341944b3091b59be55, type: 3}
-  m_ShaderKeywords: _EMISSION _USEAMBIENTLIGHT_ON _USEOUTLINE_ON _USEREFLECTIONPROBES_ON
+  m_Shader: {fileID: 4800000, guid: 70e19283e0f45cc41b48de36b262b1bf, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _EMISSION
+  - _USEAMBIENTLIGHT_ON
+  - _USEOUTLINE_ON
+  - _USEREFLECTIONPROBES_ON
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -40,6 +45,14 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Diffuse:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DissolveMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DissolveRamp:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -95,6 +108,7 @@ Material:
         m_Texture: {fileID: 2800000, guid: 5bc599134a271824bb08814c62c606ab, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _AlbedoGloss: 0.223
     - _AlbedoGlossIntensity: 3
@@ -103,6 +117,8 @@ Material:
     - _CutOut: 0
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
+    - _DissolveGradientWidth: 0.2
+    - _DissolveValue: 0.5
     - _DstBlend: 0
     - _Gloss: 0.32
     - _GlossIntensity: 0.31
@@ -132,6 +148,7 @@ Material:
     - _UseOutline: 1
     - _UseReflectionProbes: 1
     - _ZWrite: 1
+    - __dummy__: 0
     m_Colors:
     - _Color: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
