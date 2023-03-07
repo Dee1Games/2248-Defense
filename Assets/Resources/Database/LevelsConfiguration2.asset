@@ -15,37 +15,9 @@ MonoBehaviour:
   LevelsData:
   - WavesData:
     - EnemiesData:
-      - N: 5
+      - N: 25
         Type: 0
         Health: 10
-        X: {x: 0, y: 4}
-        Y: {x: 0, y: 3}
-        T: 0
-    - EnemiesData:
-      - N: 5
-        Type: 0
-        Health: 20
-        X: {x: 0, y: 4}
-        Y: {x: 0, y: 3}
-        T: 0
-    - EnemiesData:
-      - N: 1
-        Type: 1
-        Health: 100
-        X: {x: 0, y: 4}
-        Y: {x: 0, y: 3}
-        T: 0
-    - EnemiesData:
-      - N: 5
-        Type: 0
-        Health: 40
-        X: {x: 0, y: 4}
-        Y: {x: 0, y: 3}
-        T: 0
-    - EnemiesData:
-      - N: 5
-        Type: 0
-        Health: 50
         X: {x: 0, y: 4}
         Y: {x: 0, y: 3}
         T: 0
