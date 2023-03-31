@@ -300,10 +300,6 @@ public class SoldierCellMergeManager : MonoBehaviour
             VibrationManager.Instance.DoMediumVibration();
             mergeCounter++;
             UIManager.Instance.UpdateMoveCount(mergeCounts - mergeCounter);
-            if (mergeCounter >= GameManager.Instance.CurrentLevelData.MergeCount)
-            {
-                EnemyStopLineManager.Instance.Disable();
-            }
         }
     }
 
@@ -558,6 +554,10 @@ public class SoldierCellMergeManager : MonoBehaviour
                 GameManager.Instance.InitCurrentTutorial();
             }
             connectedCells.Clear();
+            if (mergeCounter >= GameManager.Instance.CurrentLevelData.MergeCount && GameManager.Instance.CurrentLevelData.MergeCount!=0)
+            {
+                EnemyStopLineManager.Instance.Disable();
+            }
             yield return new WaitForSeconds(1f);
         }
     }

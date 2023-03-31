@@ -8,5 +8,6 @@ public enum Particle_Type
    Boom,
    BulletHit,
    BulletDestroy,
-   SoldierMerge
+   SoldierMerge,
+   Smoke
 }

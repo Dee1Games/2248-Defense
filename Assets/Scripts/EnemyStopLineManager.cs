@@ -20,6 +20,9 @@ public class EnemyStopLineManager : MonoBehaviour
         {
             isActive = value;
             stopLineGO.SetActive(value);
+            SpawnManager.Instance.SetStopLineForCurrentTheme(value);
+            if (value)
+                Shake = false;
         }
         get
         {
@@ -28,7 +31,22 @@ public class EnemyStopLineManager : MonoBehaviour
     }
     private bool isActive;
     
-    [SerializeField] private GameObject stopLineGO;
+    public GameObject stopLineGO;
+    
+    private bool shake;
+
+    public bool Shake
+    {
+        set
+        {
+            shake = value;
+            SpawnManager.Instance.ShakeStopLineForCurrentTheme(value);
+        }
+        get
+        {
+            return shake;
+        }
+    }
 
     void Awake()
     {
@@ -46,6 +64,7 @@ public class EnemyStopLineManager : MonoBehaviour
     public void Disable()
     {
         IsActive = false;
+        PlayDisappearAnimation();
         if (GameManager.Instance.insideEnemies.Count == 0)
         {
             foreach (SoldierCell cell in SoldierCellMergeManager.Instance.ShootingCells)
@@ -53,5 +72,14 @@ public class EnemyStopLineManager : MonoBehaviour
                 cell.currentSoldier.GoToAttackState();
             }
         }
+    }
+
+    public void PlayDisappearAnimation()
+    {
+        ParticleManager.Instance.PlayParticle(Particle_Type.Smoke, stopLineGO.transform.position, Vector3.up);
+        ParticleManager.Instance.PlayParticle(Particle_Type.Smoke, stopLineGO.transform.position + (Vector3.left), Vector3.up);
+        ParticleManager.Instance.PlayParticle(Particle_Type.Smoke, stopLineGO.transform.position + (Vector3.left*2), Vector3.up);
+        ParticleManager.Instance.PlayParticle(Particle_Type.Smoke, stopLineGO.transform.position + (Vector3.right), Vector3.up);
+        ParticleManager.Instance.PlayParticle(Particle_Type.Smoke, stopLineGO.transform.position + (Vector3.right*2), Vector3.up);
     }
 }

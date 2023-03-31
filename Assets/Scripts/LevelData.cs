@@ -8,10 +8,12 @@ public class LevelData
     [Range(0, 10)]
     public int MergeCount = 4;
     
-    [Range(1, 8)]
+    [Range(1, 5)]
     public int Map;
 
     public MapTheme Theme;
+    [Range(1, 3)]
+    public int SubTheme = 1;
     public int MinSoldierPower = 1;
     public int MaxSoldierPower = 6;
     public float BomberSoldierSpawnProbability = 0f;

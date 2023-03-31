@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = System.Random;
 
 public class GameManager : MonoBehaviour
 {
@@ -74,7 +75,7 @@ public class GameManager : MonoBehaviour
 
     public int currentLoop => (CurrentLevelIndex < Database.LevelsConfiguration.LevelsData.Count
         ? 0
-        : Mathf.FloorToInt((CurrentLevelIndex - 4) / 8));
+        : Mathf.FloorToInt((CurrentLevelIndex - 4) / levelsCount));
 
     public WaveData CurrentWaveData => CurrentLevelIndex < Database.LevelsConfiguration.LevelsData.Count ? Database.LevelsConfiguration.LevelsData[CurrentLevelIndex].WavesData[CurrentWaveIndex] :
         Database.LevelsConfiguration.LevelsData[((CurrentLevelIndex-4) % levelsCount)+4].WavesData[CurrentWaveIndex];
@@ -153,9 +154,7 @@ public class GameManager : MonoBehaviour
         CurrentWaveIndex=0;
         CurrentTutorialIndex = 0;
         IsInPlayMode = false;
-        SoldierCellMergeManager.Instance.Init();
-        SoldierCellMergeManager.Instance.ShowAllCells();
-
+        
         foreach (var enemy in insideEnemies)
         {
             Destroy(enemy.gameObject);
@@ -167,8 +166,10 @@ public class GameManager : MonoBehaviour
         
         insideEnemies.Clear();
         outsideEnemies.Clear();
-        int themeIndex = (CurrentLevelIndex%5)+1; 
-        SpawnManager.Instance.InitMapAndTheme(CurrentLevelData.Map-1, (MapTheme)themeIndex);
+        int themeIndex = (CurrentLevelIndex%4); 
+        SpawnManager.Instance.InitMapAndTheme(CurrentLevelData.Map-1, CurrentLevelData.Theme, CurrentLevelData.SubTheme);
+        SoldierCellMergeManager.Instance.Init();
+        SoldierCellMergeManager.Instance.ShowAllCells();
         InitCurrentTutorial();
     }
 
@@ -218,9 +219,7 @@ public class GameManager : MonoBehaviour
             {
                 ResetIdleTime();
                 IsInPlayMode = true;
-                SoldierCellMergeManager.Instance.Init();
-                SoldierCellMergeManager.Instance.ShowAllCells();
-                SoldierCellMergeManager.Instance.InitTutorial(Database.TutorialConfiguration.Data[CurrentTutorialIndex]);
+                
                 UIManager.Instance.State = UIState.InGame;
                 foreach (var enemy in insideEnemies)
                 {
@@ -232,7 +231,10 @@ public class GameManager : MonoBehaviour
                 }
                 insideEnemies.Clear();
                 outsideEnemies.Clear();
-                SpawnManager.Instance.InitMapAndTheme(Database.TutorialConfiguration.Map, Database.TutorialConfiguration.Theme);
+                SpawnManager.Instance.InitMapAndTheme(Database.TutorialConfiguration.Map, Database.TutorialConfiguration.Theme, 1);
+                SoldierCellMergeManager.Instance.Init();
+                SoldierCellMergeManager.Instance.ShowAllCells();
+                SoldierCellMergeManager.Instance.InitTutorial(Database.TutorialConfiguration.Data[CurrentTutorialIndex]);
                 TutorialManager.Instance.Help();
             }
             else

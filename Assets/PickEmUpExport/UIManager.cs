@@ -178,13 +178,15 @@ public class UIManager : MonoBehaviour
         if (moveCounts == -1)
         {
             CancelInvoke(nameof(DeactiveMoveCountText));
-            movesCountText.text = "Moves: " + 0;
-            Invoke(nameof(DeactiveMoveCountText), 2);
+            movesCountText.text = "Merges Left: " + 0;
+            movesCountText.color = Color.red;
+            Invoke(nameof(DeactiveMoveCountText), 1.5f);
         }
         else
         {
             movesCountText.gameObject.SetActive(moveCounts > 0);
-            movesCountText.text = "Moves: " + moveCounts;
+            movesCountText.text = "Merges Left: " + moveCounts;
+            movesCountText.color = Color.white;
         }
     }
 

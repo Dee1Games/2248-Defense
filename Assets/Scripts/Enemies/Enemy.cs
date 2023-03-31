@@ -76,19 +76,16 @@ public class Enemy : MonoBehaviour
         transform.eulerAngles = new Vector3(0f, 180f, 0f);
         //renderer.materials[0].color = Data.GetColor();
         navmeshAgent.speed = Speed;
-
+        SetState(EnemyState.Running);
+        
         if (EnemyStopLineManager.Instance.IsActive)
         {
-            navmeshAgent.speed = 0;
-            SetState(EnemyState.Stop);
+            SetDestination(new Vector3(Data.X, 0f, EnemyStopLineManager.Instance.stopLineGO.transform.position.z));
         }
         else
         {
-            navmeshAgent.speed = Speed;
-            SetState(EnemyState.Running);
+            SetDestination(new Vector3(Data.X, 0f, 0f));
         }
-        
-        SetDestination(new Vector3(Data.X, 0f, 0f));
         inited = true;
     }
     
@@ -96,16 +93,12 @@ public class Enemy : MonoBehaviour
     {     
         if (!IsAlive || !inited)
             return;
-
-        if (EnemyStopLineManager.Instance.IsActive)
-        {
-            navmeshAgent.speed = 0;
-            SetState(EnemyState.Stop);
-        }
-        else if (State==EnemyState.Stop)
+        
+        if (State==EnemyState.Stop && !EnemyStopLineManager.Instance.IsActive)
         {
             navmeshAgent.speed = Speed;
             SetState(EnemyState.Running);
+            SetDestination(new Vector3(Data.X, 0f, 0f));
         }
 
         healthCanvas.localEulerAngles = new Vector3(24.26f,180 - (transform.localEulerAngles.y - 180),0);
@@ -266,17 +259,26 @@ public class Enemy : MonoBehaviour
         
         InMove = false;
         
-        if (!enteredSoldierArea)
+        if (EnemyStopLineManager.Instance.IsActive)
         {
-            GameManager.Instance.EnemyEnteredSoldierArea();
-            enteredSoldierArea = true;
-            GameManager.Instance.insideEnemies.Add(this);
-            GameManager.Instance.outsideEnemies.Remove(this);
-            StartCoroutine(GoAttack());
+            navmeshAgent.speed = 0;
+            SetState(EnemyState.Stop);
+            EnemyStopLineManager.Instance.Shake = true;
         }
         else
         {
-            StartCoroutine(SetStateToAttack());
+            if (!enteredSoldierArea)
+            {
+                GameManager.Instance.EnemyEnteredSoldierArea();
+                enteredSoldierArea = true;
+                GameManager.Instance.insideEnemies.Add(this);
+                GameManager.Instance.outsideEnemies.Remove(this);
+                StartCoroutine(GoAttack());
+            }
+            else
+            {
+                StartCoroutine(SetStateToAttack());
+            }
         }
     }
 

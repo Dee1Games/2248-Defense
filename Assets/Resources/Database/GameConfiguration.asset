@@ -16,7 +16,7 @@ MonoBehaviour:
   SoldierSpeedBomber: 2
   InsideShootingRadius: 2
   SoldiersFireRate: 2
-  SoldiersMergeTime: 0.15
+  SoldiersMergeTime: 0.1
   ConnectPitchDifference: 0.2
   BomberExplosionRadius: 3
   BomberExplosionDamage: 2000

@@ -22,7 +22,12 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private Transform enemiesContainer;
     [SerializeField] private List<Map> maps;
     [SerializeField] private List<GameObject> themes;
+    [SerializeField] private Dictionary<MapTheme, List<GameObject>> subThemes;
     [SerializeField] private Transform spawnPos;
+
+    public MapTheme CurrentTheme;
+    public int CurrentSubTheme;
+    public int CurrentMap;
 
     void Awake()
     {
@@ -44,20 +49,44 @@ public class SpawnManager : MonoBehaviour
         StartCoroutine(SpawnCurrentWave());
     }
 
-    public void InitMapAndTheme(int map, MapTheme theme)
+    public void InitMapAndTheme(int map, MapTheme theme, int subTheme)
     {
+        CurrentTheme = theme;
+        CurrentSubTheme = subTheme;
+        CurrentMap = map;
+        
         foreach (Map _map in maps)
         {
             _map.gameObject.SetActive(false);
         }
+
+        subThemes = new Dictionary<MapTheme, List<GameObject>>();
         foreach (GameObject _theme in themes)
         {
             _theme.SetActive(false);
+            System.Enum.TryParse(_theme.name, out MapTheme myTheme);
+            subThemes.Add(myTheme, new List<GameObject>());
+            foreach (Transform child in _theme.transform)
+            {
+                subThemes[myTheme].Add(child.gameObject);
+                child.gameObject.SetActive(false);
+            }
         }
         
         maps[map].gameObject.SetActive(true);
         maps[map].ActivateMapTheme(theme);
         themes[(int)theme].SetActive(true);
+        subThemes[theme][subTheme-1].SetActive(true);
+    }
+
+    public void SetStopLineForCurrentTheme(bool active)
+    {
+        subThemes[CurrentTheme][CurrentSubTheme-1].GetComponent<SubTheme>().stopLineGo.SetActive(active);
+    }
+    
+    public void ShakeStopLineForCurrentTheme(bool shake)
+    {
+        subThemes[CurrentTheme][CurrentSubTheme-1].GetComponent<SubTheme>().stopLineGo.GetComponent<Animator>().SetBool("shake", shake);
     }
 
     private IEnumerator SpawnCurrentLevel()
