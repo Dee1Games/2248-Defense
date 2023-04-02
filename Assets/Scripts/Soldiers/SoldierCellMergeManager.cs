@@ -39,6 +39,8 @@ public class SoldierCellMergeManager : MonoBehaviour
     public bool IsShifting = false;
     public bool IsMerging = false;
 
+    public bool WaitLock;
+
     public List<SoldierCell> ShootingCells;
 
     //merge counter
@@ -50,6 +52,7 @@ public class SoldierCellMergeManager : MonoBehaviour
 
     void Awake()
     {
+        WaitLock = false;
         if (_instance == null)
         {
             _instance = this;
@@ -103,6 +106,7 @@ public class SoldierCellMergeManager : MonoBehaviour
 
     public void Init()
     {
+        WaitLock = false;
         cells = new List<List<SoldierCell>>();
         ShootingCells = new List<SoldierCell>();
         int childIndex = 0;
@@ -140,12 +144,15 @@ public class SoldierCellMergeManager : MonoBehaviour
         {
             for (int column = 0; column < 5; column++)
             {
-                cells[row][column].gameObject.SetActive(false);
+                if(row != 3)
+                    cells[row][column].gameObject.SetActive(false);
             }
         }
         foreach (var cellData in tutorialData.CellsData)
         {
             cells[cellData.X][cellData.Y].gameObject.SetActive(true);
+            if(cellData.X == 3 && cellData.N ==0)
+                cells[cellData.X][cellData.Y].gameObject.SetActive(false);
             SoldierCell theCell = cells[cellData.X][cellData.Y].Init(cellData.Y, cellData.X, cellData.X == 3, cellData.N, (cellData.N>0?SoldierType.Normal:SoldierType.Bomber));
             if(cellData.X == 3)
             {
@@ -551,6 +558,9 @@ public class SoldierCellMergeManager : MonoBehaviour
             }
             else
             {
+                WaitLock = true;
+                yield return new WaitForSeconds(0.5f);
+                WaitLock = false;
                 GameManager.Instance.InitCurrentTutorial();
             }
             connectedCells.Clear();

@@ -191,7 +191,8 @@ public class Soldier : MonoBehaviour
     public void SetState(SoldierState state)
     {
         State = state;
-        switch (State)
+        thisAnimator.SetBool("aiming", !PlayerPrefsManager.SeenTutorial && IsShooter);
+            switch (State)
         {
             case SoldierState.Idle:
                 thisCollider.isTrigger = false;

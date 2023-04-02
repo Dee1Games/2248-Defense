@@ -80,7 +80,8 @@ public class SoldierCell : MonoBehaviour
         if (currentSoldier.Type == SoldierType.Bomber ||
             !GameManager.Instance.IsInPlayMode ||
             SoldierCellMergeManager.Instance.IsShifting ||
-            SoldierCellMergeManager.Instance.IsMerging)
+            SoldierCellMergeManager.Instance.IsMerging ||
+            SoldierCellMergeManager.Instance.WaitLock)
         {
             return;
         }
@@ -93,7 +94,8 @@ public class SoldierCell : MonoBehaviour
         if (currentSoldier.Type == SoldierType.Bomber ||
             !GameManager.Instance.IsInPlayMode ||
             SoldierCellMergeManager.Instance.IsShifting ||
-            SoldierCellMergeManager.Instance.IsMerging)
+            SoldierCellMergeManager.Instance.IsMerging ||
+            SoldierCellMergeManager.Instance.WaitLock)
         {
             return;
         }
@@ -183,6 +185,7 @@ public class SoldierCell : MonoBehaviour
         else
         /*if (currentSoldier.ValueNumber / 2 == 1)*/
         {
+            GameManager.Instance.DeadSoldiersCount++;
             currentSoldier.SetState(SoldierState.Dead);
             IsFull = false;
             IsKilled = true;

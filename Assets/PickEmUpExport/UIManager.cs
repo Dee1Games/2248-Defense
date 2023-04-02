@@ -21,6 +21,8 @@ public class UIManager : MonoBehaviour
 
     private static UIManager _instance;
 
+    public GameObject unlimitedMergeAlert;
+    
     [Header("MainMenu")]
     [SerializeField] GameObject mainMenuPanel;
     [SerializeField] TMP_Text mainMenuLevelText, mainMenuCashText;
@@ -77,7 +79,17 @@ public class UIManager : MonoBehaviour
                     victoryLevelText.text = "Level " + (GameManager.Instance.CurrentLevelIndex);
                     victoryPeopleNumberText.text = "x" + GameManager.Instance.CurrentKills.ToString();
                     victoryPanel.SetActive(true);
-                    
+                    if (GameManager.Instance.DeadSoldiersCount == 0)
+                    {
+                        victoryPanel.GetComponent<Animator>().SetTrigger("star3");
+                    } else if (GameManager.Instance.DeadSoldiersCount <= 10)
+                    {
+                        victoryPanel.GetComponent<Animator>().SetTrigger("star2");
+                    }
+                    else
+                    {
+                        victoryPanel.GetComponent<Animator>().SetTrigger("star1");
+                    }
                     if (!refresh)
                     {
                         PlayerPrefsManager.Coin += GameManager.Instance.CurrentKills;
@@ -102,6 +114,7 @@ public class UIManager : MonoBehaviour
     
     private void Awake()
     {
+        unlimitedMergeAlert.SetActive(false);
         if (_instance==null)
         {
             _instance = this;

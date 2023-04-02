@@ -13,101 +13,221 @@ MonoBehaviour:
   m_Name: TutorialConfiguration
   m_EditorClassIdentifier: 
   Map: 0
-  Theme: 1
+  Theme: 0
   Data:
   - Path:
       Order:
       - {x: 1, y: 2}
       - {x: 2, y: 2}
     CellsData:
-    - X: 2
-      Y: 2
-      N: 2
     - X: 1
       Y: 2
       N: 2
-  - Path:
-      Order:
-      - {x: 1, y: 2}
-      - {x: 2, y: 2}
-      - {x: 3, y: 2}
-    CellsData:
     - X: 3
-      Y: 2
-      N: 4
-    - X: 2
-      Y: 2
-      N: 2
-    - X: 1
-      Y: 2
-      N: 2
-  - Path:
-      Order:
-      - {x: 0, y: 0}
-      - {x: 0, y: 1}
-      - {x: 0, y: 2}
-      - {x: 1, y: 2}
-      - {x: 2, y: 2}
-      - {x: 3, y: 2}
-    CellsData:
-    - X: 3
-      Y: 2
-      N: 16
-    - X: 2
-      Y: 2
-      N: 8
-    - X: 1
-      Y: 2
-      N: 4
-    - X: 0
-      Y: 2
-      N: 4
-    - X: 0
-      Y: 1
-      N: 2
-    - X: 0
       Y: 0
+      N: 0
+    - X: 3
+      Y: 1
+      N: 0
+    - X: 3
+      Y: 3
+      N: 0
+    - X: 3
+      Y: 4
+      N: 0
+    - X: 2
+      Y: 2
+      N: 2
+    - X: 3
+      Y: 2
+      N: 0
+  - Path:
+      Order:
+      - {x: 2, y: 2}
+      - {x: 3, y: 2}
+    CellsData:
+    - X: 2
+      Y: 2
+      N: 2
+    - X: 3
+      Y: 0
+      N: 4
+    - X: 3
+      Y: 1
+      N: 8
+    - X: 3
+      Y: 3
+      N: 8
+    - X: 3
+      Y: 4
+      N: 4
+    - X: 3
+      Y: 2
       N: 2
   - Path:
       Order:
       - {x: 0, y: 4}
+      - {x: 1, y: 4}
+      - {x: 2, y: 4}
+      - {x: 3, y: 4}
+    CellsData:
+    - X: 1
+      Y: 4
+      N: 2
+    - X: 2
+      Y: 4
+      N: 2
+    - X: 3
+      Y: 2
+      N: 4
+    - X: 3
+      Y: 0
+      N: 4
+    - X: 3
+      Y: 1
+      N: 8
+    - X: 3
+      Y: 3
+      N: 8
+    - X: 3
+      Y: 4
+      N: 4
+    - X: 0
+      Y: 4
+      N: 2
+  - Path:
+      Order:
+      - {x: 0, y: 1}
+      - {x: 0, y: 2}
       - {x: 0, y: 3}
+      - {x: 0, y: 4}
+      - {x: 1, y: 4}
+      - {x: 2, y: 4}
+      - {x: 3, y: 4}
+      - {x: 3, y: 3}
+    CellsData:
+    - X: 3
+      Y: 2
+      N: 4
+    - X: 2
+      Y: 4
+      N: 4
+    - X: 1
+      Y: 4
+      N: 4
+    - X: 3
+      Y: 0
+      N: 4
+    - X: 3
+      Y: 1
+      N: 8
+    - X: 3
+      Y: 3
+      N: 8
+    - X: 3
+      Y: 4
+      N: 8
+    - X: 0
+      Y: 3
+      N: 2
+    - X: 0
+      Y: 4
+      N: 2
+    - X: 0
+      Y: 2
+      N: 2
+    - X: 0
+      Y: 1
+      N: 2
+  - Path:
+      Order:
+      - {x: 0, y: 4}
+      - {x: 1, y: 3}
       - {x: 1, y: 2}
-      - {x: 2, y: 1}
+      - {x: 1, y: 1}
       - {x: 2, y: 0}
       - {x: 3, y: 0}
       - {x: 3, y: 1}
-      - {x: 3, y: 2}
-      - {x: 3, y: 3}
-      - {x: 3, y: 4}
     CellsData:
-    - X: 0
-      Y: 4
-      N: 2
-    - X: 0
+    - X: 3
+      Y: 0
+      N: 4
+    - X: 3
+      Y: 1
+      N: 8
+    - X: 3
       Y: 3
-      N: 2
+      N: 32
+    - X: 3
+      Y: 4
+      N: 32
+    - X: 3
+      Y: 2
+      N: 4
     - X: 1
       Y: 2
       N: 4
+    - X: 1
+      Y: 3
+      N: 2
+    - X: 0
+      Y: 4
+      N: 2
     - X: 2
+      Y: 0
+      N: 4
+    - X: 1
       Y: 1
       N: 4
-    - X: 2
+  - Path:
+      Order:
+      - {x: 0, y: 0}
+      - {x: 1, y: 0}
+      - {x: 1, y: 1}
+      - {x: 0, y: 2}
+      - {x: 0, y: 3}
+      - {x: 0, y: 4}
+      - {x: 1, y: 4}
+      - {x: 2, y: 4}
+      - {x: 3, y: 4}
+      - {x: 3, y: 3}
+    CellsData:
+    - X: 0
       Y: 0
+      N: 2
+    - X: 1
+      Y: 0
+      N: 2
+    - X: 1
+      Y: 1
       N: 4
-    - X: 3
-      Y: 0
+    - X: 0
+      Y: 2
+      N: 4
+    - X: 0
+      Y: 3
       N: 8
-    - X: 3
-      Y: 1
+    - X: 0
+      Y: 4
+      N: 8
+    - X: 1
+      Y: 4
+      N: 16
+    - X: 2
+      Y: 4
       N: 16
     - X: 3
-      Y: 2
+      Y: 4
       N: 32
     - X: 3
       Y: 3
-      N: 64
+      N: 32
     - X: 3
-      Y: 4
-      N: 128
+      Y: 2
+      N: 4
+    - X: 3
+      Y: 1
+      N: 32
+    - X: 3
+      Y: 0
+      N: 8

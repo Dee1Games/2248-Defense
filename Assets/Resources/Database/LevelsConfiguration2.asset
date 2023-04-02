@@ -316,7 +316,7 @@ MonoBehaviour:
         Y: {x: 0, y: 3}
         T: 0
     - EnemiesData:
-      - N: 8
+      - N: 7
         Type: 1
         Health: 200
         X: {x: 0, y: 4}

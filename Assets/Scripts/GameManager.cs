@@ -81,6 +81,8 @@ public class GameManager : MonoBehaviour
         Database.LevelsConfiguration.LevelsData[((CurrentLevelIndex-4) % levelsCount)+4].WavesData[CurrentWaveIndex];
 
     public int CurrentTutorialIndex;
+    
+    public int DeadSoldiersCount;
 
     public float IdleTime
     {
@@ -134,6 +136,7 @@ public class GameManager : MonoBehaviour
 
     void Init()
     {
+        DeadSoldiersCount = 0;
         if (PlayerPrefsManager.SeenTutorial)
         {
             ResetIdleTime();
@@ -151,6 +154,8 @@ public class GameManager : MonoBehaviour
 
     public void InitCurrentLevel()
     {
+        DeadSoldiersCount = 0;
+        SoldierCellMergeManager.Instance.WaitLock = false;
         CurrentWaveIndex=0;
         CurrentTutorialIndex = 0;
         IsInPlayMode = false;
@@ -199,17 +204,32 @@ public class GameManager : MonoBehaviour
 
     public void StartCurrentLevel()
     {
+        StartCoroutine(startCurrentLevel());
+    }
+
+    private IEnumerator startCurrentLevel()
+    {
+        UIManager.Instance.State = UIState.InGame;
+        DeadSoldiersCount = 0;
+        SoldierCellMergeManager.Instance.WaitLock = false;
         CurrentWaveIndex=0;
         InitCurrentLevel();
         IsInPlayMode = true;
         CurrentKills = 0;
-        UIManager.Instance.State = UIState.InGame;
         SoldierCellMergeManager.Instance.Init();
+        if (PlayerPrefsManager.SeenTutorial && CurrentLevelData.MergeCount == 0)
+        {
+            UIManager.Instance.unlimitedMergeAlert.SetActive(true);
+            yield return new WaitForSeconds(3);
+        }
+        UIManager.Instance.unlimitedMergeAlert.SetActive(false);
         SpawnManager.Instance.StartSpawningCurrentLevel();
     }
 
     public void InitCurrentTutorial()
     {
+        SoldierCellMergeManager.Instance.WaitLock = false;
+        
         if (PlayerPrefsManager.SeenTutorial && !CurrentLevelData.HasTutorial)
             return;
 
