@@ -18,13 +18,13 @@ MonoBehaviour:
   appIds:
   - 517953160512938
   appLabels:
-  - 2248 Defense
+  - 2248Defense
   cookie: 1
   logging: 1
   status: 1
   xfbml: 0
   frictionlessRequests: 1
-  androidKeystorePath: C:\Projects\2248-Defense\2248Defense.keystore
+  androidKeystorePath: 
   iosURLSuffix: 
   appLinkSchemes:
   - list: []
