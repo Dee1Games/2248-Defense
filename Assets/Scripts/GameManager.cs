@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using SupersonicWisdomSDK;
 using UnityEngine;
 using Random = System.Random;
 
@@ -92,11 +93,14 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
+
         if (_instance == null)
         {
             _instance = this;
         }
     }
+    
+
 
     void OnEnable()
     {
@@ -115,7 +119,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        Init();
+       Init();
     }
 
     void Update()
@@ -209,6 +213,8 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator startCurrentLevel()
     {
+        SupersonicWisdom.Api.NotifyLevelStarted((PlayerPrefsManager.Level +1), null);
+        print("super sonic start level " + (PlayerPrefsManager.Level +1 ));
         UIManager.Instance.State = UIState.InGame;
         DeadSoldiersCount = 0;
         SoldierCellMergeManager.Instance.WaitLock = false;

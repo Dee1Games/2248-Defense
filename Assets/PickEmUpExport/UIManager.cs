@@ -1,3 +1,4 @@
+using SupersonicWisdomSDK;
 using UnityEngine;
 using TMPro;
 
@@ -76,6 +77,9 @@ public class UIManager : MonoBehaviour
                     inGamePanel.SetActive(true);
                     break;
                 case UIState.Victory:
+                    SupersonicWisdom.Api.NotifyLevelCompleted(GameManager.Instance.CurrentLevelIndex, null);
+                    print("super sonic win level " + GameManager.Instance.CurrentLevelIndex );
+                    
                     victoryLevelText.text = "Level " + (GameManager.Instance.CurrentLevelIndex);
                     victoryPeopleNumberText.text = "x" + GameManager.Instance.CurrentKills.ToString();
                     victoryPanel.SetActive(true);
@@ -98,6 +102,9 @@ public class UIManager : MonoBehaviour
                     break;
                 case UIState.Defeat:
 					//GameManager.Instance.CanDraw = false;
+                    SupersonicWisdom.Api.NotifyLevelFailed((GameManager.Instance.CurrentLevelIndex + 1), null);
+                    print("super sonic lose level " + (GameManager.Instance.CurrentLevelIndex + 1));
+                    
                     defeatLevelText.text = "Level " + (GameManager.Instance.CurrentLevelIndex + 1);
                     zombiesKilledText.text = "x" + GameManager.Instance.CurrentKills;
                     defeatPanel.SetActive(true);
