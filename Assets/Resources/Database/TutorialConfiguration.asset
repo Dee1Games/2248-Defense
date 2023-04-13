@@ -17,32 +17,6 @@ MonoBehaviour:
   Data:
   - Path:
       Order:
-      - {x: 1, y: 2}
-      - {x: 2, y: 2}
-    CellsData:
-    - X: 1
-      Y: 2
-      N: 2
-    - X: 3
-      Y: 0
-      N: 0
-    - X: 3
-      Y: 1
-      N: 0
-    - X: 3
-      Y: 3
-      N: 0
-    - X: 3
-      Y: 4
-      N: 0
-    - X: 2
-      Y: 2
-      N: 2
-    - X: 3
-      Y: 2
-      N: 0
-  - Path:
-      Order:
       - {x: 2, y: 2}
       - {x: 3, y: 2}
     CellsData:
@@ -70,6 +44,7 @@ MonoBehaviour:
       - {x: 1, y: 4}
       - {x: 2, y: 4}
       - {x: 3, y: 4}
+      - {x: 3, y: 3}
     CellsData:
     - X: 1
       Y: 4
