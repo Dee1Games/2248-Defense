@@ -44,7 +44,7 @@ MonoBehaviour:
   enableManagedInterstitialAds: 0
   enableManagedBannerAds: 0
   enableManagedRateUsPopup: 1
-  enableDebug: 0
+  enableDebug: 1
   debugIronSource: 0
   testBlockingApiInvocation: 0
   enableTestAds: 0
