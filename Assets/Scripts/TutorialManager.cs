@@ -34,7 +34,7 @@ public class TutorialManager : MonoBehaviour
 
     void Update()
     {
-        if(Path==null || Path.Order.Count<2 || SoldierCellMergeManager.Instance.IsShifting || SoldierCellMergeManager.Instance.IsMerging)
+        if(Path==null || Path.Order.Count<2 || SoldierCellMergeManager.Instance.IsShifting || SoldierCellMergeManager.Instance.IsMerging || UIManager.Instance.waitingForInput)
             return;
 
         float t = PlayerPrefsManager.SeenTutorial ? 3f : 1f;

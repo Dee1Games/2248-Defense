@@ -147,7 +147,14 @@ public class GameManager : MonoBehaviour
             CurrentLevelIndex = PlayerPrefsManager.Level;
             CurrentWaveIndex = 0;
             InitCurrentLevel();
-            UIManager.Instance.State = UIState.MainMenu;
+            if (CurrentLevelData.MergeCount == 0)
+            {
+                StartCurrentLevel();
+            }
+            else
+            {
+                UIManager.Instance.State = UIState.MainMenu;
+            }
         }
         else
         {
@@ -226,9 +233,13 @@ public class GameManager : MonoBehaviour
         if (PlayerPrefsManager.SeenTutorial && CurrentLevelData.MergeCount == 0)
         {
             UIManager.Instance.unlimitedMergeAlert.SetActive(true);
-            yield return new WaitForSeconds(3);
+            UIManager.Instance.unlimitedMergeTapToPlay.SetActive(true);
+            UIManager.Instance.waitingForInput = true;
+            while (UIManager.Instance.waitingForInput)
+                yield return new WaitForEndOfFrame();
         }
         UIManager.Instance.unlimitedMergeAlert.SetActive(false);
+        UIManager.Instance.unlimitedMergeTapToPlay.SetActive(false);
         SpawnManager.Instance.StartSpawningCurrentLevel();
     }
 

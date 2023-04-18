@@ -22,7 +22,10 @@ public class UIManager : MonoBehaviour
 
     private static UIManager _instance;
 
+    public bool waitingForInput = false;
+
     public GameObject unlimitedMergeAlert;
+    public GameObject unlimitedMergeTapToPlay;
     
     [Header("MainMenu")]
     [SerializeField] GameObject mainMenuPanel;
@@ -122,9 +125,19 @@ public class UIManager : MonoBehaviour
     private void Awake()
     {
         unlimitedMergeAlert.SetActive(false);
+        unlimitedMergeTapToPlay.SetActive(false);
+        waitingForInput = false;
         if (_instance==null)
         {
             _instance = this;
+        }
+    }
+
+    void Update()
+    {
+        if (waitingForInput && Input.GetMouseButton(0))
+        {
+            waitingForInput = false;
         }
     }
 
@@ -230,6 +243,11 @@ public class UIManager : MonoBehaviour
     public void OnClick_InGame_Retry()
     {
         GameManager.Instance.Restart();
+    }
+
+    public void OnClick_UnlimitedMergeTapToPlay()
+    {
+        waitingForInput = false;
     }
 }
 
